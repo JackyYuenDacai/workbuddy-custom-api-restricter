@@ -1,0 +1,18 @@
+{
+  "name": "workbuddy-custom-api-restricter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Version-specific WorkBuddy model-routing patch that preserves login and web search",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "test": "node --test --test-name-pattern=\"^(only raw|model catalog|approved streaming|wrong model|request-transform|catalog helper)\" test.cjs",
+    "test:installed": "node --test test.cjs",
+    "prepare:patch": "node patch.cjs prepare",
+    "install:patch": "node patch.cjs install",
+    "restore:patch": "node patch.cjs restore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackyYuenDacai/workbuddy-custom-api-restricter.git"
+  }
+}

@@ -1,0 +1,16 @@
+# WorkBuddy bundles, generated manifests and local machine settings are not source.
+/staged/
+/manifest.json
+/paths.local.json
+/backups/
+/archives/
+/node_modules/
+*.asar
+*.exe
+*.log
+*.bak
+.env
+.env.*
+models.json
+settings.json
+package-lock.json
