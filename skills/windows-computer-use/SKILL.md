@@ -9,7 +9,7 @@ description: 在 Windows 上通过本地 MCP 查找和启动受支持的应用�
 
 ## 弹层与焦点恢复
 
-VS Code 的 "Work in" 选择器等瞬时弹层可能在截图之间移动位置并抢占键盘焦点。如果某个动作没有产生预期的可见变化，立即停止继续输入，调用 `desktop_cursor` 查看真实指针位置与前台窗口；当前台窗口不符合预期时再调用 `desktop_windows`。重新观察目标窗口——每个弹层都是新目标，坐标绝不复用。如果焦点已改变，调用 `desktop_focus` 后重新观察，因为焦点变化会使之前的 snapshot 失效。对弹层选项，只点击一个可见标签一次并观察后再输入；只有当新截图明确显示目标输入框已聚焦时才输入。连续两次定位或输入失败后，请用户手动激活或关闭该弹层，不要盲点或反复输入。`desktop_cursor` 仅用于诊断，绝不能当作安全点击目标。
+VS Code 的 "Work in" 选择器等瞬时弹层可能在截图之间移动位置并抢占键盘焦点。如果某个动作没有产生预期的可见变化，立即停止继续输入，调用 `desktop_cursor` 查看真实指针位置与前台窗口；当前台窗口不符合预期时再调用 `desktop_windows`。`desktop_focus` 会恢复最小化窗口，并在目标拥有可见活动弹窗时改为激活该弹窗；此时必须使用返回的 `activated_window_id` 重新观察。`focused=false` 表示窗口虽已恢复/置前但 Windows 拒绝了键盘焦点，应改用整屏截图点击可见窗口，仍失败再请用户手动激活。每个弹层都是新目标，坐标绝不复用。对弹层选项，只点击一个可见标签一次并观察后再输入；只有当新截图明确显示目标输入框已聚焦时才输入。连续两次定位或输入失败后，请用户手动激活或关闭该弹层，不要盲点或反复输入。`desktop_cursor` 仅用于诊断，绝不能当作安全点击目标。
 
 ## 工具发现
 
@@ -21,15 +21,15 @@ VS Code 的 "Work in" 选择器等瞬时弹层可能在截图之间移动位置�
 | `desktop_launch` | 启动指定应用；浏览器新建窗口，可携带 HTTP(S) URL，不关闭现有窗口 |
 | `desktop_browser_state` | 只读目标浏览器标题及可用的地址栏 URL；不读取网页表单，URL 可能为空 |
 | `desktop_windows` | 获取可见窗口 ID、标题、进程和边界 |
-| `desktop_focus` | 尝试激活用户选择的窗口；Windows 拒绝时请用户手动激活 |
+| `desktop_focus` | 恢复并激活用户选择的窗口；自动转向可见活动弹窗，返回实际 `activated_window_id` |
 | `desktop_observe` | 截取指定前台窗口，返回图片、图片尺寸、`snapshot_id` |
 | `desktop_click` | 使用截图像素坐标点击，一次最多双击 |
 | `desktop_type_text` | 输入 Unicode 文本，不用剪贴板，不自动按 Enter |
 | `desktop_key` | 发送 schema 中允许的编辑/导航快捷键 |
 | `desktop_scroll` | 用截图内 `x,y` 指定滚动区域，自动移入该区域后滚动，不点击；`amount` 正数向上、负数向下，单次 1–5 格 |
 | `desktop_cursor` | 只读诊断：返回当前指针位置与前台窗口；不直接作为安全点击目标 |
-| `desktop_screen_observe` | 截取**整屏**（含任务栏、托盘等无标题壳 UI），返回图片像素 + 屏幕绝对边界；用于定位 `desktop_windows` 列不到的任务栏/托盘图标 |
-| `desktop_raw_click` | 按**绝对屏幕坐标**点击（不绑窗口、不要求前台），支持右键；用于点任务栏图标、弹出并操作右键菜单 |
+| `desktop_screen_observe` | 截取整个虚拟桌面（全部显示器、可见窗口、任务栏、托盘和壳弹层），返回图片和一次性 `snapshot_id` |
+| `desktop_screen_click` | 使用整屏截图内的 `x,y` 点击可见窗口、任务栏、托盘或壳弹层；支持左右键和双击 |
 
 ## 启动应用与浏览器搜索
 
@@ -57,16 +57,18 @@ VS Code 的 "Work in" 选择器等瞬时弹层可能在截图之间移动位置�
 
 `performed=true` 只表示滚轮输入已发出，`content_movement_verified=false` 表示还没有核对内容移动。操作后观察并比较正文位置；若无变化，先检查是否选错滚动区域或已经到达顶部/底部。不要因工具报告成功就连续重复相同滚动，也不要反复截图重试过期令牌而不说明推理超时。
 
-## 任务栏 / 托盘（裸坐标通道）
+## 多窗口、任务栏与托盘
 
-任务栏（`Shell_TrayWnd`）、托盘图标等 Windows 壳 UI **没有窗口标题**，`desktop_windows` 列不到、`desktop_observe` 也截不到（它只截单个有标题的前台窗口）。需要操作它们时用裸坐标通道：
+Windows 同一时刻只有一个键盘前台窗口，但可在一次任务中依次操作多个窗口。先用 `desktop_windows` 取得各窗口 ID，再对当前目标执行 `desktop_focus` → `desktop_observe` → 单个动作 → 重新观察；切换到下一个窗口时重复该流程。不要把窗口 A 的 snapshot 用于窗口 B。
 
-1. `desktop_screen_observe` 截整屏，返回图片像素和屏幕绝对边界（多显示器下原点可能为负）。
-2. 在整屏图里定位目标（任务栏图标、托盘图标），把图片像素换算成**绝对屏幕坐标** `screen_x/screen_y`（按返回的 `screen_left/top/right/bottom` 和 `width/height` 线性映射）。
-3. `desktop_raw_click(screen_x, screen_y, button="right")` 弹出右键菜单，或 `button="left"` 点选。
-4. 菜单是**瞬时浮动窗口**，`desktop_raw_click` 是盲操作、不带 snapshot 校验：每次点击后必须重新 `desktop_screen_observe` 看结果，再点菜单项。
+任务栏、托盘图标和隐藏图标弹层等 Windows 壳 UI 通常没有可供 `desktop_windows` 使用的标题。需要打开隐藏托盘图标或从被遮挡窗口中切换时：
 
-裸坐标通道不绑 `window_id`、不要求目标前台，因此不受"窗口内坐标"限制；但仍受 STOP 文件和四角紧急停止守卫保护。能用窗口绑定的 `desktop_click` 就用它（有 snapshot 校验、更安全），只有窗口通道够不到的壳 UI 才用 `desktop_raw_click`。点击会触发 UI 动作，按"确认与边界"要求先核对目标、必要时取得确认。
+1. 调用 `desktop_screen_observe`，在返回图片中定位托盘的“显示隐藏的图标”按钮、任务栏图标或可见窗口。
+2. 用同次返回的 `snapshot_id` 和图片像素 `x,y` 调用 `desktop_screen_click`。不要自行换算绝对坐标；工具会处理缩放及负坐标显示器。
+3. 第一次点击只负责打开隐藏图标弹层、菜单或置前窗口。弹层是瞬时界面，因此必须再次 `desktop_screen_observe`，再用新 snapshot 点击其中目标。
+4. 切换到有标题的窗口后，再调用 `desktop_windows` 确认其 ID，并回到窗口绑定的观察/操作流程。键盘输入绝不能直接依据整屏截图发送。
+
+整屏点击不绑 `window_id`，但要求新鲜且一次性的整屏 snapshot，并检查虚拟桌面边界、鼠标是否被用户移动、终端/开发者工具目标、STOP 文件和四角紧急停止。能用窗口绑定的 `desktop_click` 就用它；只有切换窗口或窗口通道够不到的壳 UI 才用 `desktop_screen_click`。点击会触发 UI 动作，按“确认与边界”要求先核对目标、必要时取得确认。
 
 ## 确认与边界
 

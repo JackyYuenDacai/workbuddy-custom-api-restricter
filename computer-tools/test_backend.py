@@ -55,7 +55,7 @@ class AppTests(unittest.TestCase):
 
     def test_ctrl_l_only_in_browser_and_no_input_on_rejection(self):
         for process in ("notepad.exe", "firefox.exe"):
-            with patch.object(Path, "exists", return_value=False), patch.object(backend, "ensure_target", return_value={"window_id": "1", "process": process}), patch.object(backend, "send_inputs") as send:
+            with patch.object(Path, "exists", return_value=False), patch.object(backend, "ensure_target", return_value={"window_id": "1", "process": process}), patch.object(backend, "ensure_keyboard_target"), patch.object(backend, "send_inputs") as send:
                 if process == "notepad.exe":
                     with self.assertRaisesRegex(ValueError, "restricted"):
                         backend.dispatch({"action": "key", "key": "CTRL+L"})
@@ -147,6 +147,89 @@ class ScrollTests(unittest.TestCase):
             backend.dispatch(self.request)
         self.user.SetCursorPos.assert_not_called()
         self.send.assert_not_called()
+
+
+class ScreenClickTests(unittest.TestCase):
+    def setUp(self):
+        self.user = MagicMock()
+        self.user.SetCursorPos.return_value = True
+        self.user.WindowFromPoint.return_value = 456
+        self.user.GetAncestor.return_value = 789
+        self.positions = [(-100, 50), (-1680, 40)]
+
+        def cursor(point):
+            x, y = self.positions.pop(0)
+            point._obj.x, point._obj.y = x, y
+            return True
+
+        self.user.GetCursorPos.side_effect = cursor
+        self.request = {"action": "screen_click", "expected_screen": {"left": -1920, "top": -200, "right": 1920, "bottom": 1080},
+                        "screen_x": -1680, "screen_y": 40, "button": "left", "count": 1}
+
+    def test_negative_monitor_click_is_checked_and_sent_once(self):
+        target = {"process": "explorer.exe", "title": "", "window_id": "789"}
+        with patch.object(Path, "exists", return_value=False), patch.object(backend, "screen_bounds", return_value=(-1920, -200, 1920, 1080)), \
+                patch.object(backend, "user", self.user), patch.object(backend, "window_info", return_value=target), \
+                patch.object(backend, "send_inputs") as send, patch.object(backend.time, "sleep"):
+            result = backend.dispatch(self.request)
+        self.user.SetCursorPos.assert_called_once_with(-1680, 40)
+        send.assert_called_once()
+        self.assertTrue(result["performed"])
+
+    def test_changed_desktop_bounds_reject_before_pointer_movement(self):
+        with patch.object(Path, "exists", return_value=False), patch.object(backend, "screen_bounds", return_value=(0, 0, 1920, 1080)), \
+                patch.object(backend, "user", self.user), patch.object(backend, "send_inputs") as send:
+            with self.assertRaisesRegex(ValueError, "bounds changed"):
+                backend.dispatch(self.request)
+        self.user.SetCursorPos.assert_not_called()
+        send.assert_not_called()
+
+    def test_terminal_target_is_rejected_without_click(self):
+        target = {"process": "windowsterminal.exe", "title": "Terminal", "window_id": "789"}
+        with patch.object(Path, "exists", return_value=False), patch.object(backend, "screen_bounds", return_value=(-1920, -200, 1920, 1080)), \
+                patch.object(backend, "user", self.user), patch.object(backend, "window_info", return_value=target), \
+                patch.object(backend, "send_inputs") as send, patch.object(backend.time, "sleep"):
+            with self.assertRaisesRegex(ValueError, "Terminal"):
+                backend.dispatch(self.request)
+        send.assert_not_called()
+
+
+class FocusTests(unittest.TestCase):
+    def test_visible_owned_popup_is_activated_instead_of_blocked_parent(self):
+        requested = {"window_id": "100", "minimized": False, "foreground": False}
+        popup = {"window_id": "200", "minimized": False, "foreground": False}
+        focused = {"window_id": "200", "minimized": False, "foreground": True}
+        win32 = MagicMock()
+        win32.GetLastActivePopup.return_value = 200
+        win32.IsWindowVisible.return_value = True
+        win32.GetForegroundWindow.side_effect = [300, 200]
+        win32.GetWindowThreadProcessId.return_value = 7
+        thread = MagicMock()
+        thread.GetCurrentThreadId.return_value = 8
+        with patch.object(backend, "user", win32), patch.object(backend, "kernel", thread), \
+                patch.object(backend, "window_info", side_effect=[requested, popup, focused]), patch.object(backend.time, "sleep"):
+            result = backend.focus_window("100")
+        self.assertTrue(result["focused"])
+        self.assertTrue(result["popup_redirected"])
+        self.assertEqual(result["requested_window_id"], "100")
+        self.assertEqual(result["activated_window_id"], "200")
+        win32.SetForegroundWindow.assert_called_with(200)
+
+    def test_focus_denial_returns_recovery_evidence(self):
+        requested = {"window_id": "100", "minimized": True, "foreground": False}
+        still_unfocused = {"window_id": "100", "minimized": False, "foreground": False}
+        win32 = MagicMock()
+        win32.GetLastActivePopup.return_value = 100
+        win32.GetForegroundWindow.return_value = 300
+        win32.GetWindowThreadProcessId.return_value = 7
+        thread = MagicMock()
+        thread.GetCurrentThreadId.return_value = 8
+        with patch.object(backend, "user", win32), patch.object(backend, "kernel", thread), \
+                patch.object(backend, "window_info", side_effect=[requested, still_unfocused]), patch.object(backend.time, "sleep"):
+            result = backend.focus_window("100")
+        self.assertTrue(result["restored"])
+        self.assertFalse(result["focused"])
+        self.assertIn("whole desktop", result["next_step"])
 
 
 if __name__ == "__main__":

@@ -39,23 +39,30 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
       const result=await bridge({action:'observe',window_id});
       const {png_base64,...metadata}=result;
       const token=randomUUID();
-      snapshot={token,window_id,pid:result.pid,rect:result.rect,focus:result.focused_control,width:result.image_width,height:result.image_height,created:now()};
+      snapshot={token,source:'window',window_id,pid:result.pid,rect:result.rect,focus:result.focused_control,width:result.image_width,height:result.image_height,created:now()};
       return {metadata:{...metadata,snapshot_id:token,valid_for_seconds:SNAPSHOT_VALID_SECONDS,coordinates:'image pixels, origin at top-left of this image',one_action_per_snapshot:true},png_base64};
     }),
     screenObserve:()=>exclusive(async()=>{
+      snapshot=null;
       const result=await bridge({action:'screen_observe'});
       const {png_base64,...metadata}=result;
-      return {metadata,png_base64};
+      const token=randomUUID();
+      snapshot={token,source:'screen',rect:{left:result.screen_left,top:result.screen_top,right:result.screen_right,bottom:result.screen_bottom},width:result.image_width,height:result.image_height,created:now()};
+      return {metadata:{...metadata,snapshot_id:token,valid_for_seconds:SNAPSHOT_VALID_SECONDS,coordinates:'image pixels, origin at top-left of this image',one_action_per_snapshot:true},png_base64};
     }),
-    rawClick:({screen_x,screen_y,button,count})=>exclusive(async()=>{
+    screenClick:({snapshot_id,x,y,button,count})=>exclusive(async()=>{
       enabled();
-      if(!Number.isInteger(screen_x)||!Number.isInteger(screen_y)||screen_x<0||screen_y<0)throw Error('screen_x and screen_y must be non-negative integers in absolute screen pixels.');
-      return bridge({action:'raw_click',screen_x,screen_y,button:button||'left',count:count||1});
+      const previous=snapshot;snapshot=null;
+      if(!previous||previous.source!=='screen'||snapshot_id!==previous.token||now()-previous.created>SNAPSHOT_VALID_SECONDS*1000)throw Error('Screen snapshot is missing, stale or already used. Observe the screen again.');
+      if(!Number.isInteger(x)||!Number.isInteger(y)||x<0||y<0||x>=previous.width||y>=previous.height)throw Error('Click coordinates are missing or outside the screen image. Supply x and y from a new screen observation.');
+      const screen_x=previous.rect.left+Math.floor(x*(previous.rect.right-previous.rect.left)/previous.width);
+      const screen_y=previous.rect.top+Math.floor(y*(previous.rect.bottom-previous.rect.top)/previous.height);
+      return bridge({action:'screen_click',expected_screen:previous.rect,screen_x,screen_y,button:button||'left',count:count||1});
     }),
     act:(action,args)=>exclusive(async()=>{
       enabled();
       const previous=snapshot;snapshot=null;
-      if(!previous||args.snapshot_id!==previous.token||now()-previous.created>SNAPSHOT_VALID_SECONDS*1000)throw Error('Snapshot is missing, stale or already used. Observe the target again.');
+      if(!previous||previous.source!=='window'||args.snapshot_id!==previous.token||now()-previous.created>SNAPSHOT_VALID_SECONDS*1000)throw Error('Window snapshot is missing, stale or already used. Observe the target again.');
       if(!['click','type','key','scroll'].includes(action))throw Error('Unsupported action.');
       const request={action,window_id:previous.window_id,expected_rect:previous.rect,expected_pid:previous.pid};
       if(action==='type'||action==='key')request.expected_focus=previous.focus;

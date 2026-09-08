@@ -189,7 +189,7 @@ npm run test:performance
 
 ## Windows 电脑操作技能（可选）
 
-附带 [`windows-computer-use`](skills/windows-computer-use/SKILL.md) 技能和 [`computer-tools`](computer-tools/README.md) 本地 MCP：查找并启动 Firefox/Chrome/Edge/Notepad、浏览器新窗口打开 URL、只读浏览器状态、窗口列表、前台截图、鼠标点击、中文输入、常用快捷键（含浏览器 Ctrl+L）、滚动。它补充当前 WorkBuddy 内置 ComputerUse 仅支持 macOS 的限制，不修改 WorkBuddy 程序或 Qwen 路由。
+附带 [`windows-computer-use`](skills/windows-computer-use/SKILL.md) 技能和 [`computer-tools`](computer-tools/README.md) 本地 MCP：查找并启动 Firefox/Chrome/Edge/Notepad、浏览器新窗口打开 URL、只读浏览器状态、多窗口切换、弹窗焦点恢复、前台/整屏截图、任务栏与系统托盘点击、中文输入、常用快捷键（含浏览器 Ctrl+L）和滚动。它补充当前 WorkBuddy 内置 ComputerUse 仅支持 macOS 的限制，不修改 WorkBuddy 程序或 Qwen 路由。
 
 安装步骤见 [computer-tools/README.md](computer-tools/README.md)。安装后在 WorkBuddy 新会话中说：
 
@@ -197,7 +197,7 @@ npm run test:performance
 
 > 使用 windows-computer-use，打开 Firefox，用 Google 搜索 Astra，新建窗口并截图确认搜索结果；不要仅凭启动成功就报告完成。
 
-每个输入动作必须依据最近截图，快照令牌 30 秒有效、只能用一次；窗口或前台发生变化时拒绝操作。Windows 拒绝激活窗口时，需要用户手动点击，不绕过限制。付款、发送、删除等最终动作仍需相应确认，不能把安装工具理解成全局自动批准。
+每个输入动作必须依据最近截图，快照令牌 120 秒有效、只能用一次；窗口或前台发生变化时拒绝操作。最小化窗口会先恢复，活动弹窗会返回实际目标 ID；Windows 仍拒绝焦点时，用新整屏截图点击已显示的目标或请用户手动激活，不绕过限制。付款、发送、删除等最终动作仍需相应确认，不能把安装工具理解成全局自动批准。
 
 只读截图也可能包含隐私内容；保持本地 Qwen 路由，并只选择任务相关窗口。模型如果无法实际看到截图，就不能继续猜测坐标操作。
 

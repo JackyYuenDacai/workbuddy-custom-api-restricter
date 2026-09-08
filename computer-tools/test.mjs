@@ -7,6 +7,7 @@ function fixture(options={}) {
   const bridge=async request=>{
     requests.push(request);
     if(request.action==='observe')return{window_id:'123',pid:44,rect:{left:-800,top:100,right:800,bottom:1300},image_width:800,image_height:600,png_base64:'test'};
+    if(request.action==='screen_observe')return{source:'screen',screen_left:-1920,screen_top:-200,screen_right:1920,screen_bottom:1080,image_width:1600,image_height:533,png_base64:'screen'};
     return {performed:true};
   };
   return {requests,controller:createController(bridge,{isStopped:()=>false,...options})};
@@ -17,6 +18,30 @@ test('Click coordinates map screenshot scale and negative monitor positions',asy
   await controller.act('click',{snapshot_id:observed.metadata.snapshot_id,x:100,y:50});
   assert.equal(requests.at(-1).screen_x,-600);assert.equal(requests.at(-1).screen_y,200);
   assert.equal(requests.at(-1).expected_pid,44);assert.deepEqual(requests.at(-1).expected_rect,{left:-800,top:100,right:800,bottom:1300});
+});
+test('Whole-desktop clicks map image pixels across negative-position monitors',async()=>{
+  const {controller,requests}=fixture();
+  const observed=await controller.screenObserve();
+  assert.equal(observed.metadata.coordinates,'image pixels, origin at top-left of this image');
+  assert.equal(observed.metadata.one_action_per_snapshot,true);
+  await controller.screenClick({snapshot_id:observed.metadata.snapshot_id,x:100,y:100,button:'right',count:1});
+  assert.deepEqual(requests.at(-1),{action:'screen_click',expected_screen:{left:-1920,top:-200,right:1920,bottom:1080},screen_x:-1680,screen_y:40,button:'right',count:1});
+});
+test('Window and whole-desktop snapshots cannot be mixed or reused',async()=>{
+  const {controller}=fixture();
+  const windowToken=(await controller.observe({window_id:'123'})).metadata.snapshot_id;
+  await assert.rejects(controller.screenClick({snapshot_id:windowToken,x:1,y:1}),/Screen snapshot/);
+  const screenToken=(await controller.screenObserve()).metadata.snapshot_id;
+  await assert.rejects(controller.act('click',{snapshot_id:screenToken,x:1,y:1}),/Observe the target/);
+  await assert.rejects(controller.screenClick({snapshot_id:screenToken,x:1,y:1}),/already used/);
+});
+test('Invalid whole-desktop coordinates consume the snapshot without backend input',async()=>{
+  const {controller,requests}=fixture();
+  const token=(await controller.screenObserve()).metadata.snapshot_id;
+  const count=requests.length;
+  await assert.rejects(controller.screenClick({snapshot_id:token,x:1600,y:0}),/outside/);
+  assert.equal(requests.length,count);
+  await assert.rejects(controller.screenClick({snapshot_id:token,x:1,y:1}),/already used/);
 });
 test('Snapshot is single-use, including after failed or invalid actions',async()=>{
   const {controller}=fixture();

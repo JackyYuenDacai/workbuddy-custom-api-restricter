@@ -6,7 +6,8 @@
 
 - 查找并启动 Firefox、Chrome、Edge、Notepad：注册表/常见目录/PATH 多来源查找，使用完整 exe 路径；不接受任意命令。
 - 用指定浏览器在新窗口打开 HTTP(S) URL；读取指定浏览器标题和可用的地址栏状态。
-- 列出窗口、尝试切换前台窗口。
+- 列出并依次切换多个窗口；恢复最小化窗口，自动转向目标拥有的可见活动弹窗。
+- 截取整个虚拟桌面并按一次性截图坐标操作任务栏、系统托盘、隐藏图标弹层和可见窗口。
 - 截取指定前台窗口，返回 MCP 图片，不默认保存截图。
 - 根据截图点击、双击、右键，输入中文/Unicode 文本。
 - 常用编辑/导航快捷键、鼠标滚动。
@@ -58,7 +59,7 @@ Copy-Item -LiteralPath .\skills\windows-computer-use -Destination $computerSkill
 
 ### 已安装用户升级
 
-MCP 注册指向本仓库的 `server.mjs`，源码更新后无需删除再注册。先比较仓库 `skills/windows-computer-use/SKILL.md` 与用户目录同名技能，保留自定义修改，备份旧文件后更新。随后保存任务并重启 WorkBuddy，让已启动的 MCP 进程重新加载；新会话中发现的工具应包含 `desktop_find_app`、`desktop_launch`、`desktop_browser_state`，共 10 个工具。仅 `Connected` 不证明旧进程已加载新工具。
+MCP 注册指向本仓库的 `server.mjs`，源码更新后无需删除再注册。先比较仓库 `skills/windows-computer-use/SKILL.md` 与用户目录同名技能，保留自定义修改，备份旧文件后更新。随后保存任务并重启 WorkBuddy，让已启动的 MCP 进程重新加载；新会话中发现的工具应包含 `desktop_find_app`、`desktop_launch`、`desktop_browser_state`、`desktop_screen_observe` 和 `desktop_screen_click`，共 13 个工具。仅 `Connected` 不证明旧进程已加载新工具。
 
 ## 使用示例
 
@@ -78,18 +79,20 @@ WorkBuddy 延迟加载工具时，先使用 ToolSearch 查找 `local-computer-to
 | `desktop_launch` | `app` 同上；浏览器可加 `url`，仅 HTTP(S)、无内嵌账号密码，最多 2000 字符；固定新窗口，无任意参数；Notepad 不接受 URL |
 | `desktop_browser_state` | 目标浏览器的 `window_id`；返回标题、可用的 `url` 或 `address_bar_text`，不改变焦点、不遍历网页文档表单 |
 | `desktop_windows` | 只列可见窗口；标题可能含隐私信息 |
-| `desktop_focus` | 不绕过 Windows 前台切换规则；失败时由用户手动点击目标窗口 |
+| `desktop_focus` | 恢复并置前窗口；可见活动弹窗优先，使用返回的 `activated_window_id` 继续；`focused=false` 时用整屏截图点击可见窗口或请用户手动激活 |
 | `desktop_observe` | 只捕获当前前台且完整显示的目标窗口，图片最大 1600×1200 |
 | `desktop_click` | 使用返回图片内坐标，最多双击，不能使用猜测的整屏坐标 |
 | `desktop_type_text` | 最多 2000 字符，禁止换行/控制字符，不借用剪贴板，不自动 Enter |
 | `desktop_key` | 仅 schema 中的常见编辑/导航键，新增浏览器专用 `CTRL+L`；不支持 Win+R 或任意组合 |
 | `desktop_scroll` | 必须传入截图内的 `x,y`，工具自动将指针移到目标正文/列表后滚动，不先点击；`amount` 正数向上、负数向下，单次 1–5 格 |
+| `desktop_screen_observe` | 截取全部显示器、可见窗口、任务栏、系统托盘和壳弹层；返回一次性 `snapshot_id` |
+| `desktop_screen_click` | 使用同次整屏截图的图片像素 `x,y` 点击；内部处理缩放和负坐标显示器，不接受盲猜绝对坐标 |
 
 每个输入动作需要最近截图的 `snapshot_id`：120 秒有效、一次性，返回的 `valid_for_seconds` 为准。有效期适应本地模型约 50 秒的推理等待；界面变化后仍需重新观察。动作前再次检查目标窗口、进程、前台状态及边界；失败后不自动重试输入。多显示器负坐标和截图缩放由工具转换。
 
 滚动会再次检查指针实际位置和该点所属的顶层窗口，防止窗口遮挡或用户移动鼠标后向错误目标发送滚轮。`performed=true` 仅表示输入发送成功，`content_movement_verified=false` 提醒调用方通过新截图比较内容位置。无变化时检查目标面板和滚动边界，不要盲目重复。升级后需重新连接 MCP 或重启 WorkBuddy，确认 `desktop_scroll` schema 包含必填 `x,y`。
 
-常规 GUI 操作使用 `desktop_observe`：只向模型返回目标窗口，最大 1600×1200。另一个 `windows-multiscreen-screenshot` 技能默认生成每屏及合并大图，不应用它替代这里的逐步窗口观察。
+常规 GUI 操作使用 `desktop_observe`：只向模型返回当前目标窗口，最大 1600×1200。跨窗口切换、任务栏、系统托盘及隐藏图标弹层使用 `desktop_screen_observe` → `desktop_screen_click`；第一次点击打开弹层后必须重新整屏观察再点击其中图标。Windows 仍只有一个键盘前台窗口，因此切换后要用新窗口 ID 重新观察，不能跨窗口复用 snapshot。
 
 启动应用会使旧截图令牌失效。`process_started=true` 只表示进程启动调用成功，`window_observed=true` 只表示检测到新窗口。它们均不证明页面加载完成；`page_verified` 固定为 `false`，需要调用者根据新截图另行核对。如果窗口出现较慢而工具没找到，先查看窗口列表，不盲目重复启动。
 

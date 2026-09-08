@@ -47,10 +47,17 @@ user.GetWindowRect.argtypes = [W.HWND, C.POINTER(Rect)]
 user.IsWindow.argtypes = [W.HWND]
 user.IsWindowVisible.argtypes = [W.HWND]
 user.IsIconic.argtypes = [W.HWND]
+user.IsWindowEnabled.argtypes = [W.HWND]
+user.GetLastActivePopup.argtypes = [W.HWND]
+user.GetLastActivePopup.restype = W.HWND
 user.GetWindowTextW.argtypes = [W.HWND, W.LPWSTR, C.c_int]
 user.GetWindowThreadProcessId.argtypes = [W.HWND, C.POINTER(W.DWORD)]
+user.GetWindow.argtypes = [W.HWND, W.UINT]
+user.GetWindow.restype = W.HWND
 user.SetForegroundWindow.argtypes = [W.HWND]
 user.ShowWindow.argtypes = [W.HWND, C.c_int]
+user.ShowWindowAsync.argtypes = [W.HWND, C.c_int]
+user.BringWindowToTop.argtypes = [W.HWND]
 user.GetCursorPos.argtypes = [C.POINTER(Point)]
 user.SetCursorPos.argtypes = [C.c_int, C.c_int]
 user.SetCursorPos.restype = W.BOOL
@@ -98,7 +105,9 @@ def window_info(window_id):
                 process_name = os.path.basename(image.value)
         finally:
             kernel.CloseHandle(handle)
+    owner = user.GetWindow(hwnd, 4)  # GW_OWNER; useful for modal/popup recovery.
     return {"window_id": str(hwnd), "title": title.value, "process": process_name, "pid": pid.value,
+            "owner_window_id": str(owner) if owner else None, "enabled": bool(user.IsWindowEnabled(hwnd)),
             "foreground": hwnd == user.GetForegroundWindow(), "minimized": bool(user.IsIconic(hwnd)),
             "rect": {key: getattr(rect, key) for key in ("left", "top", "right", "bottom")}}
 
@@ -117,6 +126,8 @@ def list_windows():
         return True
     callback = callback_type(collect)
     user.EnumWindows(callback, 0)
+    for z_order, info in enumerate(windows):
+        info["z_order"] = z_order
     return {"windows": windows}
 
 def screen_bounds():
@@ -196,12 +207,14 @@ def focus_window(window_id):
     foreground thread, and a synthetic Alt press) to legitimately gain the
     right to set the foreground window. This does not bypass UAC or elevation.
     """
-    hwnd = int(window_id)
+    requested_hwnd = int(window_id)
     info = window_info(window_id)
-    if info["minimized"]:
-        user.ShowWindow(hwnd, 9)  # SW_RESTORE
-    else:
-        user.ShowWindow(hwnd, 5)  # SW_SHOW
+    popup_hwnd = user.GetLastActivePopup(requested_hwnd)
+    hwnd = popup_hwnd if popup_hwnd and popup_hwnd != requested_hwnd and user.IsWindowVisible(popup_hwnd) else requested_hwnd
+    target_info = window_info(str(hwnd)) if hwnd != requested_hwnd else info
+    was_minimized = target_info["minimized"]
+    user.ShowWindowAsync(hwnd, 9 if was_minimized else 5)  # SW_RESTORE / SW_SHOW
+    raised = bool(user.BringWindowToTop(hwnd))
     fg = user.GetForegroundWindow()
     fg_thread = user.GetWindowThreadProcessId(fg, None) if fg else 0
     cur_thread = kernel.GetCurrentThreadId()
@@ -219,14 +232,17 @@ def focus_window(window_id):
     finally:
         if attached:
             user.AttachThreadInput(cur_thread, fg_thread, False)
-    focused = window_info(window_id)
-    if not focused["foreground"]:
-        raise ValueError("Windows denied focus. Ask the user to activate this window manually.")
-    return focused
+    focused = window_info(str(hwnd))
+    return {**focused, "was_minimized": was_minimized, "restored": not focused["minimized"],
+            "raised": raised, "focused": focused["foreground"],
+            "requested_window_id": str(requested_hwnd), "activated_window_id": str(hwnd),
+            "popup_redirected": hwnd != requested_hwnd,
+            "next_step": ("Observe this window before input." if focused["foreground"] else
+                          "The window was restored/raised but Windows denied keyboard focus. Observe the whole desktop and click the visible window, or ask the user to activate it manually.")}
 
 def dispatch(request):
     action = request.get("action")
-    if action in {"launch", "focus", "click", "type", "key", "scroll"} and Path(__file__).with_name("STOP").exists():
+    if action in {"launch", "focus", "screen_click", "click", "type", "key", "scroll"} and Path(__file__).with_name("STOP").exists():
         raise ValueError("Computer input is paused by the STOP file. Ask the user to remove it manually.")
     if action == "find_app":
         return find_app(request["app"])
@@ -307,19 +323,34 @@ def dispatch(request):
         image.thumbnail((1600, 1200))
         output = io.BytesIO()
         image.save(output, format="PNG")
-        return {"source": "screen", "width": image.width, "height": image.height,
+        return {"source": "screen", "image_width": image.width, "image_height": image.height,
                 "screen_left": left, "screen_top": top, "screen_right": right, "screen_bottom": bottom,
-                "coordinates": "image pixels, origin at top-left of the whole screen; map to absolute screen_x/screen_y for raw_click",
                 "png_base64": base64.b64encode(output.getvalue()).decode("ascii")}
-    if action == "raw_click":
-        if Path(__file__).with_name("STOP").exists():
-            raise ValueError("Computer input is paused by the STOP file. Ask the user to remove it manually.")
+    if action == "screen_click":
         x, y = request["screen_x"], request["screen_y"]
         left, top, right, bottom = screen_bounds()
-        if not (isinstance(x, int) and isinstance(y, int) and left <= x < right and top <= y < bottom):
-            raise ValueError("Raw click is outside the screen bounds.")
-        user.SetCursorPos(x, y)
+        expected = request.get("expected_screen")
+        current = {"left": left, "top": top, "right": right, "bottom": bottom}
+        if expected != current:
+            raise ValueError("Desktop bounds changed. Obtain a new whole-desktop screenshot.")
+        if not (type(x) is int and type(y) is int and left <= x < right and top <= y < bottom):
+            raise ValueError("Screen click is outside the desktop bounds.")
+        cursor = Point()
+        if not user.GetCursorPos(C.byref(cursor)):
+            raise ValueError("Could not verify the pointer position.")
+        corner_guard(cursor.x, cursor.y)
         corner_guard(x, y)
+        if not user.SetCursorPos(x, y):
+            raise ValueError("Could not move the pointer to the desktop target. Obtain a new screenshot.")
+        time.sleep(0.05)
+        if not user.GetCursorPos(C.byref(cursor)) or (cursor.x, cursor.y) != (x, y):
+            raise ValueError("Pointer moved before clicking. Obtain a new screenshot.")
+        hovered = user.WindowFromPoint(cursor)
+        root = user.GetAncestor(hovered, 2) if hovered else 0
+        if root:
+            target = window_info(root)
+            if target["process"].lower() in BLOCKED or "devtools" in target["title"].lower() or "developer tools" in target["title"].lower():
+                raise ValueError("Terminal and developer-console input is not supported. Use approved coding tools instead.")
         down, up = (0x0002, 0x0004) if request.get("button", "left") == "left" else (0x0008, 0x0010)
         count = request.get("count", 1)
         if count not in (1, 2):
