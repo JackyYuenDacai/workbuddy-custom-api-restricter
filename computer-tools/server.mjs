@@ -7,7 +7,7 @@ const controller=createController(createBridge(process.env.WORKBUDDY_COMPUTER_PY
 const server=new McpServer({name:'workbuddy-windows-computer-tools',version:'0.4.0'});
 const appName=z.enum(['firefox','chrome','edge','notepad']);
 const windowId=z.string().regex(/^\d+$/).max(20).describe('Window ID returned by desktop_windows.');
-const snapshotId=z.string().uuid().describe(`Fresh single-use snapshot_id returned by a desktop observation; expires after ${SNAPSHOT_VALID_SECONDS} seconds. Observe again if the content changed.`);
+const snapshotId=z.string().uuid().describe(`Fresh single-use snapshot_id returned by desktop_observe; expires after ${SNAPSHOT_VALID_SECONDS} seconds. Observe again if the content changed.`);
 const screenSnapshotId=z.string().uuid().describe(`Fresh single-use snapshot_id returned specifically by desktop_screen_observe; expires after ${SNAPSHOT_VALID_SECONDS} seconds.`);
 const mutation={readOnlyHint:false,destructiveHint:true,idempotentHint:false,openWorldHint:true};
 const wrap=handler=>async args=>{try{return{content:[{type:'text',text:JSON.stringify(await handler(args),null,2)}]};}catch(error){return{isError:true,content:[{type:'text',text:error.message}]};}};
