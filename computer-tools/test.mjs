@@ -102,6 +102,35 @@ test('Focus invalidates an existing screenshot',async()=>{
   await controller.focus({window_id:'123'});
   await assert.rejects(controller.act('key',{snapshot_id:token,key:'ENTER'}),/already used/);
 });
+
+test('Opening the tray invalidates both snapshot types and exposes backend evidence',async()=>{
+  const {controller,requests}=fixture();
+  const windowToken=(await controller.observe({window_id:'123'})).metadata.snapshot_id;
+  assert.deepEqual(await controller.openTray(),{performed:true});
+  assert.deepEqual(requests.at(-1),{action:'open_tray'});
+  await assert.rejects(controller.act('key',{snapshot_id:windowToken,key:'ENTER'}),/already used/);
+  const screenToken=(await controller.screenObserve()).metadata.snapshot_id;
+  await controller.openTray();
+  await assert.rejects(controller.screenClick({snapshot_id:screenToken,x:1,y:1}),/already used/);
+});
+
+test('STOP blocks opening the tray before invoking the backend',async()=>{
+  const {controller,requests}=fixture({isStopped:()=>true});
+  await assert.rejects(controller.openTray(),/paused/);
+  assert.equal(requests.length,0);
+});
+
+test('Tray failure never retries or preserves an earlier snapshot',async()=>{
+  let attempts=0;
+  const controller=createController(async request=>{
+    if(request.action==='screen_observe')return {screen_left:0,screen_top:0,screen_right:1920,screen_bottom:1080,image_width:1600,image_height:900};
+    attempts++;throw Error('Foreground changed');
+  },{isStopped:()=>false});
+  const token=(await controller.screenObserve()).metadata.snapshot_id;
+  await assert.rejects(controller.openTray(),/Foreground changed/);
+  await assert.rejects(controller.screenClick({snapshot_id:token,x:1,y:1}),/already used/);
+  assert.equal(attempts,1);
+});
 test('Actions do not overlap',async()=>{
   let release;
   const controller=createController(()=>new Promise(resolve=>{release=resolve;}));

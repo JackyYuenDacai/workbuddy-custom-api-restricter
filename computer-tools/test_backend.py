@@ -76,10 +76,10 @@ class ScrollTests(unittest.TestCase):
         self.info = {"window_id": "123", "rect": {"left": -800, "top": 100, "right": 800, "bottom": 1300}}
         self.request = {"action": "scroll", "window_id": "123", "screen_x": -600, "screen_y": 200, "amount": -3}
         self.user = MagicMock()
-        self.user.SetCursorPos.return_value = True
+        self.user.SetPhysicalCursorPos.return_value = True
         self.user.WindowFromPoint.return_value = 456
         self.user.GetAncestor.return_value = 123
-        self.user.GetCursorPos.side_effect = self.cursor_at_target
+        self.user.GetPhysicalCursorPos.side_effect = self.cursor_at_target
         for target, kwargs in [(backend, {"user": self.user})]:
             patcher = patch.multiple(target, **kwargs)
             patcher.start()
@@ -103,7 +103,7 @@ class ScrollTests(unittest.TestCase):
         for amount in [-5, -1, 1, 5]:
             with self.subTest(amount=amount):
                 result = backend.dispatch({**self.request, "amount": amount})
-                self.user.SetCursorPos.assert_called_with(-600, 200)
+                self.user.SetPhysicalCursorPos.assert_called_with(-600, 200)
                 item = self.send.call_args.args[0][0]
                 self.assertEqual(item.value.mi.dwFlags, 0x0800)
                 self.assertEqual(item.value.mi.mouseData, (amount * 120) & 0xffffffff)
@@ -114,19 +114,62 @@ class ScrollTests(unittest.TestCase):
                         {"screen_y": True}, {"amount": True}, {"amount": 0}, {"amount": 6}]:
             with self.subTest(changes=changes), self.assertRaises(ValueError):
                 backend.dispatch({**self.request, **changes})
-        self.user.SetCursorPos.assert_not_called()
+        self.user.SetPhysicalCursorPos.assert_not_called()
         self.send.assert_not_called()
 
     def test_pointer_move_failure_never_sends_wheel(self):
-        self.user.SetCursorPos.return_value = False
+        self.user.SetPhysicalCursorPos.return_value = False
         with self.assertRaisesRegex(ValueError, "Could not move"):
             backend.dispatch(self.request)
         self.send.assert_not_called()
 
-    def test_user_pointer_movement_never_sends_wheel(self):
-        self.user.GetCursorPos.side_effect = None
-        with self.assertRaisesRegex(ValueError, "Pointer moved"):
+    def test_failed_pointer_read_is_not_reported_as_movement(self):
+        self.user.GetPhysicalCursorPos.side_effect = None
+        self.user.GetPhysicalCursorPos.return_value = False
+        with self.assertRaisesRegex(ValueError, "Cannot read"):
             backend.dispatch(self.request)
+        self.send.assert_not_called()
+
+    def test_small_jitter_on_same_control_still_scrolls(self):
+        def jitter(pointer):
+            pointer._obj.x, pointer._obj.y = -599, 201
+            return True
+        self.user.GetPhysicalCursorPos.side_effect = jitter
+        result = backend.dispatch(self.request)
+        self.assertTrue(result["pointer_moved_by_tool"])
+        self.assertEqual(result["actual_screen_x"], -599)
+        self.send.assert_called_once()
+
+    def test_small_jitter_onto_another_control_does_not_scroll(self):
+        self.user.WindowFromPoint.side_effect = [456, 457]
+        with self.assertRaisesRegex(ValueError, "different control"):
+            backend.dispatch(self.request)
+        self.send.assert_not_called()
+
+    def test_pointer_change_after_tool_move_does_not_scroll(self):
+        def moved_after_wait(_):
+            def moved(pointer):
+                pointer._obj.x, pointer._obj.y = -570, 200
+                return True
+            self.user.GetPhysicalCursorPos.side_effect = moved
+        backend.time.sleep.side_effect = moved_after_wait
+        with self.assertRaisesRegex(ValueError, "Pointer changed"):
+            backend.dispatch(self.request)
+        self.send.assert_not_called()
+
+    def test_constrained_pointer_is_not_reported_as_user_movement(self):
+        def constrained(pointer):
+            pointer._obj.x, pointer._obj.y = -300, 200
+            return True
+        self.user.GetPhysicalCursorPos.side_effect = constrained
+        with self.assertRaisesRegex(ValueError, "did not reach"):
+            backend.dispatch(self.request)
+        self.send.assert_not_called()
+
+    def test_stop_created_during_preparation_prevents_scroll(self):
+        with patch.object(Path, "exists", side_effect=[False, False, True]):
+            with self.assertRaisesRegex(ValueError, "paused"):
+                backend.dispatch(self.request)
         self.send.assert_not_called()
 
     def test_overlay_never_receives_wheel(self):
@@ -145,24 +188,24 @@ class ScrollTests(unittest.TestCase):
         self.ensure.side_effect = ValueError("Emergency stop")
         with self.assertRaisesRegex(ValueError, "Emergency stop"):
             backend.dispatch(self.request)
-        self.user.SetCursorPos.assert_not_called()
+        self.user.SetPhysicalCursorPos.assert_not_called()
         self.send.assert_not_called()
 
 
 class ScreenClickTests(unittest.TestCase):
     def setUp(self):
         self.user = MagicMock()
-        self.user.SetCursorPos.return_value = True
+        self.user.SetPhysicalCursorPos.return_value = True
         self.user.WindowFromPoint.return_value = 456
         self.user.GetAncestor.return_value = 789
-        self.positions = [(-100, 50), (-1680, 40)]
+        self.positions = [(-100, 50), (-1680, 40), (-1680, 40)]
 
         def cursor(point):
             x, y = self.positions.pop(0)
             point._obj.x, point._obj.y = x, y
             return True
 
-        self.user.GetCursorPos.side_effect = cursor
+        self.user.GetPhysicalCursorPos.side_effect = cursor
         self.request = {"action": "screen_click", "expected_screen": {"left": -1920, "top": -200, "right": 1920, "bottom": 1080},
                         "screen_x": -1680, "screen_y": 40, "button": "left", "count": 1}
 
@@ -172,7 +215,7 @@ class ScreenClickTests(unittest.TestCase):
                 patch.object(backend, "user", self.user), patch.object(backend, "window_info", return_value=target), \
                 patch.object(backend, "send_inputs") as send, patch.object(backend.time, "sleep"):
             result = backend.dispatch(self.request)
-        self.user.SetCursorPos.assert_called_once_with(-1680, 40)
+        self.user.SetPhysicalCursorPos.assert_called_once_with(-1680, 40)
         send.assert_called_once()
         self.assertTrue(result["performed"])
 
@@ -181,7 +224,7 @@ class ScreenClickTests(unittest.TestCase):
                 patch.object(backend, "user", self.user), patch.object(backend, "send_inputs") as send:
             with self.assertRaisesRegex(ValueError, "bounds changed"):
                 backend.dispatch(self.request)
-        self.user.SetCursorPos.assert_not_called()
+        self.user.SetPhysicalCursorPos.assert_not_called()
         send.assert_not_called()
 
     def test_terminal_target_is_rejected_without_click(self):
@@ -192,6 +235,122 @@ class ScreenClickTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Terminal"):
                 backend.dispatch(self.request)
         send.assert_not_called()
+
+
+class TrayTests(unittest.TestCase):
+    def setUp(self):
+        self.taskbar = {"window_id": "100", "pid": 10, "process": "explorer.exe"}
+        self.overflow = {"window_id": "200", "pid": 10, "process": "explorer.exe"}
+        self.user = MagicMock()
+        for patcher in [patch.object(Path, "exists", return_value=False),
+                        patch.object(backend, "user", self.user), patch.object(backend.time, "sleep")]:
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.guard = self.mock("input_guard")
+        self.shell = self.mock("shell_window", return_value=self.taskbar)
+        self.popup = self.mock("tray_overflow", side_effect=[None, self.overflow])
+        self.focus_query = backend.tray_chevron_focused
+        self.focused = self.mock("tray_chevron_focused", return_value=True)
+        self.ensure = self.mock("ensure_target", return_value=self.taskbar)
+        self.send = self.mock("send_inputs")
+
+    def mock(self, name, **kwargs):
+        patcher = patch.object(backend, name, **kwargs)
+        value = patcher.start()
+        self.addCleanup(patcher.stop)
+        return value
+
+    def test_opens_verified_chevron_without_mouse_movement(self):
+        result = backend.dispatch({"action": "open_tray"})
+        self.assertTrue(result["opened"])
+        self.assertFalse(result["pointer_moved_by_tool"])
+        self.assertEqual(result["window_id"], "200")
+        codes = [[item.value.ki.wVk for item in call.args[0]] for call in self.send.call_args_list]
+        self.assertEqual(codes, [[0x5B, 0x42, 0x42, 0x5B], [13, 13]])
+        self.ensure.assert_called_once_with({"window_id": "100", "expected_pid": 10}, mutation=True)
+        self.user.SetPhysicalCursorPos.assert_not_called()
+
+    def test_already_open_tray_is_not_toggled_closed(self):
+        self.popup.side_effect = None
+        self.popup.return_value = self.overflow
+        result = backend.dispatch({"action": "open_tray"})
+        self.assertTrue(result["opened"])
+        self.assertTrue(result["already_open"])
+        self.send.assert_not_called()
+
+    def test_unknown_focused_icon_never_receives_enter(self):
+        self.focused.return_value = False
+        result = backend.dispatch({"action": "open_tray"})
+        self.assertFalse(result["opened"])
+        self.send.assert_called_once()
+        self.assertIn("desktop_screen_observe", result["next_step"])
+
+    def test_missing_taskbar_sends_no_input(self):
+        self.shell.return_value = None
+        result = backend.dispatch({"action": "open_tray"})
+        self.assertFalse(result["performed"])
+        self.send.assert_not_called()
+
+    def test_focus_switch_before_enter_does_not_type_into_another_app(self):
+        self.ensure.side_effect = ValueError("Target is not the visible foreground window")
+        with self.assertRaisesRegex(ValueError, "foreground"):
+            backend.dispatch({"action": "open_tray"})
+        self.send.assert_called_once()
+
+    def test_stop_and_corner_pause_prevent_shortcut(self):
+        with patch.object(Path, "exists", return_value=True):
+            with self.assertRaisesRegex(ValueError, "paused"):
+                backend.dispatch({"action": "open_tray"})
+        self.guard.side_effect = ValueError("Emergency stop")
+        with self.assertRaisesRegex(ValueError, "Emergency stop"):
+            backend.dispatch({"action": "open_tray"})
+        self.send.assert_not_called()
+
+    def test_input_delivery_does_not_prove_tray_opened(self):
+        self.popup.side_effect = None
+        self.popup.return_value = None
+        result = backend.dispatch({"action": "open_tray"})
+        self.assertTrue(result["performed"])
+        self.assertFalse(result["opened"])
+        self.assertEqual(self.send.call_count, 2)
+
+    def test_uia_timeout_is_unknown_not_permission_to_press_enter(self):
+        # Exercise the real helper instead of the open_tray fixture's mock.
+        with patch.object(backend.subprocess, "run", side_effect=subprocess.TimeoutExpired("powershell", 3)):
+            self.assertFalse(self.focus_query("100"))
+
+
+class WindowClickTests(unittest.TestCase):
+    enter_patch = ScrollTests.enter_patch
+    cursor_at_target = ScrollTests.cursor_at_target
+
+    def setUp(self):
+        ScrollTests.setUp(self)
+        self.request = {"action": "click", "window_id": "123", "screen_x": -600, "screen_y": 200}
+
+    # Only share fixture setup, not the scroll-specific test cases.
+    def test_click_rejects_failed_move_and_occlusion(self):
+        self.user.SetPhysicalCursorPos.return_value = False
+        with self.assertRaisesRegex(ValueError, "Could not move"):
+            backend.dispatch(self.request)
+        self.user.SetPhysicalCursorPos.return_value = True
+        self.user.GetAncestor.return_value = 789
+        with self.assertRaisesRegex(ValueError, "covered"):
+            backend.dispatch(self.request)
+        self.send.assert_not_called()
+
+    def test_invalid_click_options_never_move_pointer(self):
+        for options in [{"button": "middle"}, {"count": True}, {"count": 0}, {"count": 3}]:
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                backend.dispatch({**self.request, **options})
+        self.user.SetPhysicalCursorPos.assert_not_called()
+        self.send.assert_not_called()
+
+    def test_double_click_is_one_input_batch(self):
+        result = backend.dispatch({**self.request, "button": "right", "count": 2})
+        self.assertTrue(result["pointer_moved_by_tool"])
+        self.send.assert_called_once()
+        self.assertEqual([item.value.mi.dwFlags for item in self.send.call_args.args[0]], [8, 16, 8, 16])
 
 
 class FocusTests(unittest.TestCase):

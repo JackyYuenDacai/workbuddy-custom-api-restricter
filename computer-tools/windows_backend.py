@@ -61,6 +61,12 @@ user.BringWindowToTop.argtypes = [W.HWND]
 user.GetCursorPos.argtypes = [C.POINTER(Point)]
 user.SetCursorPos.argtypes = [C.c_int, C.c_int]
 user.SetCursorPos.restype = W.BOOL
+user.GetPhysicalCursorPos.argtypes = [C.POINTER(Point)]
+user.GetPhysicalCursorPos.restype = W.BOOL
+user.SetPhysicalCursorPos.argtypes = [C.c_int, C.c_int]
+user.SetPhysicalCursorPos.restype = W.BOOL
+user.FindWindowW.argtypes = [W.LPCWSTR, W.LPCWSTR]
+user.FindWindowW.restype = W.HWND
 user.WindowFromPoint.argtypes = [Point]
 user.WindowFromPoint.restype = W.HWND
 user.GetAncestor.argtypes = [W.HWND, W.UINT]
@@ -139,6 +145,61 @@ def corner_guard(x, y):
     if (x, y) in {(left, top), (right - 1, top), (left, bottom - 1), (right - 1, bottom - 1), (0, 0)}:
         raise ValueError("Emergency stop: pointer is in a screen corner. Move it away manually to resume.")
 
+def read_pointer():
+    point = Point()
+    if not user.GetPhysicalCursorPos(C.byref(point)):
+        raise ValueError("Cannot read the physical pointer position. No input sent; check the interactive desktop session.")
+    return point
+
+
+def input_guard():
+    if Path(__file__).with_name("STOP").exists():
+        raise ValueError("Computer input is paused by the STOP file. Ask the user to remove it manually.")
+    point = read_pointer()
+    corner_guard(point.x, point.y)
+    return point
+
+
+def move_pointer(x, y):
+    input_guard()
+    corner_guard(x, y)
+    if not user.SetPhysicalCursorPos(x, y):
+        raise ValueError("Could not move the pointer to the target. No click or scroll sent; obtain a new screenshot.")
+    point = read_pointer()
+    # Physical coordinates avoid DPI virtualization. Small device jitter is only
+    # accepted if the actual point still hits the same native control (below).
+    if max(abs(point.x - x), abs(point.y - y)) > 2:
+        raise ValueError(f"Pointer did not reach the target (requested {x},{y}; actual {point.x},{point.y}). "
+                         "No click or scroll sent; the pointer may be constrained by the app or desktop. Observe again.")
+    return point
+
+
+def pointer_target(x, y, settled):
+    point = input_guard()
+    if max(abs(point.x - x), abs(point.y - y), abs(point.x - settled.x), abs(point.y - settled.y)) > 2:
+        raise ValueError(f"Pointer changed during input preparation (target {x},{y}; actual {point.x},{point.y}). "
+                         "No click or scroll sent. Observe again; this alone does not identify who moved it.")
+    hovered = user.WindowFromPoint(point)
+    intended = user.WindowFromPoint(Point(x, y))
+    if not hovered or hovered != intended:
+        raise ValueError("Pointer is over a different control. No click or scroll sent; observe again.")
+    return point, user.GetAncestor(hovered, 2)
+
+
+def click_options(request):
+    button, count = request.get("button", "left"), request.get("count", 1)
+    if button not in ("left", "right") or type(count) is not int or count not in (1, 2):
+        raise ValueError("Invalid click button or count.")
+    return button, count
+
+
+def click_inputs(button, count):
+    down, up = (0x0002, 0x0004) if button == "left" else (0x0008, 0x0010)
+    # One SendInput batch keeps a double-click from racing a second pointer move.
+    send_inputs([Input(0, InputUnion(mi=MouseInput(0, 0, 0, flag, 0, 0)))
+                 for _ in range(count) for flag in (down, up)])
+
+
 def ensure_target(request, mutation=False):
     info = window_info(request["window_id"])
     if not info["foreground"] or info["minimized"]:
@@ -150,9 +211,7 @@ def ensure_target(request, mutation=False):
     if mutation:
         if info["process"].lower() in BLOCKED or "devtools" in info["title"].lower() or "developer tools" in info["title"].lower():
             raise ValueError("Terminal and developer-console input is not supported. Use approved coding tools instead.")
-        cursor = Point()
-        user.GetCursorPos(C.byref(cursor))
-        corner_guard(cursor.x, cursor.y)
+        input_guard()
     return info
 
 def send_inputs(items):
@@ -240,9 +299,74 @@ def focus_window(window_id):
             "next_step": ("Observe this window before input." if focused["foreground"] else
                           "The window was restored/raised but Windows denied keyboard focus. Observe the whole desktop and click the visible window, or ask the user to activate it manually.")}
 
+def shell_window(class_name):
+    hwnd = user.FindWindowW(class_name, None)
+    if not hwnd or not user.IsWindowVisible(hwnd):
+        return None
+    try:
+        info = window_info(hwnd)
+        return info if info["process"].lower() == "explorer.exe" else None
+    except ValueError:
+        return None
+
+
+def tray_overflow():
+    return shell_window("TopLevelWindowForOverflowXamlIsland") or shell_window("NotifyIconOverflowWindow")
+
+
+def tray_chevron_focused(window_id):
+    powershell = Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
+    script = Path(__file__).with_name("tray_focus.ps1").read_text(encoding="utf-8")
+    try:
+        result = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-Command",
+                                 "& {\n" + script + "\n} " + str(int(window_id))],
+                                capture_output=True, encoding="utf-8", errors="replace", timeout=3,
+                                creationflags=subprocess.CREATE_NO_WINDOW)
+        return result.returncode == 0 and json.loads(result.stdout).get("chevron_focused") is True
+    except (subprocess.TimeoutExpired, ValueError, OSError):
+        return False
+
+
+def open_tray():
+    input_guard()
+    overflow = tray_overflow()
+    if overflow:
+        return {"action": "open_tray", "performed": False, "already_open": True,
+                "opened": True, "window_id": overflow["window_id"], "pointer_moved_by_tool": False,
+                "next_step": "The hidden-icons tray is already open. Observe the screen before choosing an icon."}
+    taskbar = shell_window("Shell_TrayWnd")
+    if not taskbar:
+        return {"action": "open_tray", "performed": False, "opened": False,
+                "pointer_moved_by_tool": False,
+                "next_step": "Windows Explorer taskbar unavailable. Observe the screen to locate the notification area."}
+    input_guard()
+    # Win+B targets the notification area even when the taskbar is auto-hidden.
+    send_inputs([key_input(vk=0x5B), key_input(vk=0x42), key_input(vk=0x42, flags=2), key_input(vk=0x5B, flags=2)])
+    time.sleep(0.15)
+    expected = {"window_id": taskbar["window_id"], "expected_pid": taskbar["pid"]}
+    if not tray_chevron_focused(taskbar["window_id"]):
+        return {"action": "open_tray", "performed": True, "opened": False,
+                "method": "WIN+B", "pointer_moved_by_tool": False,
+                "next_step": "Notification-area shortcut sent, but the hidden-icons button was not identified. "
+                             "Use desktop_screen_observe and click the visible chevron if present; do not send Enter blindly."}
+    # The read-only UIA query may take time. Recheck foreground identity and
+    # pauses immediately before Enter, never send it to the original app.
+    ensure_target(expected, mutation=True)
+    send_inputs([key_input(vk=13), key_input(vk=13, flags=2)])
+    for _ in range(10):
+        time.sleep(0.05)
+        overflow = tray_overflow()
+        if overflow:
+            break
+    return {"action": "open_tray", "performed": True, "opened": bool(overflow),
+            "method": "WIN+B, verified chevron, ENTER", "pointer_moved_by_tool": False,
+            "window_id": overflow["window_id"] if overflow else None,
+            "next_step": "Observe the screen to verify the tray and choose an icon. Do not repeat the shortcut without observing."}
+
+
 def dispatch(request):
     action = request.get("action")
-    if action in {"launch", "focus", "screen_click", "click", "type", "key", "scroll"} and Path(__file__).with_name("STOP").exists():
+    if action in {"launch", "focus", "open_tray", "screen_click", "click", "type", "key", "scroll"} and Path(__file__).with_name("STOP").exists():
         raise ValueError("Computer input is paused by the STOP file. Ask the user to remove it manually.")
     if action == "find_app":
         return find_app(request["app"])
@@ -286,13 +410,13 @@ def dispatch(request):
         return {**latest, **state, "page_verified": False}
     if action == "windows":
         return list_windows()
+    if action == "open_tray":
+        return open_tray()
     if action == "cursor":
-        point = Point()
-        if not user.GetCursorPos(C.byref(point)):
-            raise ValueError("Cannot read pointer position.")
+        point = read_pointer()
         foreground = user.GetForegroundWindow()
         info = window_info(str(int(foreground))) if foreground else None
-        return {"screen_x": point.x, "screen_y": point.y,
+        return {"screen_x": point.x, "screen_y": point.y, "coordinates": "physical screen pixels",
                 "foreground_window": info,
                 "note": "Diagnostic only; obtain a fresh screenshot before any input."}
     if action == "focus":
@@ -327,6 +451,7 @@ def dispatch(request):
                 "screen_left": left, "screen_top": top, "screen_right": right, "screen_bottom": bottom,
                 "png_base64": base64.b64encode(output.getvalue()).decode("ascii")}
     if action == "screen_click":
+        button, count = click_options(request)
         x, y = request["screen_x"], request["screen_y"]
         left, top, right, bottom = screen_bounds()
         expected = request.get("expected_screen")
@@ -335,49 +460,34 @@ def dispatch(request):
             raise ValueError("Desktop bounds changed. Obtain a new whole-desktop screenshot.")
         if not (type(x) is int and type(y) is int and left <= x < right and top <= y < bottom):
             raise ValueError("Screen click is outside the desktop bounds.")
-        cursor = Point()
-        if not user.GetCursorPos(C.byref(cursor)):
-            raise ValueError("Could not verify the pointer position.")
-        corner_guard(cursor.x, cursor.y)
-        corner_guard(x, y)
-        if not user.SetCursorPos(x, y):
-            raise ValueError("Could not move the pointer to the desktop target. Obtain a new screenshot.")
-        time.sleep(0.05)
-        if not user.GetCursorPos(C.byref(cursor)) or (cursor.x, cursor.y) != (x, y):
-            raise ValueError("Pointer moved before clicking. Obtain a new screenshot.")
-        hovered = user.WindowFromPoint(cursor)
-        root = user.GetAncestor(hovered, 2) if hovered else 0
+        settled = move_pointer(x, y)
+        time.sleep(0.02)
+        cursor, root = pointer_target(x, y, settled)
         if root:
             target = window_info(root)
             if target["process"].lower() in BLOCKED or "devtools" in target["title"].lower() or "developer tools" in target["title"].lower():
                 raise ValueError("Terminal and developer-console input is not supported. Use approved coding tools instead.")
-        down, up = (0x0002, 0x0004) if request.get("button", "left") == "left" else (0x0008, 0x0010)
-        count = request.get("count", 1)
-        if count not in (1, 2):
-            raise ValueError("Invalid click count.")
-        for _ in range(count):
-            send_inputs([Input(0, InputUnion(mi=MouseInput(0, 0, 0, down, 0, 0))), Input(0, InputUnion(mi=MouseInput(0, 0, 0, up, 0, 0)))])
-            if count == 2:
-                time.sleep(0.07)
+        click_inputs(button, count)
         return {"action": action, "performed": True, "screen_x": x, "screen_y": y,
-                "button": request.get("button", "left"), "count": count,
+                "button": button, "count": count, "pointer_moved_by_tool": True,
+                "actual_screen_x": cursor.x, "actual_screen_y": cursor.y,
                 "next_step": "Observe the screen again to see the result (menus/flyouts are transient)."}
     info = ensure_target(request, mutation=True)
     if action == "click":
+        button, count = click_options(request)
         x, y = request["screen_x"], request["screen_y"]
         r = info["rect"]
-        if not (isinstance(x, int) and isinstance(y, int) and r["left"] <= x < r["right"] and r["top"] <= y < r["bottom"]):
+        if not (type(x) is int and type(y) is int and r["left"] <= x < r["right"] and r["top"] <= y < r["bottom"]):
             raise ValueError("Click is outside target window.")
-        user.SetCursorPos(x, y)
+        settled = move_pointer(x, y)
         ensure_target(request, mutation=True)
-        down, up = (0x0002, 0x0004) if request.get("button", "left") == "left" else (0x0008, 0x0010)
-        count = request.get("count", 1)
-        if count not in (1, 2):
-            raise ValueError("Invalid click count.")
-        for _ in range(count):
-            send_inputs([Input(0, InputUnion(mi=MouseInput(0, 0, 0, down, 0, 0))), Input(0, InputUnion(mi=MouseInput(0, 0, 0, up, 0, 0)))])
-            if count == 2:
-                time.sleep(0.07)
+        cursor, root = pointer_target(x, y, settled)
+        if root != int(info["window_id"]):
+            raise ValueError("Click target is covered by another window. Obtain a new screenshot.")
+        click_inputs(button, count)
+        return {"action": action, "window_id": info["window_id"], "performed": True,
+                "screen_x": x, "screen_y": y, "actual_screen_x": cursor.x, "actual_screen_y": cursor.y,
+                "pointer_moved_by_tool": True, "next_step": "Take a new screenshot before another action."}
     elif action == "type":
         text = request["text"]
         if not isinstance(text, str) or len(text) > 2000 or any(ord(c) < 32 or ord(c) == 127 for c in text):
@@ -409,20 +519,17 @@ def dispatch(request):
         r = info["rect"]
         if not (type(x) is int and type(y) is int and r["left"] <= x < r["right"] and r["top"] <= y < r["bottom"]):
             raise ValueError("Scroll coordinates are missing or outside the target window. Observe again and supply x,y inside the scrollable content.")
-        if not user.SetCursorPos(x, y):
-            raise ValueError("Could not move the pointer to the scroll area. Obtain a new screenshot.")
+        settled = move_pointer(x, y)
         # Allow hover routing to settle, then recheck before delivering any wheel input.
         time.sleep(0.05)
         ensure_target(request, mutation=True)
-        cursor = Point()
-        if not user.GetCursorPos(C.byref(cursor)) or (cursor.x, cursor.y) != (x, y):
-            raise ValueError("Pointer moved before scrolling. Obtain a new screenshot.")
-        hovered = user.WindowFromPoint(cursor)
-        if not hovered or user.GetAncestor(hovered, 2) != int(info["window_id"]):
+        cursor, root = pointer_target(x, y, settled)
+        if root != int(info["window_id"]):
             raise ValueError("Scroll area is covered by another window. Obtain a new screenshot.")
         send_inputs([Input(0, InputUnion(mi=MouseInput(0, 0, (amount * 120) & 0xffffffff, 0x0800, 0, 0)))])
         return {"action": action, "window_id": info["window_id"], "performed": True,
                 "screen_x": x, "screen_y": y, "amount": amount, "content_movement_verified": False,
+                "actual_screen_x": cursor.x, "actual_screen_y": cursor.y, "pointer_moved_by_tool": True,
                 "next_step": "Observe again and compare the content position. If unchanged, check the scroll area or end of content; do not repeat blindly."}
     else:
         raise ValueError("Unsupported desktop action.")

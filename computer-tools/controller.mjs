@@ -30,6 +30,7 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
   const controller={
     windows:()=>exclusive(()=>bridge({action:'windows'})),
     cursor:()=>exclusive(()=>bridge({action:'cursor'})),
+    openTray:()=>exclusive(async()=>{enabled();snapshot=null;return bridge({action:'open_tray'});}),
     findApp:({app})=>exclusive(()=>bridge({action:'find_app',app})),
     launch:({app,url})=>exclusive(async()=>{enabled();snapshot=null;return bridge({action:'launch',app,url});}),
     browserState:({window_id})=>exclusive(()=>bridge({action:'browser_state',window_id})),
