@@ -155,6 +155,38 @@ def key_input(vk=0, scan=0, flags=0):
     item.value.ki = KeyInput(vk, scan, flags, 0, 0)
     return item
 
+def focused_control(window_id):
+    powershell = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
+    script = Path(__file__).with_name('focus_state.ps1').read_text(encoding='utf-8')
+    try:
+        result = subprocess.run([str(powershell), '-NoProfile', '-NonInteractive', '-Command',
+                                 '& {\n' + script + '\n} ' + str(int(window_id))],
+                                capture_output=True, encoding='utf-8', errors='replace', timeout=3,
+                                creationflags=subprocess.CREATE_NO_WINDOW)
+        if result.returncode == 0:
+            state = json.loads(result.stdout)
+            if state.get('available') is True and state.get('runtime_id'):
+                return state
+    except (subprocess.TimeoutExpired, ValueError, OSError):
+        pass
+    return {'available': False, 'note': 'Focused control unavailable through UI Automation.'}
+
+def ensure_keyboard_target(request, info):
+    current = focused_control(info['window_id'])
+    expected = request.get('expected_focus') or {}
+    if current.get('available'):
+        if not current.get('within_target') or not current.get('keyboard_focus'):
+            raise ValueError('Keyboard focus is outside the target. Observe again.')
+        if current.get('is_password') or current.get('terminal'):
+            raise ValueError('Password, terminal or developer-console control is focused. No keyboard input sent.')
+    if expected.get('available'):
+        if not current.get('available') or any(current.get(k) != expected.get(k) for k in ('runtime_id', 'process_id', 'control_type')):
+            raise ValueError('Focused control changed since the screenshot. Observe again before typing or pressing keys.')
+    elif info.get('process', '').lower() in {'code.exe', 'code - insiders.exe', 'vscodium.exe'}:
+        raise ValueError('Editor keyboard target was not identified in the screenshot. Observe again; do not guess between chat and terminal.')
+    # UI Automation may take time. Check the foreground again immediately before input.
+    ensure_target(request, mutation=True)
+
 def focus_window(window_id):
     """Activate a window from a non-foreground helper process.
 
@@ -238,6 +270,15 @@ def dispatch(request):
         return {**latest, **state, "page_verified": False}
     if action == "windows":
         return list_windows()
+    if action == "cursor":
+        point = Point()
+        if not user.GetCursorPos(C.byref(point)):
+            raise ValueError("Cannot read pointer position.")
+        foreground = user.GetForegroundWindow()
+        info = window_info(str(int(foreground))) if foreground else None
+        return {"screen_x": point.x, "screen_y": point.y,
+                "foreground_window": info,
+                "note": "Diagnostic only; obtain a fresh screenshot before any input."}
     if action == "focus":
         return focus_window(request["window_id"])
     if action == "observe":
@@ -250,12 +291,13 @@ def dispatch(request):
         screen = (user.GetSystemMetrics(76), user.GetSystemMetrics(77))
         if rect["left"] < screen[0] or rect["top"] < screen[1] or rect["right"] > screen[0]+user.GetSystemMetrics(78) or rect["bottom"] > screen[1]+user.GetSystemMetrics(79):
             raise ValueError("Window is partially outside the desktop. Move it fully on screen first.")
+        focus = focused_control(info['window_id'])
         image = ImageGrab.grab(bbox=(rect["left"], rect["top"], rect["right"], rect["bottom"]), all_screens=True)
-        ensure_target({"window_id": info["window_id"], "expected_rect": rect})
+        ensure_target({"window_id": info["window_id"], "expected_rect": rect, "expected_pid": info['pid']})
         image.thumbnail((1600, 1200))
         output = io.BytesIO()
         image.save(output, format="PNG")
-        return {**info, "image_width": image.width, "image_height": image.height, "png_base64": base64.b64encode(output.getvalue()).decode("ascii")}
+        return {**info, "focused_control": focus, "image_width": image.width, "image_height": image.height, "png_base64": base64.b64encode(output.getvalue()).decode("ascii")}
     if action == "screen_observe":
         from PIL import ImageGrab
         left, top, right, bottom = screen_bounds()
@@ -309,6 +351,7 @@ def dispatch(request):
         text = request["text"]
         if not isinstance(text, str) or len(text) > 2000 or any(ord(c) < 32 or ord(c) == 127 for c in text):
             raise ValueError("Type text must be at most 2000 characters without newlines, tabs or control characters. Submit keys separately.")
+        ensure_keyboard_target(request, info)
         encoded = text.encode("utf-16-le")
         for offset in range(0, len(encoded), 128):
             ensure_target(request, mutation=True)
@@ -324,6 +367,7 @@ def dispatch(request):
             raise ValueError("Unsupported shortcut.")
         if name == "CTRL+L" and info["process"].lower() not in BROWSERS:
             raise ValueError("Ctrl+L is restricted to supported browser windows.")
+        ensure_keyboard_target(request, info)
         codes = [KEYS[part] for part in name.split("+")]
         send_inputs([key_input(vk=code) for code in codes] + [key_input(vk=code, flags=2) for code in reversed(codes)])
     elif action == "scroll":

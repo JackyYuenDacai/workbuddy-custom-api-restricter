@@ -29,6 +29,7 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
   function enabled(){if(isStopped())throw Error('Computer input is paused by the STOP file. Ask the user to remove it manually to resume.');}
   const controller={
     windows:()=>exclusive(()=>bridge({action:'windows'})),
+    cursor:()=>exclusive(()=>bridge({action:'cursor'})),
     findApp:({app})=>exclusive(()=>bridge({action:'find_app',app})),
     launch:({app,url})=>exclusive(async()=>{enabled();snapshot=null;return bridge({action:'launch',app,url});}),
     browserState:({window_id})=>exclusive(()=>bridge({action:'browser_state',window_id})),
@@ -38,7 +39,7 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
       const result=await bridge({action:'observe',window_id});
       const {png_base64,...metadata}=result;
       const token=randomUUID();
-      snapshot={token,window_id,pid:result.pid,rect:result.rect,width:result.image_width,height:result.image_height,created:now()};
+      snapshot={token,window_id,pid:result.pid,rect:result.rect,focus:result.focused_control,width:result.image_width,height:result.image_height,created:now()};
       return {metadata:{...metadata,snapshot_id:token,valid_for_seconds:SNAPSHOT_VALID_SECONDS,coordinates:'image pixels, origin at top-left of this image',one_action_per_snapshot:true},png_base64};
     }),
     screenObserve:()=>exclusive(async()=>{
@@ -57,6 +58,7 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
       if(!previous||args.snapshot_id!==previous.token||now()-previous.created>SNAPSHOT_VALID_SECONDS*1000)throw Error('Snapshot is missing, stale or already used. Observe the target again.');
       if(!['click','type','key','scroll'].includes(action))throw Error('Unsupported action.');
       const request={action,window_id:previous.window_id,expected_rect:previous.rect,expected_pid:previous.pid};
+      if(action==='type'||action==='key')request.expected_focus=previous.focus;
       if(action==='click'||action==='scroll'){
         if(!Number.isInteger(args.x)||!Number.isInteger(args.y)||args.x<0||args.y<0||args.x>=previous.width||args.y>=previous.height)throw Error('Click/scroll coordinates are missing or outside the screenshot. Supply x and y from a new observation.');
         request.screen_x=previous.rect.left+Math.floor(args.x*(previous.rect.right-previous.rect.left)/previous.width);
