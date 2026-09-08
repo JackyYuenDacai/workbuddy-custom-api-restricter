@@ -14,3 +14,5 @@
 models.json
 settings.json
 package-lock.json
+!/document-tools/package-lock.json
+!/computer-tools/package-lock.json

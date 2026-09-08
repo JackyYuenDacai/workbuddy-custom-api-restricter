@@ -1,0 +1,5 @@
+node_modules/
+local-install.json
+test-output/
+__pycache__/
+STOP

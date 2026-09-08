@@ -7,6 +7,7 @@
   "scripts": {
     "test": "node --test --test-name-pattern=\"^(only raw|model catalog|approved streaming|wrong model|request-transform|catalog helper)\" test.cjs",
     "test:installed": "node --test test.cjs",
+    "test:performance": "node --test tests/local-qwen-performance.test.cjs",
     "prepare:patch": "node patch.cjs prepare",
     "install:patch": "node patch.cjs install",
     "restore:patch": "node patch.cjs restore"
