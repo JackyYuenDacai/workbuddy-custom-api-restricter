@@ -17,7 +17,6 @@ description: 在 Windows 上通过 local-computer-tools MCP 操作用户指定�
 
 按需读取，不默认加载所有参考文件：
 - 启动应用、浏览器导航、填写或修改文字：读 [应用与输入](references/apps-and-input.md)。
-- 使用键盘导航、切换窗口、关闭弹层或选择快捷键：读 [Windows 快捷键](references/windows-shortcuts.md)。先核对工具支持范围，不把系统快捷键知识当作可调用能力。
 - 操作任务栏/托盘、目标窗口缺失/隐藏、登录后窗口变化、切换瞬时弹层，或第一次出现失败/超时：**先读** [壳界面与恢复](references/recovery-and-shell.md)。恢复用户指定应用时，发现并使用已有的窗口、整屏观察/点击与托盘工具，不必等用户另说“检查托盘”。
 
 ## 观察 → 一个动作 → 核对
