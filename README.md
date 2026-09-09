@@ -185,7 +185,7 @@ npm run test:performance
 
 脚本只读访问 TextGen 的 `http://127.0.0.1:5000/v1/internal/model/info`；**WorkBuddy 推理仍走 8317**，不会为了查性能改路由或发起压测。Node 脚本无额外 npm 依赖，GPU 查询需要本机 `nvidia-smi`。接口有认证时，通过 `TEXTGEN_METRICS_API_KEY` 环境变量提供密钥，勿提交到 Git。可用 `TEXTGEN_METRICS_URL` 指定另一本机端口的同名内部统计端点，不能指向云端或推理端点。
 
-注意：后端只保留最近最多 32 条**已结束**请求，未提供每条请求的完成时间，也没有逐 token 实时速度。无新记录不等于模型停机；GPU 统计是整卡占用。技能会区分这些数据口径，避免将历史速度、采集时间、模型内部 MTP 与外部草稿模型混为一谈。
+注意：更新后的 ExLlamaV3 默认保留最近 4096 条已结束/取消请求，可用 --exl3-performance-history N 调整；performance.history 提供容量、会话与淘汰计数，记录附带 UTC 时间和 sequence。旧运行进程可能仍只有 32 条，需重启 textgen 加载新代码。llm-performance-probe 现已改为只读监控，可将实际采集到的记录持久归档到 JSONL，不能恢复此前未采集且已丢弃的记录。仍没有逐 token 实时速度；无新记录不等于模型停机，GPU 统计是整卡占用。
 
 ## Windows 电脑操作技能（可选）
 
