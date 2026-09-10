@@ -1,0 +1,4 @@
+interface:
+  display_name: "QQ Message Export"
+  short_description: "Export QQ chats by group or friend ID and date interval"
+  default_prompt: "Use $qq-message-export to resolve the requested QQ chat and export its messages for the specified date interval through the local QCE service."

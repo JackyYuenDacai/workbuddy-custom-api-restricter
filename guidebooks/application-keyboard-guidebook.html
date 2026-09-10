@@ -1,0 +1,2378 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Windows 应用键盘操作指南</title><style>
+:root {color-scheme: light; --ink:#172c3d; --muted:#50677a; --line:#d5e0e7; --accent:#006878}
+* {box-sizing:border-box} html {scroll-behavior:smooth;scroll-padding-top:1rem}
+body {margin:0;background:#f3f6f8;color:var(--ink);font:16px/1.75 "Segoe UI","Microsoft YaHei",sans-serif}
+a {color:var(--accent)} header {background:#122f40;color:white;padding:3rem max(2rem,calc((100% - 1300px)/2))}
+header h1 {font-size:2.5rem;line-height:1.3;margin:0 0 1rem} header p {max-width:85ch}
+.badge {font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#8dd7dc}
+.layout {max-width:1400px;margin:auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:2rem;padding:2rem}
+aside {position:sticky;top:1rem;align-self:start;max-height:95vh;overflow:auto}
+nav a {display:block;padding:.3rem .6rem;text-decoration:none;border-radius:4px}
+nav a:hover,nav a:focus {background:#dceef0} label {font-weight:700} input {width:100%;font:inherit;padding:.6rem;border:1px solid #869eac;border-radius:6px;margin:.5rem 0}
+button {font:inherit;border:1px solid #869eac;border-radius:5px;background:white;padding:.35rem .65rem;cursor:pointer;margin:.3rem .2rem .3rem 0}
+.hint,#count {font-size:.85rem;color:var(--muted)} article {background:white;padding:2rem;margin-bottom:2rem;border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+h2 {font-size:1.8rem;border-bottom:3px solid #178899;padding-bottom:.6rem;line-height:1.4}
+h3 {margin-top:2rem;font-size:1.25rem} .table-wrap {overflow-x:auto;margin:1rem 0}
+table {border-collapse:collapse;width:100%;font-size:.92rem} th,td {border:1px solid var(--line);padding:.65rem .8rem;text-align:left;vertical-align:top}
+th {background:#e7f0f3} tr:nth-child(even) {background:#f8fafb} code {font:.88em/1.5 Consolas,monospace;background:#edf2f5;padding:.12rem .3rem;border-radius:3px}
+[hidden] {display:none!important} .toplink {font-size:.85rem} :focus-visible {outline:3px solid #b66000;outline-offset:3px}
+@media(max-width:850px){.layout{display:block;padding:1rem}aside{position:static;max-height:none;margin-bottom:1rem}nav{columns:2}article{padding:1rem}header{padding:2rem 1rem}header h1{font-size:2rem}}
+@media print {@page{size:A4;margin:15mm} body{background:white;font:10pt/1.5 "Microsoft YaHei",sans-serif}header{background:white;color:black;padding:0}.badge{color:#333}.layout{display:block;padding:0}aside,.toplink{display:none}article{display:block!important;border:0;border-radius:0;padding:0;margin:0;break-before:page}.table-wrap{overflow:visible}th,td{padding:4pt}tr{break-inside:avoid}thead{display:table-header-group}h2,h3{break-after:avoid}a{color:inherit;text-decoration:none}code{white-space:normal}header h1{font-size:23pt}}
+
+@media print { article[hidden] { display:block!important } }
+</style></head><body>
+<header id="top"><div class="badge">Keyboard Field Guide · 10 Applications</div><h1>Windows 应用键盘操作指南</h1><p>Office · QQ · VS Code · Firefox · Altium Designer。按应用、焦点和任务查找快捷键；包含命令入口、操作流程、结果检查与故障恢复。</p><p>版本 2026-09-09 · Windows 桌面版为主。Microsoft 与 Altium 章节核对官方资料；Firefox 官方页面本次返回验证页，QQ 按版本与本机设置确认。这是默认键位与工作流指南，不代表所有应用、插件和自定义键位已逐项实机测试。</p></header>
+<div class="layout"><aside aria-label="指南目录"><label for="search">搜索章节</label>
+<input id="search" type="search" placeholder="例如：Excel 公式 / Ctrl+F" autocomplete="off">
+<div id="count" role="status" aria-live="polite"></div><button id="clear" type="button">显示全部</button><button id="print" type="button">打印 / 保存 PDF</button>
+<p class="hint">输入关键词筛选章节；Ctrl+F 在可见正文中定位。打印包含全部章节。</p>
+<nav><a href="#navigation-and-recovery">Windows 快捷操作与故障排查</a><a href="#office-common">Office 共通操作：Windows 桌面版</a><a href="#word">Word 操作手册</a><a href="#excel">Excel 操作手册</a><a href="#powerpoint">PowerPoint 操作手册</a><a href="#outlook">Outlook 操作手册</a><a href="#onenote">OneNote 操作手册</a><a href="#access">Access 操作手册</a><a href="#vscode">Visual Studio Code — Windows</a><a href="#firefox">Mozilla Firefox — Windows</a><a href="#qq">QQ / QQNT — Windows</a><a href="#altium">Altium Designer — Windows</a></nav></aside><main><article id="navigation-and-recovery"><h2>Windows 快捷操作与故障排查</h2>
+<p>本章用于跨应用焦点、窗口、菜单、输入法和按键工具。应用专用键见对应章节；窗口枚举、截图令牌、托盘发现沿用当前 computer-use 技能。</p>
+<h3>系统导航入口</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>Windows 常见键</th>
+<th>使用条件与结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用切换</td>
+<td><code>Alt+Tab</code> / <code>Alt+Shift+Tab</code></td>
+<td>窗口顺序会变，核对切换器/前台标题；不能盲数次数</td>
+</tr>
+<tr>
+<td>任务视图</td>
+<td><code>Win+Tab</code></td>
+<td>可读标题选择目标，切换后重新观察</td>
+</tr>
+<tr>
+<td>聚焦任务栏</td>
+<td><code>Win+T</code></td>
+<td>方向键选择，再读应用名/预览，Enter 激活</td>
+</tr>
+<tr>
+<td>通知区域焦点</td>
+<td><code>Win+B</code></td>
+<td>方向键探索已显示图标；隐藏图标入口需确认后打开</td>
+</tr>
+<tr>
+<td>按任务栏序号激活</td>
+<td><code>Win+1</code>…<code>Win+9</code></td>
+<td>仅已知排列时；可能启动新实例或选择组内窗口</td>
+</tr>
+<tr>
+<td>显示桌面/恢复</td>
+<td><code>Win+D</code></td>
+<td>切换，会离开当前应用；不是关闭程序</td>
+</tr>
+<tr>
+<td>窗口系统菜单</td>
+<td><code>Alt+Space</code></td>
+<td>读取移动/大小/最小化等项目，助记字母依语言</td>
+</tr>
+<tr>
+<td>最大化/还原/最小化</td>
+<td><code>Win+Up/Down</code></td>
+<td>Down 结果依初始状态；观察后再决定下一步</td>
+</tr>
+<tr>
+<td>左右贴靠</td>
+<td><code>Win+Left/Right</code></td>
+<td>可能进入布局选择，核对窗口大小与内容可见性</td>
+</tr>
+<tr>
+<td>移到另一显示器</td>
+<td><code>Win+Shift+Left/Right</code></td>
+<td>多显示器顺序以实际布局为准</td>
+</tr>
+<tr>
+<td>关闭当前窗口</td>
+<td><code>Alt+F4</code></td>
+<td>可能关闭整个应用/弹保存提示；不用于恢复未知焦点</td>
+</tr>
+<tr>
+<td>切换输入语言</td>
+<td><code>Win+Space</code></td>
+<td>读当前输入法；切换后再次核对，不假定一次到英文</td>
+</tr>
+</tbody>
+</table></div>
+<p>系统组合键可能使前台离开目标窗口。WorkBuddy 的窗口约束若拒绝跨窗口动作，使用主技能提供的窗口选择接口；不要通过更换虚假的窗口 ID 绕过。动作完成后获取新目标状态/截图令牌。</p>
+<p>托盘提示常在图标上方，也可在旁边；将 tooltip 名称与图标位置关联。展开隐藏图标后读取提示或可访问性名称，不从模糊形状猜程序。工具提供 hover 才能悬停；没有 hover 时使用可读名称或键盘焦点证据，不以点击未知图标代替识别。</p>
+<h3>按键表示与 WorkBuddy 参数</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指南表示</th>
+<th>键盘工具字段示例</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+Shift+P</td>
+<td><code>key="CTRL+SHIFT+P"</code></td>
+<td>同时修饰一个主键，自动释放</td>
+</tr>
+<tr>
+<td>Ctrl+K → Ctrl+S</td>
+<td><code>sequence=["CTRL+K","CTRL+S"]</code></td>
+<td>两笔 chord，各笔之间释放</td>
+</tr>
+<tr>
+<td>Ctrl+K → Z</td>
+<td><code>sequence=["CTRL+K","Z"]</code></td>
+<td>第二笔不带 Ctrl</td>
+</tr>
+<tr>
+<td>P → W</td>
+<td><code>sequence=["P","W"]</code></td>
+<td>仅菜单路径已确认时，字母依次按；不是输入字符串</td>
+</tr>
+<tr>
+<td>Ctrl+加号</td>
+<td><code>key="CTRL+PLUS"</code></td>
+<td>主键区加号，隐含相应 Shift；数字小键盘是 ADD</td>
+</tr>
+<tr>
+<td>Alt+等号</td>
+<td><code>key="ALT+EQUAL"</code></td>
+<td>不加 Shift，常见 Excel 自动求和</td>
+</tr>
+<tr>
+<td>Shift+F10</td>
+<td><code>key="SHIFT+F10"</code></td>
+<td>当前控件的上下文菜单</td>
+</tr>
+</tbody>
+</table></div>
+<p>表格中的 <code>Ctrl+B/I/U</code> 是三个可选组合键的简写，必须展开为 <code>CTRL+B</code>、<code>CTRL+I</code> 或 <code>CTRL+U</code>；<code>Left/Right</code> 同理。不能把斜杠或箭头原样传给工具。</p>
+<p><code>local-computer-tools</code> 0.6.0 支持 Ctrl/Alt/Shift/Win 与左右修饰键、字母、数字、F1–F24、导航、数字小键盘、标点、多媒体和 <code>VK_0xNN</code>（08–FE）。罕见 VK 需先核实语义，不代表所有应用都实现该快捷键。Fn 通常由硬件处理，Ctrl+Alt+Delete、安全桌面/UAC 不是普通 SendInput 可保证的范围。</p>
+<p>一次调用仅传 key 或 sequence 之一；sequence 为 1–8 笔的一项已知快捷操作，不用它拼接搜索、输入、发送等多阶段宏。工具仍需有效窗口与新截图令牌，并检查焦点、敏感控件和 STOP。实际完整字段以当前 MCP schema 为准；上表只展示按键字段。运行中若仍看到旧 enum，重新连接 MCP 后发现 schema。</p>
+<p>文本用 Unicode 输入工具，按键用键盘工具。当前文字工具每次最多 2000 字符且不接收换行/控制字符；多段文字按应用已确认的换行方式连接，再核对完整内容。不要用数字 VK 枚举来代替任意 Unicode 文本。</p>
+<h3>同键不同义索引</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>键</th>
+<th>应用中的典型差异</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+P</td>
+<td>VS Code 快速打开；Word/Firefox 通常打印</td>
+</tr>
+<tr>
+<td>Ctrl+W</td>
+<td>Firefox 关闭标签；Altium 原理图画线</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>Word/Excel 查找；经典 Outlook 转发；Altium PCB 翻板</td>
+</tr>
+<tr>
+<td>Ctrl+L</td>
+<td>Firefox 地址栏；VS Code 选行；Word 左对齐；Excel 建表</td>
+</tr>
+<tr>
+<td>Ctrl+D</td>
+<td>Firefox 书签；VS Code 下个同词；Word 字体；Excel 向下填充；PowerPoint 复制对象</td>
+</tr>
+<tr>
+<td>Ctrl+T</td>
+<td>Firefox 新标签；Word 悬挂缩进；Excel 建表；PowerPoint 字体；OneNote 新分区</td>
+</tr>
+<tr>
+<td>Ctrl+1</td>
+<td>Word 单倍行距；Excel 格式；VS Code 编辑器组；OneNote 待办标记</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+V</td>
+<td>新版 Word 仅粘贴文本；经典 Outlook 移动项目；VS Code Markdown 预览</td>
+</tr>
+<tr>
+<td>Ctrl+Enter</td>
+<td>Word 分页；Excel 填充选区；PowerPoint 下一占位符/新页；Outlook 可能发送；QQ 依设置</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>Excel 编辑公式时切引用；Access 属性表；Altium 浮动面板</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>VS Code 调试；Word 定位；PowerPoint 放映；Firefox 刷新</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>Excel 计算；VS Code 断点；Word 域更新；OneNote 全部同步；Firefox 阅读模式</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>Firefox/OneNote 全屏；Excel 图表页；Access 导航窗格；VS Code 单步进入</td>
+</tr>
+</tbody>
+</table></div>
+<h3>故障诊断表</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>先检查</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>键已发送但无变化</td>
+<td>前台、模态框、控件焦点、程序忙碌</td>
+<td>读窗口/焦点，等明确状态再用菜单入口</td>
+</tr>
+<tr>
+<td>字母出现在正文里</td>
+<td>菜单未打开或 chord 已超时</td>
+<td>停止输入，确认意外改动后按任务需要恢复；改用命令面板</td>
+</tr>
+<tr>
+<td>Enter 后没有执行</td>
+<td>输入法候选或建议列表</td>
+<td>读取候选/字段状态，不自动第二次 Enter</td>
+</tr>
+<tr>
+<td>Ctrl+Space 无效</td>
+<td>中文输入法快捷键冲突</td>
+<td>用应用菜单调用原动作；不擅改系统热键</td>
+</tr>
+<tr>
+<td>标点组合触发错误</td>
+<td>OEM 键、键盘布局、Shift、主键区/小键盘</td>
+<td>采用命名键并核对当前布局与应用显示的绑定</td>
+</tr>
+<tr>
+<td>sequence 中途停止</td>
+<td>前台换窗、令牌/焦点保护、STOP</td>
+<td>看已完成笔数和当前菜单状态，重新观察后从正确状态继续</td>
+</tr>
+<tr>
+<td>截图黑屏/文字不可读</td>
+<td>最小化、受保护内容、捕获方式、缩放</td>
+<td>使用结构化名称/值或恢复窗口；缺少目标证据就说明具体缺口</td>
+</tr>
+<tr>
+<td>文件保存后仍不确定</td>
+<td>AutoSave、格式转换、只读、路径</td>
+<td>检查标题/保存状态和目标文件；别重复覆盖作验证</td>
+</tr>
+<tr>
+<td>发送无反馈</td>
+<td>发件箱/气泡/传输状态、错误提示</td>
+<td>先确认是否已提交，避免重复发送</td>
+</tr>
+</tbody>
+</table></div>
+<h3>验证一项本机快捷键</h3>
+<p>先从菜单、应用帮助或快捷键设置核对绑定与上下文，再在空白临时文档或可逆导航动作中验证。记录应用版本、语言、键盘布局、焦点、按键、预期变化和实际变化。聊天发送、数据库写入、ECO、运行代码和制造输出不作为快捷键探针。导航打开成功与用户业务目标完成分开记录。</p>
+<p>官方默认值与本机实测是两类证据；本手册不会把文档核对写成已经在用户各应用中全部试过。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="office-common"><h2>Office 共通操作：Windows 桌面版</h2>
+<p>本章适用于 Microsoft 365 / Office Windows 桌面应用。网页 Office、Mac、WPS、LibreOffice 不保证同键；远程桌面可能截获系统键。Outlook 先区分经典版与新版。应用自定义绑定、语言、输入法、插件优先于默认表。</p>
+<h3>图标不清时的入口</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>默认键</th>
+<th>正确使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>显示 Ribbon KeyTips</td>
+<td><code>Alt</code> 或 <code>F10</code></td>
+<td>先释放，读取当前屏幕上字母；再依次选标签和命令，不把整个路径同时按住</td>
+</tr>
+<tr>
+<td>搜索应用命令</td>
+<td><code>Alt+Q</code></td>
+<td>支持的现代 Office 中进入 Search/Tell Me；确认是应用命令搜索，不是文档查找</td>
+</tr>
+<tr>
+<td>窗格循环</td>
+<td><code>F6</code> / <code>Shift+F6</code></td>
+<td>正文/工作表、Ribbon、状态栏、任务窗格等；次序随布局变化</td>
+</tr>
+<tr>
+<td>当前控件组导航</td>
+<td><code>Tab</code> / <code>Shift+Tab</code>、方向键</td>
+<td>核对焦点框/控件名称，不按固定 Tab 次数</td>
+</tr>
+<tr>
+<td>上下文菜单</td>
+<td><code>Shift+F10</code> / <code>APPS</code></td>
+<td>根据当前文字、单元格、对象或列表选择打开</td>
+</tr>
+<tr>
+<td>Ribbon 折叠/展开</td>
+<td><code>Ctrl+F1</code></td>
+<td>切换状态；勿在未知状态重复按</td>
+</tr>
+<tr>
+<td>关闭当前弹层</td>
+<td><code>Esc</code></td>
+<td>一层一次；可能取消编辑，不是通用退出全部操作</td>
+</tr>
+<tr>
+<td>帮助</td>
+<td><code>F1</code></td>
+<td>可能打开帮助任务窗格/网页；不等于业务操作完成</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>KeyTips 流程</strong>：确认应用与文档 → Alt → 新观察读取标签字母 → 按字母 → 新观察读取命令字母 → 选择 → 核对对话框/结果。英文版常见 File/Home/Insert/Review/View 字母为 F/H/N/R/W，但不要把它们当作跨语言保证。若某版支持 <code>Alt+Q</code>，可以直接搜索“另存为”“插入表格”“选择窗格”等本地化命令；选择前核对具体命令，搜索结果可能含帮助条目。</p>
+<p><code>sequence</code> 适合已经核实且仍在同一窗口的一项短快捷操作；KeyTips 未确认、菜单需等待、弹窗更换前台窗口时拆开操作。序列中断后检查已打开的菜单，不重发完整链。</p>
+<h3>文档、剪贴板和保存</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>常见键</th>
+<th>边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开</td>
+<td><code>Ctrl+O</code></td>
+<td>可能先进入 Backstage；核对本地/云端路径</td>
+</tr>
+<tr>
+<td>新建</td>
+<td><code>Ctrl+N</code></td>
+<td>新文档/工作簿/演示文稿；Outlook 依当前模块，新建对象可能不同</td>
+</tr>
+<tr>
+<td>保存</td>
+<td><code>Ctrl+S</code></td>
+<td>初次保存可能出现对话框；Access 数据记录与对象设计另有语义</td>
+</tr>
+<tr>
+<td>另存为</td>
+<td><code>F12</code>（Word/Excel/PowerPoint 桌面版）</td>
+<td>核对路径、格式和覆盖提示；其他应用不套用</td>
+</tr>
+<tr>
+<td>打印入口</td>
+<td><code>Ctrl+P</code></td>
+<td>打开预览不等于已经打印；核对打印机、范围、份数后才最终打印</td>
+</tr>
+<tr>
+<td>关闭当前文档</td>
+<td><code>Ctrl+F4</code></td>
+<td>可能有未保存提示；不默认丢弃</td>
+</tr>
+<tr>
+<td>复制/剪切/粘贴</td>
+<td><code>Ctrl+C/X/V</code></td>
+<td>先确认选区和剪贴板来源；V 可能携带格式、公式或链接</td>
+</tr>
+<tr>
+<td>撤销</td>
+<td><code>Ctrl+Z</code></td>
+<td>只撤销明确属于当前任务的最近操作；云协作和数据库提交不保证可撤销</td>
+</tr>
+<tr>
+<td>重做/重复</td>
+<td><code>Ctrl+Y</code></td>
+<td>不总是重做；可能重复最近动作</td>
+</tr>
+</tbody>
+</table></div>
+<p>保存对话框中可用 <code>Ctrl+L</code> / <code>Alt+D</code> 聚焦路径栏（以当前对话框为准），但<strong>不是所有 Office 正文的地址栏快捷键</strong>。确认“文件名”控件后输入文件名，明确选择格式，再执行保存。观察文档标题/保存状态；有文件工具时验证目标文件存在、扩展名正确。不要仅因对话框消失就宣称文件格式正确。</p>
+<p>AutoSave 打开时，修改可能立即同步；Ctrl+S 不是唯一写入时点。受保护视图、只读、共享权限、密码或 UAC 不能靠快捷键绕过，也不要为使快捷键成功自动启用宏。</p>
+<h3>键名、布局与多行</h3>
+<p><code>Ctrl+Shift+&gt;</code> 是字符表示；美式键盘常用工具参数 <code>CTRL+SHIFT+PERIOD</code>。<code>Ctrl+;</code> 为 <code>CTRL+SEMICOLON</code>，<code>Ctrl+Shift+:</code> 对应 <code>CTRL+SHIFT+SEMICOLON</code>；<code>Ctrl+~</code> 对应 <code>CTRL+SHIFT+BACKTICK</code>。其他布局用应用菜单核对，不能假设字符=同一物理键。</p>
+<p>Ctrl 加主键区加号用 <code>CTRL+PLUS</code> / <code>CTRL++</code>；数字小键盘加号是 <code>CTRL+ADD</code>。<code>NUMPAD_ENTER</code>、<code>NUMPAD0</code>…<code>NUMPAD9</code> 与主键区数字/Enter 不同。公式和文字用 Unicode 输入工具；快捷键工具不是任意文本输入器。</p>
+<p>换行需读对应应用：Word Enter 新段落、Shift+Enter 软换行；Excel Alt+Enter 单元格内换行；Outlook Ctrl+Enter 可能发送邮件。不能跨应用照搬。</p>
+<h3>完成检查</h3>
+<p>导航：文档身份 + 实际目标位置。编辑：目标选区 + 内容/公式/对象属性。保存：路径/格式 + 保存状态。打印/发送/发布：按用户已有授权执行一次，再核对输出状态；失败/超时不自动重复最终动作。</p>
+<p>Microsoft 来源及版本说明见各应用章节。指南覆盖常用完整工作流，不保证每个历史版本、插件或自定义功能的所有键位。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="word"><h2>Word 操作手册</h2>
+<p>先读 <a href="#office-common">Office 共通操作</a>。适用于 Windows 桌面 Word；区分正文、导航窗格、表格、页眉页脚、批注编辑框和对话框。</p>
+<h3>阅读、定位和选择</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导航/查找</td>
+<td><code>Ctrl+F</code></td>
+<td>输入关键词，检查结果和当前位置</td>
+</tr>
+<tr>
+<td>替换</td>
+<td><code>Ctrl+H</code></td>
+<td>先检查查找条件、格式和范围；不默认全部替换</td>
+</tr>
+<tr>
+<td>转到页/节/书签等</td>
+<td><code>Ctrl+G</code> / <code>F5</code></td>
+<td>确认 Go To 类型，再输入目标</td>
+</tr>
+<tr>
+<td>文档首/尾</td>
+<td><code>Ctrl+Home</code> / <code>Ctrl+End</code></td>
+<td>正文焦点；窗格中可能是列表首尾</td>
+</tr>
+<tr>
+<td>上/下单词</td>
+<td><code>Ctrl+Left</code> / <code>Ctrl+Right</code></td>
+<td>编辑光标移动</td>
+</tr>
+<tr>
+<td>上/下段落</td>
+<td><code>Ctrl+Up</code> / <code>Ctrl+Down</code></td>
+<td>核对目标段落</td>
+</tr>
+<tr>
+<td>扩展字符/单词选区</td>
+<td><code>Shift+方向键</code> / <code>Ctrl+Shift+Left/Right</code></td>
+<td>核对选区首尾</td>
+</tr>
+<tr>
+<td>选到行首/行尾</td>
+<td><code>Shift+Home</code> / <code>Shift+End</code></td>
+<td>视觉行，不一定完整段落</td>
+</tr>
+<tr>
+<td>扩展到文档首/尾</td>
+<td><code>Ctrl+Shift+Home/End</code></td>
+<td>很大选区；修改前核对</td>
+</tr>
+<tr>
+<td>全选</td>
+<td><code>Ctrl+A</code></td>
+<td>焦点在正文或当前字段，作用域不同</td>
+</tr>
+<tr>
+<td>返回上次编辑位置</td>
+<td><code>Shift+F5</code></td>
+<td>核对实际定位，不假定与上次阅读位置相同</td>
+</tr>
+</tbody>
+</table></div>
+<h3>样式和排版</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗体/斜体/下划线</td>
+<td><code>Ctrl+B/I/U</code></td>
+<td>切换；无选区时影响后续输入</td>
+</tr>
+<tr>
+<td>字体对话框</td>
+<td><code>Ctrl+D</code></td>
+<td>用数值和控件名称核对字体/字号</td>
+</tr>
+<tr>
+<td>字号增/减 1 磅</td>
+<td><code>Ctrl+]</code> / <code>Ctrl+[</code></td>
+<td>工具为 RBRACKET/LBRACKET</td>
+</tr>
+<tr>
+<td>居中/左/右/两端对齐</td>
+<td><code>Ctrl+E/L/R/J</code></td>
+<td>段落级，不是整页布局</td>
+</tr>
+<tr>
+<td>单倍/双倍/1.5 倍行距</td>
+<td><code>Ctrl+1/2/5</code></td>
+<td>当前段落或选中段落</td>
+</tr>
+<tr>
+<td>增/减段落缩进</td>
+<td><code>Ctrl+M</code> / <code>Ctrl+Shift+M</code></td>
+<td>不用空格模拟缩进</td>
+</tr>
+<tr>
+<td>悬挂缩进/减小</td>
+<td><code>Ctrl+T</code> / <code>Ctrl+Shift+T</code></td>
+<td>核对标尺/段落设置</td>
+</tr>
+<tr>
+<td>正文样式</td>
+<td><code>Ctrl+Shift+N</code></td>
+<td>应用 Normal，不保证删除所有直接格式</td>
+</tr>
+<tr>
+<td>标题 1/2/3</td>
+<td><code>Ctrl+Alt+1/2/3</code></td>
+<td>优先真实标题样式，便于导航和目录</td>
+</tr>
+<tr>
+<td>应用样式入口</td>
+<td><code>Ctrl+Shift+S</code></td>
+<td>样式名称依本地化和模板</td>
+</tr>
+<tr>
+<td>显示格式标记</td>
+<td><code>Ctrl+Shift+8</code></td>
+<td>¶ 显示/隐藏；不是插入段落符</td>
+</tr>
+<tr>
+<td>清除直接字符格式</td>
+<td><code>Ctrl+Space</code></td>
+<td>中文环境可能被输入法占用；改用命令搜索</td>
+</tr>
+<tr>
+<td>清除直接段落格式</td>
+<td><code>Ctrl+Q</code></td>
+<td>不当作退出程序</td>
+</tr>
+<tr>
+<td>切换大小写</td>
+<td><code>Shift+F3</code></td>
+<td>核对所选文字，中文一般不受影响</td>
+</tr>
+</tbody>
+</table></div>
+<h3>插入、表格和审阅</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新段落/软换行</td>
+<td><code>Enter</code> / <code>Shift+Enter</code></td>
+<td>两者有不同段落样式与间距结果</td>
+</tr>
+<tr>
+<td>分页符</td>
+<td><code>Ctrl+Enter</code></td>
+<td>不用多次 Enter 撑到下一页</td>
+</tr>
+<tr>
+<td>超链接</td>
+<td><code>Ctrl+K</code></td>
+<td>核对显示文本和链接地址</td>
+</tr>
+<tr>
+<td>脚注/尾注</td>
+<td><code>Ctrl+Alt+F</code> / <code>Ctrl+Alt+D</code></td>
+<td>依模板编号，核对位置</td>
+</tr>
+<tr>
+<td>表格下/上一格</td>
+<td><code>Tab</code> / <code>Shift+Tab</code></td>
+<td>最后一格的 Tab 会新增一行</td>
+</tr>
+<tr>
+<td>表格内插入制表符</td>
+<td><code>Ctrl+Tab</code></td>
+<td>不离开单元格</td>
+</tr>
+<tr>
+<td>拼写/编辑器</td>
+<td><code>F7</code></td>
+<td>当前版本可能显示 Editor；建议不是自动接受</td>
+</tr>
+<tr>
+<td>插入批注</td>
+<td><code>Ctrl+Alt+M</code></td>
+<td>某些现代批注需要 Post；创建编辑框≠已发布</td>
+</tr>
+<tr>
+<td>修订开/关</td>
+<td><code>Ctrl+Shift+E</code></td>
+<td>先确认当前状态与用户意图，别无意关闭审阅</td>
+</tr>
+<tr>
+<td>更新所选域</td>
+<td><code>F9</code></td>
+<td>链接、目录和域可能变化；核对提示与结果</td>
+</tr>
+<tr>
+<td>域代码/结果切换</td>
+<td><code>Alt+F9</code></td>
+<td>改显示模式，不等于刷新数据</td>
+</tr>
+</tbody>
+</table></div>
+<p>Microsoft 365 新版中 <code>Ctrl+Shift+V</code> 通常是“仅粘贴文本”；旧版曾用于粘贴格式，不能按旧经验操作。Paste Special/Format Painter 用菜单或命令搜索确认当前绑定。</p>
+<h3>工作流</h3>
+<p><strong>修改特定段落</strong>：Ctrl+F 搜索唯一片段 → 核对页码/前后文 → 回到正文并准确选择 → 输入替换 → 核对内容及样式 → 按请求保存。查找框仍有焦点时 Ctrl+A 只会选搜索词。</p>
+<p><strong>制作结构化文档</strong>：输入标题/正文 → 用标题样式分级 → 插入真正分页符和表格 → 命令搜索插入目录 → 更新并查看分页 → 保存。不要用一串空格、Tab 和空段落模仿布局。</p>
+<p><strong>审阅并保留修订</strong>：确认文档/修订状态 → 开启或保留 Track Changes → 编辑 → 按需批注 → 阅读审阅窗格 → 保存；不自动接受所有修订。</p>
+<p><strong>导出 PDF</strong>：保存原稿 → F12 或命令搜索另存为/导出 → 核对 PDF 类型、路径及范围 → 执行 → 用可用文件/预览工具核对页数、分页、表格和文字。快捷键完成保存不证明视觉排版正确。</p>
+<p>来源：<a href="https://support.microsoft.com/en-us/accessibility/word/keyboard-shortcuts-in-word">Microsoft Word shortcuts</a>，2026-09-09 查阅 Windows 相关内容。未在用户实际文档试键。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="excel"><h2>Excel 操作手册</h2>
+<p>先读 <a href="#office-common">Office 共通操作</a>。焦点状态至少分：单元格选择、单元格编辑、公式栏、名称框、筛选菜单、图表/形状与对话框。名称框/公式栏文字与行列标题比猜单元格坐标可靠。</p>
+<h3>导航与选择</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>转到单元格/范围</td>
+<td><code>Ctrl+G</code> / <code>F5</code></td>
+<td>输入 <code>D12</code>、<code>A1:D20</code> 或命名范围；核对名称框/选区</td>
+</tr>
+<tr>
+<td>查找/替换</td>
+<td><code>Ctrl+F/H</code></td>
+<td>核对工作表/工作簿、公式/值、大小写与完整单元格匹配</td>
+</tr>
+<tr>
+<td>当前区域边界</td>
+<td><code>Ctrl+方向键</code></td>
+<td>空白行列会改变落点；不等于表格最后记录</td>
+</tr>
+<tr>
+<td>工作表起点</td>
+<td><code>Ctrl+Home</code></td>
+<td>通常 A1，冻结窗格可能影响可视位置</td>
+</tr>
+<tr>
+<td>最后使用单元格</td>
+<td><code>Ctrl+End</code></td>
+<td>含格式残留，不能当成真实数据末行</td>
+</tr>
+<tr>
+<td>扩展到区域边界</td>
+<td><code>Ctrl+Shift+方向键</code></td>
+<td>核对是否跨越空白/隐藏区</td>
+</tr>
+<tr>
+<td>选择整列/整行</td>
+<td><code>Ctrl+Space</code> / <code>Shift+Space</code></td>
+<td>输入法可能截获 Ctrl+Space；编辑模式下不同</td>
+</tr>
+<tr>
+<td>当前区域/全表</td>
+<td><code>Ctrl+A</code></td>
+<td>依上下文和次数，不能盲认全表</td>
+</tr>
+<tr>
+<td>前/后工作表</td>
+<td><code>Ctrl+PageUp/PageDown</code></td>
+<td>核对标签，注意隐藏工作表</td>
+</tr>
+<tr>
+<td>当前窗格切换</td>
+<td><code>F6</code> / <code>Shift+F6</code></td>
+<td>包括 Ribbon、窗格与工作表</td>
+</tr>
+</tbody>
+</table></div>
+<h3>输入、公式和计算</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编辑活动单元格</td>
+<td><code>F2</code></td>
+<td>编辑已有内容；直接打字通常覆盖整格</td>
+</tr>
+<tr>
+<td>接受/取消当前编辑</td>
+<td><code>Enter</code> / <code>Esc</code></td>
+<td>Enter 后移动方向可配置；Esc 取消未提交编辑</td>
+</tr>
+<tr>
+<td>单元格内换行</td>
+<td><code>Alt+Enter</code></td>
+<td>不会自动开启所有需要的行高/换行显示</td>
+</tr>
+<tr>
+<td>同一内容填入选区</td>
+<td><code>Ctrl+Enter</code></td>
+<td>会写多个格，先核对范围</td>
+</tr>
+<tr>
+<td>向下/右填充</td>
+<td><code>Ctrl+D/R</code></td>
+<td>用选区首行/列覆盖其余内容，公式相对引用会调整</td>
+</tr>
+<tr>
+<td>绝对/相对引用循环</td>
+<td><code>F4</code></td>
+<td>公式编辑中 <code>$A$1 → A$1 → $A1 → A1</code>；非编辑时可能重复动作</td>
+</tr>
+<tr>
+<td>自动求和</td>
+<td><code>Alt+=</code>（<code>ALT+EQUAL</code>）</td>
+<td>核对建议范围，不能直接相信自动识别</td>
+</tr>
+<tr>
+<td>插入函数对话框</td>
+<td><code>Shift+F3</code></td>
+<td>核对函数名、参数和区域分隔符</td>
+</tr>
+<tr>
+<td>显示公式/结果</td>
+<td><code>Ctrl+BACKTICK</code></td>
+<td>依键盘布局；不是计算</td>
+</tr>
+<tr>
+<td>日期/时间常量</td>
+<td><code>Ctrl+;</code> / <code>Ctrl+Shift+;</code></td>
+<td>插入当前值，不是动态 TODAY/NOW 公式</td>
+</tr>
+<tr>
+<td>计算打开的工作簿</td>
+<td><code>F9</code></td>
+<td>编辑公式时可能把选中表达式求值成常量！先退出编辑</td>
+</tr>
+<tr>
+<td>计算活动工作表</td>
+<td><code>Shift+F9</code></td>
+<td>核对计算模式与实际结果</td>
+</tr>
+<tr>
+<td>强制完整计算</td>
+<td><code>Ctrl+Alt+F9</code></td>
+<td>可能耗时，按需求使用</td>
+</tr>
+</tbody>
+</table></div>
+<h3>格式、表格与数据</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设置单元格格式</td>
+<td><code>Ctrl+1</code></td>
+<td>数字格式、对齐、边框等；核对选区</td>
+</tr>
+<tr>
+<td>粗体/斜体/下划线</td>
+<td><code>Ctrl+B/I/U</code></td>
+<td>与数据类型无关</td>
+</tr>
+<tr>
+<td>常规/数字/百分比</td>
+<td><code>Ctrl+Shift+BACKTICK</code> / <code>Ctrl+Shift+1</code> / <code>Ctrl+Shift+5</code></td>
+<td>美式键位；百分比 0.25 显示 25%，不自动改原数值</td>
+</tr>
+<tr>
+<td>建表</td>
+<td><code>Ctrl+T</code> / <code>Ctrl+L</code></td>
+<td>核对范围与“表包含标题”；Excel Ctrl+L 不是地址栏</td>
+</tr>
+<tr>
+<td>筛选开/关</td>
+<td><code>Ctrl+Shift+L</code></td>
+<td>区分添加筛选按钮与清除具体筛选</td>
+</tr>
+<tr>
+<td>打开筛选/下拉列表</td>
+<td><code>Alt+Down</code></td>
+<td>需要相应表头/单元格焦点；也可能是数据验证列表</td>
+</tr>
+<tr>
+<td>仅选择可见单元格</td>
+<td><code>Alt+;</code>（<code>ALT+SEMICOLON</code>）</td>
+<td>操作过滤后的数据前检查可见范围</td>
+</tr>
+<tr>
+<td>选择性粘贴</td>
+<td><code>Ctrl+Alt+V</code></td>
+<td>对话框核对值/公式/格式/转置；不用固定字母跨语言选择</td>
+</tr>
+<tr>
+<td>插入单元格/行列</td>
+<td><code>Ctrl+PLUS</code></td>
+<td>依当前选区，核对右移/下移/整行列</td>
+</tr>
+<tr>
+<td>删除单元格/行列</td>
+<td><code>Ctrl+MINUS</code></td>
+<td>与 Delete 清除内容不同；确认范围</td>
+</tr>
+<tr>
+<td>清除所选内容</td>
+<td><code>Delete</code></td>
+<td>通常保留格式；筛选或多区域选区需要特别核对</td>
+</tr>
+<tr>
+<td>新工作表</td>
+<td><code>Shift+F11</code></td>
+<td>核对新增标签，不等于新工作簿</td>
+</tr>
+<tr>
+<td>当前表内图表</td>
+<td><code>Alt+F1</code></td>
+<td>核对系列/分类范围；F11 常创建图表工作表</td>
+</tr>
+</tbody>
+</table></div>
+<h3>工作流与易错点</h3>
+<p><strong>准确修改 D12</strong>：Ctrl+G → D12 → 确认名称框与原值 → 要改局部则 F2，要替换整格才直接输入 → Enter → 重新定位并核对公式栏/值 → 保存。</p>
+<p><strong>填充公式</strong>：确认首格公式 → Ctrl+G 选择完整目标区域 → Ctrl+D 或 Ctrl+R → 核对起点、中间、末端的相对/绝对引用和结果。先检查合并单元格、筛选、表格计算列是否改变行为。</p>
+<p><strong>排序/筛选</strong>：识别整个表和标题 → 打开筛选或排序入口 → 读取字段/顺序/范围 → 核对完整行仍对应。不要只排序一列而破坏记录；出现“扩展选定区域”先判断数据结构。</p>
+<p><strong>导出</strong>：先保存工作簿 → 另存为核对格式；CSV 可能仅导出活动表并丢失公式/格式/多表信息，必须符合用户目标。PDF 先核对打印区域、缩放和分页。</p>
+<p>方向键只滚动不换活动格时检查 Scroll Lock；不要连续按键试探。<code>####</code> 可能是列宽或日期显示问题，不等于数据丢失。公式作为文字时检查前导单引号、文本格式和公式显示模式。受保护表不能通过解除保护绕过用户权限。</p>
+<p>来源：<a href="https://support.microsoft.com/en-us/accessibility/excel/keyboard-shortcuts-in-excel">Microsoft Excel shortcuts</a>，2026-09-09 查阅。Excel 网页版可能被浏览器截键，不直接套用。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="powerpoint"><h2>PowerPoint 操作手册</h2>
+<p>先读 <a href="#office-common">Office 共通操作</a>。最重要的是区别幻灯片缩略图、画布对象、文本插入点、备注窗格与放映窗口。相同 Ctrl+D、Delete、Tab 在这些区域产生不同结果。</p>
+<h3>编辑与组织</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新幻灯片</td>
+<td><code>Ctrl+M</code></td>
+<td>当前演示文稿及新页位置/版式</td>
+</tr>
+<tr>
+<td>复制选中幻灯片</td>
+<td><code>Ctrl+Shift+D</code></td>
+<td>缩略图选择先确认；使用当前 Windows 绑定</td>
+</tr>
+<tr>
+<td>复制选中对象</td>
+<td><code>Ctrl+D</code></td>
+<td>画布对象焦点；不要把它当成通用复制整页</td>
+</tr>
+<tr>
+<td>删除页/对象/文字</td>
+<td><code>Delete</code></td>
+<td>完全由焦点/选择决定，执行前确认对象类型</td>
+</tr>
+<tr>
+<td>窗格切换</td>
+<td><code>F6</code> / <code>Shift+F6</code></td>
+<td>缩略图、画布、备注、Ribbon 等</td>
+</tr>
+<tr>
+<td>下一/上一对象</td>
+<td><code>Tab</code> / <code>Shift+Tab</code></td>
+<td>对象选择状态；文本内 Tab 可能缩进或进下一单元格</td>
+</tr>
+<tr>
+<td>选择窗格</td>
+<td><code>Alt+F10</code></td>
+<td>用对象名/顺序替代小图标定位，仍需验证对应对象</td>
+</tr>
+<tr>
+<td>查找/替换</td>
+<td><code>Ctrl+F/H</code></td>
+<td>核对搜索范围和匹配</td>
+</tr>
+<tr>
+<td>退出文字编辑/选择</td>
+<td><code>Esc</code></td>
+<td>一次退出当前层级，随后核对</td>
+</tr>
+<tr>
+<td>下一占位符</td>
+<td><code>Ctrl+Enter</code></td>
+<td>最后一个占位符可能新建幻灯片，不能当无副作用导航</td>
+</tr>
+</tbody>
+</table></div>
+<h3>文本与对象</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗体/斜体/下划线</td>
+<td><code>Ctrl+B/I/U</code></td>
+<td>文字选择或后续输入格式</td>
+</tr>
+<tr>
+<td>字体对话框</td>
+<td><code>Ctrl+T</code></td>
+<td>与 Excel 建表、Firefox 新标签不同</td>
+</tr>
+<tr>
+<td>左/中/右对齐</td>
+<td><code>Ctrl+L/E/R</code></td>
+<td>文本段落，不是多个图形对象对齐</td>
+</tr>
+<tr>
+<td>项目符号</td>
+<td><code>Ctrl+Shift+L</code></td>
+<td>核对当前段落</td>
+</tr>
+<tr>
+<td>段落升/降级</td>
+<td><code>Alt+Shift+Left/Right</code></td>
+<td>改变列表层级；不适用于任意对象</td>
+</tr>
+<tr>
+<td>段落上/下移动</td>
+<td><code>Alt+Shift+Up/Down</code></td>
+<td>确认文字编辑状态</td>
+</tr>
+<tr>
+<td>超链接</td>
+<td><code>Ctrl+K</code></td>
+<td>核对文本、对象与链接目标</td>
+</tr>
+<tr>
+<td>选择性粘贴</td>
+<td><code>Ctrl+Alt+V</code></td>
+<td>可能选择图片、文本、链接或嵌入对象</td>
+</tr>
+<tr>
+<td>组合/取消组合</td>
+<td><code>Ctrl+G</code> / <code>Ctrl+Shift+G</code></td>
+<td>选中多个适合组合的对象；后续层级变化</td>
+</tr>
+<tr>
+<td>微移选中对象</td>
+<td>方向键；<code>Ctrl+方向键</code> 更小步长</td>
+<td>先确认无文字光标；实际单位依缩放/网格</td>
+</tr>
+<tr>
+<td>放大/缩小字号</td>
+<td><code>Ctrl+Shift+PERIOD/COMMA</code></td>
+<td>美式键盘对应 &gt; / &lt;；核对实际字号</td>
+</tr>
+<tr>
+<td>保存/另存为</td>
+<td><code>Ctrl+S</code> / <code>F12</code></td>
+<td>核对 PPTX/PDF/其他格式</td>
+</tr>
+</tbody>
+</table></div>
+<p>对象间对齐、分布、置顶、版式、母版、插入图片/图表：优先 Alt+Q 命令搜索或读取 Ribbon KeyTips。不要猜不同语言版本的长菜单序列。</p>
+<h3>放映专用键</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>从第一页开始</td>
+<td><code>F5</code></td>
+<td>会切入放映窗口，重新确认前台</td>
+</tr>
+<tr>
+<td>从当前页开始</td>
+<td><code>Shift+F5</code></td>
+<td>当前幻灯片已核对</td>
+</tr>
+<tr>
+<td>下一动画/页</td>
+<td><code>N</code> / <code>Space</code> / <code>Right</code> / <code>PageDown</code></td>
+<td>先推进动画，不一定立即换页</td>
+</tr>
+<tr>
+<td>上一动画/页</td>
+<td><code>P</code> / <code>Left</code> / <code>PageUp</code></td>
+<td>核对页号与动画状态</td>
+</tr>
+<tr>
+<td>跳到指定页</td>
+<td>数字序列后 <code>Enter</code></td>
+<td>例如第 12 页：<code>sequence=["1","2","ENTER"]</code>，仅放映中</td>
+</tr>
+<tr>
+<td>黑屏/恢复</td>
+<td><code>B</code> / <code>PERIOD</code></td>
+<td>切换；不是删除幻灯片</td>
+</tr>
+<tr>
+<td>白屏/恢复</td>
+<td><code>W</code> / <code>COMMA</code></td>
+<td>切换；先确认不是编辑态</td>
+</tr>
+<tr>
+<td>结束放映</td>
+<td><code>Esc</code></td>
+<td>返回编辑器，检查活动文档</td>
+</tr>
+<tr>
+<td>放映快捷键帮助</td>
+<td><code>F1</code></td>
+<td>读取当前版本帮助；不是编辑器帮助入口的同一结果</td>
+</tr>
+</tbody>
+</table></div>
+<h3>工作流</h3>
+<p><strong>修改第 N 页标题</strong>：缩略图/幻灯片导航定位 → 核对页号和标题 → 选择窗格或可访问性找到标题占位符 → 进入文字编辑 → 修改 → 检查溢出、换行和层级 → 保存。</p>
+<p><strong>复制版式并制作新页</strong>：在缩略图选择参考页 → 复制幻灯片 → 确认新增页 → 编辑各占位符 → 核对图片/备注没有误保留 → 查看整页版式。不要在文字光标状态盲按复制对象快捷键。</p>
+<p><strong>演示前检查</strong>：保存 → Shift+F5 → 验证页面/动画/链接 → Esc → 检查最终页码。导出 PDF 或打印后仍需核对分页、备注/讲义选项与字体布局；快捷键不能代替视觉 QA。</p>
+<p>来源：Microsoft <a href="https://support.microsoft.com/en-us/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations">Create presentations</a>、<a href="https://support.microsoft.com/en-us/accessibility/powerpoint/use-keyboard-shortcuts-to-deliver-powerpoint-presentations">Deliver presentations</a>，2026-09-09 查阅 Windows 内容；不使用同页 Mac 键位替代。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="outlook"><h2>Outlook 操作手册</h2>
+<p>先识别 <strong>经典 Outlook Windows 桌面版</strong>、<strong>新版 Outlook</strong> 或 <strong>Outlook 网页版</strong>。新版/网页的快捷键模式可设置为 Outlook、其他邮件服务或禁用；旧版全局组合键不能跨版本保证。先读 <a href="#office-common">Office 共通操作</a>。</p>
+<h3>经典 Windows Outlook</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邮件/日历/联系人/任务模块</td>
+<td><code>Ctrl+1/2/3/4</code></td>
+<td>核对模块及当前账号</td>
+</tr>
+<tr>
+<td>转到收件箱</td>
+<td><code>Ctrl+Shift+I</code></td>
+<td>核对是哪一个邮箱的 Inbox</td>
+</tr>
+<tr>
+<td>新邮件</td>
+<td><code>Ctrl+Shift+M</code></td>
+<td>不依当前模块；新窗口出现后重新观察</td>
+</tr>
+<tr>
+<td>当前模块中新建</td>
+<td><code>Ctrl+N</code></td>
+<td>邮件、约会、联系人等依模块改变</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td><code>Ctrl+E</code> / <code>F3</code></td>
+<td>核对当前文件夹、邮箱或所有邮箱范围</td>
+</tr>
+<tr>
+<td>打开所选项目</td>
+<td><code>Enter</code></td>
+<td>列表里是打开；撰写窗口是输入/提交其他控件</td>
+</tr>
+<tr>
+<td>回复/全部回复/转发</td>
+<td><code>Ctrl+R</code> / <code>Ctrl+Shift+R</code> / <code>Ctrl+F</code></td>
+<td>Ctrl+F 是转发，不是正文查找；核对收件人</td>
+</tr>
+<tr>
+<td>标为已读/未读</td>
+<td><code>Ctrl+Q</code> / <code>Ctrl+U</code></td>
+<td>会修改邮件状态；文字编辑区域语义可能不同</td>
+</tr>
+<tr>
+<td>移到文件夹</td>
+<td><code>Ctrl+Shift+V</code></td>
+<td>核对账号和目标文件夹；不是粘贴纯文本</td>
+</tr>
+<tr>
+<td>删除所选项目</td>
+<td><code>Delete</code></td>
+<td>会移动到已删除等位置，不能当无害导航</td>
+</tr>
+<tr>
+<td>日/工作周/周/月视图</td>
+<td><code>Ctrl+Alt+1/2/3/4</code></td>
+<td>日历模块内使用</td>
+</tr>
+<tr>
+<td>新约会/会议请求</td>
+<td><code>Ctrl+Shift+A</code> / <code>Ctrl+Shift+Q</code></td>
+<td>会议有参与人和发送副作用；核对时区</td>
+</tr>
+<tr>
+<td>拼写检查</td>
+<td><code>F7</code></td>
+<td>建议不自动接受</td>
+</tr>
+<tr>
+<td>保存草稿</td>
+<td><code>Ctrl+S</code></td>
+<td>核对草稿文件夹/撰写窗口状态</td>
+</tr>
+<tr>
+<td>发送</td>
+<td><code>Alt+S</code> 或配置允许的 <code>Ctrl+Enter</code></td>
+<td>最终动作，只在已有明确发送授权、目标和内容核对后执行一次</td>
+</tr>
+</tbody>
+</table></div>
+<h3>新版 Outlook / 网页版</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>Outlook 键位模式下常见键</th>
+<th>验证要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新邮件/事件</td>
+<td>新版桌面 <code>Ctrl+N</code>；网页版 Outlook 模式 <code>N</code></td>
+<td>依当前模块；网页版 Ctrl+N 通常打开浏览器窗口，正文中 N 是输入文字</td>
+</tr>
+<tr>
+<td>回复/全部回复</td>
+<td><code>Ctrl+R</code> / <code>Ctrl+Shift+R</code></td>
+<td>只在应用焦点正确时；网页 Ctrl+R 可能刷新</td>
+</tr>
+<tr>
+<td>转发</td>
+<td>新版桌面 <code>Ctrl+F</code>；网页版 <code>Ctrl+Shift+F</code> 或 <code>Shift+F</code></td>
+<td>新版桌面与网页不能混用，先查本机快捷键帮助</td>
+</tr>
+<tr>
+<td>发送</td>
+<td><code>Ctrl+Enter</code></td>
+<td>先核对快捷键模式与发送授权</td>
+</tr>
+<tr>
+<td>关闭当前弹层</td>
+<td><code>Esc</code></td>
+<td>可能关闭搜索/撰写，检查草稿保存状态</td>
+</tr>
+</tbody>
+</table></div>
+<p>新版/网页没有核实的导航键使用可访问性控件、菜单或设置中的键盘快捷键列表；不要为统一行为自动更改用户的快捷键模式。浏览器窗口中的 Alt+Left、Ctrl+W、Ctrl+L 保留浏览器意义。</p>
+<h3>不依赖图标的工作流</h3>
+<p><strong>找邮件</strong>：确认账号/文件夹 → 搜索入口 → 输入发件人、主题或唯一短语 → 核对范围 → 从结果读取发件人、日期、主题 → 打开并核对正文。只出现同名主题不能证明是目标邮件。</p>
+<p><strong>准备草稿</strong>：新建 → 逐个确认 To/Cc/Bcc/Subject/正文焦点 → 输入 → 核对解析后的完整邮件地址及附件名称 → 保存草稿。不要用固定 Tab 次数从 To 跳正文，收件人建议列表会改变焦点。</p>
+<p><strong>回复或发送</strong>：选择正确邮件线程 → 回复类型 → 核对实际 To/Cc，尤其 Reply All → 完整内容与附件 → 根据用户已给的发送授权执行一次 → 核对 Sent Items/Outbox 和错误提示。排队在发件箱不等于送达；无反馈先检查，不重复发送。</p>
+<p><strong>安排会议</strong>：确认日历/账号 → 新会议 → 主题、参与人、时区、起止时间 → 查看忙闲和重复规则 → 按请求保存或发送邀请。不要把“创建日历草稿”扩展为通知所有参与者。</p>
+<p>来源：<a href="https://support.microsoft.com/en-us/accessibility/outlook/keyboard-shortcuts-for-outlook">Microsoft Outlook shortcuts</a>，2026-09-09 查阅。不同版本与当前区域的键位必须区分；未操作用户邮箱来试验。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="onenote"><h2>OneNote 操作手册</h2>
+<p>适用于当前 Windows 桌面 OneNote，先读 <a href="#office-common">Office 共通操作</a>。旧版 OneNote for Windows 10、网页版和 Mac 不保证同键。确认笔记本、分区、页面和同步账号；正文是多个容器，不是一份连续 Word 文档。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新页面</td>
+<td><code>Ctrl+N</code></td>
+<td>当前分区中创建，核对标题与位置</td>
+</tr>
+<tr>
+<td>新分区</td>
+<td><code>Ctrl+T</code></td>
+<td>核对目标笔记本，避免同名分区</td>
+</tr>
+<tr>
+<td>搜索所有笔记本</td>
+<td><code>Ctrl+E</code></td>
+<td>检查实际范围及打开的笔记本</td>
+</tr>
+<tr>
+<td>当前页面查找</td>
+<td><code>Ctrl+F</code></td>
+<td>区别于全局搜索</td>
+</tr>
+<tr>
+<td>页面标题</td>
+<td><code>Ctrl+Shift+T</code></td>
+<td>核对焦点确已到标题字段</td>
+</tr>
+<tr>
+<td>当前分区前/后页面</td>
+<td><code>Ctrl+PageUp/PageDown</code></td>
+<td>检查页标题，含子页</td>
+</tr>
+<tr>
+<td>后/前分区</td>
+<td><code>Ctrl+Tab</code> / <code>Ctrl+Shift+Tab</code></td>
+<td>顺序依当前界面，不用于正文插入 Tab</td>
+</tr>
+<tr>
+<td>页面/窗格导航</td>
+<td><code>F6</code> / <code>Shift+F6</code></td>
+<td>当前版本窗格顺序需观察</td>
+</tr>
+<tr>
+<td>粗体/斜体/下划线</td>
+<td><code>Ctrl+B/I/U</code></td>
+<td>当前选区或后续输入</td>
+</tr>
+<tr>
+<td>标题 1/2/3</td>
+<td><code>Ctrl+Alt+1/2/3</code></td>
+<td>使用真实标题样式</td>
+</tr>
+<tr>
+<td>待办标记</td>
+<td><code>Ctrl+1</code></td>
+<td>可能创建、勾选或清除标记，核对当前状态</td>
+</tr>
+<tr>
+<td>超链接</td>
+<td><code>Ctrl+K</code></td>
+<td>可链接网页或笔记对象，核对目标</td>
+</tr>
+<tr>
+<td>插入日期</td>
+<td><code>Alt+Shift+D</code></td>
+<td>当前光标位置；不等于日期时间一起</td>
+</tr>
+<tr>
+<td>插入时间</td>
+<td><code>Alt+Shift+T</code></td>
+<td>依据本机时间与区域格式</td>
+</tr>
+<tr>
+<td>插入日期和时间</td>
+<td><code>Alt+Shift+F</code></td>
+<td>核对显示内容</td>
+</tr>
+<tr>
+<td>页面全屏视图</td>
+<td><code>F11</code></td>
+<td>切换显示，区别于其他 Office 应用</td>
+</tr>
+<tr>
+<td>同步当前笔记本</td>
+<td><code>Shift+F9</code></td>
+<td>触发后观察同步错误，不能宣称已经云端同步</td>
+</tr>
+<tr>
+<td>同步所有笔记本</td>
+<td><code>F9</code></td>
+<td>范围比当前页面大，按需求使用</td>
+</tr>
+<tr>
+<td>打印</td>
+<td><code>Ctrl+P</code></td>
+<td>自由布局容器可能跨页，检查预览</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>整理会议笔记</strong>：选择正确笔记本/分区 → Ctrl+N → 核对标题焦点并输入标题 → 正文建立标题/段落/待办 → 检查容器顺序 → 核对同步状态。Ctrl+A 的范围可能逐层扩展，不先确认就删除会影响更多笔记。</p>
+<p><strong>找笔记并更新待办</strong>：全局搜索关键词 → 核对笔记本、分区、页标题和日期 → 定位任务段落 → 检查原勾选状态 → 切换一次 → 核对。反复 Ctrl+1 不保证得到“已完成”。</p>
+<p>OneNote 通常自动保存；另存为快捷键不能套用 Word 的 F12。分享笔记本、改权限、导出和发送页面另按用户需求处理。输入 Ctrl+Shift+M 等历史 Quick Note 热键前，先核对当前版本，避免创建与目标无关的笔记。</p>
+<p>来源：<a href="https://support.microsoft.com/en-us/accessibility/onenote/keyboard-shortcuts-in-onenote">Microsoft OneNote shortcuts</a>，2026-09-09 查阅；部分同页快捷键依版本不同，未验证的配置以本机帮助为准。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="access"><h2>Access 操作手册</h2>
+<p>适用于 Windows 桌面 Access，先读 <a href="#office-common">Office 共通操作</a>。区分数据库文件、导航窗格中的对象、Datasheet 数据记录、Form 表单、Design 设计视图、Query 查询及属性字段。</p>
+<p><strong>数据库与普通文档不同：离开记录可能自动提交数据，Ctrl+S 经常保存对象设计；不能认为“不按保存”就不会改数据库。</strong> 删除/更新查询可能批量修改数据，不能靠输入宏或盲目撤销试验。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导航窗格显隐</td>
+<td><code>F11</code></td>
+<td>查看对象列表，不是全屏</td>
+</tr>
+<tr>
+<td>属性表显隐</td>
+<td><code>F4</code></td>
+<td>当前对象/控件属性</td>
+</tr>
+<tr>
+<td>切换窗格</td>
+<td><code>F6</code> / <code>Shift+F6</code></td>
+<td>设计网格、属性、导航等随上下文变化</td>
+</tr>
+<tr>
+<td>切换数据库窗口</td>
+<td><code>Ctrl+F6</code> / <code>Ctrl+Shift+F6</code></td>
+<td>核对对象名与视图</td>
+</tr>
+<tr>
+<td>打开所选对象</td>
+<td><code>Enter</code></td>
+<td>导航窗格中，表单/查询可能有加载事件或提示</td>
+</tr>
+<tr>
+<td>以设计视图打开选中对象</td>
+<td><code>Ctrl+Enter</code></td>
+<td>仅导航窗格对象焦点；字段内可能插入换行</td>
+</tr>
+<tr>
+<td>查找/替换</td>
+<td><code>Ctrl+F/H</code></td>
+<td>检查对象、字段、匹配方式；替换会改记录</td>
+</tr>
+<tr>
+<td>当前字段扩大编辑窗口</td>
+<td><code>Shift+F2</code></td>
+<td>Zoom 对话框便于读取长文本；不等于缩放设计画布</td>
+</tr>
+<tr>
+<td>编辑/导航模式切换</td>
+<td><code>F2</code></td>
+<td>Datasheet 中；导航窗格 F2 可能重命名对象</td>
+</tr>
+<tr>
+<td>下/上一字段</td>
+<td><code>Tab</code> / <code>Shift+Tab</code></td>
+<td>可能离开记录并提交修改</td>
+</tr>
+<tr>
+<td>当前记录首/末字段</td>
+<td><code>Home</code> / <code>End</code></td>
+<td>非字段文字编辑模式；核对活动格</td>
+</tr>
+<tr>
+<td>首/末记录</td>
+<td><code>Ctrl+Home</code> / <code>Ctrl+End</code></td>
+<td>导航模式中，选定记录并非排序后的业务“最新”</td>
+</tr>
+<tr>
+<td>添加新记录</td>
+<td><code>Ctrl+PLUS</code></td>
+<td>当前允许新增的记录视图；不是普通放大</td>
+</tr>
+<tr>
+<td>保存当前记录修改</td>
+<td><code>Shift+Enter</code></td>
+<td>明确提交，核对校验/约束提示</td>
+</tr>
+<tr>
+<td>取消当前编辑</td>
+<td><code>Esc</code></td>
+<td>一次通常撤销当前字段，再次可能整条记录；只取消尚未提交且确定的改动</td>
+</tr>
+<tr>
+<td>从上条记录复制同字段</td>
+<td><code>Ctrl+QUOTE</code></td>
+<td>当前字段会被写入，先核对源记录</td>
+</tr>
+<tr>
+<td>插入当前日期</td>
+<td><code>Ctrl+SEMICOLON</code></td>
+<td>日期格式由区域/字段类型决定</td>
+</tr>
+<tr>
+<td>数据字段内换行</td>
+<td><code>Ctrl+Enter</code></td>
+<td>只在支持多行的文本字段；注意导航窗格中的不同意义</td>
+</tr>
+<tr>
+<td>保存对象设计</td>
+<td><code>Ctrl+S</code></td>
+<td>核对是表、查询、表单等对象，不当成记录提交统一键</td>
+</tr>
+<tr>
+<td>关闭活动对象</td>
+<td><code>Ctrl+F4</code></td>
+<td>可能出现设计保存或数据验证提示</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>只读检查</strong>：确认数据库和目标对象 → 导航窗格定位 → 打开合适视图 → 查找记录 → 阅读字段/主键 → 不进入编辑或执行动作查询。查询运行是否只读要看具体 SQL/类型，不能凭名称猜测。</p>
+<p><strong>修改一条记录</strong>：核对主键和原值 → 确定字段 → F2 或 Zoom 编辑 → 核对新值 → 按已有授权提交 → 再次定位主键验证。出现关系约束/重复键错误，先解释原因，不换主键或关闭校验来绕过。</p>
+<p><strong>设计更改</strong>：先明确对象和备份/版本需求 → 设计视图 → 修改指定属性 → 核对影响 → 保存。不要将可见界面的字段删除理解为仅删除显示内容；表结构修改可能影响数据与其他对象。</p>
+<p>来源：<a href="https://support.microsoft.com/en-us/accessibility/access/keyboard-shortcuts-for-access">Microsoft Access shortcuts</a>，2026-09-09 查阅。某些键的意义与焦点强相关，本表不授权执行宏、动作查询或删除数据。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="vscode"><h2>Visual Studio Code — Windows</h2>
+<p>先确认是目标工作区/窗口，焦点不在终端、WebView、调试控制台或模态窗口。Vim、Emacs、JetBrains keymap 扩展和用户 keybindings 可覆盖默认值。以下组合键仅在实际工具支持时发送。</p>
+<h3>优先导航与查找</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>状态/结果核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令面板 / Show All Commands</td>
+<td><code>Ctrl+Shift+P</code> 或 <code>F1</code></td>
+<td>出现带 <code>&gt;</code> 的命令输入框；输入命令名称，确认结果项后 Enter</td>
+</tr>
+<tr>
+<td>快速打开文件 / Quick Open</td>
+<td><code>Ctrl+P</code></td>
+<td>输入文件名或路径，核对工作区和完整路径再打开</td>
+</tr>
+<tr>
+<td>跳到行/列</td>
+<td><code>Ctrl+G</code></td>
+<td>输入 <code>行:列</code>，例如 <code>120:8</code>；核对当前文件和状态栏</td>
+</tr>
+<tr>
+<td>当前文件符号</td>
+<td><code>Ctrl+Shift+O</code></td>
+<td>出现符号列表；输入符号名过滤</td>
+</tr>
+<tr>
+<td>工作区符号</td>
+<td><code>Ctrl+T</code></td>
+<td>需要对应语言服务支持；核对文件归属</td>
+</tr>
+<tr>
+<td>当前文件查找</td>
+<td><code>Ctrl+F</code></td>
+<td>查找框获得焦点；核对大小写、正则、选区范围</td>
+</tr>
+<tr>
+<td>下一个/上一个匹配</td>
+<td><code>F3</code> / <code>Shift+F3</code></td>
+<td>核对当前匹配和行号，不默认为跳转成功</td>
+</tr>
+<tr>
+<td>工作区搜索</td>
+<td><code>Ctrl+Shift+F</code></td>
+<td>搜索侧栏出现；检查包含/排除路径</td>
+</tr>
+<tr>
+<td>当前文件替换</td>
+<td><code>Ctrl+H</code></td>
+<td>先审阅匹配和范围；不默认 Replace All</td>
+</tr>
+<tr>
+<td>错误/警告列表</td>
+<td><code>Ctrl+Shift+M</code></td>
+<td>Problems 面板和诊断列表</td>
+</tr>
+<tr>
+<td>下一/上一诊断</td>
+<td><code>F8</code> / <code>Shift+F8</code></td>
+<td>核对诊断位置与消息</td>
+</tr>
+<tr>
+<td>转到定义 / 返回</td>
+<td><code>F12</code> / <code>Alt+Left</code></td>
+<td>依赖语言服务；确认跳转文件/符号</td>
+</tr>
+<tr>
+<td>快速修复</td>
+<td><code>Ctrl+.</code></td>
+<td>只先打开候选菜单；选择后可能修改代码</td>
+</tr>
+</tbody>
+</table></div>
+<h3>焦点、布局与编辑</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>状态/结果核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>聚焦第一编辑器组</td>
+<td><code>Ctrl+1</code></td>
+<td>是编辑器组，不是“第一个标签”</td>
+</tr>
+<tr>
+<td>资源管理器</td>
+<td><code>Ctrl+Shift+E</code></td>
+<td>文件树焦点；文件树中的 Delete 会删文件</td>
+</tr>
+<tr>
+<td>侧栏显隐</td>
+<td><code>Ctrl+B</code></td>
+<td>切换状态，先确认当前是否显示</td>
+</tr>
+<tr>
+<td>底部面板显隐</td>
+<td><code>Ctrl+J</code></td>
+<td>面板可能是终端；不是执行命令的授权</td>
+</tr>
+<tr>
+<td>最近编辑器切换</td>
+<td><code>Ctrl+Tab</code> / <code>Ctrl+Shift+Tab</code></td>
+<td>按 MRU 顺序，不保证是相邻标签</td>
+</tr>
+<tr>
+<td>保存当前文件</td>
+<td><code>Ctrl+S</code></td>
+<td>新文件会弹路径对话框；核对目标及脏标记</td>
+</tr>
+<tr>
+<td>关闭当前编辑器</td>
+<td><code>Ctrl+W</code></td>
+<td>处理未保存提示，不默认丢弃</td>
+</tr>
+<tr>
+<td>重命名符号</td>
+<td><code>F2</code></td>
+<td>语言服务可能改多个文件；核对符号和编辑结果</td>
+</tr>
+<tr>
+<td>格式化文档</td>
+<td><code>Shift+Alt+F</code></td>
+<td>确认 formatter；可能改整份文件</td>
+</tr>
+<tr>
+<td>切换行注释</td>
+<td><code>Ctrl+/</code></td>
+<td>核对选区；键盘布局可能改变触发方式</td>
+</tr>
+<tr>
+<td>撤销/重做</td>
+<td><code>Ctrl+Z</code> / <code>Ctrl+Y</code></td>
+<td>仅在明确知道待撤销内容时使用</td>
+</tr>
+<tr>
+<td>打开快捷键设置</td>
+<td><code>Ctrl+K → Ctrl+S</code></td>
+<td>或命令面板搜索 “Preferences: Open Keyboard Shortcuts”</td>
+</tr>
+</tbody>
+</table></div>
+<h3>选择、编辑和重构速查</h3>
+<p>以下均以普通文本编辑器获得焦点为前提。多光标修改会同时作用于多个位置；先检查光标数与选区。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>Windows 默认键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按单词移动/选择</td>
+<td><code>Ctrl+Left/Right</code> / 加 <code>Shift</code></td>
+<td>受语言单词分隔设置影响</td>
+</tr>
+<tr>
+<td>行首/末、文件首/末</td>
+<td><code>Home/End</code>、<code>Ctrl+Home/End</code></td>
+<td>加 Shift 扩展选区；Home 可能先到首个非空白字符</td>
+</tr>
+<tr>
+<td>选择当前行</td>
+<td><code>Ctrl+L</code></td>
+<td>重复会扩大选区；不是浏览器地址栏</td>
+</tr>
+<tr>
+<td>扩展/缩小语法选区</td>
+<td><code>Shift+Alt+Right/Left</code></td>
+<td>依语言服务，从表达式扩展到外围结构</td>
+</tr>
+<tr>
+<td>选中下一个相同文本</td>
+<td><code>Ctrl+D</code></td>
+<td>当前词或选区的下一匹配；检查是否应加入</td>
+</tr>
+<tr>
+<td>选择全部相同匹配</td>
+<td><code>Ctrl+Shift+L</code></td>
+<td>一次建立多个光标，范围是当前文件</td>
+</tr>
+<tr>
+<td>在上/下增加光标</td>
+<td><code>Ctrl+Alt+Up/Down</code></td>
+<td>某些显卡/系统热键会截获；不反复重试</td>
+</tr>
+<tr>
+<td>撤销最后一个光标动作</td>
+<td><code>Ctrl+U</code></td>
+<td>不等于撤销文字内容</td>
+</tr>
+<tr>
+<td>上/下移动整行</td>
+<td><code>Alt+Up/Down</code></td>
+<td>包含当前选择的多行</td>
+</tr>
+<tr>
+<td>上/下复制整行</td>
+<td><code>Shift+Alt+Up/Down</code></td>
+<td>新增代码，核对重复范围</td>
+</tr>
+<tr>
+<td>删除整行</td>
+<td><code>Ctrl+Shift+K</code></td>
+<td>不要求先选行；必须确认当前行</td>
+</tr>
+<tr>
+<td>下/上插入空行</td>
+<td><code>Ctrl+Enter</code> / <code>Ctrl+Shift+Enter</code></td>
+<td>编辑器中与终端/聊天发送语义不同</td>
+</tr>
+<tr>
+<td>缩进/取消缩进</td>
+<td><code>Ctrl+]</code> / <code>Ctrl+[</code></td>
+<td>工具可写 <code>CTRL+RBRACKET/LBRACKET</code>，以实际 schema 为准</td>
+</tr>
+<tr>
+<td>块注释</td>
+<td><code>Shift+Alt+A</code></td>
+<td>依当前语言注释规则</td>
+</tr>
+<tr>
+<td>格式化选区</td>
+<td><code>Ctrl+K → Ctrl+F</code></td>
+<td>需 formatter 支持，避免误格式化整文件</td>
+</tr>
+<tr>
+<td>折叠/展开当前区域</td>
+<td><code>Ctrl+Shift+[</code> / <code>Ctrl+Shift+]</code></td>
+<td>核对光标所在代码块</td>
+</tr>
+<tr>
+<td>全部折叠/展开</td>
+<td><code>Ctrl+K → Ctrl+0</code> / <code>Ctrl+K → Ctrl+J</code></td>
+<td>改变显示，不删除代码</td>
+</tr>
+<tr>
+<td>查看定义而不离开</td>
+<td><code>Alt+F12</code></td>
+<td>Peek Definition；Esc 退出已确认的 Peek</td>
+</tr>
+<tr>
+<td>查找引用</td>
+<td><code>Shift+F12</code></td>
+<td>查看引用不修改；重命名仍需 F2 和结果复查</td>
+</tr>
+</tbody>
+</table></div>
+<h3>工作区、搜索和设置</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>默认键/命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新建未保存文件</td>
+<td><code>Ctrl+N</code></td>
+<td>保存前核对文件类型和路径</td>
+</tr>
+<tr>
+<td>另存为</td>
+<td><code>Ctrl+Shift+S</code></td>
+<td>保留/改变原文件依实际保存结果核对</td>
+</tr>
+<tr>
+<td>打开文件夹</td>
+<td><code>Ctrl+K → Ctrl+O</code></td>
+<td>可能切换工作区；检查未保存文件</td>
+</tr>
+<tr>
+<td>拆分编辑器</td>
+<td><code>Ctrl+BACKSLASH</code></td>
+<td>分组视图，不是复制磁盘文件</td>
+</tr>
+<tr>
+<td>聚焦第 1/2/3 编辑器组</td>
+<td><code>Ctrl+1/2/3</code></td>
+<td>不同于标签序号</td>
+</tr>
+<tr>
+<td>工作区替换入口</td>
+<td><code>Ctrl+Shift+H</code></td>
+<td>先审阅文件、匹配数、包含/排除和差异</td>
+</tr>
+<tr>
+<td>设置</td>
+<td><code>Ctrl+COMMA</code></td>
+<td>搜索设置名，区分 User 与 Workspace 范围</td>
+</tr>
+<tr>
+<td>Zen Mode</td>
+<td><code>Ctrl+K → Z</code></td>
+<td>布局切换；可通过同一已核实命令退出</td>
+</tr>
+<tr>
+<td>源代码管理视图</td>
+<td><code>Ctrl+Shift+G</code></td>
+<td>先查看 diff；不自动 stage、commit、push</td>
+</tr>
+<tr>
+<td>Markdown 预览</td>
+<td><code>Ctrl+Shift+V</code></td>
+<td>需要当前 Markdown 文件；不是粘贴纯文本</td>
+</tr>
+<tr>
+<td>侧边 Markdown 预览</td>
+<td><code>Ctrl+K → V</code></td>
+<td>第二笔是单字母 V，不带 Ctrl</td>
+</tr>
+</tbody>
+</table></div>
+<p>搜索框中的正则、大小写、全词和“在选区查找”都会改变命中。工作区搜索也受 <code>.gitignore</code>、排除设置、当前根文件夹影响；零结果不能直接证明文件不存在。大范围替换先读差异预览与匹配上下文，执行后查看相关改动。</p>
+<p><strong>调试与终端只按任务需要使用</strong>：F5 通常启动/继续调试，F9 切换断点，F10/F11/Shift+F11 为逐过程/逐语句/跳出，Shift+F5 停止调试；它们会影响运行程序。<code>Ctrl+BACKTICK</code> 打开集成终端，不能用于“让编辑器恢复焦点”。当前 WorkBuddy 的终端/开发者控制台输入保护仍然适用。</p>
+<h3>图标看不清时的流程</h3>
+<p><strong>打开指定文件并定位</strong>：确认工作区 → Quick Open → 输入文件名 → 核对候选路径 → Enter → 确认文件标题 → Go to Line → 输入行号 → 核对定位。每一步遵守当前工具的观察/令牌要求。</p>
+<p><strong>不用猜快捷键查命令</strong>：命令面板按本地化名称搜索。常用 command ID 可在键盘快捷键设置中搜索核对，例如 <code>workbench.action.quickOpen</code>、<code>workbench.action.gotoLine</code>、<code>workbench.action.showCommands</code>、<code>workbench.action.openGlobalKeybindings</code>。不要把 command ID 输入集成终端或假定可在面板中直接执行 ID。</p>
+<p><strong>键位不匹配</strong>：打开 Keyboard Shortcuts 查看当前绑定及 <code>when</code> 条件；不要重置用户键位。执行、调试、任务运行、扩展安装、Git 发布都按用户请求单独判断，不把它们当作导航恢复。</p>
+<p>来源：Microsoft <a href="https://code.visualstudio.com/docs/reference/default-keybindings">Default Keyboard Shortcuts</a>（2026-09-09 查阅）。这是默认值核对，没有在用户工作区修改/执行代码来试键。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="firefox"><h2>Mozilla Firefox — Windows</h2>
+<p>确认目标 Firefox 窗口、标签和是否有模态提示。网页编辑器、PDF 阅读器、扩展和全屏状态可能截获按键；优先浏览器地址栏建立明确焦点。以下是常见 Windows 默认快捷键，以当前版本菜单/工具 schema 为准。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>默认键</th>
+<th>核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>聚焦地址栏</td>
+<td><code>Ctrl+L</code> / <code>Alt+D</code> / <code>F6</code></td>
+<td>首选 Ctrl+L；F6 的结果依当前焦点，可能只是循环到另一窗格</td>
+</tr>
+<tr>
+<td>导航</td>
+<td>地址栏输入 URL 后 <code>Enter</code></td>
+<td>核对输入域确为地址栏；加载后验证实际 URL 和页面</td>
+</tr>
+<tr>
+<td>新标签</td>
+<td><code>Ctrl+T</code></td>
+<td>仅在需要新标签时；复用已有标签不要重开</td>
+</tr>
+<tr>
+<td>关闭/恢复标签</td>
+<td><code>Ctrl+W</code> / <code>Ctrl+Shift+T</code></td>
+<td>关闭前检查未提交表单；恢复后核对 URL</td>
+</tr>
+<tr>
+<td>下/上标签</td>
+<td><code>Ctrl+PageDown</code> / <code>Ctrl+PageUp</code></td>
+<td>相邻标签，核对标题</td>
+</tr>
+<tr>
+<td>按序选择标签</td>
+<td><code>Ctrl+1</code>…<code>Ctrl+8</code>；<code>Ctrl+9</code> 最后一个</td>
+<td>只在标签顺序已知时使用</td>
+</tr>
+<tr>
+<td>Ctrl+Tab 标签切换</td>
+<td><code>Ctrl+Tab</code> / <code>Ctrl+Shift+Tab</code></td>
+<td>“按最近使用顺序切换”设置会改变顺序；不要默认相邻</td>
+</tr>
+<tr>
+<td>后退/前进</td>
+<td><code>Alt+Left</code> / <code>Alt+Right</code></td>
+<td>可能离开未保存表单；返回后核对页面</td>
+</tr>
+<tr>
+<td>刷新</td>
+<td><code>Ctrl+R</code> / <code>F5</code></td>
+<td>表单提交结果未知时避免刷新造成重发</td>
+</tr>
+<tr>
+<td>忽略缓存刷新</td>
+<td><code>Ctrl+Shift+R</code> / <code>Ctrl+F5</code></td>
+<td>仅排查陈旧页面时；不是清除登录/所有缓存</td>
+</tr>
+<tr>
+<td>停止加载/关闭查找</td>
+<td><code>Esc</code></td>
+<td>结果依当前模式；不是统一“回主界面”</td>
+</tr>
+<tr>
+<td>页面查找</td>
+<td><code>Ctrl+F</code></td>
+<td>显示查找条；可用文字定位替代猜图标</td>
+</tr>
+<tr>
+<td>下一个/上一个匹配</td>
+<td><code>F3</code> / <code>Shift+F3</code></td>
+<td>核对匹配文本；找到文字不等于已点链接</td>
+</tr>
+<tr>
+<td>页面缩放</td>
+<td><code>Ctrl++</code> / <code>Ctrl+-</code> / <code>Ctrl+0</code></td>
+<td><code>Ctrl++</code> 为 Ctrl 加加号键，工具表示依 schema；0 复位</td>
+</tr>
+<tr>
+<td>浏览器菜单</td>
+<td><code>Alt</code>，再方向键</td>
+<td>Windows 隐藏菜单栏可临时显示；菜单助记字母依语言</td>
+</tr>
+<tr>
+<td>英文界面的 File 菜单</td>
+<td><code>Alt+F</code></td>
+<td>菜单助记字母依语言；不是通用的“三横线”应用菜单快捷键</td>
+</tr>
+<tr>
+<td>全屏</td>
+<td><code>F11</code></td>
+<td>先判断当前状态；切换后重新核对窗口</td>
+</tr>
+<tr>
+<td>下载列表</td>
+<td><code>Ctrl+J</code></td>
+<td>打开列表不等于授权打开/运行下载文件</td>
+</tr>
+<tr>
+<td>历史侧栏</td>
+<td><code>Ctrl+H</code></td>
+<td>只查看任务相关历史</td>
+</tr>
+<tr>
+<td>书签侧栏</td>
+<td><code>Ctrl+B</code></td>
+<td>与 VS Code 同键但用途不同</td>
+</tr>
+<tr>
+<td>保存页面/打印</td>
+<td><code>Ctrl+S</code> / <code>Ctrl+P</code></td>
+<td>会进入保存/打印流程，不作为导航恢复</td>
+</tr>
+</tbody>
+</table></div>
+<h3>标签、书签、表单与阅读</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>常见 Windows 默认键</th>
+<th>焦点/版本说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新窗口</td>
+<td><code>Ctrl+N</code></td>
+<td>区别于 Ctrl+T 新标签；新窗口需重新确认目标</td>
+</tr>
+<tr>
+<td>新隐私窗口</td>
+<td><code>Ctrl+Shift+P</code></td>
+<td>不继承普通窗口全部会话状态，不等于匿名网络</td>
+</tr>
+<tr>
+<td>恢复关闭的窗口</td>
+<td><code>Ctrl+Shift+N</code></td>
+<td>先确认确实需要恢复，避免恢复不相关会话</td>
+</tr>
+<tr>
+<td>给当前页加书签</td>
+<td><code>Ctrl+D</code></td>
+<td>核对标题、URL、保存目录；可能打开已有书签编辑</td>
+</tr>
+<tr>
+<td>书签管理 Library</td>
+<td><code>Ctrl+Shift+O</code></td>
+<td>新窗口需重新识别焦点</td>
+</tr>
+<tr>
+<td>历史 Library</td>
+<td><code>Ctrl+Shift+H</code></td>
+<td>与 Ctrl+H 侧栏区别</td>
+</tr>
+<tr>
+<td>页内查找文字</td>
+<td><code>Ctrl+F</code></td>
+<td>不含站点尚未加载或折叠的内容</td>
+</tr>
+<tr>
+<td>快速查找文字/链接</td>
+<td><code>/</code> / <code>QUOTE</code></td>
+<td>仅非输入框焦点；网页可能截获，以实际状态为准</td>
+</tr>
+<tr>
+<td>页面上/下滚动</td>
+<td><code>PageUp/PageDown</code></td>
+<td>文本框或嵌入 PDF 有自己的滚动范围</td>
+</tr>
+<tr>
+<td>下/上滚一屏</td>
+<td><code>Space</code> / <code>Shift+Space</code></td>
+<td>仅页面背景焦点；按钮/复选框上会激活</td>
+</tr>
+<tr>
+<td>页面顶部/底部</td>
+<td><code>Ctrl+Home/End</code></td>
+<td>输入框焦点时移动文字光标</td>
+</tr>
+<tr>
+<td>下/上一可聚焦控件</td>
+<td><code>Tab</code> / <code>Shift+Tab</code></td>
+<td>用焦点框、控件名称或状态栏链接验证</td>
+</tr>
+<tr>
+<td>激活已聚焦链接</td>
+<td><code>Enter</code></td>
+<td>核对链接地址；表单按钮上可提交</td>
+</tr>
+<tr>
+<td>打开已聚焦链接到新标签</td>
+<td><code>Alt+Enter</code></td>
+<td>焦点必须是链接；地址栏也可能新标签导航</td>
+</tr>
+<tr>
+<td>阅读模式</td>
+<td><code>F9</code></td>
+<td>仅支持的文章页；可能无效，不反复按</td>
+</tr>
+<tr>
+<td>清除历史对话框</td>
+<td><code>Ctrl+Shift+Delete</code></td>
+<td>仅打开入口；不要默认清除全部数据</td>
+</tr>
+</tbody>
+</table></div>
+<p>下载、打印、保存页面和书签对话框可能成为独立窗口。不要用一个 <code>sequence</code> 连续切窗口并确认路径；每次核对新窗口和文件名。地址栏建议可以包含历史、书签和远程搜索，Enter 前检查最终字符串与候选，不仅检查输入的关键词。</p>
+<p><strong>内置 PDF</strong>：先确认 Firefox PDF 阅读器。页面查找、缩放与打印可能由阅读器处理；优先读取工具栏的页码、总页数、缩放框和下载控件名称。PDF 扫描图没有可搜索文本时，零匹配不等于内容不存在。不要把普通网页 Home/End 的结果当成 PDF 页号定位成功。</p>
+<p><strong>表单</strong>：Tab 导航到字段 → 读取标签/当前值 → 编辑 → 验证值与验证错误。Space 在复选框切换勾选；箭头在单选组或下拉项改变选项。输入法候选仍显示时 Enter 可能只提交候选词。表单发送由明确的目标按钮及已有用户授权决定，不靠连续 Enter 猜测。</p>
+<h3>可靠工作流</h3>
+<p><strong>导航已有窗口</strong>：确认 Firefox → Ctrl+L → 确认地址栏焦点 → 输入用户指定地址 → 确认文字 → Enter → 核对 URL、标题及目标页面内容。地址相同但显示登录或错误页，不能报告页面任务完成。</p>
+<p><strong>链接太小</strong>：Ctrl+F 搜索已知可见文字 → 核对命中 → 用可访问性链接节点或新截图点击目标；不要假定 Enter 在查找栏里会打开链接。若只有图形按钮，页面缩放可以辅助观察，但不能创造不存在的控件语义。</p>
+<p><strong>恢复页内焦点</strong>：Esc 关闭已确认的查找/菜单 → 用 F6 或 Tab 切到页面并检查焦点；不要用固定 Tab 次数定位付款、发送或删除按钮。空格在网页可能滚动、勾选复选框或激活控件，Enter 可能提交表单。</p>
+<p>来源入口：Mozilla <a href="https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly">Keyboard shortcuts</a>。2026-09-09 该站返回浏览器验证页，未把该响应当作文档核验；上表为常见默认值，执行时以本机菜单为准。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="qq"><h2>QQ / QQNT — Windows</h2>
+<p>QQ 经典版与新版 QQNT 的全局热键、搜索和发送键可以不同，还可能被微信、截图工具或输入法占用。不能把下面的经典默认候选当作已验证的本机设置。第一次需要某项热键时，在 QQ 设置的“快捷键/热键”与聊天输入框“发送”旁的选项中核对，并记录当前会话有效的绑定；不要改用户的发送习惯。</p>
+<h3>常用入口和按键</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>按键/入口</th>
+<th>适用性与结果核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恢复现有 QQ</td>
+<td>主技能的窗口 ID、任务栏、系统托盘流程</td>
+<td>窗口列表缺失不等于退出；先查隐藏图标，不直接启动第二实例</td>
+</tr>
+<tr>
+<td>提取/打开消息</td>
+<td><code>Ctrl+Alt+Z</code></td>
+<td>经典版常见默认，可更改/禁用；可能跳到未读联系人，不保证目标聊天</td>
+</tr>
+<tr>
+<td>截图</td>
+<td><code>Ctrl+Alt+A</code></td>
+<td>常见可配置全局热键；可能打开 QQ 或别的软件截图层，不能作为“查 QQ 在不在”的探测</td>
+</tr>
+<tr>
+<td>搜索联系人/群</td>
+<td>主窗口搜索框；仅在当前版本明确显示时用其搜索快捷键</td>
+<td>不假定 Ctrl+F 一定是联系人搜索；确认搜索范围再输入姓名/号码</td>
+</tr>
+<tr>
+<td>搜索当前聊天</td>
+<td>当前会话中的“聊天记录/搜索”入口</td>
+<td>QQNT/经典版入口和绑定不同；Ctrl+F 仅在菜单/设置确认后使用</td>
+</tr>
+<tr>
+<td>列表选择</td>
+<td><code>Up</code> / <code>Down</code></td>
+<td>先确认焦点在搜索结果/联系人列表，核对选中项身份</td>
+</tr>
+<tr>
+<td>打开所选联系人</td>
+<td><code>Enter</code></td>
+<td>只在已确认结果列表焦点时；聊天输入框里的同一键可能发送</td>
+</tr>
+<tr>
+<td>字段切换</td>
+<td><code>Tab</code> / <code>Shift+Tab</code></td>
+<td>逐步核对控件，不用固定 Tab 次数猜输入框</td>
+</tr>
+<tr>
+<td>关闭已知弹层</td>
+<td><code>Esc</code></td>
+<td>先判断是否截图层、搜索、候选窗或聊天窗口；不盲目重复</td>
+</tr>
+<tr>
+<td>文本全选/修改</td>
+<td><code>Ctrl+A</code>、方向键、Backspace</td>
+<td>仅在已确认的消息编辑框中；消息列表全选可能是另一操作</td>
+</tr>
+<tr>
+<td>发送消息</td>
+<td><code>Enter</code> 或 <code>Ctrl+Enter</code></td>
+<td>以“发送”按钮选项的当前设置为准；执行前核对联系人、完整内容与已有发送授权</td>
+</tr>
+<tr>
+<td>换行</td>
+<td>当前发送模式对应的换行方式，常见为 <code>Ctrl+Enter</code> 或 <code>Enter</code></td>
+<td>不能拿真实消息试验哪一个会发送；Shift+Enter 也不能跨版本保证</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>特别注意</strong>：文字输入工具仍拒绝换行/控制字符，但 0.6.0 的键盘工具支持 <code>CTRL+ENTER</code> / <code>SHIFT+ENTER</code>。已从设置确认哪一键换行后，可以分段输入并用该换行键连接，每次观察核对。若发送模式未知，先查设置，不能拿真实消息试键，不偷偷改成一行或分多次发送。</p>
+<h3>恢复、搜索、撰写</h3>
+<ol>
+<li>根据 QQ 标题/进程找到当前窗口；托盘恢复时读取已出现的 tooltip，常在图标上方，也可能在旁边。把提示文字与当前图标关联；不点击 tooltip 本身。仅当工具支持 hover 时才用悬停产生提示；不要拿未知图标点击代替悬停。</li>
+<li>激活后确认账号和目标联系人/群。昵称重名时结合 QQ 号、群名或用户提供的身份；不会因为“打开了一个聊天”就认为目标正确。</li>
+<li>从主窗口搜索定位联系人，核对结果，再打开。进入会话后确认聊天标题，随后聚焦输入框。</li>
+<li>写入草稿后核对全文。用户只要求准备/编辑时保留草稿；用户已明确要求向该联系人发送这些内容时，不重复索取同一授权，核对当前发送键后执行一次。</li>
+<li>查看消息气泡及发送状态；超时或界面无反馈时先核对是否已经发送，不重发来验证。登录、验证码或密码由用户处理。</li>
+</ol>
+<h3>本机热键登记与更完整的任务路线</h3>
+<p>QQ 的“完整指南”应包含确认键位的办法，而不是把经典版候选填成 QQNT 保证可用的表。第一次查看设置时按以下字段记录在当前会话；不修改原设置：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>需要读取的实际值</th>
+<th>执行后的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>版本/账号</td>
+<td>QQNT 或经典版、版本号、当前账号</td>
+<td>设置/主窗口身份</td>
+</tr>
+<tr>
+<td>提取消息热键</td>
+<td>当前组合键、是否启用、是否冲突</td>
+<td>恢复后的聊天标题；可能是最新未读而非目标</td>
+</tr>
+<tr>
+<td>截图热键</td>
+<td>组合键及工具归属</td>
+<td>截图层的品牌、按钮/提示</td>
+</tr>
+<tr>
+<td>发送方式</td>
+<td>Enter 发送或 Ctrl+Enter 发送</td>
+<td>发送按钮选项中的选中状态</td>
+</tr>
+<tr>
+<td>换行方式</td>
+<td>与当前发送方式相配的实际绑定</td>
+<td>以设置说明为准，不用真实消息试验</td>
+</tr>
+<tr>
+<td>搜索范围</td>
+<td>联系人/群/当前聊天/全局消息</td>
+<td>搜索栏标签、搜索结果分类</td>
+</tr>
+<tr>
+<td>关闭窗口行为</td>
+<td>关闭窗口或最小化到托盘</td>
+<td>窗口/托盘状态，不以任务栏消失判定退出</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>查聊天记录</strong>：从正确聊天进入记录搜索 → 指定关键词/日期/文件类型 → 核对发送人、时间和前后消息 → 回到原会话核对标题。全局搜索同名结果与当前聊天记录不是同一范围。</p>
+<p><strong>准备多段消息</strong>：先读取发送/换行设置 → 聚焦正确聊天输入框 → 分段输入与已确认的换行键 → 检查完整草稿与附件 → 根据请求保存草稿或发送一次。输入工具每次最多 2000 字符时按段分次输入；切分不能偷偷改变消息边界或发送次数。</p>
+<p><strong>发送文件</strong>：进入目标聊天 → 通过已识别的“文件”入口打开选择器 → 核对路径、文件名、类型与实际附件预览 → 按已有发送授权提交 → 核对传输完成/失败状态。<code>Ctrl+V</code> 若剪贴板是文件或图片，可能形成附件或发送预览；不要把它当作保证只粘贴文字。</p>
+<p><strong>截图</strong>：任务确需截图时才使用已核实热键 → 核对截图层 → 选择区域并检查预览 → 区分复制、保存、取消、发送。截图完成不自动授权发给当前聊天。</p>
+<p><strong>修改草稿</strong>：确认输入框焦点 → Ctrl+Home/End、Ctrl+Left/Right 和加 Shift 的选择键可用于标准文本编辑；富文本控件、表情块和引用消息可能改变光标行为，按结果核对。Ctrl+A 后先确认仅选中草稿再替换。</p>
+<p><strong>托盘找不到</strong>：按主技能检查任务栏和隐藏图标；若提示显示在图标上方/旁边，读取名称并关联其指向的图标。QQ 可能正在登录、后台运行或有独立会话窗口；先恢复已有实例，不反复启动。需要菜单时在已识别图标上打开上下文菜单并读项目。</p>
+<p><strong>无响应恢复</strong>：先查模态文件选择器、截图层、输入法候选、快捷键冲突和焦点。已确认弹层用一次 Esc 退出后重新观察。聊天发送结果不明时先读消息气泡/失败标记；禁止用第二次发送作为验证。</p>
+<h3>来源与置信度</h3>
+<p>QQ 没有在本次核验中取得覆盖经典版和 QQNT 的统一官方键位表，也没有读取用户聊天内容来测试。<code>Ctrl+Alt+Z</code> 与 <code>Ctrl+Alt+A</code> 仅作为经典常见绑定候选；本机设置、菜单提示及发送方式选项是最终依据。不要编造未经确认的“快速打开联系人”组合键。</p><a class="toplink" href="#top">返回目录 ↑</a></article><article id="altium"><h2>Altium Designer — Windows</h2>
+<p>快捷键取决于编辑器与当前交互命令。先识别活动文档：<code>.SchDoc/.SchLib</code> 原理图/符号，<code>.PcbDoc/.PcbLib</code> PCB/封装；再看画布、面板、属性字段、菜单或对话框谁有焦点。中文输入法组合状态会影响字母助记键。</p>
+<h3>跨编辑器的入口</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>默认键</th>
+<th>核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开已有文档</td>
+<td><code>Ctrl+O</code></td>
+<td>在 Open 对话框确认完整路径与文档类型</td>
+</tr>
+<tr>
+<td>保存当前文档</td>
+<td><code>Ctrl+S</code></td>
+<td>核对文档名和未保存标记，不等于保存所有项目文档</td>
+</tr>
+<tr>
+<td>关闭当前文档</td>
+<td><code>Ctrl+F4</code></td>
+<td>处理保存提示；不要用 Ctrl+W 代替</td>
+</tr>
+<tr>
+<td>面板/设计文档间切换焦点</td>
+<td><code>Shift+F5</code></td>
+<td>最后活动面板与当前设计文档之间切换；核对焦点</td>
+</tr>
+<tr>
+<td>浮动面板显隐</td>
+<td><code>F4</code></td>
+<td>是切换，不保证所有停靠面板都消失</td>
+</tr>
+<tr>
+<td>上/下一个已激活文档</td>
+<td><code>Alt+Left</code> / <code>Alt+Right</code></td>
+<td>按激活历史，确认文件标题</td>
+</tr>
+<tr>
+<td>当前交互阶段快捷键菜单</td>
+<td><code>Shift+F1</code></td>
+<td>在正在放置、移动或布线时查看；Esc 关闭帮助菜单后仍可能处于原命令</td>
+</tr>
+<tr>
+<td>上下文帮助</td>
+<td><code>F1</code></td>
+<td>依资源/交互模式显示帮助；不等于执行帮助条目</td>
+</tr>
+<tr>
+<td>取消当前交互阶段</td>
+<td><code>Esc</code></td>
+<td>一次可能只取消当前线段/对象；观察状态栏、光标和附着对象，再决定是否需下一次 Esc</td>
+</tr>
+</tbody>
+</table></div>
+<h3>原理图 / Schematic</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>默认键</th>
+<th>适用模式/核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>显示全部设计对象</td>
+<td><code>Ctrl+PageDown</code></td>
+<td>画布焦点且没有未结束的放置动作；核对图纸对象范围</td>
+</tr>
+<tr>
+<td>缩放</td>
+<td><code>PageUp</code> / <code>PageDown</code></td>
+<td>以当前光标位置为中心；光标位置未知时优先显示全部</td>
+</tr>
+<tr>
+<td>重绘屏幕</td>
+<td><code>End</code></td>
+<td>用于画面刷新，不修改设计</td>
+</tr>
+<tr>
+<td>清除当前过滤</td>
+<td><code>Shift+C</code></td>
+<td>原理图过滤；核对先前隐藏/变暗对象恢复</td>
+</tr>
+<tr>
+<td>切换预设捕捉网格</td>
+<td><code>G</code> / <code>Shift+G</code></td>
+<td>向前/向后切换，核对状态栏网格值；不要为视觉方便乱改精度</td>
+</tr>
+<tr>
+<td>进入画线</td>
+<td><code>Ctrl+W</code></td>
+<td><strong>不是关闭标签</strong>；进入后核对 Wire 模式，未确定连接点就不落点</td>
+</tr>
+<tr>
+<td>测量两点距离</td>
+<td><code>Ctrl+M</code></td>
+<td>进入测量，不会自动选择两点；核对坐标与单位</td>
+</tr>
+<tr>
+<td>放置/移动时编辑属性</td>
+<td><code>Tab</code></td>
+<td>暂停交互并进入 Properties；再按 Tab 可能只是字段切换</td>
+</tr>
+<tr>
+<td>旋转附着对象</td>
+<td><code>Space</code> / <code>Shift+Space</code></td>
+<td>对象放置/移动时逆/顺时针 90°；画线时同键有不同作用</td>
+</tr>
+<tr>
+<td>镜像附着对象</td>
+<td><code>X</code> / <code>Y</code></td>
+<td>仅已确认对象处于放置/移动模式；不是全局镜像命令</td>
+</tr>
+<tr>
+<td>画线时切换起止子模式</td>
+<td><code>Space</code></td>
+<td>Wire/Bus 等交互状态；核对预览</td>
+</tr>
+<tr>
+<td>画线时切换拐角模式</td>
+<td><code>Shift+Space</code></td>
+<td>与旋转对象不同；以 Shift+F1 当前帮助为准</td>
+</tr>
+</tbody>
+</table></div>
+<p>常见菜单序列 <code>P → W</code> 表示 Place → Wire。只在当前菜单明确显示相应助记字母时执行；本地化或自定义菜单可能不同。先 P 打开菜单，再核对 Wire，最后 W；不要把字母输入属性字段。</p>
+<h3>PCB / Footprint</h3>
+<p>以下查看键仅在<strong>普通画布浏览模式</strong>、没有布线/长度调节/放置命令时使用。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>默认键</th>
+<th>适用模式/核对点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2D / 3D 布局视图</td>
+<td>顶行 <code>2</code> / <code>3</code></td>
+<td>核对视图模式；数字小键盘的 2/3 在 3D 中另有用途</td>
+</tr>
+<tr>
+<td>显示全部设计对象</td>
+<td><code>Ctrl+PageDown</code></td>
+<td>核对板与对象范围</td>
+</tr>
+<tr>
+<td>缩放/重绘</td>
+<td><code>PageUp</code> / <code>PageDown</code>；<code>End</code></td>
+<td>光标相关缩放；End 重绘</td>
+</tr>
+<tr>
+<td>单层显示模式循环</td>
+<td><code>Shift+S</code></td>
+<td>核对层显示；不是删层</td>
+</tr>
+<tr>
+<td>视图配置</td>
+<td><code>L</code></td>
+<td>普通查看时进入 View Configuration；布线中的 L 可能切换布线层</td>
+</tr>
+<tr>
+<td>网格菜单</td>
+<td><code>G</code></td>
+<td>是菜单，区别于原理图的直接循环网格</td>
+</tr>
+<tr>
+<td>翻转板视图</td>
+<td><code>Ctrl+F</code></td>
+<td><strong>不是文本查找</strong>；可能把板/元件视图翻到另一面</td>
+</tr>
+<tr>
+<td>清除过滤</td>
+<td><code>Shift+C</code></td>
+<td>普通 2D 浏览时使用；3D 可清测量，布线状态可切换 subnet swapping，不能通用恢复</td>
+</tr>
+<tr>
+<td>查看当前交互快捷键</td>
+<td><code>Shift+F1</code></td>
+<td>布线/滑动/长度调节时优先看当前命令帮助</td>
+</tr>
+<tr>
+<td>交互时属性</td>
+<td><code>Tab</code></td>
+<td>进入相应 Properties 模式；普通 PCB 选择状态的 Tab 可能扩展选区</td>
+</tr>
+</tbody>
+</table></div>
+<p>常见 PCB 菜单序列 <code>P → T</code>（Place → Track）或 <code>R → I</code>（Route → Interactive Routing）依当前版本菜单核实再用。<code>Space</code>、<code>Shift+Space</code>、数字键及 L 在布线、长度调节、3D 各有含义；不能从普通浏览表推断交互动作。</p>
+<h3>模式决策表：先判断再按键</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>当前状态</th>
+<th>可用入口</th>
+<th>容易误用的键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原理图普通画布</td>
+<td>Ctrl+PageDown、Projects/SCH 面板、菜单查找</td>
+<td>Ctrl+W 进入画线；不是关闭</td>
+</tr>
+<tr>
+<td>原理图附着元件</td>
+<td>Tab 属性、Shift+F1 当前帮助</td>
+<td>Space 旋转；X/Y 镜像；Enter 可能落点</td>
+</tr>
+<tr>
+<td>原理图画线</td>
+<td>Shift+F1；确认网络与端点</td>
+<td>Space/Shift+Space 控制走线模式，不是旋转元件</td>
+</tr>
+<tr>
+<td>PCB 普通 2D</td>
+<td>L、Shift+S、Ctrl+PageDown</td>
+<td>Ctrl+F 翻板；Tab 可能扩展选择</td>
+</tr>
+<tr>
+<td>PCB 布线/调长</td>
+<td>Shift+F1、Tab 查看当前属性</td>
+<td>L、数字键、Shift+C 具有命令专用含义</td>
+</tr>
+<tr>
+<td>PCB 3D 查看</td>
+<td>读 View 菜单和当前帮助</td>
+<td>主键盘/小键盘数字意义不同；不要套用 2D 过滤恢复</td>
+</tr>
+<tr>
+<td>Properties 数值框</td>
+<td>Tab/Shift+Tab、字段选择、单位核对</td>
+<td>字母可能输入值，Enter 可能提交；不是菜单助记键</td>
+</tr>
+<tr>
+<td>菜单/模态对话框</td>
+<td>可见 KeyTips、方向键、焦点名称</td>
+<td>Enter 执行当前项目，Esc 只退出当前层级</td>
+</tr>
+</tbody>
+</table></div>
+<h3>项目与精确编辑工作流</h3>
+<p><strong>打开并浏览设计</strong>：定位现有 Altium 窗口 → Projects 面板核对工程与路径 → 打开指定 SchDoc/PcbDoc → 确认活动标签、读写状态 → 普通浏览态用 Ctrl+PageDown → 根据目标对象进入 SCH/PCB 面板或已核实的查找命令。不要把打开同名库元件当成打开工程上的实际实例。</p>
+<p><strong>定位元件/网络</strong>：从面板名称、Designator、Comment、Net 等可读字段搜索/筛选 → 核对工程、对象类型、设计标号与网络 → 使用面板提供的定位/缩放入口 → 核对被选中对象的属性。先看筛选是 dim、mask、select 还是 zoom，避免以为其他对象已删除。跨原理图/PCB 的定位依工程关联与当前配置，不凭显示位置猜测同一对象。</p>
+<p><strong>更改元件属性</strong>：确认唯一对象与目标字段 → 打开 Properties → 读原值、单位和锁定状态 → 修改已请求的参数 → 提交并重新读值 → 核对连接、图层和未保存标记。对象坐标、旋转角与设计标号均可用文字验证；多选时属性面板可能批量改对象，先确认选择数量。</p>
+<p><strong>放置元件或布线</strong>：先确定元件/引脚/网络/图层/坐标 → 菜单进入对应命令 → Shift+F1 读取当前可用键 → 核对光标附着对象 → 必要时 Tab 精确设置属性 → 逐次落点并核对 → Esc 取消剩余交互阶段 → 查看最终连接/DRC 信息。快捷键只能进入动作，不能推断模糊图中的引脚位置。</p>
+<p><strong>查看测量</strong>：进入已核实的测量命令 → 读单位、坐标与起止对象 → 选择两点 → 核对报告距离及几何对象 → 退出测量模式。测量标注与真实铜线/机械对象必须区分；不要用 Delete 清理未知画布对象。</p>
+<p><strong>检查与输出</strong>：使用菜单或搜索到的项目验证/DRC 命令，读取具体规则、范围和 Messages/报告；错误列表为空可能只是未运行或筛选隐藏。按用户请求生成输出时，核对 OutJob、目标目录、图层、单位、钻孔及版本；不要把保存文档等同于制造文件已更新。</p>
+<h3>查找命令与自定义键位</h3>
+<p>找不到记忆中的菜单序列时，先显示菜单并读命令名/当前绑定，或用当前版本支持的命令搜索入口。不要假定 Office Alt+Q 或 VS Code Ctrl+Shift+P 在 Altium 可用。P→W、P→T、R→I 只在当前编辑器菜单已证实后作为一项短序列；进入独立对话框要重新观察。</p>
+<p>对于复制/粘贴、Move/Drag、选中同网络对象、交互布线、长度调节、切层、过孔、3D 旋转、网格和捕捉设置，优先读取该模式 Shift+F1 帮助与菜单。Move 和 Drag 对电气连接维护的行为不同，不能为了方便把它们互换。未验证的快捷键不做全局保证。</p>
+<h3>图像模糊时的可行范围</h3>
+<p>先用活动文档名、编辑器类型、状态栏命令文字/坐标和属性面板值建立状态。必要时用 Shift+F1 获取当前命令的文字帮助、Shift+F5 回到画布、Ctrl+PageDown 显示全部，配合新截图或可访问性文本核对。</p>
+<p>快捷键能可靠<strong>进入命令</strong>，不能替代对象身份、网络、焊盘、图层、坐标和连接正确性的证据。Enter 在交互命令中可以相当于点击/落点。对象位置不可辨认时不盲放元件、不布线、不依据模糊截图提交 PCB 改动；优先 Properties 中可核对的精确数值，或请求缺少的目标信息。</p>
+<p>制造输出、ECO 执行、Workspace 发布、打印不是普通查看快捷键的后续默认动作。不要把 <code>Ctrl+Alt+S</code> 当成通用 Save All；某些 Workspace 直接编辑场景中它用于保存新的项目项修订。</p>
+<p>来源（2026-09-09 查阅）：Altium <a href="https://www.altium.com/documentation/altium-designer/shortcut-keys">General shortcuts</a>、<a href="https://www.altium.com/documentation/altium-designer/shortcut-keys/schematic-editors">Schematic editors</a>、<a href="https://www.altium.com/documentation/altium-designer/shortcut-keys/pcb-editors">PCB editors</a>。本机自定义键位未逐一操作验证。</p><a class="toplink" href="#top">返回目录 ↑</a></article></main></div><script>
+const box=document.getElementById('search');
+const chapters=[...document.querySelectorAll('article')];
+const links=[...document.querySelectorAll('nav a')];
+function filter(){
+ const terms=box.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+ let count=0;
+ chapters.forEach((chapter,i)=>{
+  const visible=terms.every(term=>chapter.textContent.toLocaleLowerCase().includes(term));
+  chapter.hidden=!visible; links[i].hidden=!visible; count+=visible?1:0;
+ });
+ document.getElementById('count').textContent=`显示 ${count} / ${chapters.length} 章`;
+}
+box.addEventListener('input',filter);
+document.getElementById('clear').addEventListener('click',()=>{box.value='';filter();box.focus()});
+document.getElementById('print').addEventListener('click',()=>window.print());
+document.querySelector('main').addEventListener('click',event=>{
+ const anchor=event.target.closest('a[href^="#"]');
+ if(anchor){box.value='';filter()}
+});
+filter();
+</script></body></html>

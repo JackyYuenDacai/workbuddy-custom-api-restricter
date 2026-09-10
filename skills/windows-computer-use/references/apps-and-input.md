@@ -35,6 +35,6 @@
 4. 长文、多行或富文本超出能力时，优先改用已有且获授权的文档/应用工具；没有合适工具就说明限制并让用户选择。不要虚构粘贴、文件上传、任意组合键或批处理接口。
 5. 输入后核对可见文字、目标字段和错误提示；敏感字段交给用户，不截图确认秘密。后续 Enter/保存/发送是独立动作，按其副作用确认，重新观察后执行。
 
-当前 `desktop_key` 枚举：`ENTER, TAB, ESC, BACKSPACE, DELETE, UP, DOWN, LEFT, RIGHT, HOME, END, PAGEUP, PAGEDOWN, CTRL+A, CTRL+F, CTRL+L, CTRL+S, CTRL+Z, CTRL+Y, SHIFT+TAB`。不要猜测支持 Ctrl+V、Alt+Tab、任意组合键或按住拖拽；使用当前 schema 确认能力。
+`desktop_key` 0.6.0 使用通用字符串 `key` 或 `sequence`，支持 Ctrl+C/X/V、Alt+Tab、Win、F 键、标点、数字小键盘等；不再使用旧枚举。不是持续按住/拖拽工具，也不替代 Unicode 文字输入。语法与焦点规则见 [Windows 快捷键](windows-shortcuts.md)。若发现旧 schema，重新连接 local-computer-tools 后再发现。
 
 输入超时可能只输入了部分文字，先观察字段再恢复。不能盲目重发整段、盲目 Ctrl+Z 或清空内容；已经提交但结果不确定时只读核对，停止重复提交。

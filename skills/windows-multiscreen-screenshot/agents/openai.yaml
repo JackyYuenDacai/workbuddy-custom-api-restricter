@@ -1,0 +1,4 @@
+interface:
+  display_name: "Windows Multiscreen Screenshot"
+  short_description: "Capture Windows monitors with negative coordinates and high DPI"
+  default_prompt: "Use $windows-multiscreen-screenshot to capture the requested Windows monitor with physical pixel coordinates and verify the saved image."

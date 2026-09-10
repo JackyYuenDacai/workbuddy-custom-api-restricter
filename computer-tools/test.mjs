@@ -171,3 +171,23 @@ test('Ctrl+L preserves the same snapshot/foreground identity safeguards',async()
   assert.equal(requests.at(-1).expected_pid,44);
   await assert.rejects(controller.act('key',{snapshot_id:token,key:'CTRL+L'}),/already used/);
 });
+
+
+test('General shortcut sequence is forwarded and consumes one snapshot',async()=>{
+  const {controller,requests}=fixture();
+  const token=(await controller.observe({window_id:'123'})).metadata.snapshot_id;
+  await controller.act('key',{snapshot_id:token,sequence:['CTRL+K','CTRL+S']});
+  assert.deepEqual(requests.at(-1).sequence,['CTRL+K','CTRL+S']);
+  assert.equal('key' in requests.at(-1),false);
+  await assert.rejects(controller.act('key',{snapshot_id:token,key:'SHIFT+F1'}),/already used/);
+});
+
+test('Ambiguous or oversized key requests never reach backend',async()=>{
+  for(const args of [{key:'A',sequence:['B']},{sequence:[]},{sequence:['A'].constructor(9).fill('A')},{key:'A\nB'}]){
+    const {controller,requests}=fixture();
+    const token=(await controller.observe({window_id:'123'})).metadata.snapshot_id;
+    const count=requests.length;
+    await assert.rejects(controller.act('key',{snapshot_id:token,...args}));
+    assert.equal(requests.length,count);
+  }
+});

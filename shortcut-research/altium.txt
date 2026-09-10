@@ -1,0 +1,679 @@
+{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.altium.com/#organization",
+        "name": "Altium",
+        "alternateName": [
+          "Altium Limited",
+          "Altium Ltd"
+        ],
+        "url": "https://www.altium.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.altium.com/themes/custom/altium_designer_new/logo.png"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/altium/",
+          "https://www.bloomberg.com/profile/company/ALMFF:US",
+          "https://pitchbook.com/profiles/company/61840-81",
+          "https://en.wikipedia.org/wiki/Altium",
+          "https://www.wikidata.org/wiki/Q1066620",
+          "https://www.crunchbase.com/organization/altium-limited",
+          "https://profile.google.com/cp/CgovbS8wMjdyM2xq",
+          "https://www.youtube.com/c/AltiumOfficial",
+          "https://www.facebook.com/AltiumOfficial/",
+          "https://x.com/altium",
+          "https://www.tiktok.com/@altiumdesigner",
+          "https://www.instagram.com/altium_official/",
+          "https://www.g2.com/sellers/altium-caf10713-ff96-44ab-90af-cc9c6c9ef346",
+          "https://grokipedia.com/page/Altium"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/altium-designer#product",
+              "name": "Altium Designer",
+              "url": "https://www.altium.com/altium-designer"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/develop#product",
+              "name": "Altium Develop",
+              "url": "https://www.altium.com/develop"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/teams#product",
+              "name": "Altium Agile Teams",
+              "url": "https://www.altium.com/agile/teams"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/enterprise#product",
+              "name": "Altium Agile Enterprise",
+              "url": "https://www.altium.com/agile/enterprise"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/platform#product",
+              "name": "Altium 365",
+              "url": "https://www.altium.com/platform"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.octopart.com/#product",
+              "name": "Octopart",
+              "url": "https://www.octopart.com/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://circuitmaker.com/#product",
+              "name": "CircuitMaker",
+              "url": "https://circuitmaker.com/"
+            }
+          }
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://www.renesas.com/#organization",
+          "name": "Renesas Electronics Corporation",
+          "url": "https://www.renesas.com/",
+          "sameAs": [
+            "https://www.linkedin.com/company/renesas/",
+            "https://en.wikipedia.org/wiki/Renesas_Electronics",
+            "https://www.wikidata.org/wiki/Q1145403",
+            "https://www.crunchbase.com/organization/renesas"
+          ]
+        }
+      }
+Shortcuts | Altium Designer Technical Documentation
+window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'event': 'tagList','tagSlugs': 'agile|altium-designer|altium-designer|develop|software'});
+window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'region': ['US-CA']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'region': ['US']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5LFC7W');
+(function() {
+            var didInit = false;
+            function initMunchkin() {
+              if(didInit === false) {
+                didInit = true;
+                Munchkin.init('817-SFW-071');
+              }
+            }
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            s.onreadystatechange = function() {
+              if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                initMunchkin();
+              }
+            };
+            s.onload = initMunchkin;
+            document.getElementsByTagName('head')[0].appendChild(s);
+          })();
+Skip to main content
+Search In:
+Doc:
+Documentation:
+Altium Designer
+Altium Designer
+Altium 365
+Altium MCAD CoDesigner
+Altium On-Prem Enterprise Server
+Altium CircuitMaker
+Altium CircuitStudio
+Company Dashboard
+Altium Infrastructure Server
+Altium Developer Center
+Close
+Search
+Search on Documentation
+Altium Designer Documentation
+Getting Familiar with the Altium Design Environment
+Shortcuts
+Updated: August 30, 2024
+Perhaps the single thing you can do to become more productive in any software environment is to learn the shortcuts and, once learned, they become second nature. This article takes a look at the default shortcuts available across various key design domains, including how you can access listings while you work, and how you can edit them.
+Shortcut Listings
+The following sections provide more information (or links to more information) about the shortcuts assigned for use in the software and its various editors. When looking at any of the shortcut key listings, keep in mind the following:
+When referring to shortcuts, use of the plus (+) symbol denotes holding multiple keys down on the keyboard in the indicated sequence. For example,
+Shift+F1
+means holding down the
+Shift
+key then pressing the
+F1
+key. Likewise,
+Shift+Ctrl+PgUp
+means holding down the
+Shift
+key then holding down the
+Ctrl
+key at the same time and pressing the
+PgUp
+key.
+Where use of the standard mouse buttons is made,
+Click
+refers to a single click of the left-hand mouse button,
+Double-Click
+refers to two clicks of the left-hand mouse button, and
+Right-Click
+refers to a single click of the right-hand mouse button.
+General Altium Environment Shortcuts
+The following shortcuts are typically always available, irrespective of the type of editor that is currently active.
+Shortcut
+Description
+F1
+Access technical documentation for the resource currently under the cursor (menu or toolbar command, dialog, panel, design object, Query Language keyword).
+Ctrl+O
+Open an existing document using the
+Open
+dialog.
+Ctrl+F4
+Close the active document.
+Ctrl+S
+Save the active document.
+Ctrl+Alt+S
+Save the current document as a new revision of the associated parent item in the connected Workspace. This command is used only when performing a direct edit on a Workspace item.
+Ctrl+P
+Print the active document (where supported).
+Alt+F4
+Exit Altium Designer.
+Ctrl+Tab
+Cycle forward to the next open tabbed document, making it the active document in the design space.
+Shift+Ctrl+Tab
+Cycle backward to the previous open tabbed document, making it the active document in the design space.
+F4
+Toggle the display of all floating panels.
+Shift+F4
+Tile all open documents.
+Shift+F5
+Toggle the focus between the last active panel and the currently active design document in the main design window.
+Alt+Right Arrow
+Step forward to the next document in the sequence of documents that have been made active in the main design window.
+Alt+Left Arrow
+Step back to the previous document, in the sequence of documents that have been made active in the main design window.
+F5
+Refresh the active document when that document is a web-based document.
+Hold
+Ctrl
+while moving a panel
+Prevent automatic docking, grouping, or snapping.
+Drag and drop from Windows Explorer into Altium Designer
+Open a document, project, or project group.
+Shift+Ctrl+F3
+Move to the next message (down) in the
+Messages
+panel and cross-probe to the object responsible for the message in the associated document (where supported).
+Shift+Ctrl+F4
+Move to the previous message (up) in the
+Messages
+panel and cross-probe to the object responsible for the message in the associated document (where supported).
+Editor-specific Shortcuts
+Use the following links to access pages of shortcuts specific to the indicated editor(s).
+Schematic Editor & Schematic Symbol Editor Shortcuts
+PCB Editor & PCB Footprint Editor Shortcuts
+Component Editor Shortcuts
+Output Job Editor Shortcuts
+Draftsman Editor Shortcuts
+Multi-board Schematic Editor Shortcuts
+Multi-board Assembly Editor Shortcuts
+CAMtastic Editor Shortcuts
+SimData Editor Shortcuts
+Text-based Document Editor Shortcuts
+Accessing Shortcuts
+In a multi-editor environment like Altium Designer, it can be hard to remember the shortcuts, particularly those special-purpose ones that are available when you are running a command. To help with this, the software provides some ways to 'look up' key shortcuts.
+While Running an Interactive Command
+When running an interactive command within the Schematic and PCB editors - for example
+Place » Wire
+in a schematic or
+Route » Interactive Routing
+in the PCB - use the
+Shift+F1
+keyboard shortcut to access a menu listing all valid shortcuts for that stage of the interactive command. You can either process another command by choosing it from the menu, or press
+Esc
+to close the menu without impact on the currently running command (and use the desired shortcut thereafter).
+Use the
+Shift+F1
+shortcuts menu to refresh your memory about the shortcuts available or use it in the traditional menu sense to select the required option with the mouse. Shown here is the menu when placing a wire on a schematic. Hover over the image to see the menu when interactively routing a connection on a PCB.
+Alternatively, and for some interactive commands, use the
+F1
+keyboard shortcut. This gives access to the
+Graphical Editing Hot key List
+dialog, providing a list of the shortcuts available. Click the
+Current Process Help
+button to open the documentation page specific to the interactive command you are using. Note that the dialog is purely for guidance - the commands cannot be launched from within the dialog.
+Use the
+Graphical Editing Hot key List
+dialog to refresh your memory about the shortcuts available for the currently running interactive command. Shown here is the dialog when placing a wire on a schematic. Hover over the image to see the dialog when interactively moving a component on a PCB.
+Rather than using the
+Close
+button to exit the dialog, which can affect the currently running command with a change to the current cursor location, press
+Esc
+or
+Enter
+instead.
+When Configuring Editor Resources
+When
+customizing the menus and toolbars
+for an editor in Altium Designer, a listing of the general shortcuts available in that editor, as well as interactive shortcuts (where supported), will be available to browse.
+Quickly enter customization mode for the active editor by double-clicking in the blank area to the right of the main
+Help
+menu entry. For more information on customizing your installation of Altium Designer, see
+Configuration & Customization
+.
+Access a listing of shortcuts when customizing an editor. Shown here is the listing of general shortcuts for the Schematic Editor (notice that there is also a listing of interactive shortcuts). Hover over the image to see the listing of general shortcuts for the PCB Editor.
+Editing Shortcuts
+The fastest way to add or edit the shortcut(s) assigned to a command is to
+Ctrl+click
+on the entry for that command on the relevant menu or toolbar. This will open the
+Edit Command
+dialog, from where you can add a shortcut or edit the currently assigned one.
+To add or edit a shortcut for a particular command, hold
+Ctrl
+as you click on that command's menu or toolbar entry to open the
+Edit Command
+dialog.
+To define the shortcut, click in the
+Primary
+field (in the
+Shortcuts
+region of the dialog), then press the key combination you want to use on your keyboard. Alternatively, use the drop-down list then scroll to the required key(s). If you want a second, different shortcut associated to the command, use the
+Alternative
+field, in the same way you setup the
+Primary
+field. If a shortcut key combination is currently in use, the command using it will be displayed below in the relevant
+Currently in use by
+field. If you continue with the new assignment, it will be removed from that other command.
+Accelerator Keys
+In addition to standard keyboard shortcuts, Altium Designer also employs the use of
+Accelerator Keys
+. These are used as part of the main menu system (not right-click context menus) to be able to access commands through the sequential use of one or more such keys.
+Specifying an Accelerator Key
+An accelerator key is specified as part of a menu (main or sub) or command's caption by adding the ampersand (&) character immediately before the letter that you want to use as the accelerator. Within a menu, the current accelerator key is distinguished by the use of underlining.
+Ctrl+Click
+on a main menu or sub-menu entry, to access the
+Edit Drop Down Menu
+dialog.
+Ctrl+Click
+on a command entry to access the
+Edit Command
+dialog. Add the
+&
+character at the required position within the defined
+Caption
+.
+An accelerator key is created by placing an & character before that letter in a command or menu's caption. Shown here is the accelerator key 'R' for the
+Rules
+command. Hover over the image to see the definition of the accelerator ('m') for the
+Rooms
+sub-menu.
+Within any given menu or sub-menu, a particular letter can be used only once as an accelerator key.
+Main Menu Accelerators
+Strictly speaking, access to a root main menu through its accelerator key requires holding down the
+Alt
+key. This is because the same key may also be assigned to a pop-up menu. So for example, access to the
+Simulate
+menu in the Schematic Editor (with the
+Mixed Simulation
+system extension installed) would, at first sight, look to be a case of clicking the
+S
+key. However, while this is the menu's defined accelerator key, doing so will pop-up the
+Select
+sub-menu (from the main
+Edit
+menu). By using
+Alt+S
+, the intended
+Simulate
+menu is accessed.
+The accelerator key for a main menu could be used as the popup key for a different sub-menu. Using
+Alt+<MenuAcceleratorKey>
+will always access that main menu.
+In many cases, a main menu will also have a pop-up key assigned (and typically the same key as its accelerator). Where this is the case, using that key will access the menu in pop-up form. For example, the
+Design
+menu in the PCB Editor can strictly be accessed using
+Alt+D
+, but also in pop-up form using
+D
+. This functionality is defined for a menu in the
+Edit Drop Down Menu
+dialog, by using the
+Popup Key
+field.
+A menu can be accessed as a pop-up by specifying a popup key.
+For obvious reasons, pop-up keys are not assigned to menus in text-based editors, and so main menus can only be accessed through use of the
+Alt
+key.
+The following table summarizes the accelerator and pop-up keys assigned to various main menus available across editors:
+Menu
+Accelerator Key
+Popup Key
+F
+ile
+F
+F
+E
+dit
+E
+E
+V
+iew
+V
+V
+Proje
+c
+t
+C
+C
+P
+lace
+P
+P
+D
+esign
+D
+D
+T
+ools
+T
+T
+Ro
+u
+te
+(PCB Editor only)
+U
+U
+R
+eports
+R
+R
+S
+imulate
+(Schematic Editor only)
+S
+-
+W
+indow
+W
+W
+H
+elp
+H
+H
+Accelerator Key Sequence Examples
+Expand one of the following collapsible sections to access a listing of example accelerator key sequences available for the indicated editor. With hundreds of permutations available, you will soon build your own list of favorite keyboard sequences that you will want to keep in mind and use as you design.
+When referring to accelerator key sequences, use of the comma (,) symbol denotes pressing each key in the sequence in succession. For example,
+T, V, U
+means press the
+T
+key, then press the
+V
+key, and then press the
+U
+key.
+In some of the examples, accel
+erator keys are used in combination with key sequences within dialogs, ultimately arriving at a quick sequence of keystrokes to achieve a dialog setting and apply it.
+Schematic Keyboard Sequences
+Use the Accelerator Key Sequence...
+To...
+V, D
+Fit document.
+V, F
+Fit all objects.
+X, A
+Deselect all objects on the current sheet.
+V, G, S
+Access the
+Choose a snap grid size
+dialog in which you can set the snap grid to a user-specified value.
+E, W
+Break wire.
+T, A
+Access the
+Annotate dialog
+.
+T, A, E
+Reset schematic designators.
+T, A, I
+Reset duplicate schematic designators.
+P, P
+Use to open the
+Components panel
+with which to browse and place components from your own libraries.
+P, W
+Start wiring.
+P, V, K
+Place Compile Mask Directive.
+P, V, N
+Place Generic No ERC directive.
+M, M
+Move object.
+R, I
+Access the
+Report Manager dialog
+presenting a Bill of Materials for the active design project.
+T, P
+Access the
+Schematic - General page
+of the
+Preferences
+dialog. If you have previously accessed a different page of the Schematic preferences, then that page will be presented.
+PCB Keyboard Sequences
+Use the Accelerator Key Sequence...
+To...
+V, D
+Fit document.
+V, F
+Fit board.
+S, Y
+Select all on current layer.
+X, A
+Deselect all.
+O, D
+Access the
+View Options
+tab of the
+View Configuration panel
+.
+G, G, 5, Enter
+Set default
+Global Board Snap Grid
+to 5mil (both
+Step X
+and
+Step Y
+) when the board measurement units are Imperial.
+G, G
+accesses the
+Snap Grid (1..1000) dialog
+. Depending on the grid size required and the current measurement units, change the sequence after this and before the final
+Enter
+as needed.
+T, M
+Reset error markers.
+D, R
+Access the
+PCB Rules and Constraints Editor dialog
+.
+T, G, M
+Access the
+Polygon Pour Manager dialog
+.
+T, D, R
+Run a batch Design Rule Check.
+P, S
+Place string.
+P, T
+Start interactive routing.
+M, M
+Move object.
+M+X
+Opens the
+Get X-Y Offsets
+dialog to move the current selection by a specified distance in the horizontal (X) and/or vertical (Y) planes.
+T, P
+Access the
+PCB Editor - General page
+of the
+Preferences
+dialog. If you have previously accessed a different page of the PCB preferences, then that page will be presented.
+Draftsman Keyboard Sequences
+Use the Accelerator Key Sequence...
+To...
+V, D
+Fit document
+V, F
+Fit selected sheet
+P, S
+Place Board Assembly View
+P, F
+Place Board Fabrication View
+P, V, E
+Place Board Realistic View
+T, I
+Import changes from the PCB document
+T, A
+Add new sheet
+M, S
+Move selected object(s)
+Printer-friendly version
+If you find an issue, select the text/image and press
+Ctrl
++
+Enter
+to send us your feedback.
+Rate this page
+Easy to find?
+Accurate?
+Complete?
+Clear?
+Anything to add?
+Thank you for your feedback!
+Altium Designer Documentation
+New in Altium Designer
+Tutorial - A Complete Design Walkthrough with Altium Designer
+Getting Familiar with the Altium Design Environment
+Elements of the Environment
+Signing in to Your Altium Account
+Accessing Your Workspace
+Creating Projects and Documents
+Opening Projects and Documents
+Managing Project Documents
+Navigating a Document
+Saving Projects and Documents
+Project History
+Sharing a Design
+Document Commenting
+Requirements in a Design
+Collaborators Visualization & Conflict Prevention
+Working with Renesas 365 Solutions
+Interactive Process Workflows
+Design Variants
+Design Object Selection
+Editing Multiple Design Objects
+Working with Panels
+Shortcuts
+QuickNav - Panels
+Advanced Topics
+Capturing Your Design Idea as a Schematic
+Analyzing Your Design Using Circuit Simulation
+BOM Management with ActiveBOM
+Managing Design Changes between the Schematic & PCB
+Laying Out Your PCB
+Analyzing Your PCB Design
+Streamlining Board Design Documentation with Draftsman
+Preparing Your Design for Manufacture
+Designing with Multiple PCBs
+Harness Design
+Building & Maintaining Your Components and Libraries
+Configuring and Administrating Your Workspace
+Installation, Licensing & Management
+Quick Links
+QuickLinks
+Using Altium Documentation
+Documentation Copyright Information
+Altium Documentation - Home
+Knowledge Base
+Feature Availability
+The features available to you depend on which Altium solution you have –
+Altium Develop
+,
+Altium Agile Teams
+,
+Altium Agile Enterprise
+, or Altium Designer (on active term).
+If you don’t see a documented feature in your actual software,
+contact Altium Sales
+to find out more.
+Legacy Documentation
+Altium Designer documentation is no longer versioned. If you need to access documentation for older versions of Altium Designer, visit the
+Legacy Documentation
+section of the
+Other Installers
+page.
+Content
+Was this page helpful?
+Report Document Issue
+You are reporting an issue with the following selected text
+and/or image within the active document:
+ISSUE
+For further assistance, please connect to our
+Support Center
+This site is protected by reCAPTCHA and the Google
+Privacy Policy
+and
+Terms of Service
+apply.
+Cancel
+{"path":{"baseUrl":"\/documentation\/","pathPrefix":"","currentPath":"node\/248081","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx9kmFygyAQhS9kZKbtCXoRZoWNIQJrd1cbe_piYlNNTf8IvO8x-OBB1DAk687WxYBZzX1WwYI69EGJbR-HNmQxMOiJ-J0udQ8tPrU5ykUIlCE-ej0500ZqIB5EpxhyuyafXqxocN1kx5cVuB_xZhJyguAPIQfdd_QcJJ1lAynrnDCTR3skTmt4RPQNuM7saDaGhoGnXT-Don0IZxPmwYDTMGLZnLs_bP5Y8P4_eobLc1LSpATZbxJySc_oVIyiOxVF7tLW1hOrDSIDmif6XuYRWcp7moYRvOMhNT_SnmsZ__xBhjG0MBfDNpFcJ-ZIpMjP-akc9x__VSoHvboTmAYEKxdBZNrME4qUt5LKEaPxPPQQa0cxQj-bVqLiRaEEPTBK-FpYKA3iUuj6_DEgT_W1RVeSywzibFy6-dPRx_Wts6WeWaGJaEojg06HuQdSlXu6BbDjq2mJ2oj1r4Z5a1gvKplEMd3CKlG5q94s4zc4pojp","theme":"altium_doc","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/documentation\/altium-designer\/shortcut-keys?ajax_form=1":true},"altiumDocMenu":{"basePage":"248081"},"spaceName":"Altium Designer","csp":{"nonce":"a8-IFjLewptz_oRO2RmBZA"},"ajax":{"edit-actions--2":{"callback":"::setMessage","event":"mousedown","keypress":true,"prevent":"click","url":"\/documentation\/altium-designer\/shortcut-keys?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Send Feedback"}},"edit-captcha-response":{"callback":"recaptcha_v3_ajax_callback","event":"change","url":"\/documentation\/altium-designer\/shortcut-keys?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"captcha_response"}}},"user":{"uid":0,"permissionsHash":"6d676ddc53316b96406ac7699961e1c2fe8a944cbc20f94236085ed819496e27"}}

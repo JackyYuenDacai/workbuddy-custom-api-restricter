@@ -1,0 +1,272 @@
+use axum::body::Body;
+use axum::extract::State;
+use axum::http::{HeaderValue, Request};
+use axum::middleware::Next;
+use axum::response::{IntoResponse, Response};
+
+use crate::api::response::{self, ApiError, ErrorType, RequestId};
+use crate::api::state::SharedState;
+use crate::security::VerifyTokenReason;
+
+/// 导出预览下发的访问令牌 Cookie 名（供 iframe 内运行时渲染的资源请求兜底）。
+pub const PREVIEW_TOKEN_COOKIE: &str = "qce_preview_token";
+
+/// 请求 ID 中间件：读取 `X-Request-ID` 或生成新 ID，注入 extensions 与响应头。
+pub async fn request_id_middleware(mut request: Request<Body>, next: Next) -> Response {
+    let request_id = request
+        .headers()
+        .get("x-request-id")
+        .and_then(|value| value.to_str().ok())
+        .filter(|value| value.len() <= 128)
+        .map_or_else(response::generate_request_id, ToString::to_string);
+    request
+        .extensions_mut()
+        .insert(RequestId(request_id.clone()));
+    let mut response = next.run(request).await;
+    if let Ok(header_value) = HeaderValue::from_str(&request_id) {
+        response.headers_mut().insert("x-request-id", header_value);
+    }
+    response
+}
+
+/// 从请求中提取真实客户端 IP。
+pub fn client_ip(request: &Request<Body>) -> Option<String> {
+    request
+        .extensions()
+        .get::<axum::extract::ConnectInfo<std::net::SocketAddr>>()
+        .map(|info| info.0.ip().to_string())
+}
+
+/// Issue #438: verifyToken 失败原因 → HTTP 状态 + error code + 用户可读消息。
+fn map_verify_token_failure(
+    reason: VerifyTokenReason,
+    client_ip: Option<&str>,
+) -> (axum::http::StatusCode, &'static str, String) {
+    match reason {
+        VerifyTokenReason::TokenExpired => (
+            axum::http::StatusCode::FORBIDDEN,
+            "TOKEN_EXPIRED",
+            "访问令牌已过期，请在控制台重新获取".to_string(),
+        ),
+        VerifyTokenReason::IpNotAllowed => (
+            axum::http::StatusCode::FORBIDDEN,
+            "IP_NOT_ALLOWED",
+            format!(
+                "客户端 IP{} 不在 IP 白名单内（可在 security.json 中关闭 IP 白名单或加入当前 IP）",
+                client_ip.map(|ip| format!(" {ip}")).unwrap_or_default()
+            ),
+        ),
+        VerifyTokenReason::InvalidToken => (
+            axum::http::StatusCode::FORBIDDEN,
+            "INVALID_TOKEN",
+            "无效的访问令牌".to_string(),
+        ),
+    }
+}
+
+/// 判断路径是否为公开路由（无需认证）。
+fn is_public_route(path: &str) -> bool {
+    const PUBLIC_ROUTES: [&str; 6] = [
+        "/",
+        "/health",
+        "/auth",
+        "/auth/",
+        "/security-status",
+        "/qce",
+    ];
+    const STATIC_EXTENSIONS: [&str; 11] = [
+        ".png", ".jpg", ".jpeg", ".svg", ".gif", ".ico", ".css", ".js", ".woff", ".woff2", ".ttf",
+    ];
+
+    let lower = path.to_lowercase();
+    let is_root_static_file = !path.starts_with("/api/")
+        && !path.starts_with("/resources/")
+        && !path.starts_with("/downloads/")
+        && !path.starts_with("/scheduled-downloads/")
+        && STATIC_EXTENSIONS.iter().any(|ext| lower.ends_with(ext));
+
+    PUBLIC_ROUTES.contains(&path)
+        || path.starts_with("/static/")
+        || path.starts_with("/qce/")
+        || is_root_static_file
+    // 注意：/api/download-file 需要认证（Issue #192 安全修复）
+}
+
+fn is_websocket_upgrade(request: &Request<Body>) -> bool {
+    request
+        .headers()
+        .get("upgrade")
+        .and_then(|value| value.to_str().ok())
+        .is_some_and(|value| value.eq_ignore_ascii_case("websocket"))
+}
+
+/// 安全认证中间件。
+pub async fn auth_middleware(
+    State(state): State<SharedState>,
+    request: Request<Body>,
+    next: Next,
+) -> Response {
+    let path = request.uri().path().to_string();
+    let root_websocket_upgrade = path == "/" && is_websocket_upgrade(&request);
+    if is_public_route(&path) && !root_websocket_upgrade {
+        return next.run(request).await;
+    }
+
+    let request_id = request
+        .extensions()
+        .get::<RequestId>()
+        .map_or_else(response::generate_request_id, |id| id.0.clone());
+
+    // 检查认证令牌：Authorization Bearer / ?token= / X-Access-Token
+    let token = request
+        .headers()
+        .get("authorization")
+        .and_then(|value| value.to_str().ok())
+        .and_then(|value| value.strip_prefix("Bearer "))
+        .map(ToString::to_string)
+        .or_else(|| {
+            request
+                .uri()
+                .query()
+                .and_then(|query| url_query_param(query, "token"))
+        })
+        .or_else(|| {
+            request
+                .headers()
+                .get("x-access-token")
+                .and_then(|value| value.to_str().ok())
+                .map(ToString::to_string)
+        })
+        .or_else(|| {
+            // 导出预览 iframe / <img> 标签带不上 `?token=` 或 Authorization 头：
+            // 预览页与前端登录时都会把访问令牌写入 Cookie，这里用它兜底。
+            // 只在资源只读路径下认 Cookie，避免变成通用 CSRF 凭证。
+            if path.starts_with("/api/exports/files/") || path.starts_with("/resources/") {
+                request
+                    .headers()
+                    .get(axum::http::header::COOKIE)
+                    .and_then(|value| value.to_str().ok())
+                    .and_then(|cookies| cookie_value(cookies, PREVIEW_TOKEN_COOKIE))
+            } else {
+                None
+            }
+        });
+
+    let Some(token) = token.filter(|t| !t.is_empty()) else {
+        let err = ApiError::new(ErrorType::Auth, "需要访问令牌", "MISSING_TOKEN")
+            .with_status(axum::http::StatusCode::UNAUTHORIZED);
+        return response::error(&err, &request_id).into_response();
+    };
+
+    let ip = client_ip(&request);
+    if let Err(reason) = state
+        .security_manager
+        .verify_token_with_reason(&token, ip.as_deref())
+    {
+        let (status, code, message) = map_verify_token_failure(reason, ip.as_deref());
+        let mut err = ApiError::new(ErrorType::Auth, message, code).with_status(status);
+        if code == "IP_NOT_ALLOWED" {
+            if let Some(ip) = ip {
+                err = err.with_context(serde_json::json!({ "clientIP": ip }));
+            }
+        }
+        return response::error(&err, &request_id).into_response();
+    }
+
+    next.run(request).await
+}
+
+/// 从 Cookie 头里提取指定名字的值（不做 URL 解码，令牌本身为 URL 安全字符）。
+fn cookie_value(cookies: &str, name: &str) -> Option<String> {
+    cookies.split(';').find_map(|pair| {
+        let (k, v) = pair.split_once('=')?;
+        (k.trim() == name).then(|| v.trim().to_string())
+    })
+}
+
+/// 从 query string 中提取参数（URL 解码）。
+fn url_query_param(query: &str, key: &str) -> Option<String> {
+    for pair in query.split('&') {
+        let Some((k, v)) = pair.split_once('=') else {
+            continue;
+        };
+        if k == key {
+            return percent_encoding::percent_decode_str(v)
+                .decode_utf8()
+                .ok()
+                .map(|decoded| decoded.replace('+', " "));
+        }
+    }
+    None
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn public_route_detection() {
+        assert!(is_public_route("/"));
+        assert!(is_public_route("/health"));
+        assert!(is_public_route("/qce/index.html"));
+        assert!(is_public_route("/static/app.css"));
+        assert!(!is_public_route("/api/exports/files"));
+        assert!(!is_public_route("/api/exports/files/abc.html/preview"));
+        assert!(!is_public_route("/api/exports/files/abc.html/info"));
+        assert!(!is_public_route(
+            "/api/exports/files/abc/resources/images/x.bin"
+        ));
+        assert!(!is_public_route(
+            "/api/exports/files/abc/resources/images/x.png"
+        ));
+        assert!(!is_public_route("/downloads/abc.html"));
+        assert!(!is_public_route("/resources/avatar.png"));
+        assert!(!is_public_route("/api/download-file"));
+        assert!(!is_public_route("/api/groups"));
+        assert!(!is_public_route("/api/messages/roaming/first"));
+        assert!(!is_public_route("/api/messages/roaming/export"));
+    }
+
+    #[test]
+    fn root_websocket_upgrade_is_not_treated_as_public_http() {
+        let request = Request::builder()
+            .header("upgrade", "websocket")
+            .body(Body::empty())
+            .expect("request");
+        assert!(is_public_route("/"));
+        assert!(is_websocket_upgrade(&request));
+    }
+
+    #[test]
+    fn client_ip_ignores_forwarding_headers() {
+        let mut request = Request::builder()
+            .header("x-forwarded-for", "127.0.0.1")
+            .header("x-real-ip", "127.0.0.1")
+            .body(Body::empty())
+            .expect("request");
+        request.extensions_mut().insert(axum::extract::ConnectInfo(
+            "192.0.2.25:40653"
+                .parse::<std::net::SocketAddr>()
+                .expect("socket address"),
+        ));
+        assert_eq!(client_ip(&request).as_deref(), Some("192.0.2.25"));
+    }
+
+    #[test]
+    fn cookie_parser_reads_named_value() {
+        let cookies = "foo=1; qce_preview_token=abc123; bar=2";
+        assert_eq!(
+            cookie_value(cookies, PREVIEW_TOKEN_COOKIE).as_deref(),
+            Some("abc123")
+        );
+        assert_eq!(cookie_value("foo=1", PREVIEW_TOKEN_COOKIE), None);
+    }
+
+    #[test]
+    fn query_parser_skips_malformed_pairs() {
+        assert_eq!(
+            url_query_param("broken&token=abc%20123", "token").as_deref(),
+            Some("abc 123")
+        );
+    }
+}

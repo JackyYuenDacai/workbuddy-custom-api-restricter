@@ -1,0 +1,1539 @@
+{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.altium.com/#organization",
+        "name": "Altium",
+        "alternateName": [
+          "Altium Limited",
+          "Altium Ltd"
+        ],
+        "url": "https://www.altium.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.altium.com/themes/custom/altium_designer_new/logo.png"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/altium/",
+          "https://www.bloomberg.com/profile/company/ALMFF:US",
+          "https://pitchbook.com/profiles/company/61840-81",
+          "https://en.wikipedia.org/wiki/Altium",
+          "https://www.wikidata.org/wiki/Q1066620",
+          "https://www.crunchbase.com/organization/altium-limited",
+          "https://profile.google.com/cp/CgovbS8wMjdyM2xq",
+          "https://www.youtube.com/c/AltiumOfficial",
+          "https://www.facebook.com/AltiumOfficial/",
+          "https://x.com/altium",
+          "https://www.tiktok.com/@altiumdesigner",
+          "https://www.instagram.com/altium_official/",
+          "https://www.g2.com/sellers/altium-caf10713-ff96-44ab-90af-cc9c6c9ef346",
+          "https://grokipedia.com/page/Altium"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/altium-designer#product",
+              "name": "Altium Designer",
+              "url": "https://www.altium.com/altium-designer"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/develop#product",
+              "name": "Altium Develop",
+              "url": "https://www.altium.com/develop"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/teams#product",
+              "name": "Altium Agile Teams",
+              "url": "https://www.altium.com/agile/teams"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/enterprise#product",
+              "name": "Altium Agile Enterprise",
+              "url": "https://www.altium.com/agile/enterprise"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/platform#product",
+              "name": "Altium 365",
+              "url": "https://www.altium.com/platform"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.octopart.com/#product",
+              "name": "Octopart",
+              "url": "https://www.octopart.com/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://circuitmaker.com/#product",
+              "name": "CircuitMaker",
+              "url": "https://circuitmaker.com/"
+            }
+          }
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://www.renesas.com/#organization",
+          "name": "Renesas Electronics Corporation",
+          "url": "https://www.renesas.com/",
+          "sameAs": [
+            "https://www.linkedin.com/company/renesas/",
+            "https://en.wikipedia.org/wiki/Renesas_Electronics",
+            "https://www.wikidata.org/wiki/Q1145403",
+            "https://www.crunchbase.com/organization/renesas"
+          ]
+        }
+      }
+PCB Editor & PCB Library Editor Shortcuts | Altium Designer Technical Documentation
+window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'event': 'tagList','tagSlugs': 'agile|altium-designer|altium-designer|develop|functional-areas|pcb-design-layout|software'});
+window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'region': ['US-CA']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'region': ['US']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5LFC7W');
+(function() {
+            var didInit = false;
+            function initMunchkin() {
+              if(didInit === false) {
+                didInit = true;
+                Munchkin.init('817-SFW-071');
+              }
+            }
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            s.onreadystatechange = function() {
+              if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                initMunchkin();
+              }
+            };
+            s.onload = initMunchkin;
+            document.getElementsByTagName('head')[0].appendChild(s);
+          })();
+Skip to main content
+Search In:
+Doc:
+Documentation:
+Altium Designer
+Altium Designer
+Altium 365
+Altium MCAD CoDesigner
+Altium On-Prem Enterprise Server
+Altium CircuitMaker
+Altium CircuitStudio
+Company Dashboard
+Altium Infrastructure Server
+Altium Developer Center
+Close
+Search
+Search on Documentation
+Altium Designer Documentation
+Laying Out Your PCB
+PCB Editor & PCB Library Editor Shortcuts
+Updated: March 29, 2026
+The following sections present shortcut keys that are specific to the PCB and/or the PCB Footprint Editors. For general information regarding shortcut keys - including access and editing, general Altium environment shortcuts, and accelerator keys - see
+Altium Designer Shortcut Keys
+.
+When looking at the shortcut key listings, keep in mind the following:
+When referring to shortcuts, use of the plus (+) symbol denotes holding multiple keys down on the keyboard in the indicated sequence. For example,
+Shift+F1
+means holding down the
+Shift
+key then pressing the
+F1
+key. Likewise,
+Shift+Ctrl+PgUp
+means holding down the
+Shift
+key then holding down the
+Ctrl
+key at the same time and pressing the
+PgUp
+key.
+Where use of the standard mouse buttons is made,
+Click
+refers to a single click of the left-hand mouse button,
+Double-Click
+refers to two clicks of the left-hand mouse button, and
+Right-Click
+refers to a single click of the right-hand mouse button.
+Standard Shortcuts
+The following shortcuts are standard to the PCB and/or PCB Footprint Editors. They are available in general and do not require you to be performing an interactive process to access them.
+General Editing
+Double-Click
+Modify the properties of the object currently under the cursor.
+Right-Click
+Access context menu for the design space or object currently under the cursor. If currently within an interactive command, will escape from the current operation.
+Ctrl+C
+Copy selection
+Ctrl+X
+Cut selection
+Ctrl+V
+Paste selection
+Alt+Insert
+Paste objects onto the current layer regardless of their original layer assignments.
+Ctrl+R
+Copy selected object(s) and paste repeatedly where needed in the design space (rubber stamping).
+Delete
+Delete selection
+Ctrl+Z
+Undo
+Ctrl+Y
+Redo
+Selecting
+Shift+F
+Access the Find Similar Objects feature (click on an object to use as the base template).
+Click
+Select/deselect the object currently under the cursor.
+Shift+Click
+Change the selection status of the object currently under the cursor without affecting the status of other objects.
+Tab
+With an initial object selected in the design, extend the selection to include the next higher-level object (or objects), based on logical hierarchy. In addition, the feature caters for selection extension across multiple objects selected across different nets in the design.
+Shift+Tab
+Single select the next design object in a set of co-located (overlapping) objects without utilizing a selection pop-up window. To use this command, ensure that the
+Display popup selection dialog
+option is disabled on the
+PCB Editor - General page
+of the
+Preferences
+dialog.
+Shift+Ctrl+X
+Toggle Cross Select Mode On or Off.
+Shift+Ctrl+Y
+Toggle the Cross Select Mode's
+Reposition selected component in PCB
+option On or Off.
+Ctrl+A
+Select all objects on the current document.
+Ctrl+B
+Select all objects that reside within the boundary of the defined board shape.
+Ctrl+H
+Select all electrical objects that are connected to the same piece of copper.
+Alt+Click
+On a connection to select that connection.
+Alt+Shift+Click
+On a connection to select that connection in addition to the connections already selected (cumulative connection selection).
+Click
+(away from objects)
+, Hold&Drag
+(left-to-right)
+Select all objects that fall completely within the bounds of the selection area.
+Click
+(away from objects)
+, Hold&Drag
+(right-to-left)
+Select all objects that fall completely inside the selection area or are touched by its boundary.
+Ctrl+Hold&Drag
+(left-to-right)
+Select all component pads that fall completely within the bounds of the selection area.
+Ctrl+Hold&Drag
+(right-to-left)
+Select all component pads that fall completely inside the selection area or are touched by its boundary.
+Alt+Click&Drag
+(from right-to-left)
+To select all connections touched by the dragged rectangle.
+Ctrl+n
+(
+n
+=
+1
+to
+8
+)
+Store the current selection in memory location
+n
+.
+Alt+n
+(
+n
+=
+1
+to
+8
+)
+Recall the selection from memory location
+n
+.
+Shift+n
+(
+n
+=
+1
+to
+8
+)
+Add the current selection to the selection already stored in memory location
+n
+.
+Alt+Shift+n
+(
+n
+=
+1
+to
+8
+)
+Recall selection from memory location
+n
+and add it to the current selection in the design space.
+Shift+Ctrl+n
+(
+n
+=
+1
+to
+8
+)
+Apply filtering based on the selection set in memory location
+n
+.
+Moving
+Click
+(on an object)
+, Hold&Drag
+Move the single object currently under the cursor (or group of selected objects if the object is part of that selection).
+On a via in a stack of vias, use to move the entire stack to a new location.
+Ctrl+Click, Hold&Drag
+On a via in a stack of vias, use to move just that via to a new location (and not the entire stack).
+Left Arrow
+Move the cursor to the left (for a Cartesian Grid) or inward (for a Polar Grid) in the current document design space in increments of one snap grid unit.
+Shift+Left Arrow
+Move the cursor to the left (for a Cartesian Grid) or inward (for a Polar Grid) in the current document design space in increments of 10 snap grid units.
+Right Arrow
+Move the cursor to the right (for a Cartesian Grid) or outward (for a Polar Grid) in the current document design space in increments of one snap grid unit.
+Shift+Right Arrow
+Move the cursor to the right (for a Cartesian Grid) or outward (for a Polar Grid) in the current document design space, in increments of 10 snap grid units.
+Up Arrow
+Move the cursor upwards (for a Cartesian Grid) or counterclockwise (for a Polar Grid) in the current document design space, in increments of one snap grid unit.
+Shift+Up Arrow
+Move the cursor upwards (for a Cartesian Grid) or counterclockwise (for a Polar Grid) in the current document design space, in increments of 10 snap grid units.
+Down Arrow
+Move the cursor downwards (for a Cartesian Grid) or clockwise (for a Polar Grid) in the current document design space, in increments of one snap grid unit.
+Shift+Down Arrow
+Move the cursor downwards (for a Cartesian Grid) or clockwise (for a Polar Grid) in the current document design space, in increments of 10 snap grid units.
+Ctrl+Left Arrow
+Move the current selection (one or more selected design objects) to the left in the current document design space in increments of one snap grid unit.
+Shift+Ctrl+Left Arrow
+Move the current selection (one or more selected design objects) to the left in the current document design space, in increments of 10 snap grid units.
+Ctrl+Right Arrow
+Move the current selection (one or more selected design objects) to the right in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Right Arrow
+Move the current selection (one or more selected design objects) to the right in the current document design space, in increments of 10 snap grid units.
+Ctrl+Up Arrow
+Move the current selection (one or more selected design objects) upwards in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Up Arrow
+Move the current selection (one or more selected design objects) upwards in the current document design space, in increments of 10 snap grid units.
+Ctrl+Down Arrow
+Move the current selection (one or more selected design objects) downwards in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Down Arrow
+Move the current selection (one or more selected design objects) downwards in the current document design space, in increments of 10 snap grid units.
+Aligning
+Shift+Ctrl+L
+Align selected objects by their left edges.
+Shift+Ctrl+R
+Align selected objects by their right edges.
+Alt+Shift+L
+Align selected design objects by their left edges while maintaining adequate spacing in observance with applicable design rules.
+Alt+Shift+R
+Align selected design objects by their right edges while maintaining adequate spacing in observance with applicable design rules.
+Shift+Ctrl+H
+Make the horizontal spacing of selected objects equal.
+Shift+Ctrl+T
+Align selected objects by their top edges.
+Shift+Ctrl+B
+Align selected objects by their bottom edges.
+Shift+Alt+I
+Align selected design objects by their top edges while maintaining adequate spacing in observance with applicable design rules.
+Shift+Alt+N
+Align selected design objects by their bottom edges while maintaining adequate spacing in observance with applicable design rules.
+Shift+Ctrl+V
+Make the vertical spacing of selected objects equal.
+Shift+Ctrl+D
+Move selected components to the nearest point on the required component placement grid.
+Viewing the Board
+1
+Switch the display of the PCB design space to
+Board Planning Mode
+.
+2
+Switch the display of the PCB design space to
+2D Layout Mode
+.
+3
+Switch the display of the PCB design space to
+3D Layout Mode
+.
+Ctrl+Alt+2
+Switch the display of the PCB design space to
+2D Layout Mode
+and see the same location and orientation of the board as you switch.
+Ctrl+Alt+3
+Switch the display of the PCB design space to
+3D Layout Mode
+and see the same location and orientation of the board as you switch.
+Shift+S
+Cycle through the available single layer viewing modes. The available modes are determined by enabling the corresponding options in the
+Available Single Layer Modes
+region on the
+PCB Editor - Board Insight Display page
+of the
+Preferences
+dialog.
+Ctrl+F
+Flip the active board, or active component, just as if you were turning it over in your hand. Use the shortcut again to flip the board/component back again.
+Ctrl+PgDn
+Display all design objects on the current document.
+PgUp
+Zoom-in, relative to the current cursor location.
+You can also use the mouse to zoom in to a region of the document by one of the following methods (where applicable and depending on how the buttons of your mouse might be assigned):
+Hold the
+Ctrl
+key and roll the mouse wheel upward. Use of the
+Ctrl
+key is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Hold both the
+Ctrl
+key and the right mouse button, then move the mouse forward.
+Hold the right (first) and left (second) mouse buttons, then move the mouse forward.
+Click and hold the mouse wheel, then move the mouse forward.
+PgDn
+Zoom-out, relative to the current cursor location.
+You can use the mouse to zoom out from a region of the document by one of the following methods (where applicable and depending on how the buttons of your mouse might be assigned):
+Hold the
+Ctrl
+key and roll the mouse wheel downward. Use of the
+Ctrl
+key is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Hold both the
+Ctrl
+key and the right-mouse button, then move the mouse backward.
+Hold the right (first) and left (second) mouse buttons, then move the mouse backward.
+Click and hold the mouse wheel, then move the mouse backward.
+Shift+PgUp
+Zoom-in, relative to the current cursor location and in progressively smaller steps.
+Shift+PgDn
+Zoom-out, relative to the current cursor location and in progressively larger steps.
+Ctrl+PgUp
+Set the magnification of the current document to 400%.
+Mouse Wheel
+Scroll vertically within the design space. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Shift+Mouse Wheel
+Scroll horizontally within the design space. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Home
+Redraw the view in the main design window, placing the location marked by the cursor - prior to launching the command - at the center of the window.
+End
+Refresh the screen, in effect performing a redraw of the current document, to remove any undesirable drawing update effects.
+Alt+End
+Redraw the current layer of the current document, to remove any undesirable drawing update effects.
+Alt+F5
+Toggle the display of the current document's editor between maximized and not maximized.
+F5
+Visually toggle the
+Net Color Override
+feature on or off.
+Shift+Z
+Toggle the 3D model visibility in the current PCB document.
+L
+Access the
+Layers And Colors
+tab of the
+View Configuration panel
+in which you can configure the display of layers for the board and the colors assigned to those layers.
+Ctrl+D
+Access the
+View Options
+tab of the
+View Configuration panel
+in which you can configure the mode used to display each of the various design items within the design space.
+Right-Click, Hold&Drag
+Display the slider (panning) hand cursor then drag to move your view of the design space.
+Board Insight Display
+Shift+H
+Toggle the Heads Up Display on or off.
+Shift+G
+Toggle Heads Up Display tracking on or off.
+Insert
+Resets the Delta Origin point for the Heads Up Display feature to
+0,0
+.
+Shift+D
+Toggle the display of the
+Delta
+coordinates within the Heads Up Display.
+Shift+V
+Access the
+Board Insight
+pop-up, listing all violations (of defined
+Design Rules
+) currently under the cursor.
+Shift+X
+Access the
+Board Insight
+pop-up, listing all components and/or net objects currently under the cursor.
+Ctrl+Mouse Wheel Click
+Access the
+Board Insight
+pop-up, listing all violations (of defined
+Design Rules
+) and all components and/or net objects currently under the cursor. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Grids
+Shift+E
+Cycle to the next mode of object
+Hotspot Snapping
+.
+Ctrl+E
+Access a pop-up window in which to define which objects to be used for snapping purposes. The choices made are reflected back in the
+Snap Options
+region of the
+Properties
+panel (on the
+General
+tab when viewing options for a PCB document).
+Ctrl+G
+Access the dedicated grid editor dialog for the snap grid currently under the cursor.
+Shift+Ctrl+G
+Set the X (horizontal) and Y (vertical) step values - for the default
+Global Board Snap Grid
+- simultaneously to a chosen value.
+Ctrl+Shift
+Temporarily disables the grid.
+Shift+H
+Toggle on/off whether the cursor on a grid will snap to the active grid. Once enabled, the cursor will pull or snap to the nearest snap group location.
+Highlighting
+Ctrl+Click
+On a net object to highlight the entire routed net.
+On a layer tab to highlight all content on that layer.
+In free space to clear current highlighting.
+Shift+Ctrl+Click
+On a net object to highlight the entire routed net in addition to the routed nets already highlighted (cumulative routed net highlighting).
+On a layer tab to highlight all content on that layer in addition to the content already highlighted on other layers (cumulative layer highlighting).
+Alt+Ctrl
+While hovering the cursor over a layer tab to highlight the content of that layer only.
+]
+Increase the masking level, which decreases the extent of dimming in the design space for all objects not falling under the scope of the currently applied filter. Note that this shortcut is only effective when the highlighting method for objects not passing the applied filter is set to
+Dim
+. Unlike the
+Mask
+highlighting method, such objects can still be selected and edited.
+[
+Decrease the masking level, which increases the extent of dimming in the design space for all objects not falling under the scope of the currently applied filter. Note that this shortcut is only effective when the highlighting method for objects not passing the applied filter is set to
+Dim
+. Unlike the
+Mask
+highlighting method, such objects can still be selected and edited.
+Shift+C
+Clear the filter that is currently being applied to the active document.
+Quick Panel Access
+F11
+Toggle the display of the
+Properties
+panel.
+F12
+Toggle the display of the
+PCB Filter panel
+or the
+PCBLIB Filter panel
+accordingly.
+Shift+F12
+Toggle the display of the
+List panel
+(
+PCB List
+or
+PCBLIB List
+panel) accordingly.
+Layer Switching
++
+(on numeric keypad)
+Switch to the next enabled layer.
+-
+(on numeric keypad)
+Switch to the previous enabled layer.
+*
+(on numeric keypad)
+Switch to the next enabled signal layer.
+Shift+*
+(on numeric keypad)
+Switch to the previous enabled signal layer.
+Shift+Ctrl+Mouse Wheel
+Cycle through the enabled layers. As you roll the mouse wheel upward/downward, the next/previous enabled layer (at the bottom of the main design window) will become the active layer. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Routing/Track Modification
+Shift+A
+Route selected connections using the ActiveRoute Guided Interactive Router.
+Ctrl+W
+Start routing using the Interactive Router.
+Shift+Ctrl+Click&Hold
+Create a vertex (or break) in a track segment at the current cursor position.
+Backspace
+Delete a single, selected end-of-route object (component-free track, arc, via, or pad). The singular routing object connected to the deleted object will be automatically selected and ready for subsequent deletion. By using the command repeatedly, you are able to incrementally unwind the routed path in the same way as using the
+Backspace
+shortcut while interactively routing.
+Ctrl+Delete
+Delete one or more selected routing objects (component-free tracks, arcs, vias, and pads) on the current document. All routing objects connected to those deleted will be automatically selected and ready for subsequent deletion. By using the command repeatedly, you are able to incrementally unwind the routed path in both directions.
+Ctrl+Alt+G
+Use
+Glossing
+to improve the quality of the selected routes by reducing the overall length and number of corners.
+Commenting
+Alt+Ctrl+C
+Add a new comment thread to a point, object, or area on the active PCB document. Before you can start using the comment feature, ensure that you have opened (checked out) a
+Managed Project
+and are working on its PCB document.
+Miscellaneous
+Ctrl+Home
+Move the cursor to the absolute origin at the lower-left corner of the design space.
+Ctrl+End
+Move the cursor to the relative origin of the current document (PCB document), or the location of the component reference point (PCB Footprint document).
+Ctrl+Q
+In the main design space to access the
+Selection Memory dialog
+, from where you can control all aspects of the selection memory feature.
+In a dialog or panel to toggle the measurement units (in the dialog or panel only), between metric (mm) and imperial (mil).
+Alt+Left Arrow
+Jump to, and make active, the previous component in the current library document. Note that after reaching the first component in the list, the command will not cycle to the last component again.
+Alt+Right Arrow
+Jump to, and make active, the next component in the current library document. Note that after reaching the last component in the list, the command will not cycle to the first component again.
+Q
+Toggle the measurement units for the current document between metric (mm) and imperial (mil).
+Ctrl+M
+Measure and display the distance between any two points in the current document.
+,
+Click
+Cross-probe from a chosen object on the current PCB document to its corresponding counterpart on the relevant schematic source document while remaining in the PCB document (
+Continuous Mode
+)
+,
+Ctrl+Click
+Cross-probe from a chosen object on the current PCB document to its corresponding counterpart on the relevant schematic document, making the target schematic document the active document (
+Jump To Mode
+).
+General Interactive Shortcuts
+The following shortcuts become available when an interactive process has been launched, such as placing a new design object, or moving an existing one. Note that the shortcuts available will depend on the interactive command and the specific design object that is the focus of that command.
+F1
+Access the
+Graphical Editing Hot key List
+dialog that provides a listing of the shortcuts available (but that cannot be launched) as well as access to the documentation for the currently running command.
+Shift+F1
+Access a menu that lists all valid shortcuts for the present stage of the currently running interactive command.
+Enter
+Acts like a
+Click
+of the mouse when placing/moving an object.
+Tab
+Access the associated mode of the
+Properties
+panel in which properties for the object being placed/moved can be changed on-the-fly. Continuing to use
+Tab
+when in the
+Properties
+panel (or any dialog for that matter) will cycle through the fields in the panel.
+X
+Mirror the object being placed/moved along the X-axis.
+Y
+Mirror the object being placed/moved along the Y-axis.
+L
+Flip the object being placed/moved to the other side of the board.
+Alt
+Constrain the direction of movement to the horizontal or vertical axis depending on the initial direction of movement.
+Shift
+When auto-panning while placing/moving an object, use to pan at higher speed.
+Esc
+(or
+Right-Click
+)
+Escape from the current process - either a stage of the currently running interactive command or the command itself.
+Spacebar
+Rotates the object being placed/moved counterclockwise. Rotation is in accordance with the value for the
+Rotation Step
+defined on the
+PCB Editor – General page
+of the
+Preferences
+dialog.
+Shift+Spacebar
+Rotates the object being placed/moved clockwise. Rotation is in accordance with the value for the
+Rotation Step
+defined on the
+PCB Editor – General page
+of the
+Preferences
+dialog.
+Polygonal Object Shortcuts
+The following additional shortcuts relate to placing/editing polygonal-shaped objects -
+Polygon Pour
+,
+Region
+,
+Coverlay Polygon
+,
+Polygonal Room
+,
+Extruded 3D Body
+,
+Board Shape
+.
+Placing
++
+(on numeric keypad)
+Switch to the next enabled layer.
+-
+(on numeric keypad)
+Switch to the previous enabled layer.
+*
+(on numeric keypad)
+Switch to the next enabled signal layer.
+Shift+*
+(on numeric keypad)
+Switch to the previous enabled signal layer.
+Shift+Spacebar
+Cycle through the five available corner modes (45 degree, 45 degree with arc, 90 degree, 90 degree with arc, and Any Angle).
+Spacebar
+Toggle between corner direction sub-modes (for the relevant corner modes).
+,
+Reduce the radius of the arc (by 1mil/0.025mm increments) when in arc cornering placement mode.
+Shift+,
+Reduce the radius of the arc (by 10mil/0.254mm increments) when in arc cornering placement mode.
+.
+Increase the radius of the arc (by 1mil/0.025mm increments) when in arc cornering placement mode.
+Shift+.
+Increase the radius of the arc (by 10mil/0.254mm increments) when in arc cornering placement mode.
+1
+Toggle Look-Ahead placement mode on/off.
+Click
+or
+Enter
+Place a vertex point.
+Backspace
+Remove the last placed vertex.
+Editing
+Ctrl+Click&Hold
+Anywhere along an edge of a selected polygonal-based object away from editing handles to insert a new end vertex.
+Click&Hold+Delete
+On an end vertex of a selected polygonal-based object, to remove that vertex.
+Interactive Routing Shortcuts
+The following additional shortcuts become available when routing connections using one of the interactive routing tools - Interactive Routing, Interactive Differential Pair Routing and Interactive Multi-routing. Note that the shortcuts available will depend on the interactive routing tool being used.
+Tab
+Access the
+Interactive Routing mode
+/
+Differential Pair Routing mode
+/
+Multi-routing mode
+of the
+Properties
+panel in which you can change routing preferences on-the-fly, as well as modify properties of the track being placed.
+Esc
+Terminates the current route. Any routing that has been committed before calling the termination is retained.
+Click
+or
+Enter
+Commits the routing up to the current cursor position and places the tracks.
+Backspace
+Unwinds the last committed route back to its starting point. If any objects had been
+pushed
+through placing the last segment, they are moved back to their original positions.
+Ctrl+Click
+Auto-complete segments to target.
+1
+Toggle Look-Ahead placement mode on/off.
+Spacebar
+Toggle between corner direction sub-modes (for the relevant corner modes).
+Shift+Spacebar
+Cycle through the five available corner modes (45 degree, 45 degree with arc, 90 degree, 90 degree with arc, and Any Angle). Note that Any Angle is not available when using the Interactive Differential Pair Router or the Interactive Multi-router.
+,
+Reduce the radius of the arc (by 1mil/0.025mm increments) when in arc cornering placement mode.
+Shift+,
+Reduce the radius of the arc (by 10mil/0.254mm increments) when in arc cornering placement mode.
+.
+Increase the radius of the arc (by 1mil/0.025mm increments) when in arc cornering placement mode.
+Shift+.
+Increase the radius of the arc (by 10mil/0.254mm increments) when in arc cornering placement mode.
+Shift+R
+Cycle through the currently enabled routing conflict resolution modes. The modes available (including
+Ignore Obstacles
+,
+Push Obstacles
+,
+Walkaround Obstacles
+,
+Stop at First Obstacle
+,
+Hug and Push Obstacles, AutoRoute On Current Layer, AutoRoute On Multiple Layers
+) can be defined on the
+PCB Editor - Interactive Routing page
+of the
+Preferences
+dialog and modified on-the-fly (press
+Tab
+to access the
+Interactive Routing mode
+/
+Differential Pair Routing mode
+/
+Multi-routing mode
+of the
+Properties
+panel). Note that when interactively routing differential pairs or multiple traces, the
+AutoRoute On Current Layer
+and
+AutoRoute On Multiple Layers
+modes are not available.
+Shift+D
+Toggle automatic loop removal feature on/off.
+Ctrl+W
+Toggle the display of clearance boundaries.
+Shift+F
+Toggle
+Follow mode
+.
+Shift+W
+Choose the required track width from available predefined favorite routing widths in the
+Track mode
+of the
+Properties
+panel.
+Shift+V
+Choose the required via size from available predefined via sizes, sourced from one or more associated via templates using the
+Choose Via Sizes dialog
+.
+3
+Cycle through routing width sources (
+User Choice
+-->
+Rule Minimum
+-->
+Rule Preferred
+-->
+Rule Maximum
+). With
+User Choice
+, routing widths are defined and managed in the
+Favorite Interactive Routing Widths dialog
+. When interactively routing differential pairs, the rule-based values come from the applicable
+Differential Pairs Routing rule
+.
+4
+Cycle through via size sources (
+User Choice
+-->
+Rule Minimum
+-->
+Rule Preferred
+-->
+Rule Maximum
+). With
+User Choice
+, via sizes are defined through via templates - locally to the active PCB document or through associated Pad Via libraries (
+*.PvLib
+).
++
+or
+*
+(on numeric keypad)
+Switch to the next enabled (and rule-permitted) signal layer, dropping a via.
+-
+(on numeric keypad)
+Switch to the previous enabled (and rule-permitted) signal layer, dropping a via.
+Shift+Ctrl+Mouse Wheel
+Cycle through the enabled signal layers, dropping a via. As you roll the mouse wheel upward/downward, the next/previous enabled signal layer (at the bottom of the main design window) will become the active layer and a via will be dropped. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+1
+-
+9
+(on numeric keypad)
+Switch to routing on the corresponding routing (signal) layer (dropping a via to do so). The number can be obtained from the prefix to the layer name (
+[n]
+), on the layer tab at the bottom of the main workspace. Alternatively, the number can be acquired from the pop-up window accessed through the
+Ctrl+L
+shortcut.
+Ctrl+L
+Access a pop-up window of available routing layers. Click an entry to switch to that layer (dropping a via to do so). The number to the right of each entry (
+[n]
+) can be used to switch to that layer directly, without popping this window.
+L
+When routing from a multi-layer pad or via, switches the layer for the current connection to the next signal layer defined for that pad/via. Note that this feature works only when the routing is started from the pad/via and before the first segment is committed.
+/
+Add fanout via; tool immediately waits for next fanout to route and via to place.
+2
+Add a via without changing layer.
+5
+When interactively routing a differential pair or multiple traces, use to cycle through available via patterns (aligned or staggered) during a layer change.
+6
+Cycle through the possible Via Type options when performing a layer change and there is more than one Via Type available.
+Shift+6
+When interactively routing a differential pair, use to cycle through the Gap values defined in the applicable
+Differential Pairs Routing rule
+(
+Min Gap
+-->
+Preferred Gap
+-->
+Max Gap
+).
+Shift+B
+When interactively routing a differential pair, use to cycle through the Width-Gap value pairings defined in the applicable
+Differential Pairs Routing rule
+(
+Min Width-Min Gap
+-->
+Preferred Width-Preferred Gap
+-->
+Max Width-Max Gap
+).
+When routing multiple traces, use to increase the spacing between neighboring routes.
+B
+When routing multiple traces, use to decrease the spacing between neighboring routes.
+C
+When routing multiple traces, change the spacing between neighboring routes to use the Track-Track clearance value defined in the applicable
+Clearance rule
+.
+8
+Display a pop-up listing of possible Via Type options when performing a layer change and there is more than one Via Type available.
+7
+Cycles through the connections available for routing if the current pad has multiple connections.
+9
+Switches the cursor position from the currently selected pad or track to the target pad or track. If the location of the object being switched to is not within the current design window, the view jumps and centers around the new cursor position.
+Shift+G
+Toggle display of the length tuning gauge, which indicates how well the current route is meeting applicable Length and Matched Length design rules.
+Shift+Ctrl+G
+Cycle through the
+Gloss Effort (Routed)
+settings -
+Off
+,
+Weak
+and
+Strong
+. For more information, see
+Glossing - Smoothing the Routes
+.
+Ctrl+Shift
+Hold to temporarily inhibit automatic glossing.
+Shift+C
+Enable subnet swapping. Note that if no swappable target subnets are available, a message to this effect will be presented in the
+Messages
+panel.
+Shift+T
+Swap target subnet - cycles through all swappable target subnets.
+Interactive Sliding Shortcuts
+The following additional shortcuts become available when rearranging existing routes, by interactively sliding (or dragging) a route across the board. For more information, see
+Interactive Sliding Support
+.
+Click+Hold&Drag
+On a track segment, to slide it.
+Shift+Spacebar
+During sliding, use to cycle through the three
+Hugging Style
+modes (on the
+PCB Editor - Interactive Routing
+page of the
+Preferences
+dialog):
+45 Degree
+,
+Mixed
+and
+Rounded
+.
+Shift+R
+Cycle through the currently enabled routing conflict resolution modes. The modes available (including
+Ignore Obstacles
+,
+Push Obstacles
+,
+Walkaround Obstacles
+,
+Stop at First Obstacle
+,
+Hug and Push Obstacles, AutoRoute On Current Layer, AutoRoute On Multiple Layers
+) can be defined on the
+PCB Editor - Interactive Routing page
+of the
+Preferences
+dialog and modified on-the-fly (press
+Tab
+to access the
+Interactive Sliding mode
+of the
+Properties
+panel). Note that when interactively sliding track, the
+AutoRoute On Current Layer
+and
+AutoRoute On Multiple Layers
+modes are not available.
+Spacebar
+When clicking and dragging a vertex point, use this shortcut to cycle through the
+Vertex Action
+modes:
+Deform
+,
+Scale
+and
+Smooth
+.
+Shift+Ctrl+G
+Cycle through the
+Gloss Effort (Routed)
+modes -
+Off
+,
+Weak
+and
+Strong
+. For more information, see
+Glossing - Smoothing the Routes
+.
+Z
+Toggle the
+Keep Coupled
+option On or Off.
+C
+Toggle the
+Include Miters
+option On or Off.
+R
+Toggle the
+Merge Parallel
+option On or Off.
+Ctrl+W
+Toggle the display of clearance boundaries.
+Shift+G
+Toggle display of the length tuning gauge, which indicates how well the current route is meeting applicable Length and Matched Length design rules.
+Length Tuning Shortcuts
+The following additional shortcuts relate to the placement of, and editing thereafter, of additional track 'patterns' when tuning the length of routed track(s) using one of the interactive length tuning tools - Interactive Length Tuning or Interactive Diff Pair Length Tuning. Note that the shortcuts available will depend on the interactive length tuning tool being used, or the placed pattern type being edited.
+During Pattern Placement
+Spacebar
+When length tuning using the Accordion or Trombone patterns, use to cycle forward through the supported cornering styles. Available styles are:
+Mitered Lines
+,
+Mitered Arcs
+and
+Rounded.
+Shift+Spacebar
+When length tuning using the Accordion or Trombone patterns, use to cycle backward through the supported cornering styles.
+Shift+G
+Toggle display of the length tuning gauge on/off.
+Tab
+Use to access the
+Interactive Length Tuning mode
+/
+Interactive Differential Pair Length Tuning mode
+of the
+Properties
+panel. What you can do depends on when you use the shortcut:
+Use before an object has been chosen to be able to specify the tuning pattern to be used - Accordion, Trombone, or Sawtooth, and to define related properties to be used from the outset.
+Use during the length tuning process to define the approach used for defining the target length, and to modify properties of the tuning pattern on-the-fly.
+,
+When length tuning using the Accordion pattern, use to decrease the
+Max Amplitude
+of the pattern by the amount defined in the associated
+Step
+field.
+When length tuning using the Sawtooth pattern, use to decrease the
+Actual Height
+of the pattern by the amount defined in the associated
+Step
+field.
+.
+When length tuning using the Accordion pattern, use to increase the
+Max Amplitude
+of the pattern by the amount defined in the associated
+Step
+field.
+When length tuning using the Sawtooth pattern, use to increase the
+Actual Height
+of the pattern by the amount defined in the associated
+Step
+field.
+1
+When length tuning using the Accordion or Trombone patterns, use to decrease the
+Miter
+percentage for the pattern corners by the amount defined in the associated
+Step
+field. Note that this only applies when using the
+Mitered Lines
+, or
+Mitered Arcs
+mitering styles.
+2
+When length tuning using the Accordion or Trombone patterns, use to increase the
+Miter
+percentage for the pattern corners by the amount defined in the associated
+Step
+field. Note that this only applies when using the
+Mitered Lines
+, or
+Mitered Arcs
+mitering styles.
+3
+When length tuning using the Accordion or Trombone patterns, use to decrease the
+Space
+(pitch) by the amount defined in the associated
+Step
+field.
+4
+When length tuning using the Accordion or Trombone patterns, use to increase the
+Space
+(pitch) by the amount defined in the associated
+Step
+field.
+Hold
+Shift
+When length tuning using the Trombone or Sawtooth patterns, use to slide the pattern. Release to continue placing the pattern.
+After Pattern Placement
+Click&Drag
+On a selected pattern's perpendicular or parallel edging to lengthen or widen the pattern respectively.
+Within the 'sleeve' of a selected Trombone or Sawtooth pattern to freely move the pattern along or perpendicular to the original route path.
+Ctrl+Click &Drag
+On a perpendicular edge of a selected Accordion pattern to pivot around the opposite end of the accordion.
+On a parallel edge of a selected Accordion pattern to pivot around the center of the accordion.
+Within the 'sleeve' of a selected Trombone or Sawtooth pattern (or on a parallel edge) to move the pattern perpendicular to the original route path.
+Shift+Click &Drag
+On an edge of the 'sleeve' of a selected Trombone or Sawtooth pattern, to slide the pattern along the original route path, maintaining the pattern's lateral distribution across the route path.
+S
+When length tuning using the Trombone or Sawtooth patterns, use to toggle the
+Single Side
+option On or Off. When On (enabled), the tuning pattern is created so that it only projects in one direction from the original route path. Enabling and disabling the Signle Side option will effectively recenter the currently selected pattern.
+R
+When length tuning using the Accordion pattern, use during rotation to toggle (on/off) the rotation to snap in 45-degree increments.
+Component Move/Drag Shortcuts
+The following additional shortcuts become available when interactively dragging/moving one or more placed components - all part of the PCB Editor's routing-aware move component feature.
+Shift+R
+Toggle the
+Component re-route
+option (on the
+PCB Editor - Interactive Routing
+page of the
+Preferences
+dialog) On and Off. When On (enabled), the feature will break the routing at the component pads, fanouts or escape routes, and then attempt to re-route those broken connections once the moving component has been placed.
+R
+Cycle through the
+Component pushing
+modes:
+Avoid
+,
+Push
+and
+Ignore
+.
+Shift+Tab
+When the
+Move component with relevant routing
+option is enabled (on the
+PCB Editor - Interactive Routing
+page of the
+Preferences
+dialog), use this shortcut to cycle through the set of objects being moved as follows:
+Components only, then
+Components +Via Fanouts +Escapes +Interconnects, then
+Initial selection set (if different from the previous two), then
+Back to Components only.
+Hold
+Ctrl
+key down
+When moving a component to view dynamic alignment guides (green indicator lines) in relation to the boundaries of this and nearby components.
+Hold
+Shift
+key down
+When moving a component to view dynamic alignment guides (green indicator lines) in relation to the pads of this and nearby components.
+N
+Cycle through the
+Net Line Connect
+modes:
+Pad To Pad
+(connections from the pads of other connected components),
+Breaks
+(connections from the track ends of partial routes) and
+Hidden
+.
+Shift+Ctrl+G
+Cycle through the
+Gloss Effort (Routed)
+modes -
+Off
+,
+Weak
+and
+Strong
+. For more information, see
+Glossing - Smoothing the Routes
+.
+3D Shortcuts
+The following additional shortcuts collectively relate to working with 3D Bodies, or the 3D view of your PCB (or component model).
+3D Body Placement
+(Availability depends on the type of 3D Model being placed or moved -
+Generic 3D Model
+,
+Extruded
+,
+Cylinder
+, or
+Sphere
+)
+8
+(on numeric keypad)
+Rotate the 3D body object being placed/moved counterclockwise around the model's X-axis by 90°. Note that this shortcut applies to
+Generic 3D Model
+and
+Cylinder
+model types only.
+2
+(on numeric keypad)
+Rotate the 3D body object being placed/moved clockwise around the model's X-axis by 90°. Note that this shortcut applies to
+Generic 3D Model
+and
+Cylinder
+model types only.
+4
+(on numeric keypad)
+Rotate the 3D body object being placed/moved counterclockwise around the model's Y-axis by 90°. Note that this shortcut applies to
+Generic 3D Model
+and
+Cylinder
+model types only.
+6
+(on numeric keypad)
+Rotate the 3D body object being placed/moved clockwise around the model's Y-axis by 90°. Note that this shortcut applies to
+Generic 3D Model
+and
+Cylinder
+model types only.
+Spacebar
+Rotate the 3D body object being placed/moved counterclockwise around the model's Z-axis by 90°. Note that this shortcut only applies to the
+Extruded
+model type when it is being moved.
+Shift+Spacebar
+Rotate the 3D body object being placed/moved clockwise around the model's Z-axis by 90°. Note that this shortcut only applies to the
+Extruded
+model type when it is being moved.
+9
+(on numeric keypad)
+Increase the
+Standoff Height
+for the 3D body object being placed/moved by one Snap Grid unit. Note that this shortcut only applies to the
+Extruded
+model type when it is being moved.
+3
+(on numeric keypad)
+Decrease the
+Standoff Height
+for the 3D body object being placed/moved by one Snap Grid unit. Note that this shortcut only applies to the
+Extruded
+model type when it is being moved.
+Visualization
+0
+(or
+1
+on numeric keypad)
+Change the view of the board (or component) so that you are looking straight down from above (perpendicular) with zero rotation.
+9
+(or
+9
+on numeric keypad)
+Change the view of the board (or component) so that you are looking straight down from above (perpendicular) with 90 Degree (clockwise) rotation in the X-plane.
+8
+(or
+0
+on numeric keypad)
+Change the view of the board (or component) in so that you are looking at the board from an orthogonal perspective.
+5
+(or
+5
+on numeric keypad)
+Toggle a board that has flexible areas between its flattened state (no Bending Line settings applied) and its folded state (all Bending Line settings applied)
+Hold
+Shift
+Access the 3D rotational sphere. With the sphere displayed, move the mouse around to highlight and select the required control on the sphere before right-clicking:
+Right-drag sphere when the Center Dot is highlighted – rotate in any direction.
+Right-drag sphere when the Horizontal Arrow is highlighted – rotate the view about the Y-axis.
+Right-drag sphere when the Vertical Arrow is highlighted – rotate the view about the X-axis.
+Right-drag sphere when the Circle Segment is highlighted – rotate the view about the Z-plane.
+Ctrl+C
+Copies the current view in the main design space to the clipboard in bitmap format (
+*.bmp
+). You have control over the resolution of the copied image via the
+3D Snapshot Resolution
+dialog.
+Ctrl+1
+(on numeric keypad)
+Change the view of the board (or component) so that you are looking at the board from the bottom side.
+7
+(on numeric keypad)
+Change the view of the board (or component) so that you are looking at the board from the front side.
+Ctrl+7
+(on numeric keypad)
+Change the view of the board (or component) so that you are looking at the board from the back side.
+3
+(on numeric keypad)
+Change the view of the board (or component) so that you are looking at the board from the left edge.
+Ctrl+3
+(on numeric keypad)
+Change the view of the board (or component) so that you are looking at the board from the right edge.
+4
+(on numeric keypad)
+Rotate the view of the board (or component) 30 degrees left.
+6
+(on numeric keypad)
+Rotate the view of the board (or component) 30 degrees right.
+8
+(on numeric keypad)
+Rotate the view of the board (or component) 30 degrees up.
+2
+(on numeric keypad)
+Rotate the view of the board (or component) 30 degrees down.
+Ctrl+4
+(on numeric keypad)
+Move the view of the board (or component) left.
+Ctrl+6
+(on numeric keypad)
+Move the view of the board (or component) right.
+Ctrl+8
+(on numeric keypad)
+Move the view of the board (or component) up.
+Ctrl+2
+(on numeric keypad)
+Move the view of the board (or component) down.
+L
+Access the
+View Configuration
+panel in which you can configure how the board is rendered in 3D.
+Measurements
+(Available when viewing the board in 3D in the PCB Editor and taking measurements using the
+Reports » Measure 3D Objects
+command)
+Q
+Toggle measurement units between metric and imperial - the displayed measurement values will update accordingly.
+Hold
+Ctrl
+key down
+As you move the cursor over a 3D object, use to select a specific face of that object.
+Shift+C
+Clear all currently displayed measurements in the 3D workspace.
+Pop-up Menu Shortcuts
+The following shortcuts give access to specific pop-up menus of commands, directly from within the design space itself. Some of these will be familiar as they are sub-menus found within the main menus for the editor. Each of the main menus also have a defined pop-up key for quick access from within the design space, see
+Accelerator Keys
+for more information.
+A
+The
+Align
+sub-menu (from the main
+Edit
+menu).
+B
+The
+Toolbars
+sub-menu (from the main
+View
+menu).
+G
+A pop-up menu with Snap Grid commands.
+I
+The
+Component Placement
+sub-menu (from the main
+Tools
+menu).
+J
+The
+Jump
+sub-menu (from the main
+Edit
+menu).
+K
+The
+Panels
+sub-menu (from the main
+View
+menu).
+M
+The
+Move
+sub-menu (from the main
+Edit
+menu).
+N
+A pop-up menu with Connection/Jumper display commands.
+O
+A pop-up menu offering quick access to options and preferences.
+S
+The
+Select
+sub-menu (from the main
+Edit
+menu).
+X
+The
+DeSelect
+sub-menu (from the main
+Edit
+menu).
+Y
+A pop-up menu with filtering commands.
+Z
+A pop-up menu with zoom commands.
+Printer-friendly version
+If you find an issue, select the text/image and press
+Ctrl
++
+Enter
+to send us your feedback.
+Rate this page
+Easy to find?
+Accurate?
+Complete?
+Clear?
+Anything to add?
+Thank you for your feedback!
+Altium Designer Documentation
+New in Altium Designer
+Tutorial - A Complete Design Walkthrough with Altium Designer
+Getting Familiar with the Altium Design Environment
+Capturing Your Design Idea as a Schematic
+Analyzing Your Design Using Circuit Simulation
+BOM Management with ActiveBOM
+Managing Design Changes between the Schematic & PCB
+Laying Out Your PCB
+PCB Environment Setup
+PCB Placement & Editing Techniques
+Pre-layout Stage
+Component Placement
+Understanding Connectivity on Your PCB
+Routing the PCB
+Polygons & Copper Regions
+Finalizing Your PCB Design
+PCB Health Check Monitor
+Design Rule Check (DRC)
+Board Panelization
+Designing a Rigid-Flex PCB
+High Speed Design
+Advanced Technologies
+PCB CoDesign
+PCB Editor & PCB Library Editor Shortcuts
+PCB Layout Query Functions
+QuickNav - PCB Design Objects
+Analyzing Your PCB Design
+Streamlining Board Design Documentation with Draftsman
+Preparing Your Design for Manufacture
+Designing with Multiple PCBs
+Harness Design
+Building & Maintaining Your Components and Libraries
+Configuring and Administrating Your Workspace
+Installation, Licensing & Management
+Quick Links
+QuickLinks
+Using Altium Documentation
+Documentation Copyright Information
+Altium Documentation - Home
+Knowledge Base
+Feature Availability
+The features available to you depend on which Altium solution you have –
+Altium Develop
+,
+Altium Agile Teams
+,
+Altium Agile Enterprise
+, or Altium Designer (on active term).
+If you don’t see a documented feature in your actual software,
+contact Altium Sales
+to find out more.
+Legacy Documentation
+Altium Designer documentation is no longer versioned. If you need to access documentation for older versions of Altium Designer, visit the
+Legacy Documentation
+section of the
+Other Installers
+page.
+Content
+Was this page helpful?
+Report Document Issue
+You are reporting an issue with the following selected text
+and/or image within the active document:
+ISSUE
+For further assistance, please connect to our
+Support Center
+This site is protected by reCAPTCHA and the Google
+Privacy Policy
+and
+Terms of Service
+apply.
+Cancel
+{"path":{"baseUrl":"\/documentation\/","pathPrefix":"","currentPath":"node\/304647","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx9kmFy4yAMhS_khJnunmAvwsigOIoBuZLsxnv6xZs0tVOnfwy87zHw8INkNGYfLj4kwmLuMWvgjnqMZCx-SGNHRR2Mdmb5w9fjAB2-tAUuVSAukJ69kYPrEreQDmpzotKtyUdUr0ahn_30tgKPI367jJKB4oEK2b5jENJ80Q3kYkvCwhH9iSWv4QkxthB6t6P5RK2AzLt-AUP_FM5nLKODYDRh3Vz6b2z5eIjxJ3qB62tS0-QMJW4SSk0vGEydYThXRR_S1jawmCfVEd0LfS_zhKL1f7pWEGKQMbef0p7rPn67QYGJOliK4dvEoVd3YjaU1_xcj_uJfylNgMHCGVwLik1IoDpv5hlV67_SJrCgizIOkI7_u7AWDK8GNeRBUOkv3hjV9kgt8_HyPqLMq12lziAtxnsvP_v5vL71tVazGLQJXW0j2XxYOqBNfaPb5f30y3XMXcLjl4Zla1gvGp3VMN-CGnN9p8Hdx38GQodK","theme":"altium_doc","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/documentation\/altium-designer\/shortcut-keys\/pcb-editors?ajax_form=1":true},"altiumDocMenu":{"basePage":"304647"},"spaceName":"Altium Designer","csp":{"nonce":"jXZ2eAq-6cToLjh1lEXClg"},"ajax":{"edit-actions--2":{"callback":"::setMessage","event":"mousedown","keypress":true,"prevent":"click","url":"\/documentation\/altium-designer\/shortcut-keys\/pcb-editors?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Send Feedback"}},"edit-captcha-response":{"callback":"recaptcha_v3_ajax_callback","event":"change","url":"\/documentation\/altium-designer\/shortcut-keys\/pcb-editors?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"captcha_response"}}},"user":{"uid":0,"permissionsHash":"6d676ddc53316b96406ac7699961e1c2fe8a944cbc20f94236085ed819496e27"}}

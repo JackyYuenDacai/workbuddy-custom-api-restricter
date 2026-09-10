@@ -1,0 +1,2252 @@
+Use keyboard shortcuts to create PowerPoint presentations | Microsoft Support
+Skip to main content
+Microsoft
+Support
+Support
+Support
+Home
+Microsoft 365
+Office
+Products
+Microsoft 365
+Outlook
+Microsoft Teams
+OneDrive
+Microsoft Copilot
+OneNote
+Windows
+more ...
+Devices
+Surface
+PC Accessories
+Xbox
+PC Gaming
+HoloLens
+Surface Hub
+Hardware warranties
+Account & billing
+Resources
+Community forums
+Microsoft 365 Admins
+Developer
+Education
+Report a support scam
+Product safety
+More
+Buy Microsoft 365
+All Microsoft
+Global
+Microsoft 365
+Azure
+Copilot
+Windows
+Surface
+XBOX
+Deals
+Small Business
+Support
+Software
+Software
+Windows Apps
+Outlook
+OneDrive
+Microsoft Teams
+OneNote
+Microsoft Edge
+Moving from Skype to Teams
+PCs & Devices
+PCs & Devices
+Computers
+Shop XBOX
+Accessories
+VR & mixed reality
+Certified Refurbished
+Trade-in for cash
+Entertainment
+Entertainment
+XBOX Game Pass Ultimate
+PC Game Pass
+XBOX games
+PC games
+Business
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365 for business
+Microsoft Power Platform
+Windows 365
+Small Business
+Digital Sovereignty
+Developer & IT
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Other
+Other
+Microsoft Rewards
+Free downloads & security
+Education
+Gift cards
+Licensing
+Unlocked stories
+View Sitemap
+Search
+Search for help
+No results
+Cancel
+Sign in
+Sign in with Microsoft
+Sign in or create an account.
+Hello,
+Select a different account.
+You have multiple accounts
+Choose the account you want to sign in with.
+Use keyboard shortcuts to create PowerPoint presentations
+Applies To
+PowerPoint for Microsoft 365
+PowerPoint for Microsoft 365 for Mac
+PowerPoint 2019
+PowerPoint 2019 for Mac
+PowerPoint 2016
+PowerPoint 2016 for Mac
+PowerPoint 2013
+PowerPoint for iPad
+PowerPoint for iPhone
+PowerPoint for Android tablets
+PowerPoint 2010
+PowerPoint 2007
+PowerPoint for Mac 2011
+PowerPoint for Android phones
+Many users find that using an external keyboard with keyboard shortcuts for PowerPoint helps them work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using a mouse.
+For a separate list of shortcuts to use while delivering your presentation, go to
+Use keyboard shortcuts to deliver PowerPoint presentations
+.
+Note
+The shortcuts in this topic refer to the US keyboard layout. Keys for other layouts might not correspond exactly to the keys on a US keyboard.
+A plus sign (+) in a shortcut means that you need to press multiple keys at the same time.
+A comma sign (,) in a shortcut means that you need to press multiple keys in order.
+Windows
+macOS
+iOS
+Android
+Web
+This article describes the keyboard shortcuts you can use in PowerPoint for Windows when creating or editing presentations.
+Note
+To quickly find a shortcut in this article, you can use the Search. Press
+Ctrl+F
+and then type your search words.
+If an action that you use often does not have a shortcut key, you can add it to the Quick Access Toolbar to create one. For instructions, refer to
+Use a keyboard to customize the Quick Access Toolbar
+.
+In this topic
+Frequently used shortcuts
+Work with presentations and slides
+Work with objects and text
+Copy objects and text
+Work in objects and text
+Select text
+Delete text
+Move around in text
+Find and replace text
+Format text
+Work with tables
+Move a slide
+Work with views and panes
+Work with the Selection pane
+Work with the task pane
+Ribbon keyboard shortcuts
+Open the ribbon tabs
+Work in the ribbon with the keyboard
+Other useful ribbon keyboard shortcuts
+Custom keyboard shortcuts
+Frequently used shortcuts
+The following table itemizes the most frequently used shortcuts in PowerPoint.
+To do this
+Press
+Create new presentation.
+Ctrl+N
+Add a new slide.
+Ctrl+M
+Apply bold formatting to the selected text.
+Ctrl+B
+Open the
+Font
+dialog box.
+Ctrl+T
+Cut selected text, object, or slide.
+Ctrl+X
+Copy selected text, object, or slide.
+Ctrl+C
+Paste cut or copied text, object, or slide.
+Ctrl+V
+Insert a hyperlink.
+Ctrl+K
+Insert a new comment.
+Ctrl+Alt+M
+Undo the last action.
+Ctrl+Z
+Redo the last action.
+Ctrl+Y
+Go to the next slide.
+Page down
+Go to the previous slide.
+Page up
+Start the slide show.
+F5
+End the slide show.
+Esc
+Print a presentation.
+Ctrl+P
+Save the presentation.
+Ctrl+S
+Close PowerPoint.
+Ctrl+Q
+Top of Page
+Work with presentations and slides
+To do this
+Press
+Insert a new slide.
+Ctrl+M
+Go to the next slide.
+Page down
+Go to the previous slide.
+Page up
+Zoom out.
+Ctrl+Minus sign (-)
+Zoom in.
+Ctrl+Plus sign (+)
+Zoom to fit.
+Ctrl+Alt+O
+Make a copy of the selected slide.
+Ctrl+Shift+D
+Open a presentation.
+Ctrl+O
+Close a presentation.
+Ctrl+D
+Save a presentation with a different name, location, or file format.
+Ctrl+Shift+S
+Cancel a command, such as
+Save As
+.
+Esc
+Open a recent file.
+Ctrl+O
+Top of Page
+Work with objects and text
+Copy objects and text
+To do this
+Press
+Cut selected object or text.
+Ctrl+X
+Copy selected object or text.
+Ctrl+C
+Paste cut or copied object or text.
+Ctrl+V
+Duplicate selected objects.
+Ctrl+D or Ctrl+Drag the mouse
+Office 2010 and Office 2007: Not available
+Copy the formatting of the selected object or text.
+Ctrl+Shift+C
+Paste copied formatting to the selected object or text.
+Ctrl+Shift+V
+Copy animation painter.
+Alt+Shift+C
+Office 2010 and Office 2007: Not available
+Paste animation painter.
+Alt+Shift+V
+Office 2010 and Office 2007: Not available
+Open the
+Paste Special
+dialog box.
+Ctrl+Alt+V
+Top of Page
+Work in objects and text
+To do this
+Press
+Move the focus to the first floating shape, such as an image or a text box.
+Ctrl+Alt+5
+Select another object when one object is selected.
+Tab key or Shift+Tab until the object you want is selected
+Send object back one position.
+Ctrl+Shift+Left bracket ([)
+Office 2010 and Office 2007: Not available
+Bring object forward one position.
+Ctrl+Shift+Right bracket (])
+Office 2010 and Office 2007: Not available
+Select all objects on a slide.
+Ctrl+A
+Group the selected objects.
+Ctrl+G
+Ungroup the selected group.
+Ctrl+Shift+G
+Regroup the selected objects.
+Ctrl+Shift+J
+Rotate the selected object clockwise 15 degrees.
+Alt+Right arrow key
+Rotate the selected object counterclockwise 15 degrees.
+Alt+Left arrow key
+Play or pause media.
+Ctrl+Spacebar
+Insert a hyperlink.
+Ctrl+K
+Insert a new comment.
+Ctrl+Alt+M
+Insert equation.
+Alt+Equal sign ( = )
+Edit a linked or embedded object.
+Shift+F10 or the Windows Menu key (to open the context menu), then O, Enter, E
+Tip
+To select multiple objects with the keyboard, use the
+Selection Pane
+. For more information refer to
+Manage objects with the Selection Pane
+.
+Top of Page
+Select text
+To do this
+Press
+Select one character to the right.
+Shift+Right arrow key
+Select one character to the left.
+Shift+Left arrow key
+Select to the end of a word.
+Ctrl+Shift+Right arrow key
+Select to the beginning of a word.
+Ctrl+Shift+Left arrow key
+Select from the insertion point to the same point one line up.
+Shift+Up arrow key
+Select from the insertion point to the same point one line down.
+Shift+Down arrow key
+Select from the insertion point to the end of the paragraph.
+Ctrl+Shift+Down
+arrow key
+Select from the insertion point to the beginning of the paragraph.
+Ctrl+Shift+Up arrow key
+Select text within an object (with an object selected).
+Enter
+Select an object when the text inside the object is selected.
+Esc
+Top of Page
+Rewrite text with Copilot
+To do this
+Press
+Invoke Copilot options for rewriting selected textbox
+Shift+F8
+Delete text
+To do this
+Press
+Delete one character to the left.
+Backspace
+Delete one word to the left.
+Ctrl+Backspace
+Delete one character to the right.
+Delete
+Delete one word to the right (with the cursor between the words).
+Ctrl+Delete
+Top of Page
+Move around in text
+To do this
+Press
+Move one character to the left.
+Left arrow key
+Move one character to the right.
+Right arrow key
+Move one line up.
+Up arrow key
+Move one line down.
+Down arrow key
+Move one word to the left.
+Ctrl+Left arrow key
+Move one word to the right.
+Ctrl+Right arrow key
+Move to the end of a line.
+End
+Move to the beginning of a line.
+Home
+Move up one paragraph.
+Ctrl+Up arrow key
+Move down one paragraph.
+Ctrl+Down arrow key
+Move to the end of a text box.
+Ctrl+End
+Move to the beginning of a text box.
+Ctrl+Home
+Move to the next title or body text placeholder. If it is the last placeholder on a slide, this action inserts a new slide with the same slide layout as the original slide.
+Ctrl+Enter
+Promote a paragraph.
+Alt+Shift+Left arrow key
+Demote a paragraph.
+Alt+Shift+Right arrow key
+Move selected paragraphs up.
+Alt+Shift+Up arrow key
+Move selected paragraphs down.
+Alt+Shift+Down arrow key
+Top of Page
+Find and replace text
+To do this
+Press
+Open the
+Find
+dialog box.
+Ctrl+F
+Open the
+Replace
+dialog box.
+Ctrl+H
+Repeat the last
+Find
+action.
+Shift+F4
+Top of Page
+Format text
+Before using these keyboard shortcuts, select the text you want to format.
+To do this
+Press
+Open the
+Font
+dialog box.
+Ctrl+T or Ctrl+Shift+F
+Increase the font size.
+Ctrl+Shift+Right angle bracket (>)
+Decrease the font size.
+Ctrl+Shift+Left angle bracket (<)
+Switch between sentence case, lowercase, or uppercase.
+Shift+F3
+Apply bold formatting.
+Ctrl+B
+Apply underline formatting.
+Ctrl+U
+Apply italic formatting.
+Ctrl+I
+Apply subscript formatting (automatic spacing).
+Ctrl+Equal sign ( = )
+Apply superscript formatting (automatic spacing).
+Ctrl+Shift+Plus sign (+)
+Remove manual character formatting, such as subscript and superscript.
+Ctrl+Spacebar
+Center a paragraph.
+Ctrl+E
+Justify a paragraph.
+Ctrl+J
+Left align a paragraph.
+Ctrl+L
+Right align a paragraph.
+Ctrl+R
+Create a bulleted list using different styles
+Do one of the following:
+To create a list that uses filled round bullets, press the Asterisk sign (*).
+To create a list that uses hyphens, press the Minus sign (-).
+To create a list that uses arrow bullets, press the Right angle bracket (>).
+To create a list that uses diamonds, press Left angle bracket (<) + Right angle bracket (>).
+To create a list that uses arrows, press two minus signs (-) + Right angle bracket (>).
+To create a list that uses double arrows, press the Equal sign (=) + Right angle bracket (>).
+Press
+Spacebar
+.
+Type the list item, and then press
+Enter
+.
+Top of Page
+Work with tables
+To do this
+Press
+Move to the next cell.
+Tab key
+Move to the preceding cell.
+Shift+Tab
+Move to the next row.
+Down arrow key
+Move to the preceding row.
+Up arrow key
+Insert a tab in a cell.
+Ctrl+Tab
+Start a new paragraph.
+Enter
+Add a new row at the bottom of the table with the cursor in the last cell of the last row.
+Tab key
+Top of Page
+Move a slide
+To do this
+Press
+Move the selected slide or section up in order.
+Ctrl+Up arrow key
+Move the selected slide or section down in order.
+Ctrl+Down arrow key
+Move the selected slide or section to the beginning.
+Ctrl+Shift+Up arrow key
+Move the selected slide or section to the end.
+Ctrl+Shift+Down arrow key
+Top of Page
+Work with views and panes
+To do this
+Press
+Switch to
+Presenter
+view.
+Alt+F5
+Switch to
+Slide Show
+.
+F5
+Toggle between
+Outline
+and
+Thumbnail
+views.
+Ctrl+Shift+Tab
+Switch to full screen (hide menus).
+Ctrl+F1
+Show or hide guides.
+Alt+F9
+Show or hide the grid.
+Shift+F9
+Cycle clockwise through panes in the
+Normal
+view.
+F6
+Cycle counterclockwise through panes in the
+Normal
+view.
+Shift+F6
+Switch between the
+Thumbnail
+pane and the
+Outline View
+pane.
+Ctrl+Shift+Tab
+Show
+Outline View
+level 1 headings.
+Alt+Shift+1
+Expand
+Outline View
+text below a heading.
+Alt+Shift+Plus sign (+)
+Collapse
+Outline View
+text below a heading.
+Alt+Shift+Minus sign (-)
+Select all text in the
+Outline View
+.
+Ctrl+A
+Select all slides in the
+Slide Sorter
+view or the thumbnail pane.
+Ctrl+A
+Show the help menu.
+F1
+Top of Page
+Work with the Selection pane
+To do this
+Press
+Open the
+Selection
+pane.
+Alt+F10
+Alt+H, S, L, P
+Office 2007: Alt+J, D, A, P
+Cycle the focus through the different panes.
+F6
+Display the context menu.
+Shift+F10 or the Windows Menu key
+Move the focus to a single item or group.
+Up or Down arrow key
+Move the focus from an item in a group to its parent group.
+Left arrow key
+Move the focus from a group to the first item in that group.
+Right arrow key
+Expand a focused group and all its child groups.
+Asterisk sign (*) (on numeric keypad only)
+Expand a focused group.
+Plus sign (+) (on numeric keypad only) or Right arrow key
+Collapse a focused group.
+Minus sign (-) (on numeric keypad only) or Left arrow key
+Move the focus to an item and select it.
+Shift+Up or Down arrow key
+Select a focused item.
+Spacebar or Enter
+Cancel selection of a focused item.
+Shift+Spacebar or Shift+Enter
+Move a selected item forward.
+Ctrl+Shift+F
+Move a selected item backward.
+Ctrl+Shift+B
+Show or hide a focused item.
+Ctrl+Shift+S
+Rename a focused item.
+F2
+Switch the keyboard focus within the
+Selection
+pane between tree view and the
+Show All
+and
+Hide All
+buttons.
+Tab key or Shift+Tab
+Collapse all groups (with the focus in the tree view of the
+Selection
+pane).
+Alt+Shift+1
+Expand all groups.
+Alt+Shift+9
+Top of Page
+Work with the task pane
+To do this
+Press
+Move to a task pane from another pane or area in the program window. (You might need to press F6 more than once.)
+F6
+When a task pane option has focus, move to the next or previous option in the task pane.
+Tab key or Shift+Tab
+Display the full set of commands on a task pane menu. You can access, for example, the
+Close
+,
+Move
+, or
+Size
+buttons of a task pane.
+Ctrl+Spacebar
+Office 2010: Ctrl+Down arrow key
+Move to the next command on the task pane menu.
+Up and Down arrow keys
+Select the highlighted option on the task pane menu.
+Enter
+Move or resize the task pane after the corresponding command has been selected.
+Arrow keys
+Close a task pane.
+Ctrl+Spacebar, C
+Top of Page
+Ribbon keyboard shortcuts
+The ribbon groups related options on tabs. For example, on the
+Home
+tab, the
+Paragraph
+group includes the
+Bullets
+option. Press the
+Alt
+key to display the ribbon shortcuts, called Key Tips, as letters in small images next to the tabs and options.
+You can combine the Key Tips letters with the
+Alt
+key to make shortcuts called Access keys for the ribbon options. For example, press
+Alt+H
+to open the
+Home
+tab, and
+Alt+Q
+to move to the
+Tell me
+or
+Search
+field. Press Alt again to see KeyTips for the options on the selected tab.
+In Office 2010, most of the old
+Alt
+key menu shortcuts still work, too. However, you need to know the full shortcut. For example, press
+Alt
+, and then press one of the old menu keys
+E
+(Edit),
+V
+(View),
+I
+(Insert), and so on. A notification pops up saying you're using an access key from an earlier version of Microsoft 365. If you know the entire key sequence, go ahead and use it. If you don't know the sequence, press
+Esc
+and use Key Tips instead.
+Open the ribbon tabs
+To go directly to a tab on the ribbon, press one of the following access keys. Additional tabs might appear depending on your selection in the presentation.
+To do this
+Press
+Move to the
+Tell me
+or
+Search
+field on the ribbon and type a search term for assistance or
+Help
+content.
+Alt+Q, then type the search term.
+Open the
+File
+menu.
+Alt+F
+Open the
+Home
+tab and format slides, fonts, paragraphs, or drawings.
+Alt+H
+Open the
+Insert
+tab and insert slides, tables, images, illustrations, forms, links, text, symbols, or media.
+Alt+N
+Open the
+Draw
+tab and access the drawing tools.
+Alt+J, I
+Open the
+Design
+tab and apply themes and customize slides.
+Alt+G
+Open the
+Transitions
+tab and add transitions between slides.
+Alt+K
+Open the
+Animations
+tab and add animations to slides.
+Alt+A
+Open the
+Slide Show
+tab and set up and play the slide show.
+Alt+S
+Open the
+Review
+tab and check spelling and accessibility and add comments.
+Alt+R
+Open the
+View
+tab and preview presentation layouts, show and hide gridlines and guides, set zoom magnification, manage windows, and view macros.
+Alt+W
+Open the
+Recording
+tab and manage screen recordings, audio, and video in your presentation.
+Alt+E
+Open the
+Help
+tab and browse the PowerPoint, contact support, and leave feedback.
+Alt+Y, 2
+Note
+Add-ins and other programs might add new tabs to the ribbon and might provide access keys for those tabs.
+Top of Page
+Work in the ribbon with the keyboard
+To do this
+Press
+Select the active tab on the ribbon, and activate the access keys.
+Alt or F10. To move to a different tab, use access keys or the arrow keys.
+Move the focus to commands on the ribbon.
+Tab key or Shift+Tab
+Move down, up, left, or right, respectively, among the items on the ribbon.
+Arrow keys
+Show the tooltip for the ribbon element currently in focus.
+Ctrl+Shift+F10
+Activate a selected button or control.
+Spacebar or Enter
+Open the list for a selected command.
+Down arrow key
+Open the menu for a selected button.
+Alt+Down arrow key
+When a menu or submenu is open, move to the next command.
+Down arrow key
+Expand or collapse the ribbon.
+Ctrl+F1
+Open a context menu.
+Shift+F10 or the Windows Menu key
+Move to the submenu when a main menu is open or selected.
+Left arrow key
+Get help on the currently selected command or control on the ribbon.
+F1
+Top of Page
+Other useful ribbon keyboard shortcuts
+To do this
+Press
+Change the font size for selected text.
+Alt+H, F, S
+Open the
+Zoom
+dialog box.
+Alt+W, Q
+Print all slides in your presentation as full page slides using your default printer settings (when the
+Print
+dialog box is open).
+Alt+P, P
+Select a theme.
+Alt+G, H
+Select a slide layout.
+Alt+H, L
+Show or hide the
+Notes
+pane in the
+Normal
+view.
+Alt+W, P, N
+Open the clipboard.
+Alt+H, F, O
+Insert a text box.
+Alt+N, X
+Insert an embedded document or spreadsheet as an object.
+Alt+N, J
+Insert WordArt.
+Alt+N, W
+Insert a picture from your device.
+Alt+N, P, D
+Insert a shape.
+Alt+N, S, H
+Top of Page
+Custom keyboard shortcuts
+To assign custom keyboard shortcuts to menu items, recorded macros, and Visual Basic for Applications (VBA) code in PowerPoint, you must use a third-party add-in, such as Shortcut Manager for PowerPoint, which is available from
+OfficeOne
+.
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Use keyboard shortcuts to deliver PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Use keyboard shortcuts to navigate modern comments in PowerPoint
+Use the keyboard to work with the ribbon
+This article describes the keyboard shortcuts you can use in PowerPoint for macOS when creating or editing presentations.
+Note
+The settings in some versions of the Mac operating system (OS) and some utility applications can conflict with keyboard shortcuts and Fn key operations in Microsoft 365 for Mac. For information about changing the key assignment of a keyboard shortcut, refer to the Mac Help for your version of the macOS, your utility application, or refer to
+Change a conflicting keyboard shortcut on Mac
+.
+If you don't find a keyboard shortcut here that meets your needs, you can create a custom keyboard shortcut. For instructions, go to
+Create a custom keyboard shortcut for Office for Mac
+.
+Many of the shortcuts that use the
+Ctrl
+key on a Windows keyboard also work with the
+Ctrl
+key in PowerPoint on Mac. However, not all do.
+To quickly find a shortcut in this article, you can use the Search. Press
+Command+F
+, and then type your search words.
+In this topic
+Frequently used shortcuts
+Work with presentations and slides
+Work with objects and text
+Copy objects and text
+Work in objects and text
+Select text
+Delete text
+Move around in text
+Find and replace text
+Format text
+Work with tables
+Move a slide
+Work with views and panes
+Other useful shortcut keys
+Frequently used shortcuts
+The following table itemizes the most frequently used shortcuts in PowerPoint for Mac.
+To do this
+Press
+Create a new presentation.
+⌘+N
+Add a new slide.
+⌘+Shift+N
+Apply bold formatting to the selected text.
+⌘+B
+Open the
+Font
+dialog box.
+⌘+T
+Cut the selected text, object, or slide.
+⌘+X
+Copy the selected text, object, or slide.
+⌘+C
+Paste the cut or copied text, object, or slide.
+⌘+V
+Insert a hyperlink.
+⌘+K
+Insert a comment.
+⌘+Shift+M
+Undo the last action.
+⌘+Z
+Redo the last action.
+⌘+Y
+Go to the next slide.
+Page down
+Go to the previous slide.
+Page up
+Start the slide show.
+⌘+Shift+Return
+End the slide show.
+Esc
+Print a presentation.
+⌘+P
+Save the presentation.
+⌘+S
+Close PowerPoint.
+⌘+Q
+Top of Page
+Work with presentations and slides
+To do this
+Press
+Create a new presentation with a template from the PowerPoint template gallery.
+⌘+Shift+P
+Insert a new slide.
+⌘+Shift+N
+Go to the next slide.
+Page down
+Go to the previous slide.
+Page up
+Format slide background.
+⌘+Shift+2
+Zoom out.
+⌘+Minus sign (-)
+Zoom in.
+⌘+Plus sign (+)
+Zoom to fit.
+⌘+Option+O
+Make a copy of the selected slide.
+⌘+Shift+D
+Open a presentation.
+⌘+O
+Close a presentation.
+⌘+W
+Print a presentation.
+⌘+P
+Save a presentation with a different name, location, or file format.
+⌘+Shift+S
+Cancel a command, such as
+Save As
+.
+Esc
+Move through multiple open presentations.
+⌘+Tilde sign (~)
+Open a recent file.
+⌘+Shift+O
+Top of Page
+Work with objects and text
+Copy objects and text
+To do this
+Press
+Cut selected object or text.
+⌘+X
+Copy selected object or text.
+⌘+C
+Paste cut or copied object or text.
+⌘+V
+Duplicate selected objects.
+Control+D or Control+Drag the mouse
+Copy the formatting of the selected object or text.
+⌘+Shift+C
+Paste copied formatting to the selected object or text.
+⌘+Shift+V
+Copy animation.
+⌘+Option+Shift+C
+Paste animation.
+⌘+Option+Shift+V
+Open the
+Paste Special
+dialog box.
+⌘+Control+V
+Top of Page
+Work in objects and text
+To do this
+Press
+Select another object when one object is selected.
+Tab key or Shift+Tab until the object you want is selected
+Send object back one position.
+⌘+Option+Shift+B
+Bring object forward one position.
+⌘+Option+Shift+F
+Send object to back.
+⌘+Shift+B
+Bring object to front.
+⌘+Shift+F
+Select all objects on a slide.
+⌘+A
+Group the selected objects.
+⌘+Option+G
+Ungroup the selected objects.
+⌘+Option+Shift+G
+Regroup the selected objects.
+⌘+Option+J
+Rotate the selected object clockwise 15 degrees.
+Option+Right arrow key
+Rotate the selected object counterclockwise 15 degrees.
+Option+Left arrow key
+Play or pause media.
+Spacebar
+Insert a hyperlink.
+⌘+K
+Insert a comment.
+⌘+Shift+M
+Format the selected object.
+⌘+Shift+1
+Resize selected objects.
+Shift+Arrow keys
+Move the selected object in the direction of the arrow.
+Arrow keys or ⌘+Arrow keys
+Top of Page
+Select text
+To do this
+Press
+Select one character to the right.
+Shift+Right arrow key
+Select one character to the left.
+Shift+Left arrow key
+Select to the end of a word.
+Shift+Option+Right arrow key
+Select to the beginning of a word.
+Shift+Option+Left arrow key
+Select from the insertion point to the same point one line up.
+Shift+Up arrow key
+Select from the insertion point to the same point one line down.
+Shift+Down arrow key
+Select all text to the start of the line.
+⌘+Shift+Left arrow key
+Select all text to the end of the line.
+⌘+Shift+Right arrow key
+Select from the insertion point to the end of the paragraph.
+Shift+Option+Down arrow key
+Select from the insertion point to the beginning of the paragraph.
+Shift+Option+Up arrow key
+Select text within an object (with an object selected).
+Return
+Select an object when the text inside the object is selected.
+Esc
+Top of Page
+Delete text
+To do this
+Press
+Delete one character to the left.
+Delete
+Delete one word to the left.
+⌘+Delete
+Delete one character to the right.
+Fn+Delete
+Delete one word to the right (with the cursor between the words).
+Option+Fn+Delete
+Top of Page
+Move around in text
+To do this
+Press
+Move one character to the left.
+Left arrow key
+Move one character to the right.
+Right arrow key
+Move one line up.
+Up arrow key
+Move one line down.
+Down arrow key
+Move to the beginning of a word or one word to the left.
+Option+Left arrow key
+Move one word to the right.
+Option+Right arrow key
+Move to the end of a line.
+End or Fn+Right arrow key
+Move to the beginning of a line.
+Home or Fn+Left arrow key
+Move to the beginning of a paragraph or up one paragraph.
+Option+Up arrow key
+Move down one paragraph.
+Option+Down arrow key
+Move to the start or end of all the text in the object you are editing.
+⌘+Up or Down arrow key
+Promote a paragraph.
+⌘+Left bracket ([)
+Demote a paragraph.
+⌘+Right bracket (])
+Top of Page
+Find and replace text
+To do this
+Press
+Open the
+Search in Presentation
+search field.
+⌘+F
+Open the
+Find and Replace
+pane.
+⌘+Shift+H
+Top of Page
+Format text
+To do this
+Press
+Open the
+Font
+dialog box.
+⌘+T
+Increase the font size of the selected text.
+⌘+Shift+Right angle bracket (>)
+Decrease the font size of the selected text.
+⌘+Shift+Left angle bracket (<)
+Open the
+Paragraph
+dialog box.
+Command+Option+M
+Switch between sentence case, uppercase, or lowercase.
+Shift+F3
+Apply bold formatting to the selected text.
+⌘+B
+Apply an underline to the selected text.
+⌘+U
+Apply italic formatting to the selected text.
+⌘+I
+Apply subscript formatting (automatic spacing).
+⌘+Control+Equal sign (=)
+Apply superscript formatting (automatic spacing).
+⌘+Control+Shift+Equal sign (=)
+Remove manual character formatting, such as subscript and superscript.
+Control+Spacebar
+Center a paragraph.
+⌘+E
+Justify a paragraph.
+⌘+J
+Left align a paragraph.
+⌘+L
+Right align a paragraph.
+⌘+R
+Create a bulleted list using different styles
+Do one of the following:
+To create a list that uses filled round bullets, press the Asterisk sign (*).
+To create a list that uses hyphens, press the Minus sign (-).
+To create a list that uses arrow bullets, press the Right angle bracket (>).
+To create a list that uses diamonds, press Left angle bracket (<) + Right angle bracket (>).
+To create a list that uses arrows, press two minus signs (-) + Right angle bracket (>).
+To create a list that uses double arrows, press the Equal sign ( = ) + Right angle bracket (>).
+Press
+Spacebar
+.
+Type the list item, and then press
+Return
+.
+Top of Page
+Work with tables
+To do this
+Press
+Move to the next cell.
+Tab key
+Move to the preceding cell.
+Shift+Tab
+Move to the next line or row.
+Down arrow key
+Move to the preceding line or row.
+Up arrow key
+Insert a tab in a cell.
+Option+Shift+Tab
+Start a new paragraph in a cell.
+Return
+Add a new row at the bottom of the table (with the cursor in the last cell of the last row).
+Tab key
+Top of Page
+Move a slide
+To do this
+Press
+Move the selected slide or section up in order.
+⌘+Up arrow key
+Move the selected slide or section down in order.
+⌘+Down arrow key
+Move the selected slide or section to the beginning.
+⌘+Shift+Up arrow key
+Move the selected slide or section to the end.
+⌘+Shift+Down arrow key
+Top of Page
+Work with views and panes
+To do this
+Press
+Switch to
+Normal
+view.
+⌘+1
+Switch to
+Slide Sorter
+view.
+⌘+2
+Switch to
+Notes Page
+view.
+⌘+3
+Switch to
+Outline View
+.
+⌘+4
+Switch to
+Slide Master
+view.
+⌘+Option+1
+Switch to
+Handout Master
+view.
+⌘+Option+2
+Switch to
+Notes Master
+view.
+⌘+Option+3
+Switch to
+Presenter
+view.
+Option+Return
+Switch to slide show.
+⌘+Shift+Return
+Toggle between
+Outline View
+and thumbnail pane.
+Control+Shift+Tab
+Switch to full screen (hide menus).
+⌘+Control+F
+Show or hide guides.
+⌘+Option+Control+G
+Show or hide the grid.
+Shift+F9
+Cycle clockwise through panes in the
+Normal
+view.
+F6
+Cycle counterclockwise through panes in the
+Normal
+view.
+Shift+F6
+Select all text in the
+Outline View
+.
+⌘+A
+Select all slides in the
+Slide Sorter
+view or the thumbnail pane.
+⌘+A
+Show the help menu.
+F1
+Top of Page
+Other useful shortcut keys
+To do this
+Press
+Switch
+Drawing
+mode on and off.
+⌘+Control+Z
+Show
+Thesaurus
+entry for a selected word.
+⌘+Option+Control+R
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Use keyboard shortcuts to deliver PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Use keyboard shortcuts to navigate modern comments in PowerPoint
+Use the keyboard to work with the ribbon
+This article describes the keyboard shortcuts in PowerPoint for iOS when creating or editing presentations.
+Note
+If you're familiar with keyboard shortcuts on your macOS computer, the same key combinations work with PowerPoint for iOS using an external keyboard, too.
+To quickly find a shortcut, you can use the Search. Press
+Command+F
+and then type your search words.
+In this topic
+Frequently used shortcuts on iPad
+Navigate in PowerPoint for iPad
+Move the insertion point within placeholders and notes on iPad
+Select content on iPad
+Edit and format presentations on iPhone
+Navigate and select within a text box on iPhone
+Frequently used shortcuts on iPad
+This table shows the most frequently used shortcuts for PowerPoint for iPad.
+To do this
+Press
+Insert a new slide.
+⌘+Shift+N
+Delete selected text, object, or slide.
+Delete
+Cut selected content and copy it to the clipboard.
+⌘+X
+Undo the last action.
+⌘+Z
+Copy the selected content to the clipboard.
+⌘+C
+Paste copied or cut content.
+⌘+V
+Select all text.
+⌘+A
+Apply bold formatting to the selected content.
+⌘+B
+Apply italic formatting to the selected content.
+⌘+I
+Underline selected content.
+⌘+U
+Select one word to the left.
+Shift+Option+Left arrow key
+Select one word to the right.
+Shift+Option+Right arrow key
+Top of Page
+Navigate in PowerPoint for iPad
+PowerPoint for iPad is a mobile application, so the keyboard shortcuts and navigation might be different from those in desktop versions of PowerPoint.
+To move through the options, press
+Shift+Right arrow
+key until the focus is on the ribbon, and then press the
+Right
+or
+Left arrow
+key. To select an option, press
+⌘+Option+Spacebar
+.
+To move the focus to different areas in PowerPoint for iPad (from the ribbon to the thumbnail pane, for example), place the focus on a button, and then press
+Shift+Right arrow
+key to move forward or
+Shift+Left arrow
+key to move backward.
+Top of Page
+Move the insertion point within placeholders and notes on iPad
+To do this
+Press
+Move one character to the right.
+Right arrow key
+Move one character to the left.
+Left arrow key
+Move one word to the right.
+Option+Right arrow key
+Move one word to the left.
+Option+Left arrow key
+Move up one line.
+Up arrow key
+Move down one line.
+Down arrow key
+Move to the beginning of the line.
+⌘+Left arrow key
+Move to the end of the line.
+⌘+Right arrow key
+Move to the beginning of the placeholder or notes.
+⌘+Up arrow key
+Move to the end of the placeholder or notes.
+⌘+End
+Top of Page
+Select content on iPad
+To do this
+Press
+Select one character to the right.
+Shift+Right arrow key
+Select one character to the left.
+Shift+Left arrow key
+Select one word to the right.
+Shift+⌘+Right arrow key
+Select one word to the left.
+Shift+⌘+Left arrow key
+Select one line up.
+Shift+Up arrow key
+Select one line down.
+Shift+Down arrow key
+Select from the insertion point to the beginning of the paragraph.
+Shift+Option+Up arrow key
+Select from the insertion point to the end of the paragraph.
+Shift+Option+Down arrow key
+Select all within the placeholder or notes.
+⌘+A
+Select from the current position to the beginning of the line.
+Shift+⌘+Left arrow key
+Select from the current position to the end of the line.
+Shift+⌘+Right arrow key
+Top of Page
+Edit and format presentations on iPhone
+To do this
+Press
+Undo the last action.
+⌘+Z
+Repeat the last action.
+Shift+Y
+Cut selected content.
+⌘+X
+Copy selected content.
+⌘+C
+Paste copied or cut content.
+⌘+V
+Select all.
+⌘+A
+Apply bold formatting to selected content.
+⌘+B
+Apply italic formatting to the selected content.
+⌘+I
+Underline selected content.
+⌘+U
+Top of Page
+Navigate and select within a text box on iPhone
+To do this
+Press
+Select text.
+Shift+Left or Right arrow key, or Shift+Up or Down arrow key
+Move cursor by one word to the right.
+Option+Right arrow key
+Move cursor by one word to the left.
+Option+Left arrow key
+Move cursor to the beginning of the text box.
+⌘+Up arrow key
+Move cursor to the end of the text box.
+⌘+Down arrow key
+Move cursor to the beginning of the current line.
+⌘+Left arrow key
+Move cursor to the end of the current line.
+⌘+Right arrow key
+Select one word to the left.
+Shift+Option+Left arrow key
+Select one word to the right.
+Shift+Option+Right arrow key
+Select from current position to beginning of the placeholder or notes.
+Shift+⌘+Up arrow key
+Select from current position to the end of the placeholder or notes.
+Shift+⌘+Down arrow key
+Select from current position to beginning of the line.
+Shift+⌘+Left arrow key
+Select from current position to end of the line.
+Shift+⌘+Right arrow key
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Use keyboard shortcuts to navigate modern comments in PowerPoint
+Use the keyboard to work with the ribbon
+This article describes the keyboard shortcuts in PowerPoint for Android when creating or editing presentations.
+Note
+To quickly find a shortcut, you can use the Search. Press Ctrl+F and then type your search words.
+Edit and format the presentation
+To do this
+Press
+Undo the last action.
+Ctrl+Z
+Repeat the last action.
+Ctrl+Y
+Cut the selected content (and copy to the clipboard).
+Ctrl+X
+Copy the selected content to the clipboard.
+Ctrl+C
+Paste the copied or cut content.
+Ctrl+V
+Select all.
+Ctrl+A
+Apply bold formatting to the selected content.
+Ctrl+B
+Apply italic formatting to the selected content.
+Ctrl+I
+Underline the selected content.
+Ctrl+U
+Save or sync the presentation.
+Ctrl+S
+Copy formatting.
+Ctrl+Shift+C
+Select text.
+Shift+Left or Right arrow key, or Shift+Up or Down arrow key
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Use keyboard shortcuts to navigate modern comments in PowerPoint
+Use the keyboard to work with the ribbon
+This article describes the keyboard shortcuts you can use in PowerPoint for the web on Windows when creating or editing presentations.
+Note
+If you use Narrator with the Windows 10 Fall Creators Update, you have to turn off scan mode in order to edit documents, spreadsheets, or presentations with Microsoft 365 for the web. For more information, refer to
+Turn off virtual or browse mode in screen readers in Windows 10 Fall Creators Update
+.
+To quickly find a shortcut, you can use the Search. Press
+Ctrl+F
+and then type your search words.
+When you use PowerPoint for the web, we recommend that you use Microsoft Edge as your web browser. Because PowerPoint for the web runs in your web browser, the keyboard shortcuts are different from those in the desktop program. For example, you'll use
+Ctrl+F6
+instead of
+F6
+for jumping in and out of the commands. Also, common shortcuts like
+F1
+(Help) and
+Ctrl+O
+(Open) apply to the web browser – not PowerPoint for the web.
+In this topic
+Frequently used shortcuts
+Work with presentations and slides
+Work with objects and text
+Copy objects and text
+Work in objects and text
+Select text
+Delete text
+Move around in text
+Format text
+Work with tables
+Work with comments
+Move a slide
+Navigate with only the keyboard
+Navigate the ribbon and panes
+Frequently used shortcuts
+The following table provides the shortcuts that you'll likely use often in PowerPoint for the web.
+Tip
+To quickly create a new presentation in PowerPoint for the web, open your browser, type
+PowerPoint.new
+or
+ppt.new
+in the address bar, and then press
+Enter
+.
+To do this
+Windows
+Mac
+Insert a new slide (with the focus in the thumbnail pane, slide pane, or
+Notes
+pane).
+Ctrl+M
+No shortcut
+Apply bold formatting to the selected text.
+Ctrl+B
+⌘+B
+Cut selected text, object, or slide.
+Ctrl+X
+⌘+X
+Copy selected text, object, or slide.
+Ctrl+C
+⌘+C
+Paste cut or copied text, object, or slide.
+Ctrl+V
+⌘+V
+Insert a hyperlink.
+Ctrl+K
+⌘+K
+Undo the last action.
+Ctrl+Z
+⌘+Z
+Redo the last action.
+Ctrl+Y
+⌘+Y
+Delete selected text, object, or slide.
+Delete
+Delete
+Open the
+Find
+dialog box.
+Ctrl+F
+⌘+F
+Move a shape.
+Arrow keys
+Arrow keys
+Go to the next slide (with the focus in the thumbnail pane or the slide pane).
+Page down
+Fn+Down arrow key
+Go to the previous slide (with the focus in the thumbnail pane or the slide pane).
+Page up
+Fn+Up arrow key
+When a task pane option has focus, move to the next or previous option in the task pane.
+Tab key or Shift+Tab
+Tab key or Shift+Tab
+Exit the slide show.
+Esc
+Esc
+Print a presentation
+Ctrl+P
+⌘+P
+Save the presentation.
+PowerPoint for the web saves changes automatically.
+PowerPoint for the web saves changes automatically.
+Top of Page
+Work with presentations and slides
+To do this
+Windows
+Mac
+Create a new slide after the currently selected slide.
+Ctrl+M
+No shortcut
+Go to the next slide (with the focus in the thumbnail pane or the slide pane).
+Page down
+Fn+Down arrow key
+Go to the previous slide (with the focus in the thumbnail pane or the slide pane).
+Page up
+Fn+Up arrow key
+Go to the next slide in the
+Slide Show
+view.
+N, Page down, Down arrow key, Enter, or Space
+N, Page down, Right arrow key, Down arrow key, Return, or Space
+Go to the previous slide in the
+Slide Show
+view.
+P, Page up, Left arrow key, Up arrow key, or Backspace
+P, Page up, Left arrow key, Up arrow key, or Delete
+Go to a specific slide in the
+Slide Show
+view.
+G, then the Right or Left arrow key until on the slide, and then Enter
+G, then the Right or Left arrow key until on the slide, and then Return
+Turn captions or subtitles on or off in the
+Slide Show
+view.
+J
+J
+Exit the
+Slide Show
+view.
+Esc
+Esc
+Top of Page
+Work with objects and text
+Copy objects and text
+To do this
+Windows
+Mac
+Cut selected object or text.
+Ctrl+X
+⌘+X
+Copy selected object or text.
+Ctrl+C
+⌘+C
+Paste cut or copied object or text.
+Ctrl+V
+⌘+V
+Duplicate selected objects.
+Ctrl+D
+⌘+D
+Paste text, unformatted.
+Ctrl+Shift+V
+⌘+Shift+V
+Top of Page
+Work in objects and text
+To do this
+Windows
+Mac
+Move left to right through placeholders on a slide.
+Tab key
+Tab key
+Select or edit the current placeholder.
+Enter or F2
+Return or F2
+End editing text in a placeholder.
+F2
+F2
+Select multiple single objects.
+Ctrl+Click or Shift+Click
+⌘+Click or Shift+Click
+Select multiple objects.
+Click+Drag the mouse or Shift+Drag the mouse, or Ctrl+Drag the mouse
+Click+Drag the mouse or Shift+Drag the mouse
+Select all objects on the page.
+Ctrl+A
+⌘+A
+Select all text in the active text box.
+Ctrl+A
+⌘+A
+Insert a hyperlink.
+Ctrl+K
+⌘+K
+Send the object back one position.
+Ctrl+Left bracket ([)
+⌘+Shift+Option+B
+Send the object to back.
+Ctrl+Shift+Left bracket ([)
+⌘+Shift+Option+Left bracket ([)
+Bring the object forward one position.
+Ctrl+Right bracket (])
+⌘+Shift+Option+F
+Bring the object to front.
+Ctrl+Shift+Right bracket (])
+⌘+Shift+F
+Rotate the selected object by 15 degrees increments clockwise.
+Alt+Right arrow key
+Option+Right arrow key
+Rotate the selected object by 15 degrees increments counterclockwise.
+Alt+Left arrow key
+Option+Left arrow key
+Top of Page
+Select text
+To do this
+Windows
+Mac
+Select one character to the right.
+Shift+Right arrow key
+Shift+Right arrow key
+Select one character to the left.
+Shift+Left arrow key
+Shift+Left arrow key
+Select one word to the right.
+Shift+Ctrl+Right arrow key
+Shift+Option+Right arrow key
+Select one word to the left.
+Shift+Ctrl+Left arrow key
+Shift+Option+Left arrow key
+Select from the insertion point to the same point one line up.
+Shift+Up arrow key
+Shift+Up arrow key
+Select from the insertion point to the same point one line down.
+Shift+Down arrow key
+Shift+Down arrow key
+Select from the insertion point to the beginning of the paragraph.
+Shift+Ctrl+Up arrow key
+⌘+Shift+Up arrow key
+Select from the insertion point to the end of the paragraph.
+Shift+Ctrl+Down arrow key
+⌘+Shift+Down arrow key
+Select to the beginning of a line.
+Shift+Home
+⌘+Shift+Left arrow key
+Select to the end of a line.
+Shift+End
+⌘+Shift+Right arrow key
+Select to the beginning of a placeholder or notes.
+Shift+Ctrl+Home
+⌘+Shift+Fn+Left arrow key
+Select to the end of a placeholder or notes.
+Shift+Ctrl+End
+⌘+Shift+Fn+Right arrow key
+Select all within the placeholder or notes.
+Ctrl+A
+⌘+A
+Top of Page
+Delete text
+To do this
+Windows
+Mac
+Delete one character to the left.
+Backspace
+Delete
+Delete one word to the left.
+Ctrl+Backspace
+⌘+Delete
+Delete one character to the right.
+Delete
+Fn+Delete
+Delete one word to the right (with the cursor between the words).
+Ctrl+Delete
+⌘+Fn+Delete
+Top of Page
+Move around in text
+To do this
+Windows
+Mac
+Move one character to the right.
+Right arrow key
+Right arrow key
+Move one character to the left.
+Left arrow key
+Left arrow key
+Move one word to the right.
+Ctrl+Right arrow key
+Option+Right arrow key
+Move one word to the left.
+Ctrl+Left arrow key
+Option+Left arrow key
+Move one line up.
+Up arrow key
+Up arrow key
+Move one line down.
+Down arrow key
+Down arrow key
+Move to the end of a line.
+End
+End or Fn+Right arrow key
+Move to the beginning of a line.
+Home
+Home or Fn+Left arrow key
+Move up one paragraph.
+Ctrl+Up arrow key
+⌘+Up arrow key
+Move down one paragraph.
+Ctrl+Down arrow key
+⌘+Down arrow key
+Move to the end of a text box.
+Ctrl+End
+⌘+Fn+Right arrow key
+Move to the beginning of a text box.
+Ctrl+Home
+⌘+Fn+Left arrow key
+Top of Page
+Format text
+To do this
+Windows
+Mac
+Increase the font size.
+Ctrl+Shift+Right angle bracket (>)
+⌘+Shift+Right angle bracket (>)
+Decrease the font size.
+Ctrl+Shift+Left angle bracket (<)
+⌘+Shift+Left angle bracket (<)
+Apply bold formatting.
+Ctrl+B
+⌘+B
+Apply italic formatting.
+Ctrl+I
+⌘+I
+Apply underline formatting.
+Ctrl+U
+⌘+U
+Remove manual character formatting, such as subscript and superscript.
+Ctrl+Spacebar
+Control+Spacebar
+Left align a paragraph.
+Ctrl+L
+⌘+Shift+L
+Center a paragraph.
+Ctrl+E
+⌘+E
+Right align a paragraph.
+Ctrl+R
+⌘+Shift+R
+Justify a paragraph.
+Ctrl+J
+⌘+J
+Top of Page
+Work with tables
+To do this
+Windows
+Mac
+Move to the next cell.
+Tab key
+Tab key
+Move to the preceding cell.
+Shift+Tab
+Shift+Tab
+Move to the next row.
+Down arrow key
+Down arrow key
+Move to the preceding row.
+Up arrow key
+Up arrow key
+Start a new paragraph.
+Enter
+Return
+Add a new row at the bottom of the table with the cursor in the last cell of the last row.
+Tab key
+Tab key
+Top of Page
+Work with comments
+Except for the shortcut for adding a new comment, the keyboard shortcuts listed below work only when the
+Comments
+pane is open and in focus.
+To do this
+Windows
+Mac
+Add a new comment.
+Ctrl+Alt+M
+⌘+Shift+M
+Go to the next comment thread.
+Down arrow key
+Down arrow key
+Go to the previous comment thread.
+Up arrow key
+Up arrow key
+Expand a comment thread when the focus is on it.
+Right arrow key
+Right arrow key
+Collapse a comment thread.
+Left arrow key
+Left arrow key
+Go to the next reply in a comment thread.
+Down arrow key
+Down arrow key
+Go to the previous reply in a thread or the parent comment.
+Up arrow key
+Up arrow key
+Move the focus to the reply box.
+Tab key
+Tab key
+Edit a parent comment or reply (when the focus is on the parent comment or reply).
+Tab key to
+More thread actions
+, Enter, and Down arrow key to
+Edit comment
+.
+Tab key to
+More thread actions
+, Return, and Down arrow key to
+Edit comment
+.
+Post a comment or a reply or save an edit.
+Ctrl+Enter
+⌘+Return
+Top of Page
+Move a slide
+To do this
+Windows
+Mac
+Move the selected slide up one position in the thumbnail pane.
+Ctrl+Up arrow key
+⌘+Up arrow key
+Move the selected slide down one position in the thumbnail pane.
+Ctrl+Down arrow key
+⌘+Down arrow key
+Move the selected slide to the beginning in the thumbnail pane.
+Ctrl+Shift+Up arrow key
+⌘+Shift+Up arrow key
+Move the selected slide to the end in the thumbnail pane.
+Ctrl+Shift+Down arrow key
+⌘+Shift+Down arrow key
+Top of Page
+Navigate with only the keyboard
+To move the focus to different parts and areas of PowerPoint for the web (from the ribbon to the thumbnail pane, for example) and in and out of the content of a slide, press
+Ctrl+F6
+(forward) or press
+Ctrl+Shift+F6
+(backward). To navigate options and controls in PowerPoint for the web, press the
+Tab
+key to move forward, press
+Shift+Tab
+to move backward, and press
+Enter
+to select.
+Tip
+To quickly perform an action while in the
+Editing
+mode, press
+Alt+Q
+. The focus moves to the
+Search
+or
+Tell Me
+search field. Then type the action or option you want. Press the
+Up
+or
+Down arrow
+key until you find the option, and then press
+Enter
+to select it.
+The ribbon is the strip at the top of the PowerPoint for the web window. The ribbon is organized by tabs. Each tab displays a different set of tools and functions, made up of groups, and each group includes one or more options. To move the focus to the ribbon, press
+Alt+Period
+(.) or
+Alt+Windows
+key. You can also press
+Ctrl+F6
+repeatedly until the ribbon has the focus.
+Other shortcuts for using the ribbon include the following:
+To move between tabs, use the
+Right
+and
+Left arrow
+keys.
+To access the ribbon for the currently selected tab, press the
+Tab
+key once.
+To move between options on the ribbon, use the
+Right
+and
+Left arrow
+keys.
+Options are activated in different ways, depending on the type of the option:
+If the selected option is a button or split button, press
+Spacebar
+or
+Enter
+to activate it.
+If the selected option is a list (such as the
+Font
+list), to open the list, press
+Alt+Down arrow
+key. Then, to move between items, press the
+Up
+or
+Down arrow
+key. When the focus is on the item you want, press
+Enter
+to select it.
+If the selected option is a gallery, press the
+Tab
+key to go to the
+More
+option for the gallery and then, to open the gallery, press
+Enter
+. Press the
+Tab
+key to move through the items, and then press
+Enter
+to select one.
+Top of Page
+Navigate the ribbon and panes
+To do this
+Windows
+Mac
+Move forward between the following regions:
+Slide pane
+Notes
+pane
+Status bar
+Title bar
+Ribbon
+Thumbnail pane
+Ctrl+F6
+⌘+F6
+Move backward between the following regions:
+Slide pane
+Thumbnail pane
+Ribbon
+Title bar
+Status bar
+Notes
+pane
+Shift+Ctrl+F6
+Shift+⌘+F6
+Go to a different ribbon tab.
+Right and Left arrow keys
+Right and Left arrow keys
+Carry out the currently selected ribbon option.
+Enter
+Return
+Move between ribbon options or controls.
+Right and Left arrow keys
+Right and Left arrow keys
+Move between groups of features in the Single Line Ribbon.
+Ctrl+Left arrow key or Right arrow key
+No shortcut
+Switch between the simplified and classic ribbons.
+Alt+Period (.), Z, or R
+Ctrl+Period (.), Z, or R
+Display the access keys (ribbon commands) on the ribbon.
+Alt+Period (.)
+Ctrl+Period (.)
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Make your PowerPoint presentations accessible to people with disabilities
+Use keyboard shortcuts to deliver PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Use keyboard shortcuts to navigate modern comments in PowerPoint
+Use the keyboard to work with the ribbon
+Technical support for customers with disabilities
+Microsoft wants to provide the best possible experience for all our customers. If you have a disability or questions related to accessibility, please contact the
+Microsoft Disability Answer Desk
+for technical assistance. The Disability Answer Desk support team is trained in using many popular assistive technologies and can offer assistance in English, Spanish, French, and American Sign Language. Please go to the Microsoft Disability Answer Desk site to find out the contact details for your region.
+If you are a government, commercial, or enterprise user, please contact
+the enterprise Disability Answer Desk
+.
+Was this information helpful?
+Yes
+No
+Thank you! Any more feedback for Microsoft?
+Can you help us improve?
+(Send feedback to Microsoft so we can help.)
+What affected your experience?
+Resolved my issue
+Clear instructions
+Easy to follow
+No jargon
+Pictures helped
+Other
+Didn't match my screen
+Incorrect instructions
+Too technical
+Not enough information
+Not enough pictures
+Other
+Any additional feedback? (Optional)
+Submit feedback
+By pressing submit, your feedback will be used to improve Microsoft products and services.
+Your IT admin will be able to collect this data.
+Privacy Statement.
+Thank you for your feedback!
+×
+What's new
+Surface Pro
+Surface Laptop
+Surface Laptop Ultra
+Surface RTX Spark Dev Box
+Copilot for organizations
+Copilot for personal use
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Microsoft Store Promise
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft 365 Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+(function () {
+		function getCookie(name) {
+			var cookies = document.cookie.split('; ');
+			for (var i = 0; i < cookies.length; i++) {
+				var kvp = cookies[i].split('=');
+				if (kvp[0] === name) {
+					return decodeURIComponent(kvp[1]);
+				}
+			}
+			return null;
+		}
+
+		if (typeof window.oneDS === 'object') {
+			window.analytics = new window.oneDS.ApplicationInsights();
+			var config = {
+				instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432",
+				disableCookiesUsage: true,
+				cookieCfg: {
+					ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"]
+				},
+				channelConfiguration: {
+					eventsLimitInMem: 50
+				},
+				propertyConfiguration: {
+					gpcDataSharingOptIn: false,
+					callback: {
+						userConsentDetails: () => {
+							const consentDetails = {
+								Required: true,
+								Analytics: false,
+								Advertising: false,
+								SocialMedia: false
+							};
+
+							return consentDetails;
+						}
+					}
+				},
+				webAnalyticsConfiguration: {
+					autoCapture: {
+						pageView: true,
+						onLoad: true,
+						onUnload: true,
+						click: true,
+						scroll: true,
+						resize: true,
+						lineage: false,
+						jsError: true,
+						msTags: true
+					},
+					autoPopulateParentIdAndParentName: true,
+					isLoggedIn: false,
+					urlCollectHash: true,
+urlCollectQuery: true,
+					useDefaultContentName: true,
+					useShortNameForContentBlob: false
+				}
+			};
+
+			var isFirstTime = true;
+			var jsLocalId = null;
+
+
+			//Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser
+			window.analytics.addTelemetryInitializer(function (e) {
+				if (isFirstTime) {
+					var context = window.analytics.getPropertyManager().getPropertiesContext();
+					var ext = e.ext = e.ext || {};
+
+					if (jsLocalId) {
+						// Set the localId so it's set automatically for all future events
+						context.user.setLocalId(jsLocalId);
+
+						var userExt = ext.user = ext.user || {};
+						userExt.localId = jsLocalId;
+					}
+
+					isFirstTime = false;
+				}
+			});
+			window.analytics.initialize(config, []);
+		}
+	})();
+$(function () {
+		var signInUrl = "/en-us/authentication/signin";
+		var signOutUrl = "/en-us/authentication/signout";
+		var switchAccountUrl = "/en-us/authentication/switchaccount";
+		var shellOptions = {
+			meControlOptions: {
+				apiGeneration: 'GEN2',
+				authProviderConfig: {
+					type: 'webAadWithMsaProxy',
+					appSignInUrl: signInUrl,
+					appSignInToUrl: signInUrl,
+					appSignOutUrl: signOutUrl,
+					appSwitchUrl: switchAccountUrl,
+					appSwitchToUrl: switchAccountUrl,
+					aad: {
+						signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False',
+						signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True',
+						forgetUrl: 'https://login.microsoftonline.com:443/forgetuser',
+						rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc',
+					},
+				},
+			}
+		};
+
+		if (window.msCommonShell) {
+			window.msCommonShell.load(shellOptions);
+		}
+		else {
+			window.onShellReadyToLoad = function () {
+				window.onShellReadyToLoad = null;
+				window.msCommonShell.load(shellOptions);
+			};
+		}
+	});
+$(async function () {
+		await window.manageSilentSignIn.handleAllSilentSignIn();
+	})
+if (window.UcsCreative === undefined) {
+			window.UcsCreative = {};
+		}
+window.silentSigninProgress = true;
+
+		var silentSigninStartLog = {
+			actionType: 'A',
+			content: {
+				contentId: 'silentSignInStarted'
+			}
+		};
+		window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) {
+				occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"});
+			}

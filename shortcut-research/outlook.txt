@@ -1,0 +1,2753 @@
+Keyboard shortcuts for Outlook | Microsoft Support
+Skip to main content
+Microsoft
+Support
+Support
+Support
+Home
+Microsoft 365
+Office
+Products
+Microsoft 365
+Outlook
+Microsoft Teams
+OneDrive
+Microsoft Copilot
+OneNote
+Windows
+more ...
+Devices
+Surface
+PC Accessories
+Xbox
+PC Gaming
+HoloLens
+Surface Hub
+Hardware warranties
+Account & billing
+Resources
+Community forums
+Microsoft 365 Admins
+Developer
+Education
+Report a support scam
+Product safety
+More
+Buy Microsoft 365
+All Microsoft
+Global
+Microsoft 365
+Azure
+Copilot
+Windows
+Surface
+XBOX
+Deals
+Small Business
+Support
+Software
+Software
+Windows Apps
+Outlook
+OneDrive
+Microsoft Teams
+OneNote
+Microsoft Edge
+Moving from Skype to Teams
+PCs & Devices
+PCs & Devices
+Computers
+Shop XBOX
+Accessories
+VR & mixed reality
+Certified Refurbished
+Trade-in for cash
+Entertainment
+Entertainment
+XBOX Game Pass Ultimate
+PC Game Pass
+XBOX games
+PC games
+Business
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365 for business
+Microsoft Power Platform
+Windows 365
+Small Business
+Digital Sovereignty
+Developer & IT
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Other
+Other
+Microsoft Rewards
+Free downloads & security
+Education
+Gift cards
+Licensing
+Unlocked stories
+View Sitemap
+Search
+Search for help
+No results
+Cancel
+Sign in
+Sign in with Microsoft
+Sign in or create an account.
+Hello,
+Select a different account.
+You have multiple accounts
+Choose the account you want to sign in with.
+Keyboard shortcuts for Outlook
+Applies To
+Outlook for Microsoft 365
+Outlook 2024
+Outlook 2021
+Outlook 2019
+Outlook 2016
+Outlook.com
+New Outlook for Windows
+Outlook for iOS
+Outlook on the web for Exchange Server 2016
+Outlook on the web for Exchange Server 2019
+Outlook Web App
+Many users find that using an external keyboard with keyboard shortcuts for Outlook helps them work more efficiently. Keyboard shortcuts can be easier than a touchscreen and are an essential alternative to using a mouse.
+Important
+Steps may be different between
+new
+and classic Outlook for Windows. To determine which version of Outlook you're using, look for
+Settings
+on the ribbon. If there's no
+Settings
+option, follow the steps under the
+Classic Outlook
+tab. If the
+Settings
+option appears, select the tab for
+New Outlook
+.
+New Outlook
+Classic Outlook
+Outlook on the web
+Note
+The shortcuts in this topic refer to the US keyboard layout. Keys for other layouts might not correspond exactly to the keys on a US keyboard.
+A plus sign (+) in a shortcut means that you need to press multiple keys at the same time.
+A comma sign (,) in a shortcut means that you need to press multiple keys in order.
+This article describes the keyboard shortcuts in new Outlook for Windows. While many shortcuts are the same as in classic Outlook, there are some differences.
+Tip
+To quickly find a shortcut in this article, press
+Ctrl
++
+F
+, and then type your search terms.
+In this topic
+Frequently used shortcuts
+Edit text
+Format text
+Mail keyboard shortcuts
+Use the Folder pane
+Use the message and reading list
+Use the message list
+Use the reading list
+Calendar keyboard shortcut
+Contacts (People) keyboard shortcuts
+Use keyboard shortcuts to add accent marks and special characters
+Vowels with accents
+Punctuation, consonants, and special vowels
+Special characters
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in new Outlook
+To do this
+Press
+Create a new message or calendar event.
+Ctrl+N
+Open the selected message in a new window.
+Shift+Enter
+Delete message or item.
+Delete
+Forward message.
+Ctrl+F
+Go to
+Calendar
+.
+Ctrl+2
+Select the
+Reply All
+option.
+Ctrl+Shift+R
+Reply to email message.
+Ctrl+R
+Send an email message.
+Ctrl+Enter
+Open split buttons.
+Alt+Down arrow key
+Open keyboard shortcuts.
+Question mark (?)
+Key tips.
+Alt
+Top of Page
+Edit text
+The text editing keyboard shortcuts in new Outlook are the same as those in other Microsoft products.
+To do this
+Press
+Copy your selection to the clipboard.
+Ctrl+C
+Cut the text you selected.
+Ctrl+X
+Delete selected text or characters to the left of the cursor.
+Backspace
+Delete the word to the left of the cursor, but not the space before the word.
+Ctrl+Backspace
+Insert a hyperlink.
+Ctrl+K
+Paste content from the clipboard into the current location.
+Ctrl+V
+Repeat the most recent action.
+Ctrl+Y
+Reverse the most recent action.
+Ctrl+Z
+Top of Page
+Format text
+The text formatting keyboard shortcuts in new Outlook are the same as those in other Microsoft products.
+To do this
+Press
+Apply bold formatting.
+Ctrl+B
+Apply italic formatting.
+Ctrl+I
+Underline text.
+Ctrl+U
+Top of Page
+Mail keyboard shortcuts in new Outlook
+Use the Folder pane
+To do this
+Press
+Go to the
+Folder
+pane.
+Ctrl+Y
+Quick jump to the folder name
+Any alphanumeric key
+Collapse the selected section.
+Left arrow key
+Expand the selected section.
+Right arrow key
+Top of Page
+Use the message and reading list
+The keyboard shortcuts for new Outlook in the below table can be used to perform the same action in both the message list and the reading list.
+To do this
+Press
+Delete the selected message.
+Delete
+Mark the selected conversation or message as read.
+Ctrl+Q
+Mark the selected conversation or message as unread.
+Ctrl+U
+Permanently delete the selected message or item.
+Shift+Delete
+Flag a message or mark a flagged message as complete.
+Insert
+Cancel a search.
+Esc
+Go to the next message
+Ctrl+>
+Go to the previous message
+Ctrl+<
+Top of Page
+Use the message list
+The keyboard shortcuts for new Outlook in the below table are message list specific.
+To do this
+Press
+Select the current and next message in the list. Use this to select multiple, contiguous messages.
+Shift+Down arrow key
+Select the current and previous messages in the list. Use this to select multiple, contiguous messages.
+Shift+Up arrow key
+Select the first message in the folder.
+Home or Ctrl+Home
+Top of Page
+Use the reading list
+The keyboard shortcuts for new Outlook in the below table are reading list specific.
+To do this
+Press
+Close a new message.
+Esc
+Create a new message.
+Ctrl+N
+Forward a selected message.
+Ctrl+F
+Go to the bottom of a conversation or message.
+End
+Go to the top of a conversation or message.
+Home
+Move down one page for conversations or messages of two or more pages.
+Page down
+Move up one page for conversations or messages of two or more pages.
+Page up
+Reply to the selected message.
+Ctrl+R
+Reply to the sender and all recipients of the selected message.
+Ctrl+Shift+R
+Send a message.
+Ctrl+Enter
+Top of Page
+Calendar keyboard shortcuts in new Outlook
+Note
+The keyboard shortcuts for the Calendar in Teams and Outlook are the same. For Teams shortcuts, go to [Keyboard shortcuts for Microsoft Teams](../teams/keyboard-shortcuts-for-microsoft-teams.md.
+If you’re using Outlook on a Mac, go to
+Keyboard shortcuts in Outlook for Mac
+.
+To do this
+Press
+Open the calendar view.
+Ctrl+2
+Create a new calendar item.
+Ctrl+N
+Open the selected item.
+Enter
+Delete the selected item.
+Delete
+Switch the view to include today.
+No shortcut
+In Day view, move to the previous day. In Week and Work Week views, move to the previous week. In Month view, move to the previous month.
+Moving days: Ctrl+Alt+Left arrow key
+Moving weeks: Alt+Down arrow key
+Moving months: Alt+PageDown
+In Day view, move to the next day. In Week and Work Week views, move to the next week. In Month view, move to the next month.
+Moving days: Ctrl+Alt+Right arrow key
+Moving weeks: Alt+Up arrow key
+Moving months: Alt+PageUp
+Navigate to the previous pane in the calendar view.
+No shortcut
+Navigate to the next pane in the calendar view.
+No shortcut
+Move to a different region in the calendar.
+F6 or Ctrl+Shift+Tab
+Move to the next event or area in the current view.
+Tab key
+Move to a previous event or area in the current view.
+Shift+Tab
+Go to the next time period.
+Ctrl+Alt+Right arrow key
+Go to the previous time period.
+Ctrl+Alt+Left arrow key
+Go to today.
+Alt+Shift+Y/Home
+Move to a different region in the calendar.
+No shortcut
+Switch to Day view.
+Ctrl+Alt+1
+Switch to full Week view.
+Ctrl+Alt+2/Alt+"-"
+Switch to Month view.
+Ctrl+Alt+4/Alt+"="
+Switch to Work week view.
+Ctrl+Alt+2
+Switch to three-day view.
+Alt+3
+List view.
+No shortcut
+Invite Attendees.
+CTRL+N (Create New Event)
+Top of Page
+Contacts (People) keyboard shortcuts
+The
+People
+view is your address book in Outlook where your personal contacts are stored and where you can open any address book that has been set up for your organization. The
+Mail
+,
+Calendar, Copilot
+and
+People
+views work together so you can easily send mail to and schedule appointments with your most important people.
+To do this
+Press
+Go to
+Mail
+.
+Ctrl+1
+Go to
+Calendar
+.
+Ctrl+2
+Go to
+Copilot
+.
+Ctrl+3
+Go to
+People
+.
+Ctrl+4
+Delete a contact or contact list.
+Delete or Ctrl+D
+Create a contact.
+Ctrl+N
+Search for a contact.
+Ctrl+E
+Discard contact.
+Esc
+Save a contact or contact list.
+Ctrl+S
+Select all contacts or contact lists.
+Ctrl+A
+Unselect all contacts or contact lists.
+Esc
+Edit a contact or contact list.
+Shift+E
+Move down in the contact list or hub list.
+Down arrow key
+Move up in the contact list or hub list.
+Up arrow key
+Create a contact list.
+Ctrl+L
+Display the list of
+People
+keyboard shortcuts.
+Shift+Question mark (?)
+Move the focus to the
+Home
+tab.
+Alt, H
+Move the focus to the
+View
+tab.
+Alt, V
+Top of Page
+Use keyboard shortcuts to add accent marks and special characters for new Outlook
+To add accents or special characters in new Outlook, use the number pad on your external keyboard with
+Num Lock
+turned on.
+Press and hold
+Alt
+.
+Type the numeric code on the number pad and release
+Alt
+.
+Top of Page
+Vowels with accents
+The following table lists vowels with accent marks and the Alt code for them in new Outlook.
+Uppercase vowel with grave accent
+Press
+À
+0192
+È
+0200
+Ì
+0204
+Ò
+0210
+Ù
+0217
+Top of Page
+Lowercase vowel with grave accent
+Press
+à
+0224
+è
+0232
+ì
+0236
+ò
+0242
+ù
+0249
+Top of Page
+Uppercase vowel with acute accent
+Press
+Á
+0193
+É
+0201
+Í
+0205
+Ó
+0211
+Ú
+0218
+Ý
+0221
+Top of Page
+Lowercase vowel with acute accent
+Press
+á
+0224
+é
+0233
+í
+0237
+ó
+0243
+ú
+0250
+ý
+0253
+Top of Page
+Uppercase vowel with circumflex accent
+Press
+Â
+0194
+Ê
+0202
+Î
+0206
+Ô
+0212
+Û
+0219
+Top of Page
+Lowercase vowel with circumflex accent
+Press
+â
+0226
+ê
+0234
+î
+0238
+ô
+0244
+û
+0251
+Top of Page
+Uppercase vowel with tilde accent
+Press
+Ã
+0195
+Ñ
+0209
+Õ
+0213
+Top of Page
+Lowercase vowel with tilde accent
+Press
+ã
+0227
+ñ
+0241
+õ
+0245
+Top of Page
+Uppercase vowel with umlaut accent
+Press
+Ä
+0196
+Ë
+0203
+Ï
+0207
+Ö
+0214
+Ü
+0220
+Ÿ
+0159
+Top of Page
+Lowercase vowel with umlaut accent
+Press
+ä
+0228
+ë
+0235
+ï
+0239
+ö
+0246
+ü
+0252
+ÿ
+0255
+Top of Page
+Punctuation, consonants, and special vowels
+Mark, letter, symbol, or character
+Press
+Inverted exclamation mark (¡)
+0161
+Inverted question mark (¿)
+0191
+Uppercase C-cedilla (Ç)
+0199
+Lowercase c-cedilla (ç)
+0231
+Uppercase OE diphthong (Œ)
+0140
+Lowercase oe diphthong (œ)
+0156
+Eszett or ss (ß)
+0223
+Masculine ordinal indicator or degree symbol (º)
+0186
+Feminine ordinal indicator (ª)
+0170
+Uppercase O with a stroke (Ø)
+0216
+Lowercase o with a stroke (ø)
+0248
+Uppercase A with an overring, A-ring (Å)
+0197
+Lowercase a with an overring, A-ring (å)
+0229
+Uppercase AE diphthong or uppercase ash (Æ)
+0198
+Lowercase ae diphthong or lowercase ash (æ)
+0230
+Uppercase thorn (Þ)
+0222
+Lowercase thorn (þ)
+0254
+Uppercase eth (Ð)
+0208
+Lowercase eth (ð)
+0240
+Double left angled quotation mark («)
+0171
+Double right angled quotation mark (»)
+0187
+Single left angled quotation mark (‹)
+0139
+Single right angled quotation mark (›)
+0155
+Uppercase S with caron (Š)
+0138
+Lowercase s with caron (š)
+0154
+Uppercase Z with caron (Ž)
+0142
+Lowercase z with caron (ž)
+0158
+Top of Page
+Special characters
+Character
+Press
+Cent symbol ¢
+0162
+Copyright symbol ©
+0169
+Dagger symbol †
+0134
+Double dagger symbol or diesis ‡
+0135
+Pound sign £
+0163
+Euro sign €
+0128
+Yen sign ¥
+0165
+Function sign ƒ
+0131
+Currency sign ¤
+0164
+Registered trademark symbol ®
+0174
+Trademark symbol ™
+0153
+Bullet •
+0149
+En dash –
+0151
+Em dash —
+0150
+Section sign §
+0167
+Paragraph sign or pilcrow ¶
+0182
+Top of Page
+See also
+Use a screen reader to explore and navigate Outlook Mail
+Use a screen reader to explore and navigate Outlook Calendar
+Use a screen reader to explore and navigate the People app
+Basic tasks using a screen reader with email in Outlook
+Basic tasks using a screen reader with the calendar in Outlook
+Screen reader support for Outlook
+Note
+The shortcuts in this topic for classic Outlook refer to the US keyboard layout. Keys for other layouts might not correspond exactly to the keys on a US keyboard.
+A plus sign (+) in a shortcut means that you need to press multiple keys at the same time.
+A comma sign (,) in a shortcut means that you need to press multiple keys in order.
+This section describes the keyboard shortcuts in classic Outlook for Windows.
+Tip
+To quickly find a shortcut in this article, you can use the Search. Press
+Ctrl
++
+F
+, and then type your search words.
+In this topic
+Frequently used shortcuts
+Shortcuts for basic navigation
+Create an item or file
+Format text
+Use search
+Print items
+Use flags
+Use color categories
+Mail keyboard shortcuts
+Calendar keyboard shortcuts
+People keyboard shortcuts
+Tasks keyboard shortcuts
+Open the Visual Basic Editor
+Play macros
+Work with item groups
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in classic Outlook.
+To do this
+Press
+Close a window or a menu.
+Esc
+Go to the
+Home
+tab.
+Alt, H
+Create a new message.
+Ctrl+Shift+M
+Send a message.
+Alt+S
+Insert a file.
+Alt+N, A, F
+New task
+Ctrl+Shift+K
+Delete an item (when a message, task, or meeting is selected).
+Delete
+Search for an item.
+Ctrl+E or F3
+Reply to a message.
+Alt+H, R, P or Ctrl+R
+Forward a message.
+Alt+H, F, W or Ctrl+F
+Select the
+Reply All
+option.
+Alt+H, R, A or Ctrl+Shift+R
+Copy an item.
+Ctrl+C or Ctrl+Insert
+Note:
+Ctrl+Insert is not available in the
+Reading
+pane.
+Go to the
+Send/Receive
+tab.
+Alt, J, S
+Go to Calendar.
+Ctrl+2
+Create an appointment.
+Ctrl+Shift+A
+Move an item to a folder.
+Alt, H, M, V, and select a folder from the list
+Open the
+Save As
+dialog box on the
+Attachment
+tab.
+Alt, J, A, 2, A, V
+Check for new messages.
+Ctrl+M or F9
+Top of Page
+Shortcuts for basic navigation
+Note
+The numerical keys correspond to different views, but they may change based on your app configuration in classic Outlook.
+To do this
+Press
+Switch to the
+Mail
+view.
+Ctrl+1
+Switch to the
+Calendar
+view.
+Ctrl+2
+Switch to the
+Copilot
+view.
+Ctrl+3
+Switch to the
+People
+view.
+Ctrl+4
+Switch to the
+To Do
+.
+Ctrl+5
+Switch to the
+Org Explorer
+pane.
+Ctrl+6
+Switch to
+Loop
+.
+Ctrl+7
+Open
+Tasks
+.
+Ctrl+8
+Open the
+Address Book
+.
+Ctrl+Shift+B
+Go back to the previous view.
+Alt+B or Alt+Left arrow key
+Go forward to next view.
+Alt+Right arrow key
+Switch to next open message.
+Ctrl+Period (.)
+Switch to previous open message.
+Ctrl+Comma (,)
+Move between the
+Folder
+pane, the main classic Outlook window, the
+Reading
+pane, and the
+To-Do
+bar.
+Ctrl+Shift+Tab key or Shift+Tab key
+Move between the classic Outlook window, the smaller panes in the
+Folder
+pane, the
+Reading
+pane, and the sections in the
+To-Do
+bar.
+Tab key or F6
+Move between the ribbon and the calendar.
+F6
+Show the access keys in the ribbon.
+Alt or F6
+Show the tooltip for the ribbon element currently in focus.
+Ctrl+Shift+F10
+Open split buttons.
+Alt+Down arrow key
+Move around message header lines in the
+Folder
+pane or an open message.
+Ctrl+Tab
+Move between the
+Navigation
+pane and the calendar.
+Ctrl+Tab
+Move around within the
+Folder
+pane.
+Arrow keys
+Go to a different folder.
+Ctrl+Y
+Go to the
+Search
+box.
+F3 or Ctrl+E
+In the
+Reading
+pane, go to the previous message.
+Alt+Up arrow key or Ctrl+Comma (,), or Alt+Page Up
+In the
+Reading
+pane, page down through the text.
+Spacebar
+In the
+Reading
+pane, page up through the text.
+Shift+Spacebar
+Collapse or expand a group in the email message list.
+Left or Right arrow key, respectively
+Go back to previous view in the main classic Outlook window.
+Alt+B or Alt+Left arrow key
+Go forward to next view in the main classic Outlook window.
+Alt+Right arrow key
+Select the
+InfoBar
+and, if available, show the menu of commands.
+Ctrl+Shift+W
+Show the
+To-Do
+bar (peek).
+Alt+V, B, and then C for Calendar, P for People, T for Tasks, or O for Off
+Top of Page
+Navigate to the ribbon
+To do this
+Press
+Open the
+Home
+tab.
+Alt+H
+Open the
+File
+menu.
+Alt+F
+Open the
+Send/Receive
+tab.
+Alt+J, S
+Open the
+Folder
+tab.
+Alt+O
+Open the
+View
+tab.
+Alt+V
+Open the
+Search
+tab.
+Ctrl+E
+Go to the
+Tell Me
+search field.
+Alt+Q
+Top of Page
+Create an item or file in classic Outlook
+To do this
+Press
+Create an appointment.
+Ctrl+Shift+A
+Create a contact.
+Ctrl+Shift+C
+Create a contact group.
+Ctrl+Shift+L
+Create a fax.
+Ctrl+Shift+X
+Create a folder.
+Ctrl+Shift+E
+Create a meeting request.
+Ctrl+Shift+Q
+Create a message.
+Ctrl+Shift+M
+Create a note.
+Ctrl+Shift+N
+Create Microsoft Office document.
+Ctrl+Shift+H
+Post to the selected folder.
+Ctrl+Shift+S
+Post a reply in the selected folder.
+Ctrl+T
+Create a
+Search
+folder.
+Ctrl+Shift+P
+Create a task.
+Ctrl+Shift+K
+Top of Page
+Format text
+This table lists the keyboard shortcuts for formatting text in email messages, appointments, or meeting invitations in classic Outlook.
+To do this
+Press
+Display the
+Format Text
+tab on the ribbon.
+Alt+O
+Display the
+Font
+dialog box.
+Ctrl+Shift+P
+Switch the case of the first letter in a selected word or line.
+Shift+F3
+Toggle the case of the selected text between small caps and all caps.
+Ctrl+Shift+K
+Apply bold formatting.
+Ctrl+B
+Add a bulleted list.
+Ctrl+Shift+L
+Apply italic formatting.
+Ctrl+I
+Increase indent.
+Ctrl+T
+Decrease indent.
+Ctrl+Shift+T
+Center text.
+Ctrl+E
+Underline text.
+Ctrl+U
+Increase the font size.
+Ctrl+Right bracket (]) or Ctrl+Shift+Greater-than sign (>)
+Decrease the font size.
+Ctrl+Left bracket ([) or Ctrl+Shift+Less-than sign (<)
+Cut a selection.
+Ctrl+X or Shift+Delete
+Copy a selection.
+Ctrl+C or Ctrl+Insert
+Note:
+Ctrl+Insert is not available in the
+Reading
+pane.
+Paste the copied or cut selection.
+Ctrl+V or Shift+Insert
+Clear the formatting.
+Ctrl+Shift+Z or Ctrl+Spacebar
+Delete the next word.
+Ctrl+Shift+H
+Justify text (Stretch a paragraph to fit between the margins}.
+Ctrl+Shift+J
+Apply styles.
+Ctrl+Shift+S
+Create a hanging indent.
+Ctrl+T
+Insert a hyperlink.
+Ctrl+K
+Left-align a paragraph.
+Ctrl+L
+Right-align a paragraph.
+Ctrl+R
+Reduce a hanging indent.
+Ctrl+Shift+T
+Remove paragraph formatting.
+Ctrl+Q
+Top of Page
+Use search in classic Outlook
+To do this
+Press
+Go to the
+Search
+field to find a message or another item.
+Ctrl+E or F3
+Clear the search results.
+Esc
+Expand the search to include
+All Mail Items
+,
+All Calendar Items
+, or
+All Contact Items
+, depending on the module you are in.
+Ctrl+Alt+A
+Use
+Advanced Find
+.
+Ctrl+Shift+F
+Create a
+Search
+folder.
+Ctrl+Shift+P
+Search for text within an open item.
+F4
+Find and replace text, symbols, or some formatting commands when in the
+Reading
+pane or in an open item.
+Ctrl+H
+Expand search to include items from the current folder.
+Ctrl+Alt+K
+Expand search to include subfolders.
+Ctrl+Alt+Z
+Top of Page
+Print items in classic Outlook
+To do this
+Press
+Open the
+Print
+page in the
+File
+menu.
+Alt+F, P
+Print an item from an open window.
+Alt+F, P, P
+Open the
+Page Setup
+dialog box on
+Print
+page.
+Alt+S or Alt+U
+Select a printer on the
+Print
+page.
+Alt+F, P, I
+Open the
+Print Options
+dialog box.
+Alt+F, P, R
+Top of Page
+Use flags
+To do this
+Press
+Open the
+Flag for Follow Up
+dialog box to assign a flag.
+Ctrl+Shift+G
+Top of Page
+Use color categories
+To do this
+Press
+Delete the selected category from the list in the
+Color categories
+dialog.
+Alt+D
+Top of Page
+Mail keyboard shortcuts in classic Outlook
+To do this
+Press
+Switch to
+Inbox
+.
+Ctrl+Shift+I
+Switch to
+Outbox
+.
+Ctrl+Shift+O
+Check names.
+Ctrl+K
+Send a message.
+Alt+S
+Reply to a message.
+Ctrl+R
+Select the
+Reply to All
+option.
+Ctrl+Shift+R
+Reply with a meeting request.
+Ctrl+Alt+R
+Forward a message.
+Ctrl+F
+Mark a message as not junk.
+Ctrl+Alt+J
+Display blocked external content (in a message).
+Ctrl+Shift+I
+Post to a folder.
+Ctrl+Shift+S
+Apply
+Normal
+style.
+Ctrl+Shift+N
+Check for new messages.
+Ctrl+M or F9
+Go to the previous message.
+Up arrow key
+Go to the next message.
+Down arrow key
+Create a message (when in
+Mail
+view).
+Ctrl+N
+Create a message (from any Outlook view).
+Ctrl+Shift+M
+Open a received message
+Ctrl+O
+Delete and ignore a conversation.
+Ctrl+Shift+D
+Open the
+Address Book
+.
+Ctrl+Shift+B
+Add a
+Quick flag
+to an unopened message.
+Insert
+Display the
+Flag for follow up
+dialog box.
+Ctrl+Shift+G
+Mark a message as read.
+Ctrl+Q
+Mark a message as unread.
+Ctrl+U
+Open the
+MailTip
+in the composed message.
+Ctrl+Alt+P
+Find or replace text.
+F4
+Find the next item.
+Shift+F4
+Send a message.
+Ctrl+Enter
+Print an item.
+Ctrl+P
+Forward a message as an attachment.
+Ctrl+Alt+F
+Show the properties for the selected item.
+Alt+Enter
+Mark an item for download.
+Ctrl+Alt+M
+Check the
+Mark for download
+status.
+Alt+J, S, M, T
+Display the
+Send/Receive
+progress.
+Alt+J, S, P (when a
+Send/Receive
+is in progress)
+Save an item.
+Ctrl+S
+Open the
+Save as
+dialog box.
+F12
+Top of Page
+Use the Folder pane
+To do this
+Press
+Move around within the
+Folder
+pane.
+Up and Down arrow keys
+Move to the
+Message list
+from the
+Folder
+pane.
+Spacebar or Enter
+Create a new folder.
+Shift+F10, N
+Expand a selected group or folder with subfolders.
+Right arrow key
+Collapse a selected group or folder with subfolders.
+Left arrow key
+Open a selected item in the
+Folder
+pane.
+Spacebar or Enter
+Rename a selected folder in the list of folders.
+F2
+Delete a selected folder in the list (default folders, such as
+Inbox
+,
+Outbox
+,
+Drafts
+, and
+Sent
+cannot be deleted).
+Shift+F10, D
+Jump to folder by typing first letter of folder name. For example, to go to the
+Drafts
+folder, type 'd.' If multiple folders start with same letter, repeat the letter until you reach the folder you want.
+The first letter of a folder name
+Top of Page
+Use the message list in classic Outlook
+To do this
+Press
+Move down and up in the message list.
+Down and Up arrow keys
+Go to the item at the bottom of the screen.
+Page down
+Go to the item at the top of the screen.
+Page up
+Extend or reduce the selected items by one item.
+Shift+Up arrow key or Shift+Down arrow key
+Go to the next or previous item without extending the selection.
+Ctrl+Up arrow key or Ctrl+Down arrow key
+Select or cancel a selection of the active item.
+Ctrl+Spacebar
+Expand groups of messages (for example, Last Week).
+Right arrow key
+Collapse groups of messages (for example, Last Week).
+Left arrow key
+Select multiple adjacent messages.
+Shift+Down or Up arrow key
+Select multiple non-adjacent messages.
+Ctrl+Up or Down arrow key, and then, to select each message, press Spacebar
+Move message to folder.
+Ctrl+Shift+V
+Add
+Follow Up
+or
+Quick Flag
+to message.
+Shift+F10, U, T (in Narrator, Insert)
+Add
+Custom Flag
+to message.
+Ctrl+Shift+G
+Mark message as junk or not junk.
+Shift+F10, J, then the Up or Down arrow key, and then Enter
+Mark a message as read.
+Ctrl+Q
+Mark a message as unread.
+Ctrl+U
+Mark an item to download.
+Alt, J, S, M, T
+Mark an item to download a copy.
+Alt, J, S, M, C
+Unmark an item to download.
+Alt, J, S, U, U
+Unmark all items to download.
+Alt, J, S, U, K
+Delete a message.
+Alt+H+D
+Ignore a message.
+Alt+H, X
+Reply to a message.
+Alt+H, R, P
+Select the
+Reply All
+option.
+Alt+H, R, A
+Forward a message.
+Alt+H, F, W
+Open a message.
+Enter
+Display a blocked content menu.
+Ctrl+Shift+W
+Download blocked pictures or images.
+Ctrl+Shift+W, P
+Show email properties.
+Alt+Enter
+Post to a folder.
+Ctrl+Shift+S
+Copy item to a folder.
+Ctrl+Shift+Y
+Print a message.
+Ctrl+P
+Set how often Outlook checks for new messages.
+Ctrl+Alt+S
+Set the junk mail options.
+Alt+H, J, O
+Top of Page
+Use the Reading pane in classic Outlook
+To do this
+Press
+Go to the previous message.
+Alt+Up arrow key or Ctrl+Comma (,), or Alt+Page up
+Page down through text.
+Spacebar
+Page up through text.
+Shift+Spacebar
+Move to the next field.
+Tab key
+Move to previous field.
+Shift+Tab
+Move to the next or previous link.
+Tab key or Shift+Tab
+Jump to the
+Reply
+button.
+Alt+R
+In an email message, select the
+InfoBar
+and, if available, show the options menu.
+The
+InfoBar
+appears in messages that contain additional information, for example, about conflicting meetings and actions are needed. If available, the
+InfoBar
+appears in the message below the subject and sender.
+Ctrl+Shift+W
+Close the
+InfoBar
+menu.
+Esc
+Top of Page
+Check for new emails and send outgoing messages (Send/Receive) in classic Outlook
+To do this
+Press
+Start a send/receive action for all defined
+Send/Receive
+groups with
+Include this group in Send/Receive
+(F9) selected. This can include headers, full items, specified folders, items less than a specific size, or any combination that you define.
+Alt+J, S, G
+Start a send/receive action for the current folder, retrieving full items (header, item, and any attachments).
+Shift+F9
+Start a send/receive action.
+Alt+J, S, S
+Define
+Send/Receive
+groups.
+Ctrl+Alt+S
+Top of Page
+Calendar keyboard shortcuts in classic Outlook
+Note
+The keyboard shortcuts for the Calendar in Teams and Outlook are the same. For Teams shortcuts, go to
+Keyboard shortcuts for Microsoft Teams
+.
+To do this
+Press
+Create an appointment (when in the
+Calendar
+view).
+Ctrl+N
+Create an appointment (in any Outlook view).
+Ctrl+Shift+A
+Create a meeting request.
+Ctrl+Shift+Q or Alt+H, M, R
+Open the
+New Items
+menu to select which item you'd like to create.
+Alt+H+I
+Forward an appointment or meeting.
+Alt+H, F, W or Ctrl+F
+Reply to a meeting request with a message.
+Ctrl+R
+Select the
+Reply All
+option.
+Ctrl+Shift+R
+Show one day in the calendar.
+Alt+1
+Show two days in the calendar.
+Alt+2
+Show three days in the calendar.
+Alt+3
+Show four days in the calendar.
+Alt+4
+Show five days in the calendar.
+Alt+5
+Show six days in the calendar.
+Alt+6
+Show seven days in the calendar.
+Alt+7
+Show eight days in the calendar.
+Alt+8
+Show nine days in the calendar.
+Alt+9
+Show ten days in the calendar.
+Alt+0
+Show today in the calendar.
+Alt+H, O, D
+Show the daily view.
+Alt+H+R or Ctrl+Alt+1
+Show the next seven days.
+Alt+H, X
+Go to a date.
+Ctrl+G or Alt+H+L
+Switch to
+Month
+view.
+Alt+Equal or Ctrl+Alt+4
+Go to the next day.
+Ctrl+Right arrow key
+Go to the next week.
+Alt+Down arrow key
+Go to the next month.
+Alt+Page down
+Go to the previous day.
+Ctrl+Left arrow key
+Go to the previous week.
+Alt+Up arrow key
+Go to the previous month.
+Alt+Page up
+Go to the start of the week.
+Alt+Home
+Go to the end of the week.
+Alt+End
+Switch to the
+Full Week
+view.
+Alt+Minus sign (-) or Ctrl+Alt+3
+Switch to the
+Work Week
+view.
+Ctrl+Alt+2
+Go to the previous appointment.
+Ctrl+Comma (,) or Ctrl+Shift+Comma (,)
+Go to the next appointment.
+Ctrl+Period (.) or Ctrl+Shift+Period (.)
+Set up recurrence for an open appointment or meeting.
+Ctrl+G
+Open an appointment when the reminder appears.
+Alt+O
+Open the reminder window.
+Alt+V, M
+Snooze the reminder.
+Alt+S
+Dismiss the reminder.
+Alt+D
+Assign a sound to a reminder.
+Alt+F, T, A, then Alt+P. Press the
+Tab
+key until you reach the
+Browse
+button, and press
+Enter
+. In the
+Reminder Sound File
+dialog box, type or select the name of the sound file you want.
+Jump to Search.
+Ctrl+E
+Show the selected schedule in a horizontal layout if you want to compare calendars to schedule meetings.
+Alt+H, S, V or Ctrl+Alt+5
+Add shared calendars from your contacts, or create a new calendar.
+Alt+H, O, C
+Create a new calendar group or add a department calendar.
+Alt+H, C, G
+Email a selected calendar to a contact.
+Alt+H, E
+Share a calendar with others.
+Alt+H, S, C
+Publish a calendar online.
+Alt+H, P, O
+View and edit the sharing permissions for a folder.
+Alt+H, F, P
+Search for contacts.
+Alt+H, F, C
+Open the address book.
+Alt+H, A, B
+Open the
+Outlook Options
+dialog box for calendars.
+Alt+H, C, O
+If information for the currently selected item is abbreviated or not read in full, activate the Microsoft Active Accessibility (MSAA) information. MSAA provides more details to JAWS so that the information can be read in full.
+Alt+Ctrl+Shift+M
+Open the calendar scheduling assistant from the meeting window.
+Alt+X
+Top of Page
+Use the day/week/month view
+To do this
+Press
+View from one through nine days.
+Alt+key for number of days
+View 10 days.
+Alt+0 (zero)
+Switch to the
+Week
+view.
+Alt+Minus sign (-)
+Switch to the
+Month
+view.
+Alt+Equal sign ( = )
+Move between the
+Calendar
+view,
+TaskPad
+, and
+Folder
+list.
+Ctrl+Tab or F6
+Select the previous appointment.
+Shift+Tab
+Go to the previous day.
+Left arrow key
+Go to the next day.
+Right arrow key
+Go to the same day in the next week.
+Alt+Down arrow key
+Go to the same day in the previous week.
+Alt+Up arrow key
+Top of Page
+Use the single day view
+To do this
+Press
+Select the time that begins your work day.
+Home
+Select the time that ends your work day.
+End
+Select the previous block of time.
+Up arrow key
+Select the next block of time.
+Down arrow key
+Select the block of time at the top of the screen.
+Page up
+Select the block of time at the bottom of the screen.
+Page down
+Extend or reduce the selected time.
+Shift+Up arrow key or Shift+Down arrow key
+Go to the same day in the next week.
+Alt+Down arrow key
+Go to the same day in the previous week.
+Alt+Up arrow key
+Top of Page
+Use the Week view
+To do this
+Press
+Go to the start of work hours for the selected day.
+Home
+Go to the end of work hours for the selected day.
+End
+Go up one page view in the selected day.
+Page up
+Go down one page view in the selected day.
+Page down
+Change the duration of the selected block of time.
+Shift+Left arrow key, Shift+Right arrow key, Shift+Up arrow key, Shift+Down arrow key, Shift+Home, or Shift+End
+Top of Page
+Use the Month view
+To do this
+Press
+Go to the first day of the week.
+Home
+Go to the same day of the week in the previous page.
+Page up
+Go to the same day of the week in the next page.
+Page down
+Top of Page
+Use the Date Navigator view
+To do this
+Press
+Go to the first day of the current week.
+Alt+Home
+Go to the last day of the current week.
+Alt+End
+Go to the same day in the previous week.
+Alt+Up arrow key
+Go to the same day in the next week.
+Alt+Down arrow key
+Top of Page
+People keyboard shortcuts in classic Outlook
+To do this
+Press
+Dial a new call to a contact.
+Ctrl+Shift+D
+Find a contact.
+F3 or Ctrl+E
+Enter a name in the
+Search Address Books
+.
+F11
+In
+Table
+or
+List
+view of contacts, go to the first contact that starts with a specific letter.
+Shift, followed by a letter
+Select all contacts.
+Ctrl+A
+Create a message with the selected contact as subject.
+Ctrl+F
+Create a contact (when in
+Contacts
+).
+Ctrl+N
+Create a contact (from any Outlook view).
+Ctrl+Shift+C
+Open a contact form for the selected contact.
+Ctrl+O
+Create a contact group.
+Ctrl+Shift+L
+Open the
+Print
+dialog box.
+Ctrl+P
+Update a list of contact group members.
+F5
+Go to a different folder.
+Ctrl+Y
+Open the
+Address Book
+.
+Ctrl+Shift+B
+Use
+Advanced Find
+.
+Ctrl+Shift+F
+In an open contact, open the next contact listed.
+Ctrl+Shift+Period (.)
+Find a contact in
+Favorites
+.
+F11
+Close a contact.
+Esc
+Send a fax to the selected contact.
+Ctrl+Shift+X
+Open the
+Check Address
+dialog box.
+Alt+D
+In a contact form, under Internet, display the
+Email 1
+information.
+Alt+Shift+1
+In a contact form, under Internet, display the
+Email 2
+information.
+Alt+Shift+2
+In a contact form, under Internet, display the
+Email 3
+information.
+Alt+Shift+3
+Top of Page
+Use the Business Cards or Address view in classic Outlook
+To do this
+Press
+Select a specific card in the list.
+Type one or more letters of the name that the card is filed under, or type the name of the field you are sorting by
+Select the previous card.
+Up arrow key
+Select the next card.
+Down arrow key
+Select the first card in the list.
+Home
+Select the last card in the list.
+End
+Select the first card on the current page.
+Page up
+Select the first card on the next page.
+Page down
+Select the closest card in the next column.
+Right arrow key
+Select the closest card in the previous column.
+Left arrow key
+Select or cancel the selection of the active card.
+Ctrl+Spacebar
+Extend the selection to the previous card and cancel the selection of cards after the starting point.
+Shift+Up arrow key
+Extend the selection to the next card and cancel the selection of cards before the starting point.
+Shift+Down arrow key
+Extend the selection to the previous card, regardless of the starting point.
+Ctrl+Shift+Up arrow key
+Extend the selection to the next card, regardless of the starting point.
+Ctrl+Shift+Down arrow key
+Extend the selection to the first card in the list.
+Shift+Home
+Extend the selection to the last card in the list.
+Shift+End
+Extend the selection to the first card on the previous page.
+Shift+Page up
+Extend the selection to the last card on the last page.
+Shift+Page down
+Top of Page
+Shortcuts in the Edit Business Cards dialog box in classic Outlook
+To do this
+Press
+Open the
+Add
+menu list.
+Alt+A
+Select text in the
+Label
+box when the field with a label assigned is selected.
+Alt+B
+Open the
+Add Card Picture
+dialog.
+Alt+C
+Place cursor at beginning of the
+Edit
+text field.
+Alt+E
+Go to and select the
+Fields
+box.
+Alt+F
+Select the
+Image Align
+menu.
+Alt+G
+Select the color palette for the background.
+Alt+K, Enter
+Select the
+Layout
+menu.
+Alt+L
+Remove a selected field from the
+Fields
+box.
+Alt+R
+Top of Page
+Move between fields in an open Business Card in classic Outlook
+To use the following keys, make sure that a field in a card is selected.
+To do this
+Press
+Move to the next field and control.
+Tab key
+Move to the previous field and control.
+Shift+Tab
+Close the active card.
+Enter or Esc
+Top of Page
+Move between characters in a Business Card field in classic Outlook
+To use the following keys, make sure that a field in a card is selected or that the focus is located in the field.
+To do this
+Press
+Add a line in a multiline field.
+Enter
+Move to the beginning of a line.
+Home
+Move to the end of a line.
+End
+Move to the beginning of a multiline field.
+Page up
+Move to the end of a multiline field.
+Page down
+Move to the previous line in a multiline field.
+Up arrow key
+Move to the next line in a multiline field.
+Down arrow key
+Move to the previous character in a field.
+Left arrow key
+Move to the next character in a field.
+Right arrow key
+Top of Page
+Tasks keyboard shortcuts in classic Outlook
+To do this
+Press
+Accept a task request.
+Ctrl+C
+Decline a task request.
+Ctrl+D
+Find a task or other item.
+Ctrl+E
+Open the
+Go to Folder
+dialog box.
+Ctrl+Y
+Create a task when in
+Tasks
+view.
+Ctrl+N
+Create a task from any Outlook view.
+Ctrl+Shift+K
+Open the selected item.
+Ctrl+O
+Print the selected item.
+Ctrl+P
+Select all items.
+Ctrl+A
+Delete selected item.
+Ctrl+D
+Forward a task as an attachment.
+Ctrl+F
+Create a task request.
+Ctrl+Shift+Alt+U
+Switch between the
+Folder
+pane,
+Tasks
+list, and
+To-Do
+bar.
+F6
+Undo the last action.
+Ctrl+Z
+Flag an item or mark complete.
+Insert
+Top of Page
+Use the Timeline view when an item is selected in classic Outlook
+To do this
+Press
+Select the previous item.
+Left arrow key
+Select the next item.
+Right arrow key
+Select multiple adjacent items.
+Shift+Left or Right arrow key
+Select multiple non-adjacent items.
+Ctrl+Left arrow key+Spacebar or Ctrl+Right arrow key+Spacebar
+Open the selected items.
+Enter
+Select the first item on the timeline (if items are not grouped) or the first item in the group.
+Home
+Select the last item on the timeline (if items are not grouped) or the last item in the group.
+End
+Display (without selecting) the first item on the timeline (if items are not grouped) or the first item in the group.
+Ctrl+Home
+Display (without selecting) the last item on the timeline (if items are not grouped) or the last item in the group.
+Ctrl+End
+Top of Page
+Use the Timeline view when a group is selected in classic Outlook
+To do this
+Press
+Expand the group.
+Enter or Right arrow key
+Collapse the group.
+Enter or Left arrow key
+Select the previous group.
+Up arrow key
+Select the next group.
+Down arrow key
+Select the first group on the timeline.
+Home
+Select the last group on the timeline.
+End
+Select the first item on screen in an expanded group or the first item off screen to the right.
+Right arrow key
+Top of Page
+Use the Timeline view when a time unit on the time scale for days is selected
+To do this
+Press
+Move backwards in increments of time that are the same as those shown on the time scale.
+Left arrow key
+Move forward in increments of time that are the same as those shown on the time scale.
+Right arrow key
+Switch between active view, the
+To-Do
+bar,
+Search
+, and back to active view.
+Tab key and Shift+Tab
+Top of Page
+Open the Visual Basic Editor
+To do this
+Press
+Open the
+Visual Basic Editor
+.
+Alt+F11
+Top of Page
+Play macros
+To do this
+Press
+Play a macro.
+Alt+F8
+Top of Page
+Work with item groups
+To do this
+Press
+Expand a single selected group.
+Right arrow key
+Collapse a single selected group.
+Left arrow key
+Select the previous group.
+Up arrow key
+Select the next group.
+Down arrow key
+Select the first group.
+Home
+Select the last group.
+End
+Select the first item on screen in an expanded group or the first item off-screen to the right.
+Right arrow key
+Top of Page
+See also
+Use a screen reader to explore and navigate Outlook Mail
+Use a screen reader to explore and navigate Outlook Calendar
+Basic tasks using a screen reader with email in Outlook
+Basic tasks using a screen reader with the calendar in Outlook
+Screen reader support for Outlook
+This section describes the keyboard shortcuts in Outlook on the web and Outlook.com.
+Note
+In Outlook on the web and Outlook.com, you can use the keyboard shortcuts from Outlook.com, Yahoo Mail, Gmail, or Outlook. This article describes the shortcuts that are available if you choose Outlook. For instructions on how to change the version of the shortcut, go to
+Change the keyboard shortcuts version
+.
+To quickly find a shortcut in this article, you can use the Search. Press
+Ctrl
++
+F
+, and then type your search words.
+The action that a keyboard shortcut performs can be unique to the area or view you're working in, despite featuring familiar key names and key combinations.
+In this topic
+Change the keyboard shortcuts version
+Frequently used keyboard shortcuts
+Edit text
+Format text
+Mail keyboard shortcuts
+Use the Folder pane
+Use the message and reading list
+Use the message list
+Use the reading list
+Calendar keyboard shortcuts
+Use calendar forms
+People keyboard shortcuts
+Use keyboard shortcuts to add accent marks and special characters
+Vowels with accents
+Punctuation, consonants, and special vowels
+Special characters
+Change the keyboard shortcuts version
+In Outlook on the web and Outlook.com, you can choose which keyboard shortcuts you want to use: Outlook.com, Yahoo Mail, Gmail, or Outlook. Alternatively, you can turn off the keyboard shortcuts.
+To see a full list of keyboard shortcuts that are available in the version you choose, press
+Shift
++
+⁠?⁠
+(Question mark)on your keyboard.
+In Outlook.com and the new Outlook on the web, select
+Settings
+>
+General
+>
+Accessibility
+. Under
+Keyboard shortcuts
+, select the option you want, and then select
+Save
+.
+In the classic Outlook on the web, select
+Settings
+>
+Mail
+>
+General
+>
+Keyboard shortcuts
+. Select the option you want, and then select
+Save
+.
+Frequently used keyboard shortcuts
+This table lists the most frequently used shortcuts in Outlook on the web and Outlook.com.
+To do this
+Press
+Create a new message or calendar event.
+N
+Open the selected message in a new window.
+Shift+Enter
+Move the message to the
+Archive
+folder.
+E
+Delete message or item.
+Delete
+Forward message.
+Ctrl+Shift+F or Shift+F
+Go to the calendar.
+Ctrl+Shift+2
+Select the
+Reply All
+option.
+Ctrl+Shift+R or Shift+R
+Reply to email message.
+Ctrl+R or R
+Send email message.
+Ctrl+Enter
+Use search.
+Alt+Q
+Open split buttons.
+Alt+Down arrow key
+Top of Page
+Edit text
+The text editing keyboard shortcuts in Outlook on the web and Outlook.com are the same as those in other Microsoft products.
+To do this
+Press
+Copy your selection to the clipboard.
+Ctrl+C
+Cut the text you selected.
+Ctrl+X
+Delete selected text or characters to the left of the cursor.
+Backspace
+Delete the word to the left of the cursor, but not the space before the word.
+Ctrl+Backspace
+Insert a hyperlink.
+Ctrl+K
+Paste content from the clipboard into the current location.
+Ctrl+V
+Repeat the most recent action.
+Ctrl+Y
+Reverse the most recent action.
+Ctrl+Z
+Switch between inserting and overwriting text.
+Insert
+Top of Page
+Format text
+The text formatting keyboard shortcuts in Outlook on the web and Outlook.com are the same as those in other Microsoft products.
+To do this
+Press
+Apply bold formatting.
+Ctrl+B
+Apply italic formatting.
+Ctrl+I
+Underline text.
+Ctrl+U
+Top of Page
+Mail keyboard shortcuts
+Use the Folder pane
+To do this
+Press
+Collapse the selected section.
+Left arrow key
+Expand the selected section.
+Right arrow key
+Top of Page
+Use the message and reading list
+The keyboard shortcuts in the below table can be used to perform the same action in both the message list and the reading list.
+To do this
+Press
+Delete the selected message.
+Delete
+Mark the selected conversation or message as read.
+Ctrl+Q or Q
+Mark the selected conversation or message as unread.
+Ctrl+U or U
+Permanently delete the selected message or item.
+Shift+Delete
+Flag a message or mark a flagged message as complete.
+Insert
+Cancel a search.
+Esc
+Top of Page
+Use the message list
+The keyboard shortcuts in the below table are message list specific.
+To do this
+Press
+Select the current and next message in the list. Use this to select multiple, contiguous messages.
+Shift+Down arrow key
+Select the current and previous messages in the list. Use this to select multiple, contiguous messages.
+Shift+Up arrow key
+Select the first message in the folder.
+Home or Ctrl+Home
+Top of Page
+Use the reading list
+The keyboard shortcuts in the below table are reading list specific.
+To do this
+Press
+Close a new message.
+Esc
+Create a new message.
+N
+Forward a selected message.
+Ctrl+Shift+F or Shift+F
+Go to the bottom of a conversation or message.
+End or Ctrl+End
+Go to the top of a conversation or message.
+Home or Ctrl+Home
+Move down one page for conversations or messages of two or more pages.
+Page down
+Move up one page for conversations or messages of two or more pages.
+Page up
+Reply to the selected message.
+Ctrl+R or R
+Reply to the sender and all recipients of the selected message.
+Ctrl+Shift+R or Shift+R
+Send a message.
+Ctrl+Enter
+Top of Page
+Calendar keyboard shortcuts
+Note
+The keyboard shortcuts for the Calendar in Teams and Outlook are the same. For Teams shortcuts, go to
+Keyboard shortcuts for Microsoft Teams
+.
+If you’re using Outlook on a Mac, go to
+Keyboard shortcuts in Outlook for Mac
+.
+To do this
+Press
+Go to the calendar.
+Ctrl+Shift+2
+Create a new calendar item.
+N
+Open the selected item.
+Enter
+Delete the selected item.
+Delete
+Switch the view to include today.
+No shortcut
+In Day view, move to the previous day. In Week and Work Week views, move to the previous week. In Month view, move to the previous month.
+Moving days= Ctrl+Alt+Left arrow key
+Moving weeks= Alt+Down arrow key
+Moving months= Alt+PageDown
+In Day view, move to the next day. In Week and Work Week views, move to the next week. In Month view, move to the next month.
+Moving days= Ctrl+Alt+Right arrow key
+Moving weeks= Alt+Up arrow key
+Moving months= Alt+PageUp
+Navigate to the previous pane in the calendar view.
+No shortcut
+Navigate to the next pane in the calendar view.
+No shortcut
+Move to a different region in the calendar.
+Ctrl+F6 or Ctrl+Shift+F6
+Move to the next event or area in the current view.
+Tab key
+Move to a previous event or area in the current view.
+Shift+Tab
+Go to the next time period.
+Shift+Right arrow key
+Go to the previous time period.
+Shift+Left arrow key
+Go to today.
+Alt+Shift+Y
+Move to a different region in the calendar.
+No shortcut
+Switch to Day view.
+Shift+Alt+1
+Switch to full Week view.
+Shift+Alt+3
+Switch to Month view.
+Shift+Alt+4
+Switch to Work week view.
+Shift+Alt+2
+Switch to three-day view.
+No shortcut
+List view.
+No shortcut
+Invite Attendees.
+N (Create New Event)
+Top of Page
+Use calendar forms
+To do this
+Press
+Save an appointment.
+Ctrl+S
+Send a meeting.
+Ctrl+Enter or Alt+S
+Top of Page
+People keyboard shortcuts
+The
+People
+app is your address book in Outlook on the web where your personal contacts are stored and where you can open any address book that has been set up for your organization. The
+People
+,
+Mail
+,
+Copilot
+and
+Calendar
+apps work together so you can easily send mail to and schedule  appointments with your most important people. To learn more about the
+People
+app, go to
+Use a screen reader to explore and navigate the People app
+.
+To do this
+Press
+Go to
+Mail
+.
+Ctrl+Shift+1
+Go to
+Calendar
+.
+Ctrl+Shift+2
+Go to
+Copilot
+.
+Ctrl+Shift+3
+Go to
+People
+.
+Ctrl+Shift+4
+Delete a contact or contact list.
+Delete
+Create a contact.
+Shift+N
+Search for a contact.
+Alt+Q
+Dismiss changes while editing a contact.
+Esc
+Save a contact or contact list.
+Ctrl+S
+Select all contacts or contact lists.
+Ctrl+A
+Unselect all contacts or contact lists.
+Esc
+Edit a contact or contact list.
+Shift+E
+Move down in the contact or hub list.
+Down arrow key
+Move up in the contact or hub list.
+Up arrow key
+Create a contact list.
+Shift+L
+Display the list of
+People
+keyboard shortcuts.
+Shift+Question mark (?)
+Move the focus to the ribbon.
+Alt+Period (.)
+Move the focus to the
+Home
+tab.
+Alt+H
+Move the focus to the
+View
+tab.
+Alt+V
+Move forward to the next area, button, link, or option in a dialog box, or close a menu.
+Tab key
+Move backward to the previous area, button, or link.
+Shift+Tab
+Select additional contacts when one contact is already selected.
+Shift+Down or Up arrow key, then Spacebar
+Move between and select options in a menu.
+Down or Up arrow key
+Select or clear the checkbox for a contact in a contact list or an option in a dialog box.
+Spacebar
+Clear all selections on a page and refresh that page in the web browser.
+Shift+F5
+Activate a button or link or open a menu.
+Enter
+Open the context menu when a contact is selected.
+Shift+F10
+Close a dialog box.
+Esc
+Top of Page
+Use keyboard shortcuts to add accent marks and special characters
+To add accents or special characters, use the number pad on your external keyboard with
+Num Lock
+turned on.
+Press and hold
+Alt
+.
+Type the numeric code on the number pad and release
+Alt
+.
+Tip
+To type special characters on a Mac, press
+Command
++
+Control
++
+Spacebar
+.
+Top of Page
+Vowels with accents
+The following table lists vowels with accent marks and the Alt code for them.
+Uppercase vowel with grave accent
+Press
+À
+0192
+È
+0200
+Ì
+0204
+Ò
+0210
+Ù
+0217
+Top of Page
+Lowercase vowel with grave accent
+Press
+à
+0224
+è
+0232
+ì
+0236
+ò
+0242
+ù
+0249
+Top of Page
+Uppercase vowel with acute accent
+Press
+Á
+0193
+É
+0201
+Í
+0205
+Ó
+0211
+Ú
+0218
+Ý
+0221
+Top of Page
+Lowercase vowel with acute accent
+Press
+á
+0224
+é
+0233
+í
+0237
+ó
+0243
+ú
+0250
+ý
+0253
+Top of Page
+Uppercase vowel with circumflex accent
+Press
+Â
+0194
+Ê
+0202
+Î
+0206
+Ô
+0212
+Û
+0219
+Top of Page
+Lowercase vowel with circumflex accent
+Press
+â
+0226
+ê
+0234
+î
+0238
+ô
+0244
+û
+0251
+Top of Page
+Uppercase vowel with tilde accent
+Press
+Ã
+0195
+Ñ
+0209
+Õ
+0213
+Top of Page
+Lowercase vowel with tilde accent
+Press
+ã
+0227
+ñ
+0241
+õ
+0245
+Top of Page
+Uppercase vowel with umlaut accent
+Press
+Ä
+0196
+Ë
+0203
+Ï
+0207
+Ö
+0214
+Ü
+0220
+Ÿ
+0159
+Top of Page
+Lowercase vowel with umlaut accent
+Press
+ä
+0228
+ë
+0235
+ï
+0239
+ö
+0246
+ü
+0252
+ÿ
+0255
+Top of Page
+Punctuation, consonants, and special vowels
+Mark, letter, symbol, or character
+Press
+Inverted exclamation mark (¡)
+0161
+Inverted question mark (¿)
+0191
+Uppercase C-cedilla (Ç)
+0199
+Lowercase c-cedilla (ç)
+0231
+Uppercase OE diphthong (Œ)
+0140
+Lowercase oe diphthong (œ)
+0156
+Eszett or ss (ß)
+0223
+Masculine ordinal indicator or degree symbol (º)
+0186
+Feminine ordinal indicator (ª)
+0170
+Uppercase O with a stroke (Ø)
+0216
+Lowercase o with a stroke (ø)
+0248
+Uppercase A with an overring, A-ring (Å)
+0197
+Lowercase a with an overring, A-ring (å)
+0229
+Uppercase AE diphthong or uppercase ash (Æ)
+0198
+Lowercase ae diphthong or lowercase ash (æ)
+0230
+Uppercase thorn (Þ)
+0222
+Lowercase thorn (þ)
+0254
+Uppercase eth (Ð)
+0208
+Lowercase eth (ð)
+0240
+Double left angled quotation mark («)
+0171
+Double right angled quotation mark (»)
+0187
+Single left angled quotation mark (‹)
+0139
+Single right angled quotation mark (›)
+0155
+Uppercase S with caron (Š)
+0138
+Lowercase s with caron (š)
+0154
+Uppercase Z with caron (Ž)
+0142
+Lowercase z with caron (ž)
+0158
+Top of Page
+Special characters
+Character
+Press
+Cent symbol ¢
+0162
+Copyright symbol ©
+0169
+Dagger symbol †
+0134
+Double dagger symbol or diesis ‡
+0135
+Pound sign £
+0163
+Euro sign €
+0128
+Yen sign ¥
+0165
+Function sign ƒ
+0131
+Currency sign ¤
+0164
+Registered trademark symbol ®
+0174
+Trademark symbol ™
+0153
+Bullet •
+0149
+En dash –
+0151
+Em dash —
+0150
+Section sign §
+0167
+Paragraph sign or pilcrow ¶
+0182
+Top of Page
+See also
+Keyboard shortcuts in Outlook for Mac
+Basic tasks using a screen reader with email in Outlook
+Basic tasks using a screen reader with the calendar in Outlook
+Use a screen reader to explore and navigate Outlook Mail
+Use a screen reader to explore and navigate Outlook Calendar
+Use a screen reader to explore and navigate the People app
+Screen reader support for Outlook
+Technical support for customers with disabilities
+Microsoft wants to provide the best possible experience for all our customers. If you have a disability or questions related to accessibility, please contact the
+Microsoft Disability Answer Desk
+for technical assistance. The Disability Answer Desk support team is trained in using many popular assistive technologies and can offer assistance in English, Spanish, French, and American Sign Language. Please go to the Microsoft Disability Answer Desk site to find out the contact details for your region.
+If you are a government, commercial, or enterprise user, please contact
+the enterprise Disability Answer Desk
+.
+Was this information helpful?
+Yes
+No
+Thank you! Any more feedback for Microsoft?
+Can you help us improve?
+(Send feedback to Microsoft so we can help.)
+What affected your experience?
+Resolved my issue
+Clear instructions
+Easy to follow
+No jargon
+Pictures helped
+Other
+Didn't match my screen
+Incorrect instructions
+Too technical
+Not enough information
+Not enough pictures
+Other
+Any additional feedback? (Optional)
+Submit feedback
+By pressing submit, your feedback will be used to improve Microsoft products and services.
+Your IT admin will be able to collect this data.
+Privacy Statement.
+Thank you for your feedback!
+×
+What's new
+Surface Pro
+Surface Laptop
+Surface Laptop Ultra
+Surface RTX Spark Dev Box
+Copilot for organizations
+Copilot for personal use
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Microsoft Store Promise
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft 365 Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+(function () {
+		function getCookie(name) {
+			var cookies = document.cookie.split('; ');
+			for (var i = 0; i < cookies.length; i++) {
+				var kvp = cookies[i].split('=');
+				if (kvp[0] === name) {
+					return decodeURIComponent(kvp[1]);
+				}
+			}
+			return null;
+		}
+
+		if (typeof window.oneDS === 'object') {
+			window.analytics = new window.oneDS.ApplicationInsights();
+			var config = {
+				instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432",
+				disableCookiesUsage: true,
+				cookieCfg: {
+					ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"]
+				},
+				channelConfiguration: {
+					eventsLimitInMem: 50
+				},
+				propertyConfiguration: {
+					gpcDataSharingOptIn: false,
+					callback: {
+						userConsentDetails: () => {
+							const consentDetails = {
+								Required: true,
+								Analytics: false,
+								Advertising: false,
+								SocialMedia: false
+							};
+
+							return consentDetails;
+						}
+					}
+				},
+				webAnalyticsConfiguration: {
+					autoCapture: {
+						pageView: true,
+						onLoad: true,
+						onUnload: true,
+						click: true,
+						scroll: true,
+						resize: true,
+						lineage: false,
+						jsError: true,
+						msTags: true
+					},
+					autoPopulateParentIdAndParentName: true,
+					isLoggedIn: false,
+					urlCollectHash: true,
+urlCollectQuery: true,
+					useDefaultContentName: true,
+					useShortNameForContentBlob: false
+				}
+			};
+
+			var isFirstTime = true;
+			var jsLocalId = null;
+
+
+			//Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser
+			window.analytics.addTelemetryInitializer(function (e) {
+				if (isFirstTime) {
+					var context = window.analytics.getPropertyManager().getPropertiesContext();
+					var ext = e.ext = e.ext || {};
+
+					if (jsLocalId) {
+						// Set the localId so it's set automatically for all future events
+						context.user.setLocalId(jsLocalId);
+
+						var userExt = ext.user = ext.user || {};
+						userExt.localId = jsLocalId;
+					}
+
+					isFirstTime = false;
+				}
+			});
+			window.analytics.initialize(config, []);
+		}
+	})();
+$(function () {
+		var signInUrl = "/en-us/authentication/signin";
+		var signOutUrl = "/en-us/authentication/signout";
+		var switchAccountUrl = "/en-us/authentication/switchaccount";
+		var shellOptions = {
+			meControlOptions: {
+				apiGeneration: 'GEN2',
+				authProviderConfig: {
+					type: 'webAadWithMsaProxy',
+					appSignInUrl: signInUrl,
+					appSignInToUrl: signInUrl,
+					appSignOutUrl: signOutUrl,
+					appSwitchUrl: switchAccountUrl,
+					appSwitchToUrl: switchAccountUrl,
+					aad: {
+						signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False',
+						signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True',
+						forgetUrl: 'https://login.microsoftonline.com:443/forgetuser',
+						rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc',
+					},
+				},
+			}
+		};
+
+		if (window.msCommonShell) {
+			window.msCommonShell.load(shellOptions);
+		}
+		else {
+			window.onShellReadyToLoad = function () {
+				window.onShellReadyToLoad = null;
+				window.msCommonShell.load(shellOptions);
+			};
+		}
+	});
+$(async function () {
+		await window.manageSilentSignIn.handleAllSilentSignIn();
+	})
+if (window.UcsCreative === undefined) {
+			window.UcsCreative = {};
+		}
+window.silentSigninProgress = true;
+
+		var silentSigninStartLog = {
+			actionType: 'A',
+			content: {
+				contentId: 'silentSignInStarted'
+			}
+		};
+		window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) {
+				occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"});
+			}

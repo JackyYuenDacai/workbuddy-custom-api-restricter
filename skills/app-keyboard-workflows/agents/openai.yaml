@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Keyboard Workflows"
+  short_description: "Windows keyboard workflows for Office and everyday apps"
+  default_prompt: "Use $app-keyboard-workflows with computer-use to operate the requested Windows application using verified keyboard navigation."

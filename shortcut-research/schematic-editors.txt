@@ -1,0 +1,878 @@
+{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.altium.com/#organization",
+        "name": "Altium",
+        "alternateName": [
+          "Altium Limited",
+          "Altium Ltd"
+        ],
+        "url": "https://www.altium.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.altium.com/themes/custom/altium_designer_new/logo.png"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/altium/",
+          "https://www.bloomberg.com/profile/company/ALMFF:US",
+          "https://pitchbook.com/profiles/company/61840-81",
+          "https://en.wikipedia.org/wiki/Altium",
+          "https://www.wikidata.org/wiki/Q1066620",
+          "https://www.crunchbase.com/organization/altium-limited",
+          "https://profile.google.com/cp/CgovbS8wMjdyM2xq",
+          "https://www.youtube.com/c/AltiumOfficial",
+          "https://www.facebook.com/AltiumOfficial/",
+          "https://x.com/altium",
+          "https://www.tiktok.com/@altiumdesigner",
+          "https://www.instagram.com/altium_official/",
+          "https://www.g2.com/sellers/altium-caf10713-ff96-44ab-90af-cc9c6c9ef346",
+          "https://grokipedia.com/page/Altium"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/altium-designer#product",
+              "name": "Altium Designer",
+              "url": "https://www.altium.com/altium-designer"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/develop#product",
+              "name": "Altium Develop",
+              "url": "https://www.altium.com/develop"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/teams#product",
+              "name": "Altium Agile Teams",
+              "url": "https://www.altium.com/agile/teams"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/agile/enterprise#product",
+              "name": "Altium Agile Enterprise",
+              "url": "https://www.altium.com/agile/enterprise"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.altium.com/platform#product",
+              "name": "Altium 365",
+              "url": "https://www.altium.com/platform"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://www.octopart.com/#product",
+              "name": "Octopart",
+              "url": "https://www.octopart.com/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "@id": "https://circuitmaker.com/#product",
+              "name": "CircuitMaker",
+              "url": "https://circuitmaker.com/"
+            }
+          }
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://www.renesas.com/#organization",
+          "name": "Renesas Electronics Corporation",
+          "url": "https://www.renesas.com/",
+          "sameAs": [
+            "https://www.linkedin.com/company/renesas/",
+            "https://en.wikipedia.org/wiki/Renesas_Electronics",
+            "https://www.wikidata.org/wiki/Q1145403",
+            "https://www.crunchbase.com/organization/renesas"
+          ]
+        }
+      }
+Schematic Editor & Schematic Library Editor Shortcuts | Altium Designer Technical Documentation
+window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'event': 'tagList','tagSlugs': 'agile|altium-designer|altium-designer|develop|functional-areas|schematic-capture|software'});
+window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'region': ['US-CA']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'region': ['US']
+      });
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5LFC7W');
+(function() {
+            var didInit = false;
+            function initMunchkin() {
+              if(didInit === false) {
+                didInit = true;
+                Munchkin.init('817-SFW-071');
+              }
+            }
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            s.onreadystatechange = function() {
+              if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                initMunchkin();
+              }
+            };
+            s.onload = initMunchkin;
+            document.getElementsByTagName('head')[0].appendChild(s);
+          })();
+Skip to main content
+Search In:
+Doc:
+Documentation:
+Altium Designer
+Altium Designer
+Altium 365
+Altium MCAD CoDesigner
+Altium On-Prem Enterprise Server
+Altium CircuitMaker
+Altium CircuitStudio
+Company Dashboard
+Altium Infrastructure Server
+Altium Developer Center
+Close
+Search
+Search on Documentation
+Altium Designer Documentation
+Capturing Your Design Idea as a Schematic
+Schematic Editor & Schematic Library Editor Shortcuts
+Updated: October 01, 2025
+The following sections present shortcut keys that are specific to the Schematic and/or the Schematic Symbol Editors. For general information regarding shortcut keys - including access and editing, general Altium environment shortcuts, and accelerator keys - see
+Altium Designer Shortcut Keys
+.
+When looking at the shortcut key listings, keep in mind the following:
+When referring to shortcuts, use of the plus (+) symbol denotes holding multiple keys down on the keyboard in the indicated sequence. For example,
+Shift+F1
+means holding down the
+Shift
+key then pressing the
+F1
+key. Likewise,
+Shift+Ctrl+PgUp
+means holding down the
+Shift
+key then holding down the
+Ctrl
+key at the same time and pressing the
+PgUp
+key.
+Where use of the standard mouse buttons is made,
+Click
+refers to a single click of the left-hand mouse button,
+Double-Click
+refers to two clicks of the left-hand mouse button, and
+Right-Click
+refers to a single click of the right-hand mouse button.
+Standard Shortcuts
+The following shortcuts are standard to the Schematic and/or Schematic Symbol Editors. They are available in general and do not require you to be performing an interactive process to access them.
+General Editing
+Double-Click
+Modify the properties of the object currently under the cursor.
+Right-Click
+Access context menu for the design space or object currently under the cursor. If currently within an interactive command, will escape from the current operation.
+F2
+Edit selected text object in-place (direct editing).
+Ctrl+C
+Copy selection
+Ctrl+X
+Cut selection
+Ctrl+V
+Paste selection
+Ctrl+R
+Copy selected object(s) and paste repeatedly where needed in the design space (rubber stamping).
+Shift+Ctrl+V
+Access the
+Smart Paste dialog
+.
+Delete
+Delete selection
+Ctrl+Z
+Undo
+Ctrl+Y
+Redo
+Selecting
+Shift+F
+Access the Find Similar Objects feature (click on an object to use as the base template).
+Click
+Select/deselect the object currently under the cursor.
+Shift+Click
+Change the selection status of the object currently under the cursor without affecting the status of other objects.
+Shift+Ctrl+X
+Toggle Cross Select Mode On or Off.
+Shift+Ctrl+Y
+Toggle the Cross Select Mode's
+Reposition selected component in PCB
+option On or Off.
+Ctrl+A
+Select all objects on the current document.
+Alt+Click
+On a net object to select that object, and to highlight all objects associated to that net across all sheets of the active design project.
+Click
+(away from objects)
+, Hold&Drag
+(left-to-right)
+Select all objects that fall completely within the bounds of the selection area.
+Click
+(away from objects)
+, Hold&Drag
+(right-to-left)
+Select all objects that fall completely inside the selection area or are touched by its boundary.
+Ctrl+n
+(
+n
+=
+1
+to
+8
+)
+Store the current selection in memory location
+n
+.
+Alt+n
+(
+n
+=
+1
+to
+8
+)
+Recall the selection from memory location
+n
+.
+Shift+n
+(
+n
+=
+1
+to
+8
+)
+Add the current selection to the selection already stored in memory location
+n
+.
+Alt+Shift+n
+(
+n
+=
+1
+to
+8
+)
+Recall selection from memory location
+n
+and add it to the current selection in the design space.
+Shift+Ctrl+n
+(
+n
+=
+1
+to
+8
+)
+Apply filtering based on the selection set in memory location
+n
+.
+Moving
+Click
+(on an object)
+, Hold&Drag
+Move the single object currently under the cursor (or group of selected objects if the object is part of that selection). If the
+Always Drag
+option is enabled (on the
+Schematic - Graphical Editing
+page of the
+Preferences
+dialog), then using this shortcut to move an electrical object will maintain connectivity with other electrical objects.
+Ctrl+Click, Hold&Drag
+Move the single object currently under the cursor (or group of selected objects if the object is part of that selection). If the
+Always Drag
+option is disabled (on the
+Schematic - Graphical Editing
+page of the
+Preferences
+dialog), then using this shortcut to move an electrical object will maintain connectivity with other electrical objects.
+Left Arrow
+Move the cursor to the left in the current document design space in increments of one snap grid unit.
+Shift+Left Arrow
+Move the cursor to the left in the current document design space in increments of 10 snap grid units.
+Right Arrow
+Move the cursor to the right in the current document design space in increments of one snap grid unit.
+Shift+Right Arrow
+Move the cursor to the right in the current document design space, in increments of 10 snap grid units.
+Up Arrow
+Move the cursor upwards in the current document design space, in increments of one snap grid unit.
+Shift+Up Arrow
+Move the cursor upwards in the current document design space, in increments of 10 snap grid units.
+Down Arrow
+Move the cursor downwards in the current document design space, in increments of one snap grid unit.
+Shift+Down Arrow
+Move the cursor downwards in the current document design space, in increments of 10 snap grid units.
+Ctrl+Left Arrow
+Move the current selection (one or more selected design objects) to the left in the current document design space in increments of one snap grid unit.
+Shift+Ctrl+Left Arrow
+Move the current selection (one or more selected design objects) to the left in the current document design space, in increments of 10 snap grid units.
+Ctrl+Right Arrow
+Move the current selection (one or more selected design objects) to the right in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Right Arrow
+Move the current selection (one or more selected design objects) to the right in the current document design space, in increments of 10 snap grid units.
+Ctrl+Up Arrow
+Move the current selection (one or more selected design objects) upwards in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Up Arrow
+Move the current selection (one or more selected design objects) upwards in the current document design space, in increments of 10 snap grid units.
+Ctrl+Down Arrow
+Move the current selection (one or more selected design objects) downwards in the current document design space, in increments of one snap grid unit.
+Shift+Ctrl+Down Arrow
+Move the current selection (one or more selected design objects) downwards in the current document design space, in increments of 10 snap grid units.
+Aligning
+Shift+Ctrl+L
+Align selected objects by their left edges.
+Shift+Ctrl+R
+Align selected objects by their right edges.
+Shift+Ctrl+H
+Make the horizontal spacing of selected objects equal.
+Shift+Ctrl+T
+Align selected objects by their top edges.
+Shift+Ctrl+B
+Align selected objects by their bottom edges.
+Shift+Ctrl+V
+Make the vertical spacing of selected objects equal.
+Shift+Ctrl+D
+Move selected objects to the nearest point on the current snap grid.
+Spacebar
+Rotate selection counterclockwise by 90°.
+Shift+Spacebar
+Rotate selection clockwise by 90°.
+Viewing the Schematic
+Ctrl+PgDn
+Display all design objects on the current document.
+PgUp
+Zoom-in, relative to the current cursor location.
+You can also use the mouse to zoom in to a region of the document by one of the following methods (where applicable and depending on how the buttons of your mouse might be assigned):
+Hold the
+Ctrl
+key and roll the mouse wheel upward. Use of the
+Ctrl
+key is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Hold both the
+Ctrl
+key and the right mouse button, then move the mouse forward.
+Hold the right (first) and left (second) mouse buttons, then move the mouse forward.
+Click and hold the mouse wheel, then move the mouse forward.
+PgDn
+Zoom-out, relative to the current cursor location.
+You can use the mouse to zoom out from a region of the document by one of the following methods (where applicable and depending on how the buttons of your mouse might be assigned):
+Hold the
+Ctrl
+key and roll the mouse wheel downward. Use of the
+Ctrl
+key is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Hold both the
+Ctrl
+key and the right-mouse button, then move the mouse backward.
+Hold the right (first) and left (second) mouse buttons, then move the mouse backward.
+Click and hold the mouse wheel, then move the mouse backward.
+Mouse Wheel
+Scroll vertically within the design space. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Shift+Mouse Wheel
+Scroll horizontally within the design space. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Shift+Ctrl+Mouse Wheel
+Cycle through the channels in a multi-channel design. As you roll the mouse wheel upward/downward, the next/previous compiled channel tab (at the bottom of the main design window) will become the active tab. This is a default setting that can be changed from the
+System - Mouse Wheel Configuration page
+of the
+Preferences
+dialog.
+Home
+Redraw the view in the main design window, placing the location marked by the cursor - prior to launching the command - at the center of the window.
+End
+Refresh the screen, in effect performing a redraw of the current document, to remove any undesirable drawing update effects.
+Alt+End
+Redraw the current layer of the current document, to remove any undesirable drawing update effects.
+Alt+F5
+Toggle the display of the current document's editor between maximized and not maximized.
+F5
+Visually toggle the
+Net Color Override
+feature on or off.
+Shift+C
+Clear the filter that is currently being applied to the active document.
+Right-Click, Hold&Drag
+Display the slider (panning) hand cursor then drag to move your view of the design space.
+Grids
+G
+Cycle forward through your predefined snap grid settings.
+Shift+G
+Cycle backward through your predefined snap grid settings.
+Shift+Ctrl+G
+Turn the visible grid on or off in the current document.
+Ctrl+Shift
+Temporarily disables the grid.
+Shift+E
+Turn the cursor electrical grid on or off.
+Finding Text
+Ctrl+F
+Find text.
+Ctrl+H
+Find and replace text.
+F3
+Find next occurrence of searched text.
+Quick Panel Access
+F11
+Toggle the display of the
+Properties
+panel.
+F12
+Toggle the display of the
+SCH Filter panel
+or the
+SCHLIB Filter panel
+accordingly.
+Shift+F12
+Toggle the display of the
+List panel
+(
+SCH List
+or
+SCHLIB List
+panel) accordingly.
+Commenting
+Alt+Ctrl+C
+Add a new comment thread to a point, object, or area on the active schematic document. Before you can start using the comment feature, ensure that you have opened (checked out) a
+Managed Project
+and are working on one of its source schematic documents.
+Miscellaneous
+Ctrl+Double-Click
+On a
+Sheet Entry
+to jump to the corresponding port on the sub-sheet referenced by that entry's parent
+Sheet Symbol
+.
+On a
+Port
+to jump to the corresponding sheet entry in the parent sheet symbol that references the sub-sheet on which the port resides.
+On a port to jump to another port with the same name, on the indicated target schematic document (only available when the
+Net Identifier Scope
+- set on the
+Options tab
+of the
+Project
+Options dialog
+- is set to
+Flat
+, or
+Global
+).
+On a sheet symbol to descend the design hierarchy to open the child sheet referenced by that symbol.
+Ctrl+L
+Perform
+Board Level Annotation
+through use of the
+Board Level Annotate dialog
+.
+Ctrl+W
+Enter wire placement mode.
+Ctrl+Home
+Move the cursor to the absolute origin coordinate (0,0) for the current document.
+Ctrl+Q
+In the main design space to access the
+Selection Memory dialog
+, from where you can control all aspects of the selection memory feature.
+In a dialog or panel to toggle the measurement units (in the dialog or panel only), between metric (mm) and imperial (mil).
+Ctrl+M
+Measure and display the distance between any two points in the current document.
+F9
+Run a simulation for the active design using the analyses and related settings currently defined through the
+Simulation Dashboard
+panel. If this is the first time a simulation of the design is being performed, then the default analyses -
+Operating Point
+,
+DC Sweep
+,
+Transient Analysis
+, and
+AC Analysis
+- will be run, using their default settings. In the latter case, it is strongly advised to set up for simulation first, through the
+Simulation Dashboard
+panel. Note that the
+Run Simulation
+command, to which this shortcut is associated, is only available provided you have the
+Mixed Simulation
+system extension installed. This will add the
+Simulate
+menu to the Schematic editor. For more information, see
+Extending Your Installation
+(
+Altium Designer Develop
+,
+Altium Designer Agile
+,
+Altium Designer
+).
+,
+Click
+Cross-probe from a chosen object on the current schematic document to its corresponding counterpart on the PCB document remaining in the source document (
+Continuous Mode
+).
+,
+Ctrl+Click
+Cross-probe from a chosen object on the current schematic document to its corresponding counterpart on the PCB document making the target document the active document (
+Jump To Mode
+).
+Interactive Shortcuts
+The following shortcuts become available when an interactive process has been launched, such as placing a new design object, or moving an existing one. Note that the shortcuts available will depend on the interactive command and the specific design object that is the focus of that command.
+F1
+Access the
+Graphical Editing Hot key List
+dialog that provides a listing of the shortcuts available (but that cannot be launched) as well as access to the documentation for the currently running command.
+Shift+F1
+Access a menu that lists all valid shortcuts for the present stage of the currently running interactive command.
+Enter
+Acts like a
+Click
+of the mouse when placing/moving an object.
+PgUp
+Zoom in.
+PgDn
+Zoom out.
+End
+Refresh the screen.
+Home
+Change display to have the cursor (with the attached object being placed/moved) at the center of the design window.
+Left Arrow
+Move the cursor (with the attached object being placed/moved) to the left in the current document workspace, in increments of one snap grid unit.
+Shift+Left Arrow
+Move the cursor (with the attached object being placed/moved) to the left in the current document workspace, in increments of 10 snap grid units.
+Right Arrow
+Move the cursor (with the attached object being placed/moved) to the right in the current document workspace, in increments of one snap grid unit.
+Shift+Right Arrow
+Move the cursor (with the attached object being placed/moved) to the right in the current document workspace, in increments of 10 snap grid units.
+Up Arrow
+Move the cursor (with the attached object being placed/moved) upwards in the current document workspace, in increments of one snap grid unit.
+Shift+Up Arrow
+Move the cursor (with the attached object being placed/moved) upwards in the current document workspace, in increments of 10 snap grid units.
+Down Arrow
+Move the cursor (with the attached object being placed/moved) downwards in the current document workspace, in increments of one snap grid unit.
+Shift+Down Arrow
+Move the cursor (with the attached object being placed/moved) downwards in the current document workspace, in increments of 10 snap grid units.
+Tab
+Pause the interactive task and access the associated mode of the
+Properties
+panel in which properties for the object being placed/moved can be changed on-the-fly. Continuing to use
+Tab
+when in the
+Properties
+panel (or any dialog for that matter) will cycle through the fields in the panel.
+X
+Mirror the object being placed/moved along the X-axis.
+Y
+Mirror the object being placed/moved along the Y-axis.
+Alt
+Constrain the direction of movement to the horizontal or vertical axis depending on the initial direction of movement.
+Shift
+When auto-panning while placing/moving an object, use to pan at higher speed.
+Esc
+(or
+Right-Click
+)
+Escape from the current process - either a stage of the currently running interactive command or the command itself.
+Spacebar
+Rotates the object being placed/moved counterclockwise. Rotation is in increments of 90°.
+Toggles start and end sub-modes when placing a
+Wire
+/
+Bus
+/
+Signal Harness
+in
+90 Degree
+or
+45 Degree
+placement modes.
+Cycles through placement modes when placing a
+Line
+.
+Shift+Spacebar
+Rotates the object being placed/moved clockwise. Rotation is in increments of 90°.
+Cycles through placement modes when placing a
+Wire
+/
+Bus
+/
+Signal Harness
+.
+Ctrl+Spacebar
+Changes the wiring mode for any connected wires, buses, or signal harnesses when dragging an electrical object.
+Insert
+Copies attributes of the object currently under the cursor while placing an object of the same type.
+Adds a vertex while placing a
+Wire
+,
+Line
+,
+Bus
+,
+Signal Harness
+, or
+Polygon
+.
+Click&Hold+Insert
+On a selected segment of a placed
+Wire
+,
+Line
+,
+Bus
+, or
+Signal Harness
+or an edge of a placed
+Polygon
+to add a vertex at that point.
+Click&Hold+Delete
+On a vertex of a placed
+Wire
+,
+Line
+,
+Bus
+,
+Signal Harness
+or
+Polygon
+to remove that vertex.
+Backspace
+or
+Delete
+Remove the last placed vertex, while placing a
+Wire
+,
+Line
+,
+Bus
+,
+Signal Harness
+, or
+Polygon
+.
++
+(on the numeric keypad)
+Enlarges the size of the
+IEEE Symbol
+currently being placed/moved.
+-
+(on the numeric keypad)
+Reduces the size of the
+IEEE Symbol
+currently being placed/moved.
+S
+Relocate the currently selected
+Sheet Entry
+(or entries) that are being moved, to the directly opposite side of the parent
+Sheet Symbol
+.
+V
+Reverse order while moving two or more selected
+Sheet Entries
+.
+T
+Toggle IO Type while moving one or more selected
+Sheet Entries
+.
+Toggle IO Type for all Sheet Entries while graphically resizing the parent
+Sheet Symbol
+.
+Pop-up Menu Shortcuts
+The following shortcuts give access to specific pop-up menus of commands, directly from within the design space itself. Some of these will be familiar as they are sub-menus found within the main menus for the editor. Each of the main menus also have a defined pop-up key for quick access from within the design space, see
+Accelerator Keys
+for more information.
+A
+The
+Align
+sub-menu (from the main
+Edit
+menu).
+B
+The
+Toolbars
+sub-menu (from the main
+View
+menu).
+J
+The
+Jump
+sub-menu (from the main
+Edit
+menu).
+K
+The
+Panels
+sub-menu (from the main
+View
+menu).
+M
+The
+Move
+sub-menu (from the main
+Edit
+menu).
+O
+A pop-up menu offering quick access to options and preferences.
+S
+The
+Select
+sub-menu (from the main
+Edit
+menu).
+X
+The
+DeSelect
+sub-menu (from the main
+Edit
+menu).
+Y
+A pop-up menu with filtering commands.
+Z
+A pop-up menu with zoom commands.
+Printer-friendly version
+If you find an issue, select the text/image and press
+Ctrl
++
+Enter
+to send us your feedback.
+Rate this page
+Easy to find?
+Accurate?
+Complete?
+Clear?
+Anything to add?
+Thank you for your feedback!
+Altium Designer Documentation
+New in Altium Designer
+Tutorial - A Complete Design Walkthrough with Altium Designer
+Getting Familiar with the Altium Design Environment
+Capturing Your Design Idea as a Schematic
+Setting Up a Schematic Document
+Schematic Placement & Editing Techniques
+Searching for & Placing Components
+Creating Circuit Connectivity in Your Schematics
+Multi-sheet & Hierarchical Designs
+Creating a Multi-channel Design
+Design Reuse
+Numbering Your Schematic Sheets
+Annotating the Components in a Design
+Validating Your Design Project
+Advanced Topics
+Schematic Editor & Schematic Library Editor Shortcuts
+Schematic Capture Query Functions
+QuickNav - Schematic Design Objects
+Analyzing Your Design Using Circuit Simulation
+BOM Management with ActiveBOM
+Managing Design Changes between the Schematic & PCB
+Laying Out Your PCB
+Analyzing Your PCB Design
+Streamlining Board Design Documentation with Draftsman
+Preparing Your Design for Manufacture
+Designing with Multiple PCBs
+Harness Design
+Building & Maintaining Your Components and Libraries
+Configuring and Administrating Your Workspace
+Installation, Licensing & Management
+Quick Links
+QuickLinks
+Using Altium Documentation
+Documentation Copyright Information
+Altium Documentation - Home
+Knowledge Base
+Feature Availability
+The features available to you depend on which Altium solution you have –
+Altium Develop
+,
+Altium Agile Teams
+,
+Altium Agile Enterprise
+, or Altium Designer (on active term).
+If you don’t see a documented feature in your actual software,
+contact Altium Sales
+to find out more.
+Legacy Documentation
+Altium Designer documentation is no longer versioned. If you need to access documentation for older versions of Altium Designer, visit the
+Legacy Documentation
+section of the
+Other Installers
+page.
+Content
+Was this page helpful?
+Report Document Issue
+You are reporting an issue with the following selected text
+and/or image within the active document:
+ISSUE
+For further assistance, please connect to our
+Support Center
+This site is protected by reCAPTCHA and the Google
+Privacy Policy
+and
+Terms of Service
+apply.
+Cancel
+{"path":{"baseUrl":"\/documentation\/","pathPrefix":"","currentPath":"node\/304627","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx9kmFy4yAMhS_khJnunmAvwsigOIoBuZLsxnv6xZs0tVOnfwy87zHw8INkNGYfLj4kwmLuMWvgjnqMZCx-SGNHRR2Mdmb5w9fjAB2-tAUuVSAukJ69kYPrEreQDmpzotKtyUdUr0ahn_30tgKPI367jJKB4oEK2b5jENJ80Q3kYkvCwhH9iSWv4QkxthB6t6P5RK2AzLt-AUP_FM5nLKODYDRh3Vz6b2z5eIjxJ3qB62tS0-QMJW4SSk0vGEydYThXRR_S1jawmCfVEd0LfS_zhKL1f7pWEGKQMbef0p7rPn67QYGJOliK4dvEoVd3YjaU1_xcj_uJfylNgMHCGVwLik1IoDpv5hlV67_SJrCgizIOkI7_u7AWDK8GNeRBUOkv3hjV9kgt8_HyPqLMq12lziAtxnsvP_v5vL71tVazGLQJXW0j2XxYOqBNfaPb5f30y3XMXcLjl4Zla1gvGp3VMN-CGnN9p8Hdx38GQodK","theme":"altium_doc","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/documentation\/altium-designer\/shortcut-keys\/schematic-editors?ajax_form=1":true},"altiumDocMenu":{"basePage":"304627"},"spaceName":"Altium Designer","csp":{"nonce":"j7ntJ1r58h5CQIt_DzI3lg"},"ajax":{"edit-actions":{"callback":"::setMessage","event":"mousedown","keypress":true,"prevent":"click","url":"\/documentation\/altium-designer\/shortcut-keys\/schematic-editors?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Send Feedback"}},"edit-captcha-response":{"callback":"recaptcha_v3_ajax_callback","event":"change","url":"\/documentation\/altium-designer\/shortcut-keys\/schematic-editors?ajax_form=1","httpMethod":"POST","dialogType":"ajax","submit":{"_triggering_element_name":"captcha_response"}}},"user":{"uid":0,"permissionsHash":"6d676ddc53316b96406ac7699961e1c2fe8a944cbc20f94236085ed819496e27"}}

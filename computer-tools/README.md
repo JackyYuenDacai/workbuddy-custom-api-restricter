@@ -83,7 +83,7 @@ WorkBuddy 延迟加载工具时，先使用 ToolSearch 查找 `local-computer-to
 | `desktop_observe` | 只捕获当前前台且完整显示的目标窗口，图片最大 1600×1200 |
 | `desktop_click` | 使用返回图片内坐标，最多双击，不能使用猜测的整屏坐标 |
 | `desktop_type_text` | 最多 2000 字符，禁止换行/控制字符，不借用剪贴板，不自动 Enter |
-| `desktop_key` | 仅 schema 中的常见编辑/导航键，新增浏览器专用 `CTRL+L`；不支持 Win+R 或任意组合 |
+| `desktop_key` | General Windows key/chord or short sequence; see keyboard examples below. |
 | `desktop_scroll` | 必须传入截图内的 `x,y`，工具自动将指针移到目标正文/列表后滚动，不先点击；`amount` 正数向上、负数向下，单次 1–5 格 |
 | `desktop_screen_observe` | 截取全部显示器、可见窗口、任务栏、系统托盘和壳弹层；返回一次性 `snapshot_id` |
 | `desktop_screen_click` | 使用同次整屏截图的图片像素 `x,y` 点击；内部处理缩放和负坐标显示器，不接受盲猜绝对坐标 |
@@ -189,3 +189,5 @@ node workbuddy-install.cjs remove
 ```
 
 只移除用户级 `local-computer-tools` 条目，不删除其他设置、技能或测试产物。还要禁用技能时，可在 WorkBuddy 技能界面停用 `windows-computer-use`。源码和依赖锁文件可以提交；`node_modules`、本机路径配置、截图和测试产物被 Git 忽略，不应上传。
+
+Keyboard 0.6.0: `key="CTRL+SHIFT+P"`, `sequence=["CTRL+K","CTRL+S"]`. All standard key families and documented `VK_0xNN` keys are supported. Sequences contain 1?8 strokes for one known operation; each stroke releases its keys and checks target/STOP. Secure desktop and hardware Fn cannot be bypassed. Reconnect the MCP to load the new schema. Validation: 21 controller tests, 41 backend tests, and real MCP delivery of Ctrl+Shift+P, Shift+F1, Ctrl+K then Ctrl+S, and Ctrl+Home to a disposable recorder.

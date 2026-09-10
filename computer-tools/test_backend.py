@@ -53,16 +53,12 @@ class AppTests(unittest.TestCase):
                 backend.dispatch({"action": "launch", "app": "firefox"})
             launch.assert_not_called()
 
-    def test_ctrl_l_only_in_browser_and_no_input_on_rejection(self):
+    def test_ctrl_l_is_available_in_any_valid_application(self):
         for process in ("notepad.exe", "firefox.exe"):
             with patch.object(Path, "exists", return_value=False), patch.object(backend, "ensure_target", return_value={"window_id": "1", "process": process}), patch.object(backend, "ensure_keyboard_target"), patch.object(backend, "send_inputs") as send:
-                if process == "notepad.exe":
-                    with self.assertRaisesRegex(ValueError, "restricted"):
-                        backend.dispatch({"action": "key", "key": "CTRL+L"})
-                    send.assert_not_called()
-                else:
-                    backend.dispatch({"action": "key", "key": "CTRL+L"})
-                    send.assert_called_once()
+                result = backend.dispatch({"action": "key", "key": "CTRL+L"})
+                send.assert_called_once()
+                self.assertEqual(result['completed_strokes'], 1)
 
     def test_browser_state_null_when_uia_times_out(self):
         with patch.object(backend, "window_info", return_value={"process": "firefox.exe", "window_id": "1", "pid": 22, "title": "Test"}), patch.object(backend.subprocess, "run", side_effect=subprocess.TimeoutExpired("powershell", 5)):

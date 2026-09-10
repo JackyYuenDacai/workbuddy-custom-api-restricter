@@ -18,12 +18,15 @@ description: 在 Windows 上通过 local-computer-tools MCP 操作用户指定�
 按需读取，不默认加载所有参考文件：
 - 启动应用、浏览器导航、填写或修改文字：读 [应用与输入](references/apps-and-input.md)。
 - 使用键盘导航、切换窗口、关闭弹层或选择快捷键：读 [Windows 快捷键](references/windows-shortcuts.md)。先核对工具支持范围，不把系统快捷键知识当作可调用能力。
+- QQ、VS Code、Firefox、Altium，以及 Office（Word、Excel、PowerPoint、Outlook、OneNote、Access）的快捷键、命令搜索、菜单和截图难辨认时的导航：按需加载补充技能 [app-keyboard-workflows](../app-keyboard-workflows/SKILL.md)，只读对应应用参考；Windows 焦点/托盘/键位冲突查其通用导航章节。它不扩大当前工具的按键能力或跳过截图令牌要求。
 - 操作任务栏/托盘、目标窗口缺失/隐藏、登录后窗口变化、切换瞬时弹层，或第一次出现失败/超时：**先读** [壳界面与恢复](references/recovery-and-shell.md)。恢复用户指定应用时，发现并使用已有的窗口、整屏观察/点击与托盘工具，不必等用户另说“检查托盘”。
+- 用户要求保存指定屏幕/多屏 PNG，或排查负坐标副屏、高 DPI 的独立截图：读 [Windows 多屏截图](../windows-multiscreen-screenshot/SKILL.md)，优先其 DPI 感知 GDI BitBlt 脚本；不临时用 Add-Type 编译包装。它不替换本工具的截图令牌，也不允许绕过明确的截图访问拒绝。
+- QQ 按会话 ID/日期批量导出：优先 [QQ 消息导出](../qq-message-export/SKILL.md) 的本地 QCE 工具；检查后端已登录后执行，不用逐条滚动/OCR 代替可用的批量 API。
 
 ## 观察 → 一个动作 → 核对
 
 1. 用 `desktop_focus(window_id)` 激活目标；有 `activated_window_id` 时以该实际窗口为准。若 `focused=false`，不输入，按恢复指南处理。
-2. 用 `desktop_observe(window_id)` 查看返回图片与元数据，确认具体控件，不仅确认窗口。看不到图片、截图黑屏或目标被遮挡时停止坐标操作；文字状态不能代替视觉证据。
+2. 用 `desktop_observe(window_id)` 查看返回图片与元数据，确认具体控件，不仅确认窗口。看不到图片、截图黑屏或目标被遮挡时停止坐标操作；文字状态不能证明可点击坐标。若窗口身份与无模态遮挡已确认，只是小图标难辨认，可用补充技能中该应用明确且工具支持的导航入口（例如 Firefox 的 Ctrl+L），再用新观察/结构化焦点证据确认字段后输入；不在未知焦点下输入、保存或提交。
 3. 根据**该张返回图片**定位：左上角为原点，整数 `x,y` 在图片宽高内。不要用 CSS、物理屏幕坐标，或从裁剪/放大图直接取坐标。工具处理 DPI、缩放和负坐标显示器。
 4. 使用最新 `snapshot_id` 发出一个动作，再观察实际结果。一次双击可用 `count=2`，但不把点击、输入、Enter 拼成一个未经核对的动作链。
 5. 核对预期变化后继续；到达完成条件即停止。记录实际已完成内容与尚未核对的结果，不把 `performed=true` 当作任务成功。
@@ -38,7 +41,7 @@ description: 在 Windows 上通过 local-computer-tools MCP 操作用户指定�
 | --- | --- |
 | `desktop_click` | 点击刚观察到的窗口控件；左右键，单击或双击 |
 | `desktop_type_text` | 当前 schema 限长 2000，禁止换行/控制字符；不用剪贴板、不自动 Enter。长文/多行先读输入指南 |
-| `desktop_key` | 仅允许 schema 列出的编辑/导航键；快捷键也可能提交、保存或删除 |
+| `desktop_key` | 0.6.0 支持通用 `key` 组合键和短 `sequence`；按真实副作用判断保存、发送、关闭或系统操作 |
 | `desktop_scroll` | `x,y` 选在目标正文/列表，不选工具栏；`amount` 正数向上、负数向下，绝对值 1–5。先移指针再滚动，无需先点击 |
 | `desktop_cursor` | 只读指针/前台诊断；返回坐标不是可点击目标 |
 

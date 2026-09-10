@@ -1,0 +1,1954 @@
+Keyboard shortcuts in OneNote | Microsoft Support
+Skip to main content
+Microsoft
+Support
+Support
+Support
+Home
+Microsoft 365
+Office
+Products
+Microsoft 365
+Outlook
+Microsoft Teams
+OneDrive
+Microsoft Copilot
+OneNote
+Windows
+more ...
+Devices
+Surface
+PC Accessories
+Xbox
+PC Gaming
+HoloLens
+Surface Hub
+Hardware warranties
+Account & billing
+Resources
+Community forums
+Microsoft 365 Admins
+Developer
+Education
+Report a support scam
+Product safety
+More
+Buy Microsoft 365
+All Microsoft
+Global
+Microsoft 365
+Azure
+Copilot
+Windows
+Surface
+XBOX
+Deals
+Small Business
+Support
+Software
+Software
+Windows Apps
+Outlook
+OneDrive
+Microsoft Teams
+OneNote
+Microsoft Edge
+Moving from Skype to Teams
+PCs & Devices
+PCs & Devices
+Computers
+Shop XBOX
+Accessories
+VR & mixed reality
+Certified Refurbished
+Trade-in for cash
+Entertainment
+Entertainment
+XBOX Game Pass Ultimate
+PC Game Pass
+XBOX games
+PC games
+Business
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365 for business
+Microsoft Power Platform
+Windows 365
+Small Business
+Digital Sovereignty
+Developer & IT
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Other
+Other
+Microsoft Rewards
+Free downloads & security
+Education
+Gift cards
+Licensing
+Unlocked stories
+View Sitemap
+Search
+Search for help
+No results
+Cancel
+Sign in
+Sign in with Microsoft
+Sign in or create an account.
+Hello,
+Select a different account.
+You have multiple accounts
+Choose the account you want to sign in with.
+Keyboard shortcuts in OneNote
+Applies To
+OneNote for Microsoft 365
+OneNote for Microsoft 365 for Mac
+OneNote 2024
+OneNote 2024 for Mac
+OneNote 2021
+OneNote 2021 for Mac
+OneNote 2016
+Many users find that using an external keyboard with keyboard shortcuts for OneNote helps them work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using a mouse.
+Note
+The shortcuts in this topic refer to the US keyboard layout. Keys for other layouts might not correspond exactly to the keys on a US keyboard.
+A plus sign (+) in a shortcut means that you need to press multiple keys at the same time.
+A comma sign (,) in a shortcut means that you need to press multiple keys in order.
+Windows
+Office Universal Apps
+macOS
+Web
+This article lists the keyboard shortcuts for OneNote for Windows desktop.
+Note
+For information on the differences between the app versions, go to
+What's the difference between the OneNote versions?
+To quickly find a shortcut in this article, you can use Search. Press
+Ctrl+F
+, and then type your search words.
+In this topic
+Frequently used shortcuts
+Format notes
+Insert items on a page
+Work with tables
+Select text and objects
+Tag notes
+Use outlines
+Specify language settings
+Work with pages
+Work with notebooks and sections
+Search through notes
+Share notes
+Protect notes
+Frequently used shortcuts
+To do this
+Press
+Open a new OneNote window.
+Ctrl+M
+Create a
+Quick Note
+.
+Ctrl+Shift+M or Alt+Windows
+key+N
+Dock the OneNote window.
+Ctrl+Alt+D
+Undo the previous action.
+Ctrl+Z
+Redo the previous action, if possible.
+Ctrl+Y
+Select all items on the current page.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Cut the selected text or item.
+Ctrl+X
+Copy the selected text or item to the clipboard.
+Ctrl+C
+Paste the contents of the clipboard.
+Ctrl+V
+Paste text only (Paste without formatting)
+Ctrl+Shift+V
+Move to the beginning of the line.
+Home
+Move to the end of the line.
+End
+Move one word to the left.
+Ctrl+Left arrow key
+Move one word to the right.
+Ctrl+Right arrow key
+Delete one character to the left.
+Backspace
+Delete one character to the right.
+Delete
+Delete one word to the left.
+Ctrl+Backspace
+Delete one word to the right.
+Ctrl+Delete
+Insert a line break without starting a new paragraph.
+Shift+Enter
+Check spelling.
+F7
+Open the thesaurus for the currently selected word.
+Shift+F7
+Display the context menu for the currently focused object.
+Shift+F10 or Windows Menu key
+Perform the action suggested on the
+Information Bar
+when it appears at the top of a page.
+Ctrl+Shift+W
+Play the selected audio recording.
+Ctrl+Alt+P
+Stop audio recording playback.
+Ctrl+Alt+S
+Skip the current audio recording backward by 10 seconds.
+Ctrl+Alt+Y
+Skip the current audio recording forward by 10 seconds.
+Ctrl+Alt+U
+Top of Page
+Format notes
+To do this
+Press
+Highlight the selected text.
+Ctrl+Alt+H
+Insert a hyperlink.
+Ctrl+K
+Copy the formatting of the selected text (
+Format Painter
+).
+Ctrl+Alt+C
+Paste the formatting to the selected text (
+Format Painter
+).
+Ctrl+Alt+V
+Open a hyperlink.
+Enter when on the hyperlink text
+Apply or remove bold formatting.
+Ctrl+B
+Apply or remove italics formatting.
+Ctrl+I
+Apply or remove underline formatting.
+Ctrl+U
+Apply or remove strikethrough formatting.
+Alt+Hyphen (-)
+Apply or remove superscript formatting.
+Ctrl+Shift+Plus(+)
+Apply or remove subscript formatting.
+Ctrl+Shift+Minus(-)
+Apply or remove bulleted list formatting.
+Ctrl+Period (.)
+Apply or remove numbered list formatting.
+Ctrl+Forward slash (/)
+Apply a
+Heading 1
+style to the current note.
+Ctrl+Alt+1
+Apply a
+Heading 2
+style to the current note.
+Ctrl+Alt+2
+Apply a
+Heading 3
+style to the current note.
+Ctrl+Alt+3
+Apply a
+Heading 4
+style to the current note.
+Ctrl+Alt+4
+Apply a
+Heading 5
+style to the current note.
+Ctrl+Alt+5
+Apply a
+Heading 6
+style to the current note.
+Ctrl+Alt+6
+Clear all formatting applied to the selected text. (Apply the
+Normal
+style.)
+Ctrl+Shift+N
+Increase the paragraph indent.
+Alt+Shift+Right arrow key or the Tab key when at the beginning of a line
+Decrease the paragraph indent.
+Alt+Shift+Left arrow key or Shift+Tab when at the beginning of a line
+Align the paragraph to the left.
+Ctrl+L
+Align the paragraph to the right.
+Ctrl+R
+Increase the font size of the selected text.
+Ctrl+Shift+Right angle bracket (>)
+Decrease the font size of the selected text.
+Ctrl+Shift+Left angle bracket (<)
+Show or hide the rule lines on the current page.
+Ctrl+Shift+R
+Top of Page
+Insert items on a page
+To do this
+Press
+Insert a document or file on the current page.
+Alt+N, F
+Insert a document or file as a printout on the current page.
+Alt+N, O
+Show or hide document printouts on the current page when the high contrast mode on Windows 10 or one of the contrast themes on Windows 11 is activated.
+Alt+Shift+P
+Insert a picture from a file.
+Alt+N, P
+Insert a sticker.
+Alt+N, S
+Insert a screen clipping.
+Note:
+The OneNote icon must be active in the Windows taskbar notification area.
+Windows
+key+Shift+S, and then Ctrl+V
+Insert the current date.
+Alt+Shift+D
+Insert the current date and time.
+Alt+Shift+F
+Insert the current time.
+Alt+Shift+T
+Insert a line break.
+Shift+Enter
+Start a math equation or convert selected text to a math equation.
+Alt+Equal sign ( = )
+Top of Page
+Work with tables
+To do this
+Press
+Create a table.
+Tab key after typing a new line of text
+Create another column in a table with a single row.
+Tab key
+Create another row when at the end cell of a table.
+Enter
+Note:
+Press Enter again to finish creating the table.
+Insert a row below the current row.
+Ctrl+Enter when in a table cell
+Create another paragraph in the same cell in a table.
+Alt+Enter
+Create a column to the right of the current column in a table.
+Ctrl+Alt+R
+Create a column to the left of the current column in a table.
+Ctrl+Alt+E
+Create a row above the current one in a table.
+Enter when the cursor is at the beginning of any row, except for the first row
+Create a new cell or row.
+Tab key when in the last cell of the table
+Delete the current empty row in a table.
+Delete, then Delete again, when the cursor is at the beginning of the row
+Top of Page
+Select text and objects
+To do this
+Press
+Select all items on the current page.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Select to the end of the line from the current cursor location.
+Shift+End
+Select the whole line.
+Shift+Down arrow key when the cursor is at the beginning of the line
+Jump to the title of the page and select it.
+Ctrl+Shift+T
+Cancel selecting the outline or page.
+Esc
+Move the selected paragraphs upward.
+Alt+Shift+Up arrow key
+Move the selected paragraphs downward.
+Alt+Shift+Down arrow key
+Increase the paragraph indent.
+Alt+Shift+Left arrow key
+Decrease the paragraph indent.
+Alt+Shift+Right arrow key
+Select the current paragraph and its subordinate paragraphs.
+Ctrl+Shift+Hyphen (-)
+Delete the selected note or object.
+Delete
+Move to the beginning of the line.
+Home
+Move to the end of the line.
+End
+Go back to the last page visited.
+Alt+Left arrow key
+Go forward to the next page visited.
+Alt+Right arrow key
+Top of Page
+Tag notes
+To do this
+Press
+Apply, select, or clear the
+To Do
+tag.
+Ctrl+1
+Apply or clear the
+Important
+tag.
+Ctrl+2
+Apply or clear the
+Question
+tag.
+Ctrl+3
+Apply or clear the
+Remember for later
+tag.
+Ctrl+4
+Apply or clear the
+Definition
+tag.
+Ctrl+5
+Apply or clear the
+Highlight
+tag.
+Ctrl+6
+Apply or clear the
+Contact
+tag.
+Ctrl+7
+Apply or clear the
+Address
+tag.
+Ctrl+8
+Apply or clear the
+Phone number
+tag.
+Ctrl+9
+Remove all selected note tags.
+Ctrl+0
+Top of Page
+Use outlines
+To do this
+Press
+Collapse the selected outline to
+Level 1
+.
+Alt+Shift+1
+Expand an outline to
+Level 2
+.
+Alt+Shift+2
+Expand an outline to
+Level 3
+.
+Alt+Shift+3
+Expand an outline to
+Level 4
+.
+Alt+Shift+4
+Expand an outline to
+Level 5
+.
+Alt+Shift+5
+Expand an outline to
+Level 6
+.
+Alt+Shift+6
+Expand an outline to
+Level 7
+.
+Alt+Shift+7
+Expand an outline to
+Level 8
+.
+Alt+Shift+8
+Expand an outline to
+Level 9
+.
+Alt+Shift+9
+Expand all levels of an outline.
+Alt+Shift+0
+Expand the selected heading.
+Alt+Shift+Equal sign ( = )
+Collapse the selected heading.
+Alt+Shift+Hyphen (-)
+Increase the indent by one level.
+Tab key
+Decrease the indent by one level.
+Shift+Tab
+Expand a selected, collapsed outline.
+Alt+Shift+Plus sign (+)
+Collapse a selected, expanded outline.
+Alt+Shift+Minus sign (-)
+Top of Page
+Specify language settings
+Note
+To change the writing direction for your notes, you must first enable one or more right-to-left languages in
+Set the Office Language Preferences
+. For instructions, go to
+Add an editing or authoring language or set language preferences in Office
+.
+To do this
+Press
+Set writing direction left to right.
+Ctrl+Left Shift key
+Set writing direction right to left.
+Ctrl+Right Shift key
+Increase indent by one level in right-to-left text.
+Tab key
+Decrease indent by one level in right-to-left text.
+Shift+Tab
+Top of Page
+Work with pages
+To do this
+Press
+Enable or disable the full-page view.
+F11
+Open a new OneNote window.
+Ctrl+M
+Create a
+Quick Note
+.
+Ctrl+Shift+M
+Expand or collapse a page group in the page navigation pane.
+Ctrl+Shift+Asterisk (*)
+Print the current page.
+Ctrl+P
+Add a new page at the end of the selected section.
+Ctrl+N
+Increase the width of the page navigation pane.
+Ctrl+Shift+Left bracket ([)
+Decrease the width of the page navigation pane.
+Ctrl+Shift+Right bracket (])
+Decrease indent level of the current page in the page navigation pane.
+Ctrl+Alt+Left bracket ([)
+Increase indent level of the current page in the page navigation pane.
+Ctrl+Alt+Right bracket (])
+Create a new subpage below the current page.
+Ctrl+Shift+Alt+N
+Select all items.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Select the current page.
+Ctrl+Shift+A
+If the selected page is part of a group, press Ctrl+A to select all of the pages in the group.
+Move the selected page up in the page navigation pane.
+Alt+Shift+Up arrow key
+Move the selected page down in the page navigation pane.
+Alt+Shift+Down arrow key
+Move to the page title.
+Ctrl+Shift+T
+Go to the first page in the currently visible set of pages in the page navigation pane.
+Alt+Page up
+Go to the last page in the currently visible set of pages in the page navigation pane.
+Alt+Page down
+Scroll up in the current page.
+Page up
+Scroll down in the current page.
+Page down
+Scroll to the top of the current page.
+Ctrl+Home
+Scroll to the bottom of the current page.
+Ctrl+End
+Go to the next paragraph.
+Ctrl+Down arrow key
+Go to the previous paragraph.
+Ctrl+Up arrow key
+Move the cursor up on the current page, or expand the page up.
+Ctrl+Alt+Up arrow key
+Move the cursor down on the current page, or expand the page down.
+Ctrl+Alt+Down arrow key
+Move the cursor left on the current page, or expand the page to the left.
+Ctrl+Alt+Left arrow key
+Move the cursor right on the current page, or expand the page to the right.
+Ctrl+Alt+Right arrow key
+Go to the next note container.
+Alt+Down arrow key
+Go to the beginning of the line.
+Home
+Go to the end of the line.
+End
+Go to the previous page visited.
+Alt+Left arrow key
+Go to the next page visited, if possible.
+Alt+Right arrow key
+Zoom in.
+Ctrl+Plus sign (+)
+Zoom out.
+Ctrl+Minus sign (-)
+Synchronize the notebook.
+Note:
+While OneNote is running, your notes are automatically saved whenever you change them. It is not necessary to manually save notes.
+Ctrl+S
+Top of Page
+Work with notebooks and sections
+To do this
+Press
+Open OneNote.
+Windows
+key+Shift+N
+Open a notebook.
+Ctrl+O
+Open a section.
+Ctrl+Alt+Shift+O
+Create a new section.
+Ctrl+T
+Go to the next section.
+Ctrl+Tab
+Go to the previous section.
+Ctrl+Shift+Tab
+Go to the next page in the section.
+Ctrl+Page down
+Go to the previous page in the section.
+Ctrl+Page up
+Go to the first page in the section.
+Alt+Home
+Go to the last page in the section.
+Alt+End
+Go to the first page in the currently visible set of page tabs.
+Alt+Page up
+Go to the last page of the currently visible set of page tabs.
+Alt+Page down
+Move or copy the current page.
+Ctrl+Alt+M
+Put focus on the current page tab.
+Ctrl+Alt+G
+Select the current page tab.
+Ctrl+Shift+A
+Put focus on the current section tab.
+Ctrl+Shift+G
+Move the current section.
+(Horizontal Tab) Ctrl+Shift+G, and left/right arrow then Shift+F10
+(Vertical Tab) Ctrl+Shift+G, then up/down arrow then Shift+F10
+Switch to a different notebook on the Navigation bar.
+Ctrl+G, use the Down or Up arrow key to navigate the sections or use the Tab key to pick a different notebook, then press Enter
+Top of Page
+Search through notes
+To do this
+Press
+Move to the
+Search
+box to search all notebooks.
+Ctrl+E
+While searching all notebooks, preview the next result.
+Down arrow key
+While searching all notebooks, go to the selected result and dismiss the search.
+Enter
+Change the search scope.
+Ctrl+E, Tab key, Spacebar
+Open the
+Search Results
+pane.
+Alt+O after searching
+Search the current page.
+Ctrl+F
+While searching the current page, move to the next result.
+Enter
+F3
+While searching the current page, move to the previous result.
+Shift+F3
+Dismiss the search and return to the page.
+Esc
+Top of Page
+Share notes
+To do this
+Press
+Send the selected pages in an email message.
+Ctrl+Shift+E
+Create a
+Today
+Outlook task from the selected note.
+Ctrl+Shift+1
+Create a
+Tomorrow
+Outlook task from the selected note.
+Ctrl+Shift+2
+Create a
+This Week
+Outlook task from the selected note.
+Ctrl+Shift+3
+Create a
+Next Week
+Outlook task from the selected note.
+Ctrl+Shift+4
+Create a
+No Date
+Outlook task from the selected note.
+Ctrl+Shift+5
+Open the selected Outlook task.
+Ctrl+Shift+K
+Mark the selected Outlook task as complete.
+Ctrl+Shift+9
+Delete the selected Outlook task.
+Ctrl+Shift+0
+Synchronize changes in the current shared notebook.
+Shift+F9
+Synchronize changes in all shared notebooks.
+F9
+Mark the current page as
+Unread
+.
+Ctrl+Q
+Top of Page
+Protect notes
+To do this
+Press
+Lock all password-protected sections.
+Ctrl+Alt+L
+Top of Page
+See also
+OneNote help & learning
+Use a screen reader to explore and navigate OneNote
+Basic tasks using a screen reader with OneNote
+Screen reader support for OneNote
+This article lists the keyboard shortcuts for OneNote for Windows 10.
+Important
+OneNote for Windows 10 support will end in October 2025. To keep up to date with the latest OneNote features, get OneNote from the
+Microsoft Store
+or as part of
+Microsoft 365
+.
+Note
+To quickly find a shortcut in this article, you can use Search. Press
+Ctrl+F
+, and then type your search words.
+In this topic
+Frequently used shortcuts
+Navigate OneNote for Windows 10 with only the keyboard
+Type and edit notes
+Format notes
+Add items to a page
+Work with tables
+Select notes and objects
+Tag notes
+Use outlines
+Specify language settings
+Work with pages
+Work with notebooks and sections
+Search notes
+Share notes
+Protect notes
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in OneNote for Windows 10.
+To do this
+Press
+Put the focus on the current section.
+Ctrl+Shift+G
+Open the context menu.
+Shift+F10 or Windows Menu key
+Add a new page at the end of the selected section.
+Ctrl+N
+Open a notebook.
+Ctrl+O
+Switch to a different notebook on the
+Navigation
+bar.
+Ctrl+G, then the Down or Up arrow key to select a different notebook, and then Enter
+Create a new section.
+Ctrl+T
+Create a new subpage below the current page.
+Ctrl+Alt+Shift+N
+Enable or disable the full-page view.
+F11
+Put the focus on the current page tab.
+Ctrl+Alt+G
+Move or copy the current page.
+Ctrl+Alt+M
+Select the current page.
+Ctrl+Shift+A
+Jump to and select the page title.
+Ctrl+Shift+T
+Open a search box to search all currently open notebooks.
+Ctrl+E
+Top of Page
+Navigate OneNote for Windows 10 with only the keyboard
+The table below lists the shortcuts you can use to navigate in OneNote for Windows 10.
+To do this
+Press
+Jump between the ribbon tab bar, navigation pane, and the page canvas.
+F6
+Move to the ribbon from a ribbon tab.
+Down arrow key
+Move between ribbon tabs, or among the options on a ribbon.
+Left or Right arrow key
+Perform the currently selected ribbon command.
+Enter
+Move between the items on the main menu bar.
+Tab key or Shift+Tab
+Move the focus to and open the ribbon.
+Alt
+Move the focus to and open the
+Home
+ribbon tab.
+Alt+H
+Move the focus to and open the
+Insert
+ribbon tab.
+Alt+N
+Move the focus to and open the
+Draw
+ribbon tab.
+Alt+D
+Move the focus to and open the
+View
+ribbon tab.
+Alt+W
+Top of Page
+Type and edit notes
+To do this
+Press
+Open a new OneNote window.
+Ctrl+M
+Undo the last action.
+Ctrl+Z
+Redo the last action.
+Ctrl+Y
+Select all items on the current page.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Cut the selected text or item to the clipboard.
+Ctrl+X
+Copy the selected text or item to the clipboard.
+Ctrl+C
+Paste the contents of the clipboard.
+Ctrl+V
+Paste Text only (Paste without Formatting)
+Ctrl+Shift+V
+Move to the beginning of the line.
+Home
+Move to the end of the line.
+End
+Move one word to the left.
+Ctrl+Left arrow key
+Move one word to the right.
+Ctrl+Right arrow key
+Delete one character to the left.
+Backspace
+Delete one character to the right.
+Delete
+Delete one word to the left.
+Ctrl+Backspace
+Delete one word to the right.
+Ctrl+Delete
+Insert a line break without starting a new paragraph.
+Shift+Enter
+Open the context menu for the object in focus.
+Shift+F10 or Windows Menu key
+Perform the action suggested on the
+Information Bar
+if it appears at the top of a page.
+Ctrl+Shift+W
+Insert the author name and last modified time stamp.
+Ctrl+Shift+M
+Top of Page
+Format notes
+To do this
+Press
+Highlight the selected text.
+Ctrl+Shift+H or Ctrl+Alt+H
+Insert a hyperlink.
+Ctrl+K
+Copy the formatting of the selected text (
+Format Painter
+).
+Ctrl+Alt+C
+Paste the formatting to the selected text (
+Format Painter
+).
+Ctrl+Alt+V
+Open a hyperlink.
+Enter when on the hyperlink text
+Apply or remove bold formatting.
+Ctrl+B
+Apply or remove italics formatting.
+Ctrl+I
+Apply or remove underline formatting.
+Ctrl+U
+Apply or remove strikethrough formatting.
+Ctrl+Hyphen (-)
+Apply or remove superscript formatting.
+Ctrl+Shift+Equal sign ( = )
+Apply or remove subscript formatting.
+Ctrl+Equal sign ( = )
+Apply or remove bulleted list formatting.
+Ctrl+Period (.)
+Apply or remove numbered list formatting.
+Ctrl+Forward slash (/)
+Apply a
+Heading 1
+style to the current note.
+Ctrl+Alt+1
+Apply a
+Heading 2
+style to the current note.
+Ctrl+Alt+2
+Apply a
+Heading 3
+style to the current note.
+Ctrl+Alt+3
+Apply a
+Heading 4
+style to the current note.
+Ctrl+Alt+4
+Apply a
+Heading 5
+style to the current note.
+Ctrl+Alt+5
+Apply a
+Heading 6
+style to the current note.
+Ctrl+Alt+6
+Clear all formatting applied to the selected text. (Apply the
+Normal
+style.)
+Ctrl+Shift+N
+Increase the paragraph indent.
+Alt+Shift+Right arrow key or the Tab key when at the beginning of a line
+Decrease the paragraph indent.
+Alt+Shift+Left arrow key or Shift+Tab when at the beginning of a line
+Right-align the selected paragraph.
+Ctrl+R
+Left-align the selected paragraph.
+Ctrl+L
+Increase the font size of the selected text.
+Ctrl+Shift+Right angle bracket (>)
+Decrease the font size of the selected text.
+Ctrl+Shift+Left angle bracket (<)
+Show or hide the rule lines on the current page.
+Ctrl+Shift+R
+Top of Page
+Add items to a page
+To do this
+Press
+Copy a screen clipping to the clipboard (requires the Windows 10 Creators Update).
+Windows
+key+Shift+S
+Insert the current date.
+Alt+Shift+D
+Insert the current date and time.
+Alt+Shift+F
+Insert the current time.
+Alt+Shift+T
+Insert a line break.
+Shift+Enter
+Start a math equation or convert the selected text to a math equation.
+Alt+Equal sign ( = )
+Top of Page
+Work with tables
+To do this
+Press
+Create a table.
+Tab key after typing a new line of text
+Create another column in a table with a single row.
+Tab key
+Create another row when at the end cell of a table.
+Enter
+Note:
+Press Enter again to finish creating the table.
+Insert a row below the current row.
+Ctrl+Enter when in a table cell
+Create another paragraph in the same cell in a table.
+Alt+Enter
+Create a column to the right of the current column in a table.
+Ctrl+Alt+R
+Create a row above the current one in a table.
+Enter when the cursor is at the beginning of any row, except for the first row
+Create a new cell or row.
+Tab key when in the last cell of the table
+Delete the current empty row in a table.
+Delete, then Delete again, when the cursor is at the beginning of the row
+Top of Page
+Select notes and objects
+To do this
+Press
+Select all items on the current page.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Select to the end of the line.
+Shift+End
+Jump to and select the page title.
+Ctrl+Shift+T
+Cancel the outline or page selection.
+Esc
+Move the current or selected paragraphs up.
+Alt+Shift+Up arrow key
+Move the current or selected paragraphs down.
+Alt+Shift+Down arrow key
+Increase the paragraph indent.
+Alt+Shift+Right arrow key
+Decrease the paragraph indent.
+Alt+Shift+Left arrow key
+Select the current paragraph and its subordinate paragraphs.
+Ctrl+Shift+Hyphen (-)
+Delete the selected note or object.
+Delete
+Move to the beginning of the line.
+Home
+Move to the end of the line.
+End
+Move to the previous page visited.
+Alt+Left arrow key
+Move to the next page visited, if possible.
+Alt+Right arrow key
+Create a new audio recording.
+Ctrl+Alt+A
+Play the selected audio recording.
+Ctrl+Alt+P
+Stop audio recording playback.
+Ctrl+Alt+S
+Skip the current audio recording backward by 10 seconds.
+Ctrl+Alt+Y
+Skip the current audio recording backward by 5 minutes.
+Ctrl+Alt+T
+Skip the current audio recording forward by 10 seconds.
+Ctrl+Alt+U
+Skip the current audio recording forward by 5 minutes.
+Ctrl+Alt+I
+Top of Page
+Tag notes
+To do this
+Press
+Apply, select, or clear the
+To Do
+tag.
+Ctrl+1
+Apply or clear the
+Important
+tag.
+Ctrl+2
+Apply or clear the
+Question
+tag.
+Ctrl+3
+Apply or clear the
+Remember for later
+tag.
+Ctrl+4
+Apply or clear the
+Definition
+tag.
+Ctrl+5
+Remove all note tags from the selected notes.
+Ctrl+0
+Top of Page
+Use outlines
+To do this
+Press
+Show through
+Level 1
+.
+Alt+Shift+1
+Expand to
+Level 2
+.
+Alt+Shift+2
+Expand to
+Level 3
+.
+Alt+Shift+3
+Expand to
+Level 4
+.
+Alt+Shift+4
+Expand to
+Level 5
+.
+Alt+Shift+5
+Expand to
+Level 6
+.
+Alt+Shift+6
+Expand to
+Level 7
+.
+Alt+Shift+7
+Expand to
+Level 8
+.
+Alt+Shift+8
+Expand to
+Level 9
+.
+Alt+Shift+9
+Expand all levels.
+Alt+Shift+0
+Increase the indent by one level.
+Tab key
+Decrease the indent by one level.
+Shift+Tab
+Expand a collapsed outline.
+Alt+Shift+Plus sign (+)
+Collapse an expanded outline.
+Alt+Shift+Minus sign (–)
+Top of Page
+Specify language settings
+Note
+To change the writing direction for your notes, you must first enable one or more right-to-left languages in
+Set the Office Language Preferences
+. For instructions, go to
+Add an editing or authoring language or set language preferences in Office
+.
+To do this
+Press
+Set the writing direction left-to-right.
+Ctrl+Left Shift key
+Set the writing direction right-to-left.
+Ctrl+Right Shift key
+Increase indent by one level in right-to-left text.
+Tab key
+Decrease indent by one level in right-to-left text.
+Shift+Tab
+Top of Page
+Work with pages
+To do this
+Press
+Enable or disable the full-page view.
+F11
+Open a new OneNote window.
+Ctrl+M
+Expand or collapse the selected page group.
+Ctrl+Shift+Asterisk (*)
+Open the
+Accessibility Checker
+pane and check for accessibility issues.
+Ctrl+Shift+F
+Print the current page.
+Ctrl+P
+Add a new page at the end of the selected section.
+Ctrl+N
+Create a new page at the same level, below the current page.
+Ctrl+Alt+N
+Create a new subpage below the current page.
+Ctrl+Alt+Shift+N
+Select all items.
+Ctrl+A
+To expand the selection, press Ctrl+A again.
+Select the current page.
+Ctrl+Alt+G
+Move the selected page up.
+Alt+Shift+Up arrow key
+Move the selected page down.
+Alt+Shift+Down arrow key
+Move the cursor to the page title.
+Ctrl+Shift+T
+Scroll up on the current page.
+Page up
+Scroll down on the current page.
+Page down
+Scroll to the top of the current page.
+Ctrl+Home
+Scroll to the bottom of the current page.
+Ctrl+End
+Go to the next paragraph.
+Ctrl+Down arrow key
+Go to the previous paragraph.
+Ctrl+Up arrow key
+Go to the next note container.
+Alt+Down arrow key
+Go to the beginning of the line.
+Home
+Go to the end of the line.
+End
+Go back to the last visited page.
+Alt+Left arrow key
+Go forward to the next visited page.
+Alt+Right arrow key
+Mark the current page as read or unread.
+Ctrl+Q
+Zoom in.
+Ctrl+Alt+Plus sign (+) on the numeric keypad or Ctrl+Alt+Shift+Plus sign (+)
+Zoom out.
+Ctrl+Alt+Minus sign (–) on the numeric keypad or Ctrl+Alt+Shift+Hyphen (-)
+Synchronize the notebook.
+Note:
+While OneNote is running, your notes are automatically saved whenever you change them. It is not necessary to manually save notes.
+Ctrl+S
+Top of Page
+Work with notebooks and sections
+To do this
+Press
+Open a notebook.
+Ctrl+O
+Create a new section.
+Ctrl+T
+Go to the next section.
+Ctrl+Tab
+Go to the previous section.
+Ctrl+Shift+Tab
+Go to the next page in the section.
+Ctrl+Page down
+Go to the previous page in the section.
+Ctrl+Page up
+Go to the first page in the section.
+Alt+Home
+Go to the last page in the section.
+Alt+End
+Move or copy the current page.
+Ctrl+Alt+M
+Put focus on the current page tab.
+Ctrl+Alt+G
+Put focus on the current section tab.
+Ctrl+Shift+G
+Switch to a different notebook on the
+Navigation
+bar.
+Ctrl+G, then the Down or Up arrow key to select a different notebook, and then Enter
+Open the context menu for the current section.
+Ctrl+Shift+G, and then Shift+F10 or Windows Menu key
+Top of Page
+Search notes
+To do this
+Press
+Open a search box to search all currently open notebooks.
+Ctrl+E
+Open a search box to search the current page.
+Ctrl+F
+While searching all notebooks, preview the next result.
+Down arrow key
+While searching all notebooks, go to the selected result.
+Enter
+Change the search scope.
+Ctrl+E, Tab key twice, then the Down arrow key
+Dismiss the search and return to the page.
+Esc
+Top of Page
+Share notes
+To do this
+Press
+Open the
+Send link
+dialog box.
+Ctrl+Shift+E
+Synchronize the current notebook.
+Ctrl+S or Shift+F9
+Synchronize all notebooks.
+F9
+Top of Page
+Protect notes
+To do this
+Press
+Lock all password-protected sections.
+Ctrl+Alt+L
+Top of Page
+See also
+Use a screen reader to explore and navigate OneNote
+Basic tasks using a screen reader with OneNote
+Screen reader support for OneNote
+This article lists the keyboard shortcuts for OneNote for Mac.
+Note
+The settings in some versions of the operating system and some utility applications might conflict with keyboard shortcuts and function key operations in Microsoft 365 for Mac. For information about changing the key assignment for a keyboard shortcut, refer to the operating system help for your version of macOS or your utility application.
+If you don't find a keyboard shortcut here that meets your needs, you can create a custom keyboard shortcut. For instructions, go to
+Create a custom keyboard shortcut for Office for Mac
+.
+To quickly find a shortcut in this article, you can use Search. Press
+Command+F
+, and then type your search words.
+In this topic
+Enable full keyboard access
+Frequently used shortcuts
+Navigate within pages
+Edit text and graphics
+Work with tables
+Work with notebooks and sections
+Enable full keyboard access
+For the best experience using your keyboard with the ribbon, enable your keyboard to access all controls.
+To open
+System Preferences
+, do one of the following:
+Press
+Control+F2
+to move the focus to the menu bar, and then press
+Spacebar
+. Press the
+Down arrow
+key until you reach the
+System Preferences
+option, and then press
+Spacebar
+.
+Press
+Command+Spacebar
+, type
+system preferences
+, and press
+Return
+.
+In the
+System Preferences
+,select
+Accessibility
+.
+In the
+Accessibility
+dialog box,select the
+Navigation
+tab.
+Select the
+Enable Full Keyboard Access
+checkbox.
+Top of Page
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in OneNote for Mac.
+To do this
+Press
+Create a new page.
++N
+Undo the previous action.
++Z
+Redo the previous action, if possible.
++Y
+Cut the selected content to the clipboard.
++X
+Copy the selected content to the clipboard.
++C
+Paste the contents of the clipboard.
++V
+Open a notebook.
++O
+Enter or exit the full-screen mode.
++Control+F
+Close the current notebook.
++Shift+W
+Synchronize this notebook.
++S
+Synchronize all notebooks.
++Shift+S
+Select all items on the current page.
++A
+To expand the selection scope, press
++A again.
+Select the page title.
++Shift+T
+Increase the paragraph indent.
+Tab key when at the beginning of a line or
++Right bracket (])
+Decrease the paragraph indent.
+Shift+Tab when at the end of a line or
++Left bracket ([)
+Zoom in.
++Plus sign (+)
+Zoom out.
++Minus sign (-)
+Reset the zoom magnification.
++0
+Collapse an expanded outline.
+Control+Shift+Plus sign (+)
+Expand a collapsed outline.
+Control+Shift+Minus sign (-)
+Open the selected link.
+Return or Shift+Return
+Copy the selected formatting.
++Option+C
+Paste the copied formatting.
++Option+V
+Find text on the page.
++F
+Find text within all open notebooks.
++Option+F
+Top of Page
+Navigate within pages
+To do this
+Press
+Move one word to the left.
+Option+Left arrow key
+Move one word to the right.
+Option+Right arrow key
+Move to the beginning of the line.
++Left arrow key
+Move to the end of the line.
++Right arrow key
+Move up one paragraph.
++Up arrow key or Option+Up arrow key
+Move down one paragraph.
++Down arrow key or Option+Down arrow key
+Scroll up in the current page.
+Page up
+Scroll down in the current page.
+Page down
+Move the cursor up in the current outline.
++Option+Up arrow key
+Move the cursor to the title of the current page.
++Shift+T
+Top of Page
+Edit text and graphics
+To do this
+Press
+Cut the selected content to the clipboard.
++X
+Copy the selected content to the clipboard.
++C
+Paste the contents of the clipboard.
++V
+Copy the selected formatting.
++Option+C
+Paste the copied formatting.
++Option+V
+Start creating a bulleted list.
+Asterisk (*) and press Spacebar
+Note:
+To insert a single bullet in the text, press Option+8
+Start creating a numbered list.
+Type 1 and press Spacebar or
++Forward slash (/)
+Promote (indent) the selected list item.
++Right bracket (])
+Demote (decrease indent) the selected list item.
++Left bracket ([)
+Apply superscript formatting.
++Shift+Option+Equal sign ( = )
+Apply subscript formatting.
++Control+Option+Equal sign ( = )
+Insert a line break.
+Shift+Return
+Insert the current date.
++D
+Insert the current date and time.
++Shift+D
+Insert equations (or convert the selected text to a math equation).
+Control+Equal sign ( = )
+Search for the selected text using the
+Smart Lookup
+task pane.
++Control+Option+L
+Insert emoji.
++Control+Spacebar
+Delete the character to the left of the cursor.
+Delete
+Delete the character to the right of the cursor.
+Fn+Delete
+Delete the word to the left of the cursor.
+Option+Delete
+Delete the word to the right of the cursor.
+Fn+Option+Delete or Option+Del
+Increase the paragraph indent.
++Option+Right arrow key
+Decrease the paragraph indent.
++Option+Left arrow key
+Move the selected image or object up.
++Option+Up arrow key
+Move the selected image or object down.
++Option+Down arrow key
+Top of Page
+Work with tables
+To do this
+Press
+Create another table row.
+Return when at the end cell of a table.
+Note:
+Press Return again to finish the table.
+Create a table column to the right of the current column.
++Control+R
+Create a table column to the left of the current column.
++Control+L
+Create a table row below the current row.
++Return
+Create another paragraph in the same cell.
+Option+Return
+Top of Page
+Work with notebooks and sections
+To do this
+Press
+Switch between sections in a notebook.
++Shift+Opening brace ({) or
++Shift+Closing brace (})
+Switch between pages in a section.
+Place the cursor within a page.
+Press
++Control+G to move the focus to the page list.
+Press Control+Option+Up or Down arrow key to select the previous or next page in the section, or
++Page up or
++Page down.
+Open other notebooks or create new ones.
++O
+Review the list of your open notebooks.
+Control+G
+Create a new notebook page.
++N
+Open the OneNote app preferences.
++Comma (,)
+Move the current page to another location.
++Shift+M
+Copy the current page to another location.
++Shift+C
+Enter full-screen mode.
++Control+F
+Synchronize this notebook.
++S
+Synchronize all notebooks.
++Shift+S
+Move the keyboard focus to the page list.
++Control+G
+Move the keyboard focus to the section list.
+Control+Shift+G
+Top of Page
+See also
+OneNote help & learning
+Use a screen reader to explore and navigate OneNote
+Basic tasks using a screen reader with OneNote
+Screen reader support for OneNote
+This article lists the keyboard shortcuts for OneNote for the web.
+Note
+To quickly find a shortcut in this article, you can use Search. Press
+Ctrl+F
+, and then type your search words.
+When you use OneNote for the web, we recommend that you use Microsoft Edge as your web browser. Because OneNote for the web runs in your web browser, the keyboard shortcuts are different from those in the desktop program. For example, you'll use
+Ctrl+F6
+instead of
+F6
+for jumping in and out of the commands. Also, common shortcuts like
+F1
+(Help) and
+Ctrl+O
+(Open) apply to the web browser – not OneNote for the web.
+In this topic
+Navigate the ribbon and panes in Viewing mode
+Navigate the ribbon and panes in Editing mode
+Navigate within pages
+Select text and graphics
+Edit content
+Work with tables
+Format text
+Tag notes
+Navigate the ribbon and panes in Viewing mode
+To do this
+Press
+Jump from the notebook navigation to the browser fields.
+Shift+F6
+Move among ribbon commands.
+Tab key
+Perform the currently selected ribbon command.
+Enter
+Scroll up or down on a page.
+Page up or Page down
+Page forward through the notebook
+Ctrl+Page down
+Page backward through the notebook.
+Ctrl+Page up
+Go to the first page in a section.
+Alt+Page up
+Go to the last page in a section.
+Alt+Page down
+Expand the selected section.
+Enter, when on the section
+Display the access keys (ribbon commands) on the classic ribbon when using Narrator.
+Alt+Period (.)
+Top of Page
+Navigate the ribbon and panes in Editing mode
+To do this
+Press
+Open a specific page.
+Ctrl+F6 until the focus is on the navigation bar with current notebook selected, then the Tab key until the focus is on the page navigation pane, then the Down or Up arrow key to put focus on different pages, and then Enter to select a page
+Activate a different ribbon tab.
+Ctrl+F6 until you reach the row of ribbon tabs, and then the Right or Left arrow key to move among the ribbon tabs. The focused ribbon is displayed automatically.
+Move among ribbon commands.
+Tab key to move the focus from the row of ribbon tabs to the ribbon, then the Right or Left arrow key when on the ribbon
+Activate the selected ribbon command.
+Enter
+Go to the first page in a section.
+Alt+Page up
+Go to the last page in a section.
+Alt+Page down
+Move the current page up or down.
+Alt+Shift+Up or Down arrow key
+Top of Page
+Navigate within pages
+To do this
+Press
+Move the cursor from the title area to the page body.
+Tab key or Enter
+Move the cursor one word to the right.
+Ctrl+Right arrow key
+Move the cursor one word to the left.
+Ctrl+Left arrow key
+Move the cursor up by one paragraph.
+Ctrl+Up arrow key
+Move the cursor down by one paragraph.
+Ctrl+Down arrow key
+Move the cursor to the beginning of the line.
+Home
+Move the cursor to the end of the line.
+End
+Move the cursor to the beginning of the page outline.
+Ctrl+Home
+Move the cursor to the end of the page outline.
+Ctrl+End
+Move the cursor to the title area.
+Page up, or Ctrl+A and then the Tab key until the title is selected
+Top of Page
+Select text and graphics
+To do this
+Press
+Select text.
+Shift+Arrow keys
+Select the word to the right.
+Ctrl+Shift+Right arrow key
+Select the word to the left.
+Ctrl+Shift+Left arrow key
+Select from the current position to the beginning of the paragraph.
+Shift+Home
+Select from the current position to the end of the paragraph.
+Shift+End
+Select from the current position to the beginning of the outline.
+Shift+Ctrl+Home
+Select from the current position to the end of the outline.
+Shift+Ctrl+End
+Expand the selection.
+Ctrl+A to expand the selection to the entire paragraph, outline, and page.
+Top of Page
+Edit content
+To do this
+Press
+Cut the selected content to the clipboard.
+Ctrl+X
+Copy the selected content to the clipboard.
+Ctrl+C
+Paste the contents of the clipboard.
+Ctrl+V
+Insert a hyperlink.
+Ctrl+K
+Undo the previous action.
+Ctrl+Z
+Redo the previous action, if possible.
+Ctrl+Y
+Move to the next misspelled word.
+Alt+F7
+Create a new outline.
+Ctrl+Shift+F
+Move from one outline to another.
+Ctrl+A, and then Tab key
+Synchronize the notebook.
+Note:
+While OneNote for the web is running, your notes are automatically saved whenever you change them. It is not necessary to manually save notes.
+Ctrl+S
+Top of Page
+Work with tables
+To do this
+Press
+Create a table.
+Tab key after typing a new line of text
+Create a new cell.
+Tab key when in the last cell of the table
+Insert a row below the current row.
+Ctrl+Enter when in a table cell
+Top of Page
+Format text
+Note
+When a cell, column, or row is selected, alignment applies to the content of the selected cells. When a table is selected, alignment is applied to the table but does not affect alignment within cells.
+To do this
+Press
+Apply bold formatting.
+Ctrl+B
+Apply italics formatting.
+Ctrl+I
+Apply underline formatting.
+Ctrl+U
+Create a bulleted list.
+Ctrl+Period (.)
+Create a numbered list.
+Ctrl+Forward slash (/) or Ctrl+Shift+O
+Align the paragraph to the left.
+Ctrl+L
+Align the paragraph to the right.
+Ctrl+R
+Increase the paragraph indent.
+Alt+Shift+Right arrow key
+Decrease the paragraph indent.
+Alt+Shift+Left arrow key
+Top of Page
+Tag notes
+To do this
+Press
+Apply, select, or clear the
+To Do
+tag.
+Ctrl+1
+Apply or clear the
+Important
+tag.
+Ctrl+2
+Apply or clear the
+Question
+tag.
+Ctrl+3
+Apply or clear the
+Remember for later
+tag.
+Ctrl+4
+Apply or clear the
+Definition
+tag.
+Ctrl+5
+Apply or clear the
+Highlight
+tag.
+Ctrl+6
+Apply or clear the
+Contact
+tag.
+Ctrl+7
+Apply or clear the
+Address
+tag.
+Ctrl+8
+Apply or clear the
+Phone Number
+tag.
+Ctrl+9
+Top of Page
+See also
+OneNote help & learning
+Use a screen reader to explore and navigate OneNote
+Basic tasks using a screen reader with OneNote
+Screen reader support for OneNote
+Technical support for customers with disabilities
+Microsoft wants to provide the best possible experience for all our customers. If you have a disability or questions related to accessibility, please contact the
+Microsoft Disability Answer Desk
+for technical assistance. The Disability Answer Desk support team is trained in using many popular assistive technologies and can offer assistance in English, Spanish, French, and American Sign Language. Please go to the Microsoft Disability Answer Desk site to find out the contact details for your region.
+If you are a government, commercial, or enterprise user, please contact
+the enterprise Disability Answer Desk
+.
+Was this information helpful?
+Yes
+No
+Thank you! Any more feedback for Microsoft?
+Can you help us improve?
+(Send feedback to Microsoft so we can help.)
+What affected your experience?
+Resolved my issue
+Clear instructions
+Easy to follow
+No jargon
+Pictures helped
+Other
+Didn't match my screen
+Incorrect instructions
+Too technical
+Not enough information
+Not enough pictures
+Other
+Any additional feedback? (Optional)
+Submit feedback
+By pressing submit, your feedback will be used to improve Microsoft products and services.
+Your IT admin will be able to collect this data.
+Privacy Statement.
+Thank you for your feedback!
+×
+What's new
+Surface Pro
+Surface Laptop
+Surface Laptop Ultra
+Surface RTX Spark Dev Box
+Copilot for organizations
+Copilot for personal use
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Microsoft Store Promise
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft 365 Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+(function () {
+		function getCookie(name) {
+			var cookies = document.cookie.split('; ');
+			for (var i = 0; i < cookies.length; i++) {
+				var kvp = cookies[i].split('=');
+				if (kvp[0] === name) {
+					return decodeURIComponent(kvp[1]);
+				}
+			}
+			return null;
+		}
+
+		if (typeof window.oneDS === 'object') {
+			window.analytics = new window.oneDS.ApplicationInsights();
+			var config = {
+				instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432",
+				disableCookiesUsage: true,
+				cookieCfg: {
+					ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"]
+				},
+				channelConfiguration: {
+					eventsLimitInMem: 50
+				},
+				propertyConfiguration: {
+					gpcDataSharingOptIn: false,
+					callback: {
+						userConsentDetails: () => {
+							const consentDetails = {
+								Required: true,
+								Analytics: false,
+								Advertising: false,
+								SocialMedia: false
+							};
+
+							return consentDetails;
+						}
+					}
+				},
+				webAnalyticsConfiguration: {
+					autoCapture: {
+						pageView: true,
+						onLoad: true,
+						onUnload: true,
+						click: true,
+						scroll: true,
+						resize: true,
+						lineage: false,
+						jsError: true,
+						msTags: true
+					},
+					autoPopulateParentIdAndParentName: true,
+					isLoggedIn: false,
+					urlCollectHash: true,
+urlCollectQuery: true,
+					useDefaultContentName: true,
+					useShortNameForContentBlob: false
+				}
+			};
+
+			var isFirstTime = true;
+			var jsLocalId = null;
+
+
+			//Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser
+			window.analytics.addTelemetryInitializer(function (e) {
+				if (isFirstTime) {
+					var context = window.analytics.getPropertyManager().getPropertiesContext();
+					var ext = e.ext = e.ext || {};
+
+					if (jsLocalId) {
+						// Set the localId so it's set automatically for all future events
+						context.user.setLocalId(jsLocalId);
+
+						var userExt = ext.user = ext.user || {};
+						userExt.localId = jsLocalId;
+					}
+
+					isFirstTime = false;
+				}
+			});
+			window.analytics.initialize(config, []);
+		}
+	})();
+$(function () {
+		var signInUrl = "/en-us/authentication/signin";
+		var signOutUrl = "/en-us/authentication/signout";
+		var switchAccountUrl = "/en-us/authentication/switchaccount";
+		var shellOptions = {
+			meControlOptions: {
+				apiGeneration: 'GEN2',
+				authProviderConfig: {
+					type: 'webAadWithMsaProxy',
+					appSignInUrl: signInUrl,
+					appSignInToUrl: signInUrl,
+					appSignOutUrl: signOutUrl,
+					appSwitchUrl: switchAccountUrl,
+					appSwitchToUrl: switchAccountUrl,
+					aad: {
+						signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False',
+						signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True',
+						forgetUrl: 'https://login.microsoftonline.com:443/forgetuser',
+						rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc',
+					},
+				},
+			}
+		};
+
+		if (window.msCommonShell) {
+			window.msCommonShell.load(shellOptions);
+		}
+		else {
+			window.onShellReadyToLoad = function () {
+				window.onShellReadyToLoad = null;
+				window.msCommonShell.load(shellOptions);
+			};
+		}
+	});
+$(async function () {
+		await window.manageSilentSignIn.handleAllSilentSignIn();
+	})
+if (window.UcsCreative === undefined) {
+			window.UcsCreative = {};
+		}
+window.silentSigninProgress = true;
+
+		var silentSigninStartLog = {
+			actionType: 'A',
+			content: {
+				contentId: 'silentSignInStarted'
+			}
+		};
+		window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) {
+				occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"});
+			}

@@ -41,6 +41,8 @@ for pane in scroll_panes.values():
 value.trace_add("write", lambda *_: print(json.dumps({"event":"text", "value":value.get()}, ensure_ascii=True), flush=True))
 root.update()
 entry.focus_set()
+root.bind_all('<KeyPress>', lambda event: print(json.dumps({'event':'key_down','keysym':event.keysym,'state':event.state}), flush=True), add='+')
+root.bind_all('<KeyRelease>', lambda event: print(json.dumps({'event':'key_up','keysym':event.keysym,'state':event.state}), flush=True), add='+')
 root.bind('<ButtonRelease-1>', lambda event: print(json.dumps({'event':'mouse_up','x':event.x_root,'y':event.y_root,'widget':str(event.widget)}), flush=True), add='+')
 print(json.dumps({"event":"ready", "entry_x":entry.winfo_rootx()+50, "entry_y":entry.winfo_rooty()+15,
                   "button_x":button.winfo_rootx()+35, "button_y":button.winfo_rooty()+15,

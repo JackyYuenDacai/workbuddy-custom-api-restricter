@@ -1,0 +1,850 @@
+Use keyboard shortcuts to deliver PowerPoint presentations | Microsoft Support
+Skip to main content
+Microsoft
+Support
+Support
+Support
+Home
+Microsoft 365
+Office
+Products
+Microsoft 365
+Outlook
+Microsoft Teams
+OneDrive
+Microsoft Copilot
+OneNote
+Windows
+more ...
+Devices
+Surface
+PC Accessories
+Xbox
+PC Gaming
+HoloLens
+Surface Hub
+Hardware warranties
+Account & billing
+Resources
+Community forums
+Microsoft 365 Admins
+Developer
+Education
+Report a support scam
+Product safety
+More
+Buy Microsoft 365
+All Microsoft
+Global
+Microsoft 365
+Azure
+Copilot
+Windows
+Surface
+XBOX
+Deals
+Small Business
+Support
+Software
+Software
+Windows Apps
+Outlook
+OneDrive
+Microsoft Teams
+OneNote
+Microsoft Edge
+Moving from Skype to Teams
+PCs & Devices
+PCs & Devices
+Computers
+Shop XBOX
+Accessories
+VR & mixed reality
+Certified Refurbished
+Trade-in for cash
+Entertainment
+Entertainment
+XBOX Game Pass Ultimate
+PC Game Pass
+XBOX games
+PC games
+Business
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365 for business
+Microsoft Power Platform
+Windows 365
+Small Business
+Digital Sovereignty
+Developer & IT
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Other
+Other
+Microsoft Rewards
+Free downloads & security
+Education
+Gift cards
+Licensing
+Unlocked stories
+View Sitemap
+Search
+Search for help
+No results
+Cancel
+Sign in
+Sign in with Microsoft
+Sign in or create an account.
+Hello,
+Select a different account.
+You have multiple accounts
+Choose the account you want to sign in with.
+Use keyboard shortcuts to deliver PowerPoint presentations
+Applies To
+PowerPoint for Microsoft 365
+PowerPoint for Microsoft 365 for Mac
+PowerPoint 2024
+PowerPoint 2024 for Mac
+PowerPoint 2021
+PowerPoint 2021 for Mac
+PowerPoint 2019
+PowerPoint 2016
+Many users find that using an external keyboard with keyboard shortcuts for PowerPoint helps them work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using a mouse.
+For a separate list of shortcuts to use while creating your presentation, go to
+Use keyboard shortcuts to create PowerPoint presentations
+.
+Note
+The shortcuts in this topic refer to the US keyboard layout. Keys for other layouts might not correspond exactly to the keys on a US keyboard.
+A plus sign (+) in a shortcut means that you need to press multiple keys at the same time.
+A comma sign (,) in a shortcut means that you need to press multiple keys in order.
+Windows
+macOS
+Web
+This article describes the keyboard shortcuts and some other common shortcut keys that apply while you're delivering your presentation with PowerPoint for Windows.
+Note
+To quickly find a shortcut in this article, you can use Search. Press Ctrl+F, and then type your search words.
+If an action that you use often does not have a shortcut key, you can record a macro. For step-by-step instructions to record a macro, refer to the section "Record a macro" in
+Automate tasks with the Macro Recorder
+to create one.
+During the presentation, to open a list of shortcuts, press F1. Use the arrow keys to move between the tabs in the
+Slide Show Help
+dialog box.
+Get the PowerPoint 2016 keyboard shortcuts in a Word document at this link:
+PowerPoint 2016 for Windows keyboard shortcuts
+.
+In this topic
+Frequently used shortcuts
+Control the slide show
+Control media in the slide show
+Pointer and annotations in the slide show
+Rehearse the presentation
+Maneuver in Presenter View
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in PowerPoint for Windows.
+To do this
+Press
+Start a presentation from the beginning.
+F5
+Start a presentation from the current slide.
+Shift+F5
+Start the presentation in
+Presenter View
+.
+Alt+F5
+Perform the next animation or advance to the next slide.
+N
+Enter
+Page down
+Right arrow key
+Down arrow key
+Spacebar
+Perform the previous animation or return to the previous slide.
+P
+Page up
+Left arrow key
+Up arrow key
+Backspace
+Hide the pointer and navigation buttons.
+Ctrl+H
+Display a blank black slide, or return to the presentation from a blank black slide.
+B
+Period (.)
+Display a blank white slide, or return to the presentation from a blank white slide.
+W
+Comma (,)
+End the presentation.
+Esc
+Top of Page
+Control the slide show
+You can use the following keyboard shortcuts while you're delivering your presentation in
+Slide Show
+(full-screen) mode, with or without
+Presenter View
+.
+To do this
+Press
+Go to a specific slide.
+Type the slide number, then press Enter
+Go to the next slide, if the next slide is hidden.
+H (not available in
+Presenter View
+)
+View the
+All Slides
+dialog box.
+Ctrl+S
+Return to the first slide.
+Home
+Press and hold the Right and Left mouse buttons for two seconds
+Go to the last slide.
+End
+View the computer taskbar.
+Ctrl+T
+Display the context menu.
+Shift+F10 or the Windows Menu key
+Display the shortcuts menu.
+F1
+Go to the next hotspot on the current slide.
+(Hotspots include hyperlinks, animation triggers, audio objects, and video objects.)
+Tab key
+Go to the previous hyperlink on the current slide.
+Shift+Tab
+Open the selected hyperlink.
+Enter while a hyperlink is selected
+Top of Page
+Control media in the slide show
+These keyboard shortcuts work with video files imported from your computer or other device. They don't work with online video files.
+To do this
+Press
+Change the camera source for cameo
+(PowerPoint for Microsoft 365 only)
+Alt+X
+Play or pause media.
+Alt+P
+Ctrl+Spacebar
+Stop media playback.
+Alt+Q
+Go to the next bookmark.
+Alt+End
+Go to the previous bookmark.
+Alt+Home
+Increase the sound volume.
+Alt+Up
+Decrease the sound volume.
+Alt+Down
+Mute the sound.
+Alt+U
+Move forward three seconds.
+Alt+Shift+Page down
+Move backward three seconds.
+Alt+Shift+Page up
+Move forward 0.25 seconds, then pause.
+Alt+Shift+Right arrow key
+Move backward 0.25 seconds, then pause.
+Alt+Shift+Left arrow key
+Show or hide the audio and subtitles menu.
+(For videos that have multiple audio tracks and/or subtitle tracks in supported formats.)
+Alt+J
+Top of Page
+Pointer and annotations in the slide show
+Use the following keyboard shortcuts to control the pointer and to use it to create annotations during your presentation.
+To do this
+Press
+Start the laser pointer.
+Ctrl+L
+Change the pointer to a pen.
+Ctrl+P
+Change the pointer to an arrow.
+Ctrl+A
+Change the pen pointer to an eraser.
+Ctrl+E
+Hide the arrow pointer.
+Ctrl+H
+Show or hide ink markup.
+Ctrl+M
+Erase on-screen annotations.
+E
+Top of Page
+Rehearse the presentation
+You can use these keyboard shortcuts when you are rehearsing your presentation.
+To do this
+Press
+Set new timings while rehearsing.
+T
+Use original timings while rehearsing.
+O
+Use mouse click to advance while rehearsing.
+M
+Re-record slide narration and timing.
+R
+Top of Page
+Maneuver in Presenter View
+You can use the following keyboard shortcuts while you're delivering your presentation using
+Presenter View
+in newer versions of PowerPoint.
+Presenter View
+lets you look at your presentation with your speaker notes on one screen (your laptop, for example), while the audience views the notes-free presentation on a different screen.
+When you are connected to a second display,
+Presenter View
+is shown automatically when you start the slide show. To start a presentation in
+Presenter View
+even if you have only a single display, press Alt+F5.
+Tip
+If
+Presenter View
+does not start automatically with two displays, go the
+Slide Show
+tab, select the
+Use Presenter View
+checkbox, and select the preferred monitor.
+To do this
+Press
+Cycle between
+Presenter View
+regions.
+(Buttons above the slide, buttons on the upper-right corner, and the
+Notes
+pane)
+F6
+Cycle through tools within a
+Presenter View
+region.
+Tab key
+Scroll down one line in the
+Notes
+pane.
+Ctrl+Down arrow key
+Scroll up one line in the
+Notes
+pane.
+Ctrl+Up arrow key
+Scroll down one screenful in the
+Notes
+pane.
+Ctrl+Page down
+Scroll up one screenful in the
+Notes
+pane.
+Ctrl+Page up
+Read the next line in the
+Notes
+pane.
+Alt+A
+Read the previous line in the
+Notes
+pane.
+Alt+Z
+Read the elapsed time.
+(The timer starts running as soon as you start
+Presenter View
+.)
+Alt+W
+Read the next step (for example, the next slide, next animation, or end of slide show).
+Alt+Q
+Close
+Presenter View
+.
+Esc
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Use keyboard shortcuts to create PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+This article describes the keyboard shortcuts and some other common shortcut keys that apply while you're delivering your presentation with PowerPoint for macOS.
+Note
+The settings in some versions of the Mac operating system (OS) and some utility applications might conflict with keyboard shortcuts in Microsoft 365 for Mac. For information about changing the key assignment for a keyboard shortcut, refer to Mac Help for your version of macOS or your utility application.
+If you don't find a keyboard shortcut here that meets your needs, you can create a custom keyboard shortcut. For instructions, go to
+Create a custom keyboard shortcut for Office for Mac
+.
+Many of the shortcuts that use the Ctrl key on a Windows keyboard also work with the Control key in PowerPoint for macOS. However, not all do.
+To quickly find a shortcut in this article, you can use the Search. Press Command+F, and then type your search words.
+During the presentation, to open a list of shortcuts, press forward slash (/).
+In this topic
+Frequently used shortcuts
+Control the slide show
+Control media in the slide show
+Pointer and annotations in the slide show
+Navigate the Presenter View on macOS 10.15 (Catalina) and later
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in PowerPoint for macOS.
+To do this
+Press
+Start a presentation from the beginning.
+⌘+Shift+Return
+Start a presentation from the current slide.
+⌘+Return
+Start the presentation in
+Presenter View
+.
+Option+Return
+Perform the next animation or advance to the next slide.
+N
+Page down
+Right arrow key
+Down arrow key
+Spacebar
+Perform the previous animation or return to the previous slide.
+P
+Page up
+Left arrow key
+Up arrow key
+Delete
+Hide the pointer.
+⌘+I
+Display a blank black slide, or return to the presentation from a blank black slide.
+B
+Shift+B
+Period (.)
+Display a blank white slide, or return to the presentation from a blank white slide.
+W
+Shift+W
+Comma (,)
+End the presentation.
+Esc
+Hyphen (-)
+⌘+Period (.)
+Top of Page
+Control the slide show
+You can use the following keyboard shortcuts while you're delivering your presentation in
+Slide Show
+(full-screen) mode, with or without the
+Presenter View
+.
+To do this
+Press
+Go to a specific slide.
+Type the slide number, then press Return
+Go to the next slide, if the next slide is hidden.
+H
+Return to the first slide.
+Function+Left arrow key
+Go to the last slide.
+Function+Right arrow key
+Display the shortcut menu.
+Control+Mouse click
+Go to the next hotspot on the current slide.
+(Hotspots include hyperlinks, animation triggers, audio objects, and video objects.)
+Tab key
+Go to the previous hyperlink on the current slide.
+Shift+Tab
+Open the selected hyperlink.
+Return while a hyperlink is selected
+Top of Page
+Control media in the slide show
+Use the following keyboard shortcuts to control media during a presentation.
+To do this
+Press
+Change the camera source for cameo
+(PowerPoint for Microsoft 365 for Mac only)
+Option+X
+Top of Page
+Pointer and annotations in the slide show
+Use the following keyboard shortcuts to control the pointer and to use it to create annotations during your presentation.
+To do this
+Press
+Start the laser pointer.
+⌘+L
+Change the pointer to a pen.
+⌘+P
+Change the pointer to an arrow.
+⌘+A
+Hide the pointer.
+⌘+I
+Hide the pointer on mouse move.
+Control+H
+Show the pointer on mouse move.
+⌘+U
+Erase on-screen annotations.
+Shift+E
+Top of Page
+Navigate the Presenter View on macOS 10.15 (Catalina) and later
+You can use the following keyboard shortcuts while you're delivering your presentation using the
+Presenter View
+on macOS 10.15 (Catalina) and later, and when the keyboard control navigation is turned on. For instructions, refer to
+Turn on the keyboard control navigation
+.
+Use the shortcuts in the table below to move in the
+Presenter View
+in PowerPoint for macOS.
+To do this
+Press
+Start the presentation in the
+Presenter View
+.
+Option+Return
+Move the focus to the next control.
+Tab key
+Move the focus to the previous control.
+Shift+Tab
+Activate the control in focus.
+Spacebar
+In the
+Notes Pane
+, move the focus to the next control (pressing the Tab key inserts a tab character).
+Control+Tab
+Skip ahead in your presentation
+You can use your keyboard to skip ahead several slides without the audience seeing the slides as you transition to the new slide.
+Press the Tab key until you reach the
+Slide Navigator
+control (filmstrip).
+Press and hold down the Option key and press the Left or Right arrow key repeatedly until you find the slide you want to skip to.
+Release the Option key to move to the slide you want to skip to.
+Turn on the keyboard control navigation
+To use your keyboard to move between and activate controls on your Mac, turn on the keyboard control navigation.
+If you're not using VoiceOver, on your computer, select
+System Preferences
+>
+Keyboard
+>
+Shortcuts
+, and select the
+Use keyboard navigation to move focus between controls
+checkbox.
+If you're using VoiceOver, the control navigation should be on by default. To check the setting, do the following:
+On your computer, press Control+Option+M to access the Apple menu bar item. To open the Apple menu, press Control+Option+Spacebar.
+Press Control+Option+Down arrow key until you hear "System preferences ellipses," and then press Control+Option+Spacebar.
+The
+System Preferences
+window opens. The focus is in the
+Search
+text box.
+Type
+Keyboard
+, and then press Return. The
+Keyboard
+dialog box opens.
+Press Control+Option+Right arrow key until you hear "Shortcuts tab," and then press Control+Option+Spacebar.
+Press Control+Option+Right arrow key until you hear: "Use keyboard navigation to move focus between controls." VoiceOver also announces if the option is selected or unselected. To toggle the option on or off, press Control+Option+Spacebar.
+To close the
+Keyboard
+dialog box, press Command+W.
+Top of Page
+See also
+PowerPoint help & learning
+Screen reader support for PowerPoint
+Use keyboard shortcuts to create PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+This article describes the keyboard shortcuts that apply while you're delivering your presentation with PowerPoint for the web.
+Note
+If you use Narrator with the Windows 10 Fall Creators Update, you have to turn off scan mode in order to edit documents, spreadsheets, or presentations with Microsoft 365 for the web. For more information, refer to
+Turn off virtual or browse mode in screen readers in Windows 10 Fall Creators Update
+.
+To quickly find a shortcut in this article, you can use Search. Press Ctrl+F, and then type your search words.
+When you use PowerPoint for the web, we recommend that you use Microsoft Edge as your web browser. Because PowerPoint for the web runs in your web browser, the keyboard shortcuts are different from those in the desktop program. For example, you'll use Ctrl+F6 instead of F6 for jumping in and out of the commands. Also, common shortcuts like F1 (Help) and Ctrl+O (Open) apply to the web browser – not PowerPoint for the web.
+Control the slide show
+This table lists the keyboard shortcuts you can use to control the slide show.
+To do this
+Windows
+Mac
+Start a presentation from the beginning.
+Ctrl+F5
+⌘+Shift+Return
+Start a presentation from the current slide.
+Shift+Ctrl+F5
+⌘+Shift+F5
+Perform the next animation or advance to the next slide.
+N
+Enter
+Page down
+Right arrow key
+Down arrow key
+Spacebar
+N
+Return
+Page down
+Right arrow key
+Down arrow key
+Spacebar
+Perform the previous animation or return to the previous slide.
+P
+Page up
+Left arrow key
+Up arrow key
+Backspace
+P
+Page up
+Left arrow key
+Up arrow key
+Delete
+End the presentation.
+Esc
+Esc
+See also
+PowerPoint help & learning
+Get started with PowerPoint for the web
+Screen reader support for PowerPoint
+Use keyboard shortcuts to create PowerPoint presentations
+Basic tasks to create a presentation in PowerPoint with a screen reader
+Use a screen reader to explore and navigate PowerPoint
+Technical support for customers with disabilities
+Microsoft wants to provide the best possible experience for all our customers. If you have a disability or questions related to accessibility, please contact the
+Microsoft Disability Answer Desk
+for technical assistance. The Disability Answer Desk support team is trained in using many popular assistive technologies and can offer assistance in English, Spanish, French, and American Sign Language. Please go to the Microsoft Disability Answer Desk site to find out the contact details for your region.
+If you are a government, commercial, or enterprise user, please contact
+the enterprise Disability Answer Desk
+.
+Was this information helpful?
+Yes
+No
+Thank you! Any more feedback for Microsoft?
+Can you help us improve?
+(Send feedback to Microsoft so we can help.)
+What affected your experience?
+Resolved my issue
+Clear instructions
+Easy to follow
+No jargon
+Pictures helped
+Other
+Didn't match my screen
+Incorrect instructions
+Too technical
+Not enough information
+Not enough pictures
+Other
+Any additional feedback? (Optional)
+Submit feedback
+By pressing submit, your feedback will be used to improve Microsoft products and services.
+Your IT admin will be able to collect this data.
+Privacy Statement.
+Thank you for your feedback!
+×
+What's new
+Surface Pro
+Surface Laptop
+Surface Laptop Ultra
+Surface RTX Spark Dev Box
+Copilot for organizations
+Copilot for personal use
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Microsoft Store Promise
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft 365 Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+(function () {
+		function getCookie(name) {
+			var cookies = document.cookie.split('; ');
+			for (var i = 0; i < cookies.length; i++) {
+				var kvp = cookies[i].split('=');
+				if (kvp[0] === name) {
+					return decodeURIComponent(kvp[1]);
+				}
+			}
+			return null;
+		}
+
+		if (typeof window.oneDS === 'object') {
+			window.analytics = new window.oneDS.ApplicationInsights();
+			var config = {
+				instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432",
+				disableCookiesUsage: true,
+				cookieCfg: {
+					ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"]
+				},
+				channelConfiguration: {
+					eventsLimitInMem: 50
+				},
+				propertyConfiguration: {
+					gpcDataSharingOptIn: false,
+					callback: {
+						userConsentDetails: () => {
+							const consentDetails = {
+								Required: true,
+								Analytics: false,
+								Advertising: false,
+								SocialMedia: false
+							};
+
+							return consentDetails;
+						}
+					}
+				},
+				webAnalyticsConfiguration: {
+					autoCapture: {
+						pageView: true,
+						onLoad: true,
+						onUnload: true,
+						click: true,
+						scroll: true,
+						resize: true,
+						lineage: false,
+						jsError: true,
+						msTags: true
+					},
+					autoPopulateParentIdAndParentName: true,
+					isLoggedIn: false,
+					urlCollectHash: true,
+urlCollectQuery: true,
+					useDefaultContentName: true,
+					useShortNameForContentBlob: false
+				}
+			};
+
+			var isFirstTime = true;
+			var jsLocalId = null;
+
+
+			//Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser
+			window.analytics.addTelemetryInitializer(function (e) {
+				if (isFirstTime) {
+					var context = window.analytics.getPropertyManager().getPropertiesContext();
+					var ext = e.ext = e.ext || {};
+
+					if (jsLocalId) {
+						// Set the localId so it's set automatically for all future events
+						context.user.setLocalId(jsLocalId);
+
+						var userExt = ext.user = ext.user || {};
+						userExt.localId = jsLocalId;
+					}
+
+					isFirstTime = false;
+				}
+			});
+			window.analytics.initialize(config, []);
+		}
+	})();
+$(function () {
+		var signInUrl = "/en-us/authentication/signin";
+		var signOutUrl = "/en-us/authentication/signout";
+		var switchAccountUrl = "/en-us/authentication/switchaccount";
+		var shellOptions = {
+			meControlOptions: {
+				apiGeneration: 'GEN2',
+				authProviderConfig: {
+					type: 'webAadWithMsaProxy',
+					appSignInUrl: signInUrl,
+					appSignInToUrl: signInUrl,
+					appSignOutUrl: signOutUrl,
+					appSwitchUrl: switchAccountUrl,
+					appSwitchToUrl: switchAccountUrl,
+					aad: {
+						signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False',
+						signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True',
+						forgetUrl: 'https://login.microsoftonline.com:443/forgetuser',
+						rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc',
+					},
+				},
+			}
+		};
+
+		if (window.msCommonShell) {
+			window.msCommonShell.load(shellOptions);
+		}
+		else {
+			window.onShellReadyToLoad = function () {
+				window.onShellReadyToLoad = null;
+				window.msCommonShell.load(shellOptions);
+			};
+		}
+	});
+$(async function () {
+		await window.manageSilentSignIn.handleAllSilentSignIn();
+	})
+if (window.UcsCreative === undefined) {
+			window.UcsCreative = {};
+		}
+window.silentSigninProgress = true;
+
+		var silentSigninStartLog = {
+			actionType: 'A',
+			content: {
+				contentId: 'silentSignInStarted'
+			}
+		};
+		window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) {
+				occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"});
+			}

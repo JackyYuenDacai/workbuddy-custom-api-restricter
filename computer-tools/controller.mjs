@@ -11,7 +11,8 @@ export function createBridge(pythonPath) {
   return request=>new Promise((resolve,reject)=>{
     const child=spawn(pythonPath,['-X','utf8',path.join(directory,'windows_backend.py')],{windowsHide:true,stdio:['pipe','pipe','pipe']});
     let stdout='',size=0;
-    const timer=setTimeout(()=>{child.kill();reject(Error('Desktop operation timed out. Do not retry input without a new screenshot.'));},12000);
+    const timeout=request.action==='key'&&Array.isArray(request.sequence)?12000+4000*request.sequence.length:12000;
+    const timer=setTimeout(()=>{child.kill();reject(Error('Desktop operation timed out. Do not retry input without a new screenshot.'));},timeout);
     child.stdout.on('data',data=>{size+=data.length;if(size>12*1024*1024){child.kill();reject(Error('Screenshot response too large.'));}else stdout+=data;});
     child.stderr.on('data',()=>{});
     child.on('error',()=>{clearTimeout(timer);reject(Error('Could not start the configured Python desktop bridge.'));});
@@ -75,7 +76,12 @@ export function createController(bridge,{now=()=>Date.now(),isStopped=()=>fs.exi
       if(action==='click'){
         request.button=args.button||'left';request.count=args.count||1;
       }else if(action==='type')request.text=args.text;
-      else if(action==='key')request.key=args.key;
+      else if(action==='key'){
+        if((args.key!==undefined)===(args.sequence!==undefined))throw Error('Supply exactly one of key or sequence.');
+        const values=args.sequence??[args.key];
+        if(!Array.isArray(values)||values.length<1||values.length>8||values.some(v=>typeof v!=='string'||!v.trim()||v.length>120||/[\x00-\x1f\x7f]/.test(v)))throw Error('Expected 1 to 8 key/chord strings, each at most 120 characters.');
+        if(args.key!==undefined)request.key=args.key;else request.sequence=args.sequence;
+      }
       else {
         if(!Number.isInteger(args.amount)||Math.abs(args.amount)<1||Math.abs(args.amount)>5)throw Error('Scroll amount must be an integer from -5 to 5, excluding zero.');
         request.amount=args.amount;

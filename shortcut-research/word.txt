@@ -1,0 +1,2445 @@
+Keyboard shortcuts in Word | Microsoft Support
+Skip to main content
+Microsoft
+Support
+Support
+Support
+Home
+Microsoft 365
+Office
+Products
+Microsoft 365
+Outlook
+Microsoft Teams
+OneDrive
+Microsoft Copilot
+OneNote
+Windows
+more ...
+Devices
+Surface
+PC Accessories
+Xbox
+PC Gaming
+HoloLens
+Surface Hub
+Hardware warranties
+Account & billing
+Resources
+Community forums
+Microsoft 365 Admins
+Developer
+Education
+Report a support scam
+Product safety
+More
+Buy Microsoft 365
+All Microsoft
+Global
+Microsoft 365
+Azure
+Copilot
+Windows
+Surface
+XBOX
+Deals
+Small Business
+Support
+Software
+Software
+Windows Apps
+Outlook
+OneDrive
+Microsoft Teams
+OneNote
+Microsoft Edge
+Moving from Skype to Teams
+PCs & Devices
+PCs & Devices
+Computers
+Shop XBOX
+Accessories
+VR & mixed reality
+Certified Refurbished
+Trade-in for cash
+Entertainment
+Entertainment
+XBOX Game Pass Ultimate
+PC Game Pass
+XBOX games
+PC games
+Business
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365 for business
+Microsoft Power Platform
+Windows 365
+Small Business
+Digital Sovereignty
+Developer & IT
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Other
+Other
+Microsoft Rewards
+Free downloads & security
+Education
+Gift cards
+Licensing
+Unlocked stories
+View Sitemap
+Search
+Search for help
+No results
+Cancel
+Sign in
+Sign in with Microsoft
+Sign in or create an account.
+Hello,
+Select a different account.
+You have multiple accounts
+Choose the account you want to sign in with.
+Keyboard shortcuts in Word
+Applies To
+Word for Microsoft 365
+Word for Microsoft 365 for Mac
+Word 2024
+Word 2024 for Mac
+Word 2021
+Word 2021 for Mac
+Word 2019
+Word 2016
+Word for iPad
+Word for iPhone
+Word for Android tablets
+Word for Android phones
+Word Mobile
+Using an external keyboard with keyboard shortcuts in Word may help you work more efficiently. For people with mobility or vision disabilities, keyboard shortcuts can be easier than using a touchscreen, and are a helpful alternative to using a mouse.
+Note
+The shortcuts in this topic refer to the US keyboard layout. Keys for other layouts might not fully correspond to the keys on a US keyboard.
+A plus sign (
+⁠+⁠
+) in a shortcut means that you need to press multiple keys at the same time.
+A comma (
+⁠,⁠
+) in a shortcut means that you need to press multiple keys in order.
+Windows
+macOS
+Office for iOS
+Office for Android
+Web
+This article describes the keyboard shortcuts and function keys in Word for Windows.
+Note
+To quickly find a shortcut in this article, press Ctrl+F, and enter your search word.
+If an action does not have a corresponding shortcut key, you can record a macro to create one. Learn how here:
+Create or run a macro
+or
+Use a screen reader to create a macro in Word
+.
+Not all shortcut features listed for Word are supported in Word Starter version. Learn more here:
+Word features that are not fully supported in Word Starter
+.
+As reference, you can use this
+Word document
+and
+PDF
+.
+In this topic
+Frequently used shortcuts
+Ribbon keyboard shortcuts
+Navigate the document
+Preview and print documents
+Select text and graphics
+Edit text and graphics
+Work with web content
+Work with tables
+Review a document
+Work with references, citations, and indexing
+Work with mail merge and fields
+Work with text in other languages
+Work with document views
+Zoom and adjust view
+Use function key shortcuts
+Frequently used shortcuts
+This table shows the most frequently used shortcuts in MicrosoftWord.
+To do this
+Press
+Open a document.
+Ctrl+O
+Create a new document.
+Ctrl+N
+Save the document.
+Ctrl+S
+Close the document.
+Ctrl+W
+Cut the selected content to the Clipboard.
+Ctrl+X
+Copy the selected content to the Clipboard.
+Ctrl+C
+Paste the contents of the Clipboard.
+Ctrl+V
+Paste text only.
+Ctrl+Shift+V
+Select all document content.
+Ctrl+A
+Apply bold formatting to text.
+Ctrl+B
+Apply italic formatting to text.
+Ctrl+I
+Apply underline formatting to text.
+Ctrl+U
+Decrease the font size by 1 point.
+Ctrl+Left bracket ([)
+Increase the font size by 1 point.
+Ctrl+Right bracket (])
+Center the text.
+Ctrl+E
+Align the text to the left.
+Ctrl+L
+Align the text to the right.
+Ctrl+R
+Cancel a command.
+Esc
+Undo the previous action.
+Ctrl+Z
+Redo the previous action, if possible.
+Ctrl+Y
+Zoom in.
+Ctrl+Plus sign (+)
+Zoom out.
+Ctrl+Minus sign (-)
+Return back to 100% zoom.
+Ctrl+0
+Zoom in and out with mouse.
+Ctrl+Scroll
+Split the document window.
+Ctrl+Alt+S
+Remove the document window split.
+Alt+Shift+C or Ctrl+Alt+S
+Top of Page
+Close a task pane
+To close a task pane using the keyboard:
+Press F6 until the task pane is selected.
+Press Ctrl+Spacebar.
+Use the arrow keys to select
+Close
+, and then press Enter.
+Ribbon keyboard shortcuts
+The ribbon area groups together related options in tabs. For example, on the
+Home
+tab, the
+Font
+group includes the
+Font Color
+option. Press the
+Alt
+key to display the ribbon shortcuts -- called Key Tips -- as seen below.
+Note
+Add-ins and other programs can add new tabs to the ribbon and possibly provide access keys for those tabs.
+For various ribbon options you can combine the Key Tips letters with the Alt key to make shortcuts called Access Keys. For example, press Alt+H to open the
+Home
+tab, and Alt+Q to move to the
+Tell Me
+or
+Search
+field. Press Alt again to see Key Tips for the options for the selected tab.
+Depending on the version of Microsoft 365 you are using, the
+Search
+text field at the top of the app window might be called
+Tell Me
+instead. Both offer a largely similar experience, but some options and search results can vary.
+In newer versions of Office, most of the old Alt key menu shortcuts still work, too. However, you need to know the full shortcut. For example, press Alt, and then press one of the old menu keys E (Edit), V (View), I (Insert), and so on. A notification pops up saying you're using an access key from an earlier version. If you know the entire key sequence, you can still use it. Otherwise, press Esc and use Key Tips instead.
+Use the Access Keys for ribbon tabs
+To go directly to a tab on the ribbon, press one of the following access keys. Additional tabs might appear depending on your selection in the document.
+To do this
+Press
+Move to the
+Tell Me
+or
+Search
+field on the Ribbon to search for assistance or Help content.
+Alt, Q, then enter the search term.
+Open the
+File
+page to use Backstage view.
+Alt, F
+Open the
+Home
+tab to use common formatting commands, paragraph styles, and the Find tool.
+Alt, H
+Open the
+Insert
+tab to insert tables, pictures and shapes, headers, or text boxes.
+Alt, N
+Open the
+Design
+tab to use themes, colors, and effects, such as page borders.
+Alt, G
+Open the
+Layout
+tab to work with page margins, page orientation, indentation, and spacing.
+Alt, P
+Open the
+References
+tab to add a table of contents, footnotes, or a table of citations.
+Alt, S
+Open the
+Mailings
+tab to manage Mail Merge tasks and to work with envelopes and labels.
+Alt, M
+Open the
+Review
+tab to use Spell Check, set proofing languages, and to track and review changes to your document.
+Alt, R
+Open the
+View
+tab to choose a document view or mode, such as Read Mode or Outline view. You can also set the zoom magnification and manage multiple document windows.
+Alt, W
+Open the
+Help
+box.
+Alt, F1
+Open the
+Developer
+box.
+Alt, L
+Top of Page
+Work in the ribbon with the keyboard
+To do this
+Press
+Select the active tab on the ribbon and activate the access keys.
+Alt or F10. To move to a different tab, use access keys or the arrow keys.
+Move the focus to commands on the ribbon.
+Tab key or Shift+Tab
+Move between command groupings on the ribbon.
+Ctrl+Left or Right arrow key
+Move among the items on the ribbon.
+Arrow keys
+Show the tooltip for the ribbon element currently in focus.
+Ctrl+Shift+F10
+Activate the selected button.
+Spacebar or Enter
+Open the list for the selected command.
+Down arrow key
+Open the menu for the selected button.
+Alt+Down arrow key
+When a menu or submenu is open, move to the next command.
+Down arrow key
+Expand or collapse the ribbon.
+Ctrl+F1
+Open the context menu.
+Shift+F10
+Or, on a Windows keyboard, the Windows Menu key (between the right Alt and right Ctrl keys)
+Move to the submenu when a main menu is open or selected.
+Right arrow key
+Toggle AutoSave on or off.
+Alt+Z, A
+Expand or collapse the ribbon.
+Ctrl+F1
+Open the dialog box to rename the document or save it to another location.
+Alt+B
+Top of Page
+Navigate the document
+To do this
+Press
+Move the cursor one word to the left.
+Ctrl+Left arrow key
+Move the cursor one word to the right.
+Ctrl+Right arrow key
+Move the cursor up by one paragraph.
+Ctrl+Up arrow key
+Move the cursor down by one paragraph.
+Ctrl+Down arrow key
+Move the cursor to the end of the current line.
+End
+Move the cursor to the beginning the current line.
+Home
+Move the cursor to the top of the screen.
+Ctrl+Alt+Page up
+Move the cursor to the bottom of the screen.
+Ctrl+Alt+Page down
+Move the cursor by scrolling the document view up by one screen.
+Page up
+Move the cursor by scrolling the document view down by one screen.
+Page down
+Move the cursor to the top of the next page.
+Ctrl+Page down
+Move the cursor to the top of the previous page.
+Ctrl+Page up
+Move the cursor to the end of the document.
+Ctrl+End
+Move the cursor to the beginning of the document.
+Ctrl+Home
+Move the cursor to the location of the previous revision.
+Shift+F5
+Move the cursor to the location of the last revision made before the document was last closed.
+Shift+F5, immediately after opening the document.
+Cycle through floating shapes, such as text boxes or images.
+Ctrl+Alt+5, and then the Tab key repeatedly
+Exit the floating shape navigation and return to the normal navigation.
+Esc
+Display the
+Navigation
+task pane, to search within the document content.
+Ctrl+F
+Display the
+Go To
+dialog box, to navigate to a specific page, bookmark, footnote, table, comment, graphic, or other location.
+Ctrl+G
+Cycle through the locations of the four previous changes made to the document.
+Ctrl+Alt+Z
+Top of Page
+Preview and print documents
+To do this
+Press
+Print the document.
+Ctrl+P
+Switch to print preview.
+Ctrl+Alt+I
+Move around the preview page when zoomed in.
+Arrow keys
+Move by one preview page when zoomed out.
+Page up or Page down
+Move to the first preview page when zoomed out.
+Ctrl+Home
+Move to the last preview page when zoomed out.
+Ctrl+End
+Top of Page
+Select text and graphics
+To do this
+Press
+Select text.
+Shift+Arrow keys
+Select the word to the left.
+Ctrl+Shift+Left arrow key
+Select the word to the right.
+Ctrl+Shift+Right arrow key
+Select from the current position to the beginning of the current line.
+Shift+Home
+Select from the current position to the end of the current line.
+Shift+End
+Select from the current position to the beginning of the current paragraph.
+Ctrl+Shift+Up arrow key
+Select from the current position to the end of the current paragraph.
+Ctrl+Shift+Down arrow key
+Select from the current position to the top of the screen.
+Shift+Page up
+Select from the current position to the bottom of the screen.
+Shift+Page down
+Select from the current position to the beginning of the document.
+Ctrl+Shift+Home
+Select from the current position to the end of the document.
+Ctrl+Shift+End
+Select from the current position to the bottom of the window.
+Ctrl+Alt+Shift+Page down
+Select all document content.
+Ctrl+A
+Top of Page
+Extend a selection
+To do this
+Press
+Start extending the selection.
+F8
+In the extend selection mode, clicking a location in the document extends the current selection to that location.
+Select the nearest character to the left or right.
+F8, Left or Right arrow key
+Expand the selection.
+F8 repeatedly to expand the selection to the entire word, sentence, paragraph, section, and document.
+Reduce the selection.
+Shift+F8
+Select a vertical block of text.
+Ctrl+Shift+F8, then press the arrow keys
+Stop extending the selection.
+Esc
+Top of Page
+Edit text and graphics
+To do this
+Press
+Delete one word to the left.
+Ctrl+Backspace
+Delete one word to the right.
+Ctrl+Delete
+Open the
+Clipboard
+task pane and enable the Office Clipboard, which allows you to copy and paste content between Microsoft 365 apps.
+Alt, H, F, O
+Cut the selected content to the Clipboard.
+Ctrl+X
+Copy the selected content to the Clipboard.
+Ctrl+C
+Paste the contents of the Clipboard.
+Ctrl+V
+Move the selected content to a specific location.
+F2, move the cursor to the destination, and then press Enter.
+Copy the selected content to a specific location.
+Shift+F2, move the cursor to the destination, and then press Enter.
+Define an AutoText block with the selected content.
+Alt+F3
+Insert an AutoText block.
+The first few characters of the AutoText block, and then press Enter when the ScreenTip appears.
+Cut the selected content to the Spike.
+Ctrl+F3
+Paste the contents of the Spike.
+Ctrl+Shift+F3
+Copy the selected text formatting.
+Ctrl+Alt+C
+Paste the selected text formatting.
+Ctrl+Alt+V
+Paste text only.
+Ctrl+Shift+V
+Copy the header or footer used in the previous section of the document.
+Alt+Shift+R
+Display the
+Replace
+dialog box, to find and replace text, specific formatting, or special items.
+Ctrl+H
+Display the
+Object
+dialog box, to insert a file object into the document.
+Alt, N, J, J
+Insert a SmartArt graphic.
+Alt, N, M
+Insert a WordArt graphic.
+Alt, N, W
+Top of Page
+Align and format paragraphs
+To do this
+Press
+Center the paragraph.
+Ctrl+E
+Justify the paragraph.
+Ctrl+J
+Align the paragraph to the left.
+Ctrl+L
+Align the paragraph to the right.
+Ctrl+R
+Indent the paragraph.
+Ctrl+M
+Remove a paragraph indent.
+Ctrl+Shift+M
+Create a hanging indent.
+Ctrl+T
+Remove a hanging indent.
+Ctrl+Shift+T
+Remove paragraph formatting.
+Ctrl+Q
+Apply single spacing to the paragraph.
+Ctrl+1
+Apply double spacing to the paragraph.
+Ctrl+2
+Apply 1.5-line spacing to the paragraph.
+Ctrl+5
+Enable AutoFormat.
+Ctrl+Alt+K
+Apply the
+Normal
+style.
+Ctrl+Shift+N
+Apply the
+Heading 1
+style.
+Ctrl+Alt+1
+Apply the
+Heading 2
+style.
+Ctrl+Alt+2
+Apply the
+Heading 3
+style.
+Ctrl+Alt+3
+Display the
+Apply Styles
+task pane.
+Ctrl+Shift+S
+Display the
+Styles
+task pane.
+Ctrl+Alt+Shift+S
+Top of Page
+Format characters
+To do this
+Press
+Display the
+Font
+dialog box.
+Ctrl+D or Ctrl+Shift+F
+Increase the font size.
+Ctrl+Shift+Right angle bracket (>)
+Decrease the font size.
+Ctrl+Shift+Left angle bracket (<)
+Increase the font size by 1 point.
+Ctrl+Right bracket (])
+Decrease the font size by 1 point.
+Ctrl+Left bracket ([)
+Switch the text between upper case, lower case, and title case.
+Shift+F3
+Change the text to all upper case.
+Ctrl+Shift+A
+Hide the selected text.
+Ctrl+Shift+H
+Apply bold formatting.
+Ctrl+B
+Add a bulleted list.
+Ctrl+Shift+L
+Apply underline formatting.
+Ctrl+U
+Apply underline formatting to the words, but not the spaces.
+Ctrl+Shift+W
+Apply double-underline formatting.
+Ctrl+Shift+D
+Apply italic formatting.
+Ctrl+I
+Apply small caps formatting.
+Ctrl+Shift+K
+Apply subscript formatting.
+Ctrl+Shift+Minus sign (-)
+Apply superscript formatting.
+Ctrl+Shift+Plus sign (+)
+Remove manual character formatting.
+Ctrl+Spacebar
+Change the selected text to the Symbol font.
+Ctrl+Shift+Q
+Top of Page
+Manage text formatting
+To do this
+Press
+Display all nonprinting characters.
+Ctrl+Shift+8 (do not use the numeric keypad)
+Display the
+Reveal Formatting
+task pane.
+Shift+F1
+Top of Page
+Insert special characters
+To do this
+Press
+Insert a line break.
+Shift+Enter
+Insert a page break.
+Ctrl+Enter
+Insert a column break.
+Ctrl+Shift+Enter
+Insert an em dash (—).
+Ctrl+Alt+Minus sign (on the numeric keypad)
+Insert an en dash (–).
+Ctrl+Minus sign (on the numeric keypad)
+Insert an optional hyphen.
+Ctrl+Alt+Minus sign (-)
+Insert a nonbreaking hyphen.
+Shift+Alt+Minus sign(-)
+Insert a nonbreaking space.
+Ctrl+Shift+Spacebar
+Insert a copyright symbol (©).
+Press (, C, )
+Insert a registered trademark symbol (®).
+Ctrl+Alt+R
+Insert a trademark symbol (™).
+Ctrl+Alt+T
+Insert an ellipsis (…)
+Ctrl+Alt+Period (.)
+Insert the Unicode character for the specified Unicode (hexadecimal) character code. For example, to insert the euro currency symbol (
+), type 20AC, and then hold down Alt and press X.
+Tip:
+To find out the Unicode character code for a selected character, press Alt+X.
+The character code, then press Alt+X
+Insert the ANSI character for the specified ANSI (decimal) character code. For example, to insert the euro currency symbol, hold down Alt and press 0128 on the numeric keypad.
+Alt+the character code (on the numeric keypad)
+Top of Page
+Work with web content
+To do this
+Press
+Insert a hyperlink.
+Ctrl+K
+Go back one page.
+Alt+Left arrow key
+Go forward one page.
+Alt+Right arrow key
+Refresh the page.
+F9
+Top of Page
+Work with tables
+Move around in a table
+To do this
+Press
+Move to the next cell in the row and select its content.
+Tab key
+Move to the previous cell in the row and select its content.
+Shift+Tab
+Move to the first cell in the row.
+Alt+Home
+Move to the last cell in the row.
+Alt+End
+Move to the first cell in the column.
+Alt+Page up
+Move to the last cell in the column.
+Alt+Page down
+Move to the previous row.
+Up arrow key
+Move to the next row.
+Down arrow key
+Move one row up.
+Alt+Shift+Up arrow key
+Move one row down.
+Alt+Shift+Down arrow key
+Top of Page
+Select table content
+To do this
+Press
+Select the content in the next cell.
+Tab key
+Select the content in the previous cell.
+Shift+Tab
+Extend a selection to adjacent cells.
+Shift+Arrow keys
+Select a column.
+Select the top or bottom cell of the column, and then press Shift+ Page up or Page down arrow key
+Select a row.
+Select the first or last cell in the row, and then press Shift+Alt+End or Home.
+Select the whole table.
+Alt+5 on the numeric keypad, with Num Lock switched off
+Top of Page
+Insert paragraphs and tab characters in a table
+To do this
+Press
+Insert a new paragraph in a cell.
+Enter
+Insert a tab character in a cell.
+Ctrl+Tab
+Top of Page
+Review a document
+To do this
+Press
+Open the Review tab.
+Alt, R
+Show list of comments.
+Alt, R, P, 1, L
+Insert a comment.
+Ctrl+Alt+M
+Turn change tracking on or off.
+Ctrl+Shift+E
+Close the Reviewing Pane.
+Alt+Shift+C
+Top of Page
+Work with references, citations, and indexing
+Use the following shortcuts to add references to your document, such as a table of contents, footnotes, and citations.
+To do this
+Press
+Mark a table of contents entry.
+Alt+Shift+O
+Mark a table of authorities entry (citation).
+Alt+Shift+I
+Choose citation options.
+Alt+Shift+F12, Spacebar
+Mark an index entry.
+Alt+Shift+X
+Insert a footnote.
+Ctrl+Alt+F
+Insert an endnote.
+Ctrl+Alt+D
+Go to the next footnote.
+Alt+Shift+Right angle bracket (>)
+Go to the previous footnote.
+Alt+Shift+Left angle bracket (<)
+Top of Page
+Work with mail merge and fields
+To use the following keyboard shortcuts, the
+Mailings
+ribbon tab must be selected. To select the
+Mailings
+tab, press Alt+M.
+Perform a mail merge
+To do this
+Press
+Preview the mail merge.
+Alt+Shift+K
+Merge a document.
+Alt+Shift+N
+Print the merged document.
+Alt+Shift+M
+Edit a mail-merge data document.
+Alt+Shift+E
+Insert a merge field.
+Alt+Shift+F
+Top of Page
+Work with fields
+To do this
+Press
+Insert a DATE field.
+Alt+Shift+D
+Insert a LISTNUM field.
+Ctrl+Alt+L
+Insert a PAGE field.
+Alt+Shift+P
+Insert a TIME field.
+Alt+Shift+T
+Insert an empty field.
+Ctrl+F9
+Update the linked information in a Word source document.
+Ctrl+Shift+F7
+Update the selected fields.
+F9
+Unlink a field.
+Ctrl+Shift+F9
+Switch between a selected field code and its result.
+Shift+F9
+Switch between all field codes and their results.
+Alt+F9
+Run GOTOBUTTON or MACROBUTTON from a field displaying field results.
+Alt+Shift+F9
+Go to the next field.
+F11
+Go to the previous field.
+Shift+F11
+Lock a field.
+Ctrl+F11
+Unlock a field.
+Ctrl+Shift+F11
+Top of Page
+Work with text in other languages
+Set the proofing language
+Every document has a default language, typically the same default language as your computer's operating system. If your document also contains words or phrases in a different language, it's a good idea to set the proofing language for those words. This not only makes it possible to check spelling and grammar for those phrases, but it also enables assistive technologies like screen readers to handle them appropriately.
+To do this
+Press
+Display the
+Language
+dialog box to set the proofing language.
+Alt+R, U, L
+Set default languages.
+Alt+R, L
+Top of Page
+Insert international characters
+To type a lowercase character by using a key combination that includes the Shift key, hold down the Ctrl+Shift+symbol keys simultaneously, and then release them before you type the letter.
+Note
+If you type extensively in another language, you might prefer to switch to a different keyboard instead.
+To insert this
+Press
+à, è, ì, ò, ù,
+À, È, Ì, Ò, Ù
+Ctrl+Grave accent (`), the letter
+á, é, í, ó, ú, ý
+Á, É, Í, Ó, Ú, Ý
+Ctrl+Single quotation mark ('), the letter
+â, ê, î, ô, û
+Â, Ê, Î, Ô, Û
+Ctrl+Shift+Caret (^), the letter
+ã, ñ, õ
+Ã, Ñ, Õ
+Ctrl+Shift+Tilde (~), the letter
+ä, ë, ï, ö, ü, ÿ,
+Ä, Ë, Ï, Ö, Ü, Ÿ
+Ctrl+Shift+Colon (:), the letter
+å, Å
+Ctrl+Shift+At sign (@), a or A
+æ, Æ
+Ctrl+Shift+Ampersand (&), a or A
+œ, Œ
+Ctrl+Shift+Ampersand (&), o or O
+ç, Ç
+Ctrl+Comma (,), c or C
+ð, Ð
+Ctrl+Single quotation mark ('), d or D
+ø, Ø
+Ctrl+Forward slash (/), o or O
+¿
+Ctrl+Alt+Shift+Question mark (?)
+¡
+Ctrl+Alt+Shift+Exclamation point (!)
+ß
+Ctrl+Shift+Ampersand (&), s
+Top of Page
+Use Input Method Editors for East Asian languages
+To do this
+Press
+Switch to the Japanese Input Method Editor (IME) for a 101-key keyboard, if available.
+Alt+Back quote (`)
+Switch to the Korean Input Method Editor (IME) for a 101-key keyboard, if available.
+Right Alt
+Switch to the Chinese Input Method Editor (IME) for a 101-key keyboard, if available.
+Ctrl+Spacebar
+Top of Page
+Work with document views
+Word offers several different views of a document. Each view makes it easier to do certain tasks. For example,
+Read Mode
+enables you view the document as a horizontal sequence of pages, which you can quickly browse using the Left and Right arrow keys.
+Switch the document view
+To do this
+Press
+Switch to the
+Read Mode
+view.
+Alt+W, F
+Switch to the
+Print Layout
+view.
+Ctrl+Alt+P
+Switch to the
+Outline
+view.
+Ctrl+Alt+O
+Switch to the
+Draft
+view.
+Ctrl+Alt+N
+Top of Page
+Outline a document
+These shortcuts only apply when the document is in the
+Outline
+view.
+To do this
+Press
+Promote a paragraph.
+Alt+Shift+Left arrow key
+Demote a paragraph.
+Alt+Shift+Right arrow key
+Demote the paragraph to body text.
+Ctrl+Shift+N
+Move the selected paragraphs up.
+Alt+Shift+Up arrow key
+Move the selected paragraphs down.
+Alt+Shift+Down arrow key
+Expand the text under a heading.
+Alt+Shift+Plus sign (+)
+Collapse the text under a heading.
+Alt+Shift+Plus sign (+)
+Expand or collapse all text or headings.
+Alt+Shift+A
+Hide or display the character formatting.
+Forward slash (/) (on the numeric keypad)
+Switch between showing the first line of body text and showing all body text.
+Alt+Shift+L
+Show all headings with the
+Heading 1
+style.
+Alt+Shift+1
+Show all headings with the specified heading level.
+Alt+Shift+Heading level number
+Insert a tab character.
+Ctrl+Tab
+Top of Page
+Move through the document in Read Mode
+To do this
+Press
+Move to the beginning of the document.
+Home
+Move to the end of the document.
+End
+Go to a specific page.
+Type the page number, then press Enter
+Exit Read Mode.
+Esc
+Zoom and adjust view
+Use these shortcuts while focus is on your document to quickly adjust the zoom level.
+To do this
+Press
+Zoom in.
+Ctrl+Plus (+)
+Zoom out.
+Ctrl+Minus (-)
+Return to 100% zoom.
+Ctrl+0
+Zoom in and out.
+Ctrl+Scroll
+Top of Page
+Use function key shortcuts
+Key
+Description
+F1
+F1 alone: displays the
+Word help
+task pane.
+Shift+F1: displays or hides context-sensitive help or the
+Reveal Formatting
+task pane.
+Ctrl+F1: displays or hides the ribbon.
+Alt+F1: moves to the next field.
+Alt+Shift+F1: moves to the previous field.
+F2
+F2 alone: moves the selected text or graphic. Use the arrow keys to place the cursor where you want to move the text or graphic, and then press Enter to move, or press Esc to cancel.
+Shift+F2: copies the selected text or graphic. Use the arrow keys to place the cursor where you want to copy the text or graphic, and then press Enter to copy, or press Esc to cancel.
+Ctrl+F2: displays the print preview area on the
+Print
+tab in the Backstage view.
+Alt+Shift+F2: saves the document.
+Ctrl+Alt+F2: displays the
+Open
+dialog box.
+F3
+Shift+F3: switches the selected text between upper case, lower case, and title case.
+Ctrl+F3: cuts the selected content to the Spike. You can cut multiple texts and graphics to the Spike, and paste them as a group to another location.
+Ctrl+Shift+F3: pastes the contents of the Spike.
+Alt+F3: creates a new Building Block.
+F4
+F4 alone: repeats the last command or action, if possible.
+Shift+F4: repeats the last
+Find
+or
+Go To
+action.
+Ctrl+F4: closes the current document.
+Alt+F4: closes Word.
+F5
+F5 alone: displays the
+Go To
+dialog box.
+Shift+F5: moves the cursor to the last change.
+Ctrl+Shift+F5: displays the
+Bookmark
+dialog box.
+Alt+F5: restores the document window size.
+F6
+F6 alone: switch between the document, task pane, status bar, and ribbon. In a document that has been split, F6 includes the split panes when switching between panes and the task pane.
+Shift+F6: switches between the document, ribbon, status bar, and task pane.
+Ctrl+F6: switches to the next document window when more than one document is open.
+Ctrl+Shift+F6: switches to the previous document window when more than one document is open.
+Alt+F6: moves from an open dialog box back to the document, for dialog boxes that support this behavior.
+F7
+F7 alone: displays the
+Editor
+task pane to check spelling and grammar in the document or the selected text.
+Shift+F7: displays the
+Thesaurus
+task pane.
+Ctrl+Shift+F7: updates the linked information in a Word source document.
+Alt+F7: finds the next spelling or grammatical error.
+Alt+Shift+F7: displays the
+Translator
+task pane.
+F8
+F8 alone: extends the selection. For example, if a word is selected, the selection size is extended to one sentence.
+Shift+F8: reduces the selection. For example, if a paragraph is selected, the selection size is reduced to one sentence.
+Ctrl+Shift+F8: turns extend selection mode on and off. In the extend selection mode, the arrow keys extend the selection.
+Alt+F8: displays the
+Macro
+dialog box to create, run, edit, or delete a macro.
+F9
+F9 alone: updates the selected fields.
+Shift+F9: switches between a field code and its result.
+Ctrl+F9: inserts an empty field.
+Ctrl+Shift+F9: unlinks the current field.
+Alt+F9: switches between all field codes and their results.
+Alt+Shift+F9: runs GOTOBUTTON or MACROBUTTON from a field displaying field results.
+F10
+F10 alone: turns KeyTips on or off.
+Shift+F10: displays the shortcut menu for the selected item.
+Ctrl+F10: maximizes or restores the document window size.
+Alt+F10: displays the
+Selection
+task pane.
+Alt+Shift+F10: displays the menu or message for available actions, for example, for pasted text or an
+AutoCorrect
+change.
+F11
+F11 alone: moves to the next field.
+Shift+F11: moves to the previous field.
+Ctrl+F11: locks the current field.
+Ctrl+Shift+F11: unlocks the current field.
+Alt+F11: opens the
+Microsoft Visual Basic for Applications
+editor, in which you can create a macro using Visual Basic for Applications (VBA).
+F12
+F12 alone: displays the
+Save As
+dialog box.
+Shift+F12: saves the document.
+Ctrl+F12: displays the
+Open
+dialog box.
+Ctrl+Shift+F12: displays the
+Print
+tab in the Backstage view.
+Alt+Shift+F12: selects the
+Table of Contents
+button in the Table of Contents container when the container is active.
+Top of Page
+See also
+Word help center
+Basic tasks using a screen reader with Word
+Use a screen reader to explore and navigate Word
+Screen reader support for Word
+This article describes the keyboard shortcuts and function keys in Word for Mac.
+Note
+The settings in some versions of the Mac operating system (OS) and some utility applications might conflict with keyboard shortcuts and function key operations in Microsoft 365 for Mac. For information about changing the key assignment for a keyboard shortcut, see Mac Help for your version of macOS, your utility application, or refer to
+Shortcut conflicts
+.
+If you don't find a keyboard shortcut here that meets your needs, you can create a custom keyboard shortcut. For instructions, go to
+Create a custom keyboard shortcut for Office for Mac
+.
+Many of the shortcuts that use the Ctrl key on a Windows keyboard also work with the Control key in Word for Mac. However, not all do.
+To quickly find a shortcut in this article, you can use Search. Press Command+F, and then type your search words.
+For the best experience using your keyboard with the ribbon, enable your keyboard to access all controls.
+To open the
+System Preferences
+, press
++Spacebar, type
+system preferences
+, and press Return.
+To go to
+Keyboard Settings
+, type
+keyboard
+and press Return.
+In the
+Shortcuts
+tab, press Control+F7 to change the
+Full Keyboard Access
+setting from
+Text boxes and lists only
+to
+All Controls
+.
+In this topic
+Frequently used shortcuts
+Shortcut conflicts
+Navigate the document
+Select text and graphics
+Edit text and graphics
+Work with tables
+Drawing
+Work with fields
+Outline a document
+Review a document
+Use footnotes and endnotes
+Work with right-to-left languages
+Use function key shortcuts
+Frequently used shortcuts
+This table lists frequently used shortcuts in Word for Mac.
+To do this
+Press
+Undo the previous action.
++Z or F1
+Redo the previous action, if possible.
++Y
+Cut the selected content to the Clipboard.
++X or F2
+Copy the selected content to the Clipboard.
++C or F3
+Paste the contents of the Clipboard.
++V or F4
+Paste text only.
+Cmd+Shift+V
+Zoom in.
+Cmd
++Plus sign (+)
+Zoom out.
+Cmd
++Minus sign (-)
+Return back to 100% zoom.
+Cmd
++0
+Zoom in and out with mouse.
+Cmd
++Scroll
+Display the shortcut menu for the selected item. *
+Shift+F10
+Display the
+Go To
+dialog box.
++Option+G or F5
+Display the
+Spelling and Grammar
+dialog box.
++Option+L or F7
+Enable extended selection mode.
+F8
+Switch to the next window.
++Grave accent ( ` )
+Switch to the previous window.
++Shift+Grave accent (`)
+Display the
+Save As
+dialog box.
++Shift+S
+Find text (move focus to the
+Search in Document
+box).
++F
+Display the
+Find and Replace
+pane.
+Control+H
+Display the
+Print
+dialog box.
++P
+Close the current document.
++F4
+Expand or minimize the ribbon.
++Option+R
+Find the next spelling or grammatical error. The
+Check spelling as you type
+feature must be enabled.
+Option+F7
+Open the Dictionary.
+Option+Shift+F7
+Top of Page
+Shortcut conflicts
+Some Word for Mac keyboard shortcuts conflict with default macOS keyboard shortcuts. This topic flags such shortcuts with an asterisk ( * ). To use these shortcuts, you may have to change your Mac keyboard settings to change the shortcut for the key.
+Change system preferences for keyboard shortcuts
+From the
+Apple
+menu, select
+System Preferences
+.
+Select
+Keyboard
+.
+Select the
+Shortcuts
+tab.
+Select
+Mission Control
+.
+Clear the check box for the keyboard shortcut conflicting with the Word for Mac shortcut that you want to use.
+Navigate the document
+To do this
+Press
+Move the cursor one word to the left.
+Option+Left arrow key
+Move the cursor one word to the right.
+Option+Right arrow key
+Move the cursor up by one paragraph.
++Up arrow key
+Move the cursor down by one paragraph.
++Down arrow key
+Move the cursor to the beginning of the current line.
++Left arrow
+Home
+Move the cursor to the end of the current line.
++Right arrow key
+End
+Move the cursor to the top of the previous page.
++Page up
+On a MacBook, press
++Fn+Up arrow key
+Move the cursor to the top of the next page.
++Page down
+On a MacBook, press
++Fn+Down arrow key
+Move the cursor to the beginning of the document.
++Home
+On a MacBook, press
++Fn+Left arrow key
+Move the cursor to the end of the document.
++End
+On a MacBook, press
++Fn+Right arrow key
+Move the cursor to the previous insertion point.
+Shift+F5
+Move the cursor by scrolling the document view up by one screen.
+Page up
+Move the cursor by scrolling the document view down by one screen.
+Page down
+Top of Page
+Select text and graphics
+Tip
+If you know the key combination to move the cursor, you can generally select the text by using the same key combination while holding down Shift. For example,
++Right arrow moves the cursor to the next word, and
++Shift+Right arrow selects the text from the cursor to the beginning of the next word.
+To do this
+Press
+Select multiple items that are not next to each other.
+Select the first item that you want, hold down
+, and then mouse click the additional items.
+Select text.
+Shift+Arrow keys
+Select the word to the left.
+Shift+Option+Left arrow key
+Select the word to the right.
+Shift+Option+Right arrow key
+Select from the current position to the beginning of the current line.
+Cmd
++Shift+Left arrow key
+Shift+Home
+Select from the current position to the end of the current line.
+Cmd
++Shift+Right arrow key
+Shift+End
+Select from the current position to the beginning of the current paragraph.
+Cmd
++Shift+Up arrow key
+Select from the current position to the end of the current paragraph.
+Cmd
++Shift+Down arrow key
+Select from the current position to the top of the screen.
+Shift+Page up
+Select from the current position to the bottom of the screen.
+Shift+Page down
+Select from the current position to the beginning of the document.
+Cmd
++Shift+Home
+Select from the current position to the end of the document.
+Cmd
++Shift+End
+Select from the current position to the bottom of the window.
+Cmd
++Shift+Option+Page down
+Select all document content.
+Cmd
++A
+Top of Page
+Extend a selection
+To do this
+Press
+Start extending the selection. *
+F8
+In the extend selection mode, clicking a location in the document extends the current selection to that location.
+Select the nearest character to the left.
+F8, Left arrow key
+Select the nearest character to the right.
+F8, Right arrow key
+Expand the selection.
+F8 repeatedly to expand the selection to the entire word, sentence, paragraph, section, and document.
+Reduce the selection. *
+Shift+F8
+Select a vertical block of text.
+Cmd
++Shift+F8, then press the arrow keys
+Stop extending the selection.
+Esc
+Top of Page
+Edit text and graphics
+To do this
+Press
+Cut the selected content to the Clipboard.
+Cmd
++X
+F2
+Copy the selected content to the Clipboard.
+Cmd
++C
+F3
+Paste the contents of the Clipboard.
+Cmd
++V
+F4
+Display the
+Paste Special
+dialog box.
+Cmd
++Control+V
+Cut the selected content to the Spike.
+Cmd
++F3
+Paste the contents of the Spike.
+Cmd
++Shift+F3
+Copy the selected text formatting.
+Cmd
++Option+C
+Paste the selected text formatting.
+Cmd
++Option+V
+Paste text only.
+Cmd
++Shift+V
+Create an AutoText entry.
+Option+F3
+Top of Page
+Align and format paragraphs
+To do this
+Press
+Center the paragraph.
++E
+Justify the paragraph.
++J
+Align the paragraph to the left.
++L
+Align the paragraph to the right.
++R
+Indent the paragraph.
+Control+Shift+M
+Remove a paragraph indent.
++Shift+M
+Create a hanging indent.
++T
+Remove a hanging indent.
++Shift+T
+Apply single-spacing to the paragraph.
++1
+Apply double-spacing to the paragraph.
++2
+Apply 1.5-line spacing to the paragraph.
++5
+Enable AutoFormat.
++Option+K
+Apply the
+Normal
+style.
++Shift+N
+Apply the
+Heading 1
+style.
++Option+1
+Apply the
+Heading 2
+style.
++Option+2
+Apply the
+Heading 3
+style.
++Option+3
+Apply the
+List
+style.
++Shift+L, when the cursor is at the beginning of a line
+Insert a nonbreaking space.
+Option+Spacebar
+Top of Page
+Format characters
+To do this
+Press
+Increase the font size.
++Shift+Right angle bracket (>)
+Decrease the font size.
++Shift+Left angle bracket (<)
+Increase the font size by 1 point.
++Right bracket (])
+Decrease the font size by 1 point.
++Left bracket ([)
+Display the
+Font
+dialog box.
++D
+Switch the text between upper case, lower case, and title case.
+Shift+F3
+Change the text to all upper case.
++Shift+A
+Apply bold formatting.
++B
+Add a bulleted list.
++Shift+L
+Apply underline formatting.
++U
+Apply underline formatting to the words, but not the spaces.
++Shift+W
+Apply double-underline formatting.
++Shift+D
+Apply italics formatting.
++I
+Apply small caps formatting.
++Shift+K
+Apply strike-through formatting.
++Shift+X
+Apply subscript formatting.
+Cmd
++Shift+Minus sign (-)
+Top of Page
+Insert special characters
+To do this
+Press
+Insert an empty field.
++F9
+Insert a line break.
+Shift+Return
+Insert a page break.
++Return
+Insert a column break.
++Shift+Return
+Insert an optional hyphen.
+Cmd
++Option+Minus sign(-)
+Insert a nonbreaking hyphen.
+Shift+Option+Minus sign(-)
+Insert a copyright symbol (©).
+Press (, C, )
+Insert a registered trademark symbol (®).
+Option+R
+Insert a trademark symbol (™).
+Option+2
+Top of Page
+Work with tables
+Move around in a table
+To do this
+Press
+Move to the next cell and select its content.
+Tab key
+Move to the previous cell and select its content.
+Shift+Tab
+Move to the next row.
+Down arrow key
+Move to the previous row.
+Up arrow key
+Move to the first cell in the row.
+Control+Home
+Move to the last cell in the row.
+Control+End
+Move to the first cell in the column.
+Control+Page up
+Move to the last cell in the column.
+Control+Page down
+Add a new row to the bottom of the table.
+Tab key, at the end of the last row
+Insert a row.
++Control+I
+Top of Page
+Select table content
+To do this
+Press
+Select the content in the next cell.
+Tab key
+Select the content in the previous cell.
+Shift+Tab
+Extend a selection to adjacent cells.
+Shift+Arrow keys
+Select a row.
+Select the first or last cell in the row, and then press Shift+Alt+End or Home.
+Top of Page
+Resize table columns with the ruler
+To do this
+Press
+Retain the column sizes to the right and change the table width.
+Drag the column boundary in the ruler
+Move a single column line and retain the table width.
+Shift+Drag the column boundary in the ruler
+Equally resize all columns to the right and retain the table width.
++Shift+Drag the column boundary in the ruler
+Proportionally resize all columns to the right and retain the table width.
++Drag the column boundary in the ruler
+Top of Page
+Resize table columns directly in a table
+Tip
+To finely adjust the column width and display the column's measurements in the ruler when you resize the column, turn off the snap-to functionality by pressing Option with the shortcut keys.
+To do this
+Press
+Move a single column line and retain the table width.
+Drag the column boundary
+Retain column sizes to the right and change the table width.
+Shift+Drag the column boundary
+Equally resize all columns to the right and retain the table width.
++Shift+Drag the column boundary
+Proportionally resize all columns to the right and retain the table width.
++Drag the column boundary
+Top of Page
+Insert paragraphs and tab characters in a table
+To do this
+Press
+Insert a new paragraph in a cell.
+Return
+Insert a Tab character in a cell.
+Option+Tab
+Top of Page
+Drawing
+To do this
+Press
+Toggle drawing mode.
++Control+Z
+Top of Page
+Work with fields
+To do this
+Press
+Insert a DATE field.
+Control+Shift+D
+Insert a LISTNUM field.
++Option+Shift+L
+Insert a PAGE field.
+Control+Shift+P
+Insert a TIME field.
+Control+Shift+T
+Insert an empty field.
++F9
+Update the selected fields. *
+F9
+Switch between a field code and its result. *
+Shift+F9
+Switch between all field codes and their results.
+Option+F9
+Run GOTOBUTTON or MACROBUTTON from a field displaying field results.
+Option+Shift+F9
+Lock a field.
++F11
+Unlock a field.
++Shift+F11
+Top of Page
+Outline a document
+These shortcuts only apply when the document is in the
+Outline
+view.
+To do this
+Press
+Promote a paragraph.
+Control+Shift+Left arrow key
+Demote a paragraph.
+Control+Shift+Right arrow key
+Demote the paragraph to body text.
++Shift+N
+Move the selected paragraphs up. *
+Control+Shift+Up arrow key
+Move the selected paragraphs down. *
+Control+Shift+Down arrow key
+Expand the text under a heading.
+Control+Shift+Plus sign (+)
+Collapse text under a heading. *
+Control+Shift+Minus sign (-)
+Expand all body text and headings, or collapse all body text.
+Control+Shift+A
+Switch between showing the first line of body text and showing all body text.
+Control+Shift+L
+Show all headings with the specified heading level.
+Control+Shift+Heading level number
+Top of Page
+Review a document
+To do this
+Press
+Insert a comment.
++Option+A
+Turn change tracking on or off.
++Shift+E
+Move to the beginning of a comment.
+Home
+Move to the end of a comment.
+End
+(The End key is not available on all keyboards.)
+Move to the beginning of the list of comments.
++Home, in the
+Reviewing Pane
+.
+Move to the end of the list of comments.
++End, in the
+Reviewing Pane
+.
+Top of Page
+Use footnotes and endnotes
+To do this
+Press
+Insert a footnote.
++Option+F
+Insert an endnote.
++Option+E
+Top of Page
+Work with right-to-left languages
+Word supports right-to-left functionality for languages that work in a right-to-left or a combined right-to-left, left-to-right environment for writing, editing, and displaying text. In this context,
+right-to-left languages
+refers to any writing system that is written from right to left and includes languages that require contextual shaping, such as Arabic, and languages that do not.
+Before you can use these keyboard shortcuts, you need to ensure keyboard shortcuts are enabled for the language you are using:
+Go to
+Apple
+>
+System Preferences
+>
+Keyboard
+.
+On the
+Input Sources
+tab, select the language for which you want to enable shortcuts.
+On the right side of the tab, select the check box for
+Enable keyboard shortcuts
+.
+To do this
+Press
+Switch the writing direction to right-to-left.
+Control+
++ Left arrow key
+Switch the writing direction to left-to-right.
+Control+
++ Right arrow key
+Top of Page
+Zoom and adjust view
+Use these shortcuts while focus is on your document to quickly adjust the zoom level.
+To do this
+Press
+Zoom in.
+Cmd+Plus (+)
+Zoom out.
+Cmd+Minus (-)
+Return to 100% zoom.
+Cmd+0
+Zoom in and out.
+Cmd+Scroll
+Top of Page
+Use function key shortcuts
+Word for Mac uses the function keys for common commands, including Copy and Paste. For quick access to these shortcuts, you can change your Apple system preferences so you don't have to press the Fn key every time you use a function key shortcut.
+Note
+Changing system function key preferences affects how the function keys work on your Mac, not just in Word. After changing this setting, you can still perform the special features printed on a function key. Just press the Fn key. For example, to use the F12 key to change your volume, press Fn+F12.
+If a function key doesn't work as you expect it to, press the Fn key in addition to the function key. If you don't want to press the Fn key each time, you can change your Apple system preferences. For instructions, go to
+Change function key preferences
+.
+The following table provides the function key shortcuts for Word for Mac.
+Key
+Description
+F1
+F1 alone: undoes the previous action.
+F2
+F2 alone: cuts the selected content to the Clipboard.
+Shift+F2: copies the selected text or graphic. Use the arrow keys to place the cursor where you want to copy the text or graphic, and then press Return to copy, or press Esc to cancel.
+F3
+F3 alone: copies the selected content to the Clipboard.
+Shift+F3: switches the selected text between upper case, lower case, and title case.
++F3: cuts the selected content to the Spike. You can cut multiple texts and graphics to the Spike, and paste them as a group to another location.
++Shift+F3: pastes the contents of the Spike.
+Option+F3: creates an AutoText entry.
+F4
+F4 alone: pastes the content from the Clipboard.
+Shift+F4: repeats the last
+Find
+or
+Go To
+action.
+Shift+F4: repeats the last
+Find
+or
+Go To
+action.
+F5
+F5 alone: displays the
+Go To
+dialog box.
+Shift+F5: moves the cursor to the last change.
++Shift+F5: displays the
+Bookmark
+dialog.
+F6
+F6 alone: switch between the document, task pane, status bar, and ribbon. In a document that has been split, F6 includes the split panes when switching between panes and the task pane.
+Shift+F6: switches between the document, ribbon, status bar, and task pane.
++F6: switches to the next document window when more than one document is open.
++Shift+F6: switches to the previous document window when more than one document is open.
+F7
+F7 alone: displays the
+Spelling and Grammar
+dialog box.
+Shift+F7: displays the
+Thesaurus
+task pane.
++Shift+F7: updates the linked information in a Word source document.
+Option+F7: finds the next spelling or grammatical error.
+Option+Shift+F7: opens the
+Dictionary
+.
+F8
+F8 alone *: extends the selection. For example, if a word is selected, the selection size is extended to one sentence.
+Shift+F8 *: reduces the selection. For example, if a paragraph is selected, the selection size is reduced to one sentence.
++Shift+F8: turns extend selection mode on and off. In the extend selection mode, the arrow keys extend the selection.
+Option+F8: displays the
+Macro
+dialog box to create, run, edit, or delete a macro.
+F9
+F9 alone *: updates the selected fields.
+Shift+F9 *: switches between a field code and its result.
++F9: inserts an empty field.
++Shift+F9: unlinks the current field.
+Option+F9: switches between all field codes and their results.
+Option+Shift+F9: runs GOTOBUTTON or MACROBUTTON from a field displaying field results.
+F10
+Shift+F10 *: displays the shortcut menu for the selected item.
+F11
+F11 alone *: moves to the next field.
+Shift+F11 *: moves to the previous field.
++F11: locks the current field.
++Shift+F11: unlocks the current field.
+Option+F11: opens the
+Microsoft Visual Basic for Applications
+editor, in which you can create a macro using Visual Basic for Applications (VBA).
+Top of Page
+Change function key preferences
+In the
+Apple
+menu, select
+System Preferences
+.
+Select
+Keyboard
+.
+On the
+Keyboard
+tab, select the check box for
+Use all F1, F2, etc. keys as standard function keys
+.
+See also
+Word help center
+Basic tasks using a screen reader with Word
+Use a screen reader to explore and navigate Word
+Screen reader support for Word
+This article describes the keyboard shortcuts in Word for iOS.
+Note
+If you're familiar with keyboard shortcuts on your macOS computer, the same key combinations work with Word for iOS using an external keyboard, too.
+To quickly find a shortcut in this article, you can use Search. Press
++F, and then type your search words.
+In this topic
+Frequently used shortcuts
+Navigate the document
+Edit and format the document
+Frequently used shortcuts
+To do this
+Press
+Save the document.
++S
+Print the document.
++P
+Close the document.
++W
+Top of Page
+Navigate the document
+To do this
+Press
+Find text.
++F
+Find the next occurrence of text.
++G
+Find the previous occurrence of text.
+Shift+
++G
+Select all document content.
++A
+Top of Page
+Edit and format the document
+To do this
+Press
+To accept a text prediction.
+Right arrow key
+Undo the previous action.
++Z
+Redo the previous action, if possible.
++Y
+Cut the selected content to the clipboard.
++X
+Copy the selected content to the clipboard.
++C
+Paste the content from the clipboard.
++V
+Apply bold formatting to the selected text.
++B
+Apply Italic formatting to the selected text.
++I
+Underline the selected text.
++U
+Underline the selected words, but not the spaces.
++Shift+W
+Change the selected text to use the Normal style.
+Alt+
++N
+Change the selected text into a hyperlink.
++K
+Change the selected text to small caps.
+Shift+
++K
+Change the selected text to all caps.
+Shift+
++A
+Center the selected paragraph.
++E
+Justify the selected paragraph.
++J
+Align the selected paragraph to the left.
++L
+Align the selected paragraph to the right.
++R
+Indent the selected paragraph.
+Control+Shift+M
+Remove indent from the selected paragraph.
+Shift+
++M
+Apply hanging indent to the selected paragraph.
++T
+Apply the formatting of previously copied text to the currently selected text.
+Shift+
++V
+Add a comment to the selected text or shape.
+Alt+
++A
+Find and replace text.
+Control+H
+Toggle revision marks on or off in the document.
+Shift+
++E
+Top of Page
+See also
+Word help & learning
+Basic tasks using a screen reader with Word
+Use a screen reader to explore and navigate Word
+Screen reader support for Word
+This article describes the keyboard shortcuts in Word for Android.
+Note
+To quickly find a shortcut in this article, you can use Search. Press Ctrl+F, and then type your search words.
+In this topic
+Navigate the document
+Edit and format the document
+Navigate the document
+To do this
+Press
+Find text.
+Ctrl+F
+Move the cursor up by one paragraph.
+Alt+Up arrow key
+Move the cursor down by one paragraph.
+Alt+Down arrow key
+Move the cursor left by one word.
+Alt+Left arrow key
+Move the cursor right by one word.
+Alt+Right arrow key
+Move the cursor to the beginning of the current line.
+Ctrl+Left arrow key
+Move the cursor to the end of the current line.
+Ctrl+Right arrow key
+Select text.
+Shift+Arrow keys
+Select the paragraph above.
+Shift+Alt+Up arrow key
+Select the paragraph below.
+Shift+Alt+Down arrow key
+Select the word to the left.
+Shift+Alt+Left arrow key
+Select the word to the right.
+Shift+Alt+Right arrow key
+Select from the current position to the beginning of the line.
+Shift+Ctrl+Left arrow key
+Select from the current position to the end of the line.
+Shift+Ctrl+Right arrow key
+Select all document content.
+Ctrl+A
+Top of Page
+Edit and format the document
+To do this
+Press
+Undo the previous action.
+Ctrl+Z
+Redo the previous action, if possible.
+Ctrl+Y
+Cut the selected content to the clipboard.
+Ctrl+X
+Copy the selected content to the clipboard.
+Ctrl+C
+Paste the content from the clipboard.
+Ctrl+V
+Apply bold formatting to the selected text.
+Ctrl+B
+Apply italic formatting to the selected text.
+Ctrl+I
+Underline the selected text.
+Ctrl+U
+Insert a line break.
+Shift+Enter
+Top of Page
+See also
+Word help & learning
+Basic tasks using a screen reader with Word
+Use a screen reader to explore and navigate Word
+Screen reader support for Word
+This article describes the keyboard shortcuts in Word for the web.
+Note
+If you use Narrator with the Windows 10 Fall Creators Update, you have to turn off scan mode in order to edit documents, spreadsheets, or presentations with Microsoft 365 for the web. For more information, refer to
+Turn off virtual or browse mode in screen readers in Windows 10 Fall Creators Update
+.
+To quickly find a shortcut in this article, you can use Search. Press Ctrl+F and then type your search words.
+When you use Word for the web, we recommend that you use Microsoft Edge as your web browser. Because Word for the web runs in your web browser, the keyboard shortcuts are different from those in the desktop program. For example, you'll use Ctrl+F6 instead of F6 for jumping in and out of the commands. Also, common shortcuts like F1 (Help) and Ctrl+O (Open) apply to the web browser – not Word for the web.
+In this topic
+Frequently used shortcuts
+Ribbon keyboard shortcuts
+Navigate the document
+Edit and format the document
+Work with comments
+Frequently used shortcuts
+This table lists the most frequently used shortcuts in Word for the web.
+Tip
+To quickly create a new document in Word for the web, open your browser, type
+Word.new
+in the address bar, and then press Enter.
+To do this
+Press
+In the Reading view, open a PDF-based view tagged to work with screen readers.
+Press the Tab key until you reach the
+Accessibility Mode
+button, and then press Enter
+Find text in the Reading view.
+Ctrl+F or F3
+Find text in the Editing view.
+Ctrl+F or Ctrl+G
+Find and replace text in the Editing view.
+Ctrl+H
+Hide the task pane, if one is open.
+Esc
+Switch to the
+Zoom
+control.
+Alt+Period, W, then Q or Alt+Windows logo key, W, then Q
+Print the document.
+Ctrl+P
+Move to the next landmark region.
+Ctrl+F6
+Go to the
+Tell Me
+or
+Search
+text field.
+Alt+Q
+Top of Page
+Ribbon keyboard shortcuts
+Word for the web offers shortcuts called access keys to navigate the ribbon. If you've used access keys to save time on Word for desktop computers, you'll find access keys very similar in Word for the web.
+On a Windows computer, access keys all start with Alt+Period (.) or Alt+Windows logo key, then add a letter for the ribbon tab. For example, to go to the
+Review
+tab, press Alt+Period, R or Alt+Windows logo key, R.
+If you're using Word for the web on a Mac computer, press Control+Period (.) to start.
+To get to the ribbon, press Alt+Period or Alt+Windows logo key. You can alternatively press Ctrl+F6 until you reach the
+Home
+tab.
+To move between tabs on the ribbon, press the Tab key.
+To hide the ribbon so you have more room to work, press Ctrl+F3. Repeat to display the ribbon again.
+Go to the access keys for the ribbon
+To go directly to a tab on the ribbon, press one of the following access keys:
+To do this
+Press
+Open the
+Tell Me
+or
+Search
+text field on the ribbon to type a search term.
+Alt+Period, Q or Alt+Windows logo key, Q
+Open the
+File
+tab to use the Backstage view.
+Alt+Period, F or Alt+Windows logo key, F
+Open the
+Home
+tab to format text and use the
+Find
+tool.
+Alt+Period, H or Alt+Windows logo key, H
+Open the
+Insert
+tab to insert a picture, link, comment, header or footer, or a page number. You can also access the
+Symbol
+gallery.
+Alt+Period, N or Alt+Windows logo key, N
+Open the
+Page Layout
+tab to set page margins, orientation, and size, and paragraph spacing.
+Alt+Period, A or Alt+Windows logo key, A
+Open the
+References
+tab to insert a table of contents, footnotes, or endnotes.
+Alt+Period, S or Alt+Windows logo key, S
+Open the
+Review
+tab to check spelling, add comments, or track and review changes to your document.
+Alt+Period, R or Alt+Windows logo key, R
+Open the
+View
+tab to choose a view, open the
+Navigation
+pane, edit the
+Header & Footer
+, and to
+Zoom
+the document view.
+Alt+Period, W or Alt+Windows logo key, W
+Top of Page
+Use Search
+To find an option or perform an action quickly, use the
+Search
+text field. To learn more about the Search feature, go to
+Find what you need with Microsoft Search
+.
+Note
+Depending on the version of Microsoft 365 you are using, the
+Search
+text field at the top of the app window might be called
+Tell Me
+instead. Both offer a largely similar experience, but some options and search results can vary.
+Select the item or place in your document, presentation, or spreadsheet where you want to perform an action.
+To go to the
+Search
+text field, press Alt+Q.
+Type the search words for the action that you want to perform. For example, if you want to add a bulleted list, type
+bullets
+.
+Press the Down arrow key to browse through the search results.
+Once you've found the result that you want, press Enter to select it and to perform the action.
+Work in the ribbon tabs and menus
+The following shortcuts can save time when you work with the ribbon tabs and ribbon menus.
+To do this
+Press
+Select the active tab on the ribbon, and activate the access keys.
+Alt+Period or Alt+Windows logo key. To move to a different tab, use an access key or the Tab key.
+When a Ribbon tab is selected, move the focus to the tab commands.
+Enter, then Tab key or Shift+Tab
+Activate a selected button.
+Spacebar or Enter
+Open the list for a selected command.
+Spacebar or Enter
+Open the menu for a selected button.
+Alt+Down arrow key
+When a menu or submenu is open, move to the next command.
+Down arrow key
+Collapse or expand the ribbon.
+Ctrl+F3
+Top of Page
+Navigate the document
+To do this
+Press
+Move the cursor right by one word.
+Ctrl+Right arrow key
+Move the cursor left by one word.
+Ctrl+Left arrow key
+Move the cursor up by one paragraph.
+Ctrl+Up arrow key
+Move the cursor down by one paragraph.
+Ctrl+Down arrow key
+Move the cursor to the beginning of the current line.
+Home
+Move the cursor to the end of the current line.
+End
+Move the cursor to the beginning of the document.
+Ctrl+Home
+Move the cursor to the end of the document.
+Ctrl+End
+Select text.
+Shift+Arrow keys
+Select the word to the right.
+Shift+Ctrl+Right arrow key
+Select the word to the left.
+Shift+Ctrl+Left arrow key
+Select the paragraph above.
+Shift+Ctrl+Up arrow key
+Select the paragraph below.
+Shift+Ctrl+Down arrow key
+Select from the current position to the beginning of the line.
+Shift+Home
+Select from the current position to the end of the line.
+Shift+End
+Select from the current position to the beginning of the document.
+Shift+Ctrl+Home
+Select from the current position to the end of the document.
+Shift+Ctrl+End
+Select all document content.
+Ctrl+A
+Top of Page
+Edit and format the document
+To do this
+Press
+Cut the selected content to the Clipboard.
+Ctrl+X
+Copy the selected content to the Clipboard.
+Ctrl+C
+Paste the content from the Clipboard.
+Ctrl+V
+Undo the previous action.
+Ctrl+Z
+Redo the previous action.
+Ctrl+Y
+Shrink the font size.
+Ctrl+Left bracket ([)
+Grow the font size.
+Ctrl+Right bracket (])
+Apply bold formatting to the selected text.
+Ctrl+B
+Apply italic formatting to the selected text.
+Ctrl+I
+Underline the selected text.
+Ctrl+U
+Align the paragraph to the left.
+Ctrl+L
+Align the paragraph to the right.
+Ctrl+R
+Center the paragraph.
+Ctrl+E
+Justify the paragraph.
+Ctrl+J
+Create a bulleted list.
+Ctrl+Period (.)
+Create a numbered list.
+Ctrl+Slash (/)
+Top of Page
+Work with comments
+The following keyboard shortcuts only work when the
+Comments
+pane is open and selected (or "in focus" if you're using a screen reader).
+To do this
+Press
+Show or hide the
+Comments
+pane.
+Alt+Period, R, K or Alt+Windows logo key, R, K
+Add a new comment.
+Ctrl+Alt+M
+Go to the next comment thread, or the next reply in an expanded comment thread.
+Down arrow key
+Go to the previous comment thread.
+Up arrow key
+Expand the current comment thread.
+Right arrow key
+Collapse the current comment thread.
+Left arrow key
+Move to the reply box, when focus is on a comment.
+Tab key, Tab key, Enter
+Edit a comment or reply, when focus is on the comment or reply.
+Tab key, Enter
+Post a comment/reply or save an edit.
+Ctrl+Enter
+Discard a draft comment/reply or edit.
+Esc
+Top of Page
+See also
+Word help center
+Basic tasks using a screen reader with Word
+Use a screen reader to explore and navigate Word
+Screen reader support for Word
+Get started for free with
+Word for the Web
+.
+Technical support for customers with disabilities
+Microsoft wants to provide the best possible experience for all our customers. If you have a disability or questions related to accessibility, please contact the
+Microsoft Disability Answer Desk
+for technical assistance. The Disability Answer Desk support team is trained in using many popular assistive technologies and can offer assistance in English, Spanish, French, and American Sign Language. Please go to the Microsoft Disability Answer Desk site to find out the contact details for your region.
+If you are a government, commercial, or enterprise user, please contact
+the enterprise Disability Answer Desk
+.
+Was this information helpful?
+Yes
+No
+Thank you! Any more feedback for Microsoft?
+Can you help us improve?
+(Send feedback to Microsoft so we can help.)
+What affected your experience?
+Resolved my issue
+Clear instructions
+Easy to follow
+No jargon
+Pictures helped
+Other
+Didn't match my screen
+Incorrect instructions
+Too technical
+Not enough information
+Not enough pictures
+Other
+Any additional feedback? (Optional)
+Submit feedback
+By pressing submit, your feedback will be used to improve Microsoft products and services.
+Your IT admin will be able to collect this data.
+Privacy Statement.
+Thank you for your feedback!
+×
+What's new
+Surface Pro
+Surface Laptop
+Surface Laptop Ultra
+Surface RTX Spark Dev Box
+Copilot for organizations
+Copilot for personal use
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Microsoft Store Promise
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft 365 Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Your Privacy Choices Opt-Out Icon
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Manage cookies
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    if(window.onGPCLoaded) {
+        window.onGPCLoaded();
+    }
+    
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            return cookieValue != 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+(function () {
+		function getCookie(name) {
+			var cookies = document.cookie.split('; ');
+			for (var i = 0; i < cookies.length; i++) {
+				var kvp = cookies[i].split('=');
+				if (kvp[0] === name) {
+					return decodeURIComponent(kvp[1]);
+				}
+			}
+			return null;
+		}
+
+		if (typeof window.oneDS === 'object') {
+			window.analytics = new window.oneDS.ApplicationInsights();
+			var config = {
+				instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432",
+				disableCookiesUsage: true,
+				cookieCfg: {
+					ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"]
+				},
+				channelConfiguration: {
+					eventsLimitInMem: 50
+				},
+				propertyConfiguration: {
+					gpcDataSharingOptIn: false,
+					callback: {
+						userConsentDetails: () => {
+							const consentDetails = {
+								Required: true,
+								Analytics: false,
+								Advertising: false,
+								SocialMedia: false
+							};
+
+							return consentDetails;
+						}
+					}
+				},
+				webAnalyticsConfiguration: {
+					autoCapture: {
+						pageView: true,
+						onLoad: true,
+						onUnload: true,
+						click: true,
+						scroll: true,
+						resize: true,
+						lineage: false,
+						jsError: true,
+						msTags: true
+					},
+					autoPopulateParentIdAndParentName: true,
+					isLoggedIn: false,
+					urlCollectHash: true,
+urlCollectQuery: true,
+					useDefaultContentName: true,
+					useShortNameForContentBlob: false
+				}
+			};
+
+			var isFirstTime = true;
+			var jsLocalId = null;
+
+
+			//Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser
+			window.analytics.addTelemetryInitializer(function (e) {
+				if (isFirstTime) {
+					var context = window.analytics.getPropertyManager().getPropertiesContext();
+					var ext = e.ext = e.ext || {};
+
+					if (jsLocalId) {
+						// Set the localId so it's set automatically for all future events
+						context.user.setLocalId(jsLocalId);
+
+						var userExt = ext.user = ext.user || {};
+						userExt.localId = jsLocalId;
+					}
+
+					isFirstTime = false;
+				}
+			});
+			window.analytics.initialize(config, []);
+		}
+	})();
+$(function () {
+		var signInUrl = "/en-us/authentication/signin";
+		var signOutUrl = "/en-us/authentication/signout";
+		var switchAccountUrl = "/en-us/authentication/switchaccount";
+		var shellOptions = {
+			meControlOptions: {
+				apiGeneration: 'GEN2',
+				authProviderConfig: {
+					type: 'webAadWithMsaProxy',
+					appSignInUrl: signInUrl,
+					appSignInToUrl: signInUrl,
+					appSignOutUrl: signOutUrl,
+					appSwitchUrl: switchAccountUrl,
+					appSwitchToUrl: switchAccountUrl,
+					aad: {
+						signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False',
+						signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True',
+						forgetUrl: 'https://login.microsoftonline.com:443/forgetuser',
+						rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc',
+					},
+				},
+			}
+		};
+
+		if (window.msCommonShell) {
+			window.msCommonShell.load(shellOptions);
+		}
+		else {
+			window.onShellReadyToLoad = function () {
+				window.onShellReadyToLoad = null;
+				window.msCommonShell.load(shellOptions);
+			};
+		}
+	});
+$(async function () {
+		await window.manageSilentSignIn.handleAllSilentSignIn();
+	})
+if (window.UcsCreative === undefined) {
+			window.UcsCreative = {};
+		}
+window.silentSigninProgress = true;
+
+		var silentSigninStartLog = {
+			actionType: 'A',
+			content: {
+				contentId: 'silentSignInStarted'
+			}
+		};
+		window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) {
+				occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"});
+			}

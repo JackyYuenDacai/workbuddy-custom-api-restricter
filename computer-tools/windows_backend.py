@@ -10,6 +10,7 @@ import time
 import subprocess
 from pathlib import Path
 from apps import BROWSERS, find_app, launch_argv, validate_url
+from keyboard import parse_request
 
 if sys.platform != "win32":
     raise SystemExit("Windows interactive desktop required")
@@ -82,10 +83,6 @@ user.AttachThreadInput.argtypes = [W.DWORD, W.DWORD, W.BOOL]
 kernel.GetCurrentThreadId.restype = W.DWORD
 
 BLOCKED = {"cmd.exe", "powershell.exe", "pwsh.exe", "windowsterminal.exe", "openconsole.exe", "conhost.exe", "bash.exe", "wsl.exe", "mintty.exe", "wezterm-gui.exe"}
-KEYS = {"ENTER":13, "TAB":9, "ESC":27, "BACKSPACE":8, "DELETE":46, "UP":38, "DOWN":40, "LEFT":37, "RIGHT":39,
-        "HOME":36, "END":35, "PAGEUP":33, "PAGEDOWN":34, "CTRL":17, "SHIFT":16, "A":65, "F":70, "L":76, "S":83, "Z":90, "Y":89}
-ALLOWED_KEYS = {"ENTER", "TAB", "ESC", "BACKSPACE", "DELETE", "UP", "DOWN", "LEFT", "RIGHT", "HOME", "END", "PAGEUP", "PAGEDOWN",
-                "CTRL+A", "CTRL+F", "CTRL+L", "CTRL+S", "CTRL+Z", "CTRL+Y", "SHIFT+TAB"}
 
 def window_info(window_id):
     hwnd = int(window_id)
@@ -241,7 +238,7 @@ def focused_control(window_id):
         pass
     return {'available': False, 'note': 'Focused control unavailable through UI Automation.'}
 
-def ensure_keyboard_target(request, info):
+def ensure_keyboard_target(request, info, check_snapshot_focus=True):
     current = focused_control(info['window_id'])
     expected = request.get('expected_focus') or {}
     if current.get('available'):
@@ -249,10 +246,10 @@ def ensure_keyboard_target(request, info):
             raise ValueError('Keyboard focus is outside the target. Observe again.')
         if current.get('is_password') or current.get('terminal'):
             raise ValueError('Password, terminal or developer-console control is focused. No keyboard input sent.')
-    if expected.get('available'):
+    if check_snapshot_focus and expected.get('available'):
         if not current.get('available') or any(current.get(k) != expected.get(k) for k in ('runtime_id', 'process_id', 'control_type')):
             raise ValueError('Focused control changed since the screenshot. Observe again before typing or pressing keys.')
-    elif info.get('process', '').lower() in {'code.exe', 'code - insiders.exe', 'vscodium.exe'}:
+    elif (not current.get('available') or (check_snapshot_focus and not expected.get('available'))) and info.get('process', '').lower() in {'code.exe', 'code - insiders.exe', 'vscodium.exe'}:
         raise ValueError('Editor keyboard target was not identified in the screenshot. Observe again; do not guess between chat and terminal.')
     # UI Automation may take time. Check the foreground again immediately before input.
     ensure_target(request, mutation=True)
@@ -503,14 +500,31 @@ def dispatch(request):
                 keys += [key_input(scan=code, flags=4), key_input(scan=code, flags=6)]
             send_inputs(keys)
     elif action == "key":
-        name = request["key"]
-        if name not in ALLOWED_KEYS:
-            raise ValueError("Unsupported shortcut.")
-        if name == "CTRL+L" and info["process"].lower() not in BROWSERS:
-            raise ValueError("Ctrl+L is restricted to supported browser windows.")
-        ensure_keyboard_target(request, info)
-        codes = [KEYS[part] for part in name.split("+")]
-        send_inputs([key_input(vk=code) for code in codes] + [key_input(vk=code, flags=2) for code in reversed(codes)])
+        strokes = parse_request(request)  # Validate every stroke before any input.
+        completed = 0
+        try:
+            for index, codes in enumerate(strokes):
+                info = ensure_target(request, mutation=True)
+                ensure_keyboard_target(request, info, check_snapshot_focus=(index == 0))
+                # Balanced events in one SendInput batch per stroke. If Windows
+                # accepts only part of the batch, release every possibly held key.
+                releases = [key_input(vk=code, flags=2 | int(extended)) for code, extended in reversed(codes)]
+                try:
+                    send_inputs([key_input(vk=code, flags=int(extended)) for code, extended in codes] + releases)
+                except Exception:
+                    try:
+                        send_inputs(releases)
+                    except Exception:
+                        pass
+                    raise
+                completed += 1
+                if index + 1 < len(strokes):
+                    time.sleep(0.06)
+        except Exception as exc:
+            raise ValueError(f'Keyboard sequence stopped after {completed} completed stroke(s); current stroke may be partial. Observe before retrying. {exc}') from exc
+        return {"action": action, "window_id": info["window_id"], "performed": True,
+                "completed_strokes": completed, "result_verified": False,
+                "next_step": "Observe again. System shortcuts may have changed the foreground window."}
     elif action == "scroll":
         amount = request["amount"]
         if type(amount) is not int or not 1 <= abs(amount) <= 5:
