@@ -17,10 +17,16 @@ QCE README 提供 Windows 安装包和 Shell 便携包。Shell 模式使用官�
 | QCE_BASE_URL | 默认 http://127.0.0.1:40653；只允许 loopback HTTP origin，无路径/查询/凭据 |
 | QCE_TOKEN_FILE | 保存 QCE API token 的 UTF-8 本地文件路径；优先于 QCE_TOKEN |
 | QCE_TOKEN | 可选进程环境 token；不要放入工具参数、命令行或对话 |
-| QCE_EXPORT_ROOT | 本地导出根目录；默认技能集合所在父目录下 qq-message-exports |
+| QCE_EXPORT_ROOT | 本地导出根目录；**必须落在 QCE 允许的根目录下**（Windows 常见为 `%USERPROFILE%\Documents\QQChatExporter\exports` 或 `...\scheduled-exports`）。技能默认值（技能集合父目录下的 `qq-message-exports`）通常**不在**允许范围内，真实导出会返回 HTTP 400 `INVALID_PATH`。建议显式设为 QCE 允许根。 |
 | WORKBUDDY_COMPUTER_PYTHON | MCP 包装层调用的现有 Python，使用原 computer-tools 配置 |
 
 Token 由用户在 QCE 当前会话生成/显示的本地界面取得，保存在仅本人可读的文件中。不自动读取终端输出或浏览器 URL 来提取认证秘密。WorkBuddy 现有 local-computer-tools 的 env 可添加 QCE_TOKEN_FILE；不要覆盖其他配置，也不要在日志中显示 env 值。改变后重连该 MCP 服务；不需要重启 TextGen 模型服务器。
+
+### 常见坑（实测）
+
+1. **HTTP 400 `INVALID_PATH`（导出目录越界）**：`QCE_EXPORT_ROOT` 默认落在技能目录（如 F 盘），不在 QCE 白名单内。**dry_run 不发请求，发现不了这个问题**——只在真实 `dry_run=false` 提交时才 400。CLI 现已把 400 响应体里的 `error.message`（含"允许的根目录"列表）直接透传进报错，按提示把 `QCE_EXPORT_ROOT` 指到允许根即可。dry_run 的 plan 也会带 `output_root_warning` 软预警。
+2. **token 随 QCE 重启轮换**：QCE 进程重启后会生成新的 `accessToken`，旧的失效 → 认证被拒（401/403，CLI 报 "QCE authentication rejected"）。当前生效 token 以 QCE 自己的 security 配置为准（Windows 常见 `~/.qq-chat-exporter/security.json` 的 `accessToken` 字段）。刷新 `QCE_TOKEN_FILE` 内容后重试即可，无需重启 QCE。
+3. **MCP 工具认证被拒**：`local-computer-tools` 进程环境若缺 `QCE_TOKEN_FILE`，所有 `qq_*` 工具都会报 "QCE authentication rejected; configure QCE_TOKEN_FILE locally"。把该变量加进 `~/.workbuddy/mcp.json` 的 `local-computer-tools.env`（指向存有当前 token 的文件），重连该 MCP 即可。MCP 工具与自带 Python CLI 共用同一套 token/env 约定。
 
 QCE 与本客户端应运行在同一 Windows 主机并能访问相同 outputDir。Docker/远程服务的路径不一定可见，本工具不自动下载 URL 或挂载文件；完成后找不到本地文件时报告路径映射问题。
 

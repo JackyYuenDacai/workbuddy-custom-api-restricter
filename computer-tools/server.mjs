@@ -3,10 +3,12 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod';
 import { createBridge, createController, SNAPSHOT_VALID_SECONDS } from './controller.mjs';
 import { registerQQExportTools } from './qq-export.mjs';
+import { registerImageTools } from './image-tools.mjs';
 
 const controller=createController(createBridge(process.env.WORKBUDDY_COMPUTER_PYTHON));
 const server=new McpServer({name:'workbuddy-windows-computer-tools',version:'0.7.0'});
 registerQQExportTools(server);
+registerImageTools(server);
 const appName=z.enum(['firefox','chrome','edge','notepad']);
 const windowId=z.string().regex(/^\d+$/).max(20).describe('Window ID returned by desktop_windows.');
 const snapshotId=z.string().uuid().describe(`Fresh single-use snapshot_id returned by desktop_observe; expires after ${SNAPSHOT_VALID_SECONDS} seconds. Observe again if the content changed.`);

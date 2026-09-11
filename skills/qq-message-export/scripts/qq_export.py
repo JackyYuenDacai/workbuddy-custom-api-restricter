@@ -6,6 +6,7 @@ QCE_TOKEN_FILE or QCE_TOKEN, never from a tool argument or printed in errors.
 """
 from datetime import date, datetime, time, timedelta, timezone
 import json
+import hashlib
 import os
 from pathlib import Path
 import re
@@ -101,6 +102,44 @@ class Client:
         self.timeout = timeout
         self.opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
 
+    @staticmethod
+    def _http_error_detail(error):
+        """Parse QCE's JSON error body so callers see the real reason, not a generic hint.
+
+        QCE returns e.g. {"success":false,"error":{"type":"VALIDATION_ERROR",
+        "message":"导出目录不在允许范围内: ...; 允许的根目录: ...",
+        "context":{"code":"INVALID_PATH"}}}. Surface message + context.code.
+        """
+        try:
+            raw = error.read(64 * 1024)
+        except Exception:
+            raw = b''
+        try:
+            body = json.loads(raw.decode('utf-8', 'replace'))
+        except (ValueError, UnicodeError):
+            snippet = raw.decode('utf-8', 'replace').strip()
+            return snippet[:400] if snippet else None
+        if not isinstance(body, dict):
+            return None
+        err = body.get('error')
+        message = None
+        code = None
+        if isinstance(err, dict):
+            message = err.get('message')
+            ctx = err.get('context')
+            if isinstance(ctx, dict):
+                code = ctx.get('code')
+        if not message and isinstance(body.get('message'), str):
+            message = body.get('message')
+        parts = []
+        if code:
+            parts.append(str(code))
+        if message:
+            parts.append(str(message))
+        if not parts:
+            return None
+        return '; '.join(parts)[:800]
+
     def request(self, method, route, payload=None):
         if not route.startswith('/api/') or '://' in route:
             raise ExportError('Unsupported API route')
@@ -121,7 +160,9 @@ class Client:
         except urllib.error.HTTPError as error:
             if error.code in (401, 403):
                 raise ExportError('QCE authentication rejected; configure QCE_TOKEN_FILE locally') from None
-            raise ExportError(f'QCE returned HTTP {error.code}; check its local UI for details') from None
+            detail = self._http_error_detail(error)
+            suffix = f': {detail}' if detail else '; check its local UI for details'
+            raise ExportError(f'QCE returned HTTP {error.code}{suffix}') from None
         except (urllib.error.URLError, TimeoutError, ConnectionError, OSError):
             raise ExportError('QCE connection failed or timed out. Check the local service; a submitted export may still exist') from None
         except (ValueError, UnicodeError):
@@ -187,9 +228,27 @@ class Client:
         media = args.get('include_media', False)
         if not isinstance(media, bool):
             raise ExportError('include_media must be boolean')
-        return {'kind': kind, 'chat_id': chat_id, 'interval': dates, 'format': fmt,
-                'sender_ids': senders, 'include_media': media, 'output_root': str(self.root),
+        embed_media = args.get('embed_media', False)
+        if not isinstance(embed_media, bool):
+            raise ExportError('embed_media must be boolean')
+        if embed_media:
+            media = True
+        plan = {'kind': kind, 'chat_id': chat_id, 'interval': dates, 'format': fmt,
+                'sender_ids': senders, 'include_media': media, 'embed_media': embed_media,
+                'output_root': str(self.root),
                 'history_source': 'QCE local history; availability is not guaranteed complete'}
+        # dry_run does not hit the server, so it cannot validate that output_root is under
+        # QCE's allowed export root (commonly %USERPROFILE%\Documents\QQChatExporter\exports).
+        # Heuristic: if the configured root does not look like that location, warn early so a
+        # real export does not fail with HTTP 400 INVALID_PATH. Allowed roots vary per install;
+        # this is a soft hint, not a hard check.
+        if 'qqchatexporter' not in str(self.root).casefold():
+            plan['output_root_warning'] = (
+                'output_root does not look like QCE\'s allowed export directory; a real export '
+                'may fail with HTTP 400 INVALID_PATH. Point QCE_EXPORT_ROOT at QCE\'s allowed '
+                'root (often <USERPROFILE>\\Documents\\QQChatExporter\\exports) and confirm via the '
+                'real 400 error, which now surfaces the allowed roots.')
+        return plan
 
     def export(self, args):
         plan = self.plan(args)
@@ -220,7 +279,7 @@ class Client:
                    'options': {'batchSize': 5000, 'includeResourceLinks': True,
                                'includeSystemMessages': True, 'filterPureImageMessages': False,
                                'prettyFormat': True, 'exportAsZip': False,
-                               'embedAvatarsAsBase64': False, 'embedResourcesAsDataUri': False,
+                               'embedAvatarsAsBase64': False, 'embedResourcesAsDataUri': plan['embed_media'],
                                'debugExport': False, 'outputDir': str(output),
                                'skipDownloadResourceTypes': [] if plan['include_media'] else ['image','video','audio','file']}}
         if plan['sender_ids']:
@@ -283,11 +342,20 @@ class Client:
             expected = {'JSON': '.json', 'TXT': '.txt', 'HTML': '.html', 'EXCEL': '.xlsx'}[receipt['plan']['format']]
             for p in sorted(output.iterdir()):
                 if p.is_file() and p.suffix.lower() == expected and p.resolve().is_relative_to(output.resolve()):
-                    files.append({'path': str(p), 'bytes': p.stat().st_size})
+                    # Hash the local artifact so callers can detect a partial or
+                    # subsequently replaced export without reading message bodies.
+                    size = p.stat().st_size
+                    digest = hashlib.sha256()
+                    with p.open('rb') as stream:
+                        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+                            digest.update(chunk)
+                    files.append({'path': str(p), 'bytes': size,
+                                  'sha256': digest.hexdigest()})
         return {'job_id': job_id, 'task_id': task_id, 'status': task.get('status'),
                 'progress': task.get('progress'), 'message_count': task.get('messageCount'),
                 'completed': task.get('status') == 'completed', 'files': files,
                 'local_artifact_present': any(f['bytes'] > 0 for f in files),
+                'artifact_bytes': sum(f['bytes'] for f in files),
                 'coverage_verified': False,
                 'note': 'Task completion and file presence do not prove all historical messages are available; verify dates and samples'}
 

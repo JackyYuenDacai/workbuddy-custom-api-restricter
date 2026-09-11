@@ -1,0 +1,10 @@
+import {spawn} from 'node:child_process';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {z} from 'zod';
+const script=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../skills/image-processing/scripts/image_tools.py');
+export function registerImageTools(server,python=process.env.WORKBUDDY_COMPUTER_PYTHON){
+ const run=async args=>new Promise((resolve,reject)=>{if(!python||!path.isAbsolute(python))return reject(Error('Configure WORKBUDDY_COMPUTER_PYTHON to an absolute Python path.'));const c=spawn(python,['-X','utf8',script],{windowsHide:true,stdio:['pipe','pipe','pipe']});let o='';c.stdout.on('data',d=>o+=d);c.on('error',()=>reject(Error('Cannot start image processor')));c.on('close',()=>{try{let r=JSON.parse(o);r.ok?resolve(r.result):reject(Error(r.error))}catch{reject(Error('Invalid image processor response'))}});c.stdin.end(JSON.stringify(args));});
+ const input={input_path:z.string().min(1),output_path:z.string().min(1),format:z.enum(['PNG','JPEG','WEBP']).optional(),rotate:z.number().multipleOf(90).optional(),crop_left:z.number().int().min(0).optional(),crop_top:z.number().int().min(0).optional(),crop_width:z.number().int().min(1).optional(),crop_height:z.number().int().min(1).optional(),resize_width:z.number().int().min(1).max(20000).optional(),resize_height:z.number().int().min(1).max(20000).optional()};
+ server.registerTool('image_process',{description:'Process a local image using deep-learning background segmentation (rembg/U²-Net) plus resizing, rotation, format conversion and compositing. Input/output paths must be local; no network or shell commands.',inputSchema:{...input,remove_background:z.boolean().default(false),background_color:z.enum(['transparent','white']).default('transparent'),model:z.enum(['u2net','u2net_human_seg','isnet-general-use']).default('u2net')},annotations:{readOnlyHint:false,destructiveHint:false,idempotentHint:false,openWorldHint:false}},async a=>{try{return{content:[{type:'text',text:JSON.stringify(await run(a),null,2)}]}}catch(e){return{isError:true,content:[{type:'text',text:e.message}]}}});
+}
