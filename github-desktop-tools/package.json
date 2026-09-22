@@ -1,0 +1,1 @@
+{"name":"workbuddy-github-desktop-tools","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"start":"node server.mjs","test":"node --test test/*.test.mjs","probe":"node probe.mjs"},"dependencies":{"@modelcontextprotocol/sdk":"^1.30.0","zod":"^3.25.76","snappyjs":"^0.7.0"}}

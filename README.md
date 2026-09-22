@@ -260,3 +260,11 @@ npm run test:installed
  
 
 本项目不包含 WorkBuddy 本身；使用者需自行合法安装 WorkBuddy，并遵守软件条款和相关 API 服务条款。
+
+## Codex MCP 工具与技能
+
+新增 [Codex MCP 工具](codex-tools/README.md) 与配套 [codex-mcp-tools skill](skills/codex-mcp-tools/SKILL.md)，通过本机 Codex 执行分析、审查和授权的代码修改，支持异步进度查询与取消。适配当前已移除 `codex mcp-server` 的 CLI；Codex 推理使用其现有账号和模型配置。
+
+## GitHub Desktop 仓库查询 MCP
+
+新增 [GitHub Desktop 仓库查询工具](github-desktop-tools/README.md) 与 [github-desktop-repos skill](skills/github-desktop-repos/SKILL.md)。读取 Desktop 登记清单，可批量查询本地分支、未提交改动、冲突、上游领先/落后；仅查询，不自动 fetch 或修改仓库。

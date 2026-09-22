@@ -14,5 +14,10 @@
 models.json
 settings.json
 package-lock.json
+
+# Local chat-export dumps contain personal data (UIN, group names, paths) — never commit.
+/qq-message-exports/
 !/document-tools/package-lock.json
 !/computer-tools/package-lock.json
+!/codex-tools/package-lock.json
+!/github-desktop-tools/package-lock.json
