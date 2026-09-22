@@ -4,7 +4,7 @@ const { readJson, inspectInstallation, assertConnected } = require('./install-st
 const { spawnSync } = require('node:child_process');
 const name = 'local-codex-tools';
 const action = process.argv[2];
-if (!['install', 'check'].includes(action)) throw Error('Usage: node workbuddy-install.cjs install|check');
+if (!['install', 'update', 'check'].includes(action)) throw Error('Usage: node workbuddy-install.cjs install|update|check');
 const config = readJson(path.join(__dirname, 'local-install.json'));
 for (const key of ['nodePath', 'cliPath', 'configDir']) {
   if (!path.isAbsolute(config[key] || '') || !fs.existsSync(config[key])) throw Error(`Configure an existing absolute ${key} in local-install.json.`);
@@ -43,6 +43,16 @@ if (action === 'install') {
     }
   }
   console.log(JSON.stringify({ installed: true, skillTarget, backup }));
+}
+if (action === 'update') {
+  const current = readJson(path.join(config.configDir, 'mcp.json')).mcpServers?.[name];
+  if (!current || current.command !== config.nodePath || JSON.stringify(current.args) !== JSON.stringify([path.join(__dirname, 'server.mjs')])) throw Error('Installed MCP target differs; inspect configuration before updating.');
+  const source = path.join(__dirname, '..', 'skills', 'codex-mcp-tools', 'SKILL.md');
+  const target = path.join(config.configDir, 'skills', 'codex-mcp-tools', 'SKILL.md');
+  const backup = path.join(config.configDir, 'backups', `codex-tools-update-${Date.now()}`); fs.mkdirSync(backup, { recursive: true });
+  if (fs.existsSync(target)) fs.copyFileSync(target, path.join(backup, 'SKILL.md'));
+  fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(source, target);
+  console.log(JSON.stringify({ updated: true, backup }));
 }
 const details = cli(['get', name]);
 console.log(details);

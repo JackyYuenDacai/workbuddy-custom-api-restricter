@@ -267,4 +267,4 @@ npm run test:installed
 
 ## GitHub Desktop 仓库查询 MCP
 
-新增 [GitHub Desktop 仓库查询工具](github-desktop-tools/README.md) 与 [github-desktop-repos skill](skills/github-desktop-repos/SKILL.md)。读取 Desktop 登记清单，可批量查询本地分支、未提交改动、冲突、上游领先/落后；仅查询，不自动 fetch 或修改仓库。
+新增 [GitHub Desktop 仓库查询工具](github-desktop-tools/README.md) 与 [github-desktop-repos skill](skills/github-desktop-repos/SKILL.md)。读取 Desktop 登记清单，可批量查询本地分支、未提交改动、冲突、上游领先/落后；查询接口只读，另提供显式授权的 commit/push 工具，支持单次代理和故障诊断。

@@ -18,9 +18,9 @@ async function terminal(runner, id) {
 }
 test('arguments retain sandbox and prompt uses stdin', () => {
   const args = buildArgs({ cwd, sandbox: 'workspace-write', model: 'user-model' });
-  assert.deepEqual(args.slice(0, 3), ['-a', 'never', 'exec']);
+  assert.deepEqual(args.slice(0, 2), ['exec', '--approve-for-me']);
   assert.equal(args.at(-1), '-');
-  assert.equal(args[args.indexOf('--sandbox') + 1], 'workspace-write');
+  assert.ok(!args.includes('--sandbox'), '--approve-for-me already selects workspace-write and conflicts with --sandbox');
   assert.ok(!args.some(a => a.includes('bypass')));
 });
 test('reject invalid directories, sandbox and timeout before spawn', () => {
@@ -227,4 +227,20 @@ test('spawn errors fail the job and report bounded diagnostics', async () => {
   assert.equal(job.output_truncated, true);
   assert.ok(job.ended_at);
   await r.close();
+});
+
+
+test('Write tasks default to automatic review; read-only retains never approval', async () => {
+  const args = buildArgs({ cwd }); assert.ok(args.includes('--approve-for-me')); assert.ok(!args.includes('-a'));
+  const readonly = buildArgs({ cwd, sandbox: 'read-only' }); assert.deepEqual(readonly.slice(0, 3), ['-a', 'never', 'exec']); assert.ok(!readonly.includes('--approve-for-me'));
+  const dirs = buildArgs({ cwd, additional_write_dirs: [cwd] }); assert.equal(dirs[dirs.indexOf('--add-dir') + 1], cwd);
+  const r = fixtureRunner(); const job = await terminal(r, r.start({ prompt: 'write defaults', cwd }).id); assert.equal(job.sandbox, 'workspace-write'); assert.equal(job.approval_policy, 'auto-review');
+});
+test('Reject incompatible approval mode and invalid extra write roots', () => {
+  const r = fixtureRunner(); assert.throws(() => r.start({ prompt: 'x', cwd, sandbox: 'read-only', approval_policy: 'auto-review' }), /requires/);
+  assert.throws(() => r.start({ prompt: 'x', cwd, sandbox: 'read-only', additional_write_dirs: [cwd] }), /require/);
+  assert.throws(() => r.start({ prompt: 'x', cwd, additional_write_dirs: ['relative'] }), /absolute/);
+});
+test('Permission problems remain visible even when Codex returns a completed answer', async () => {
+  const r = fixtureRunner(); const job = await terminal(r, r.start({ prompt: 'helper_sandbox_lock_failed SetNamedSecurityInfoW access denied', cwd }).id); assert.equal(job.state, 'completed'); assert.ok(job.permission_issues.some(x => x.kind === 'windows-sandbox'));
 });

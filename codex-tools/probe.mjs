@@ -8,7 +8,7 @@ const parse = result => { if (result.isError) throw Error(result.content?.[0]?.t
 try {
   await client.connect(transport);
   const names = (await client.listTools()).tools.map(t => t.name);
-  for (const name of ['codex_status', 'codex_start', 'codex_job', 'codex_cancel']) {
+  for (const name of ['codex_status', 'codex_start', 'codex_job', 'codex_cancel', 'codex_request_approval', 'codex_approval_reply']) {
     if (!names.includes(name)) throw Error(`Missing MCP tool: ${name}`);
   }
   console.log(JSON.stringify({ tools: names }));

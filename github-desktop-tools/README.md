@@ -16,7 +16,7 @@
 
 > 检查 workbuddy-local-only 的状态，列出暂存、未暂存、未跟踪和冲突文件。
 
-只读：不 fetch、pull、push、commit，不修改 Desktop 数据库或 Git 索引。远程比较来自上次更新的本地跟踪引用，并非 GitHub 实时状态；没有上游时 ahead/behind 为 null。clean 仅表示工作区无改动，仍可能有未推送提交。未跟踪目录按目录聚合，计数不是递归文件总数；暂存与未暂存分类可能重叠。`maxFiles` 仅限制返回明细，完整计数保持不变。
+查询接口只读，不修改 Desktop 数据库或 Git 索引；新增的 commit/push 接口按显式参数执行授权操作，不自动 fetch/pull。远程比较来自上次更新的本地跟踪引用，并非 GitHub 实时状态；没有上游时 ahead/behind 为 null。clean 仅表示工作区无改动，仍可能有未推送提交。未跟踪目录按目录聚合，计数不是递归文件总数；暂存与未暂存分类可能重叠。`maxFiles` 仅限制返回明细，完整计数保持不变。
 
 ## 安装 / 检查
 
@@ -55,3 +55,21 @@ npm run probe
 `npm test` 使用临时目录测试日志分片/校验、SST 压缩、Manifest 淘汰、删除记录、IndexedDB 解码、路径丢失、未初始化提交、改名、Unicode、冲突、分支差异、脱敏、取消与查询前后索引哈希不变。`probe` 使用真实 stdio MCP 握手、工具发现、分页遍历全部本机仓库、单仓库调用和无效 ID 错误验证，输出实时结果到 stdout。可用 WorkBuddy 的 Node 路径运行以验证目标运行时。
 
 格式参考：[GitHub Desktop 仓库数据库](https://github.com/desktop/desktop/blob/development/app/src/lib/databases/repositories-database.ts)、[LevelDB 日志](https://github.com/google/leveldb/blob/main/doc/log_format.md)、[LevelDB 表格式](https://github.com/google/leveldb/blob/main/doc/table_format.md)、[Chromium IndexedDB 格式](https://github.com/chromium/chromium/blob/main/content/browser/indexed_db/docs/leveldb_coding_scheme.md)。
+
+
+## Commit / Push（1.1）
+
+新增 `desktop_repository_commit` 与 `desktop_repository_push`，共 5 个工具。二者需要 repositoryId、expectedBranch、expectedHead，默认 dryRun=true。commit 预览不写索引；push 预览连接远端但不更新引用。
+
+Commit 默认 mode=staged；mode=paths 加 paths 字面相对路径列表可暂存并提交指定当前内容，保留其他暂存文件。dryRun=false 才执行。保留 hook 和签名配置，不 amend。执行失败可能留有已暂存改动，先检查状态。
+
+Push 只把固定的当前 HEAD 推到指定 remote 的同名分支，不 force、不推 tags/其他分支、不自动设 upstream。拒绝多个 pushurl。proxy 省略沿用现有设置，空字符串直连，具体 URL 仅覆盖本次 Git 进程，不更改 global/local config。已停止的代理仍须恢复；不会自动改用旧截图中的端口。
+
+每条写入命令默认 25 秒、范围 5–120 秒，输出上限 1 MiB；整个操作另有总时限。超时/取消终止进程树并标记 outcomeUnknown，实际引用可能已更新，须核对后重试。错误分类包含 proxy/network/authentication/remote-rejected/git-lock/identity。跨 MCP 进程通过工作树 Git 目录内的独占锁防止同时操作；进程异常退出后的旧锁需确认 owner 不再运行后处理。
+
+```powershell
+node workbuddy-install.mjs update
+node workbuddy-install.mjs check
+```
+
+更新技能后重新连接 MCP 或新建 WorkBuddy 会话。使用示例与审批边界见配套 SKILL.md。测试通过真实临时仓库与本地 bare remote 完成，不向用户 GitHub 远端发布测试内容。

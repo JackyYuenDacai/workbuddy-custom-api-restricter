@@ -26,7 +26,7 @@ Windows 当前要求真实 `codex.exe`，不直接执行 npm 的 `codex.cmd` / `
 
 Codex 可执行文件按 `WORKBUDDY_CODEX_PATH`、PATH、本机 `%LOCALAPPDATA%/OpenAI/Codex/bin/*/codex.exe` 顺序查找；最后一种方式选择最新文件。升级后无需硬编码哈希目录。非 Windows 系统可通过 PATH 或环境变量指定实际可执行文件。
 
-默认只读，需要写入时传 `sandbox: "workspace-write"` 和用户指定的工作目录。固定 `-a never`，不自动批准越界操作，不提供关闭沙箱参数。提示词通过 stdin 传递，不执行 shell 字符串。`model` 省略时继承用户配置。
+默认 `workspace-write`，使用用户指定的目标工作目录和 `--approve-for-me` 自动审批审查；审查任务明确选择 `read-only`（此模式仍使用 `-a never`）。`additional_write_dirs` 支持用户授权的其他目录，不提供关闭沙箱参数。提示词通过 stdin 传递，不执行 shell 字符串。`model` 省略时继承用户配置。
 
 每个连接一次只运行一个任务，默认 900 秒超时，上限 3600 秒。任务和最近 50 个结果只在进程内保存，连接断开或重启后不可查；正常断开或关闭服务时会尝试停止其活动任务并等待退出；强制杀死服务或系统崩溃无法保证清理。取消与超时不撤销已完成修改。不要自动重试修改任务。
 
@@ -53,3 +53,23 @@ node probe.mjs --live
 - [OpenAI：Codex MCP server removal](https://learn.chatgpt.com/docs/mcp-server)：旧命令已移除；App Server 不是 MCP 协议的直接替代品。
 - [WorkBuddy：MCP 配置](https://www.workbuddy.ai/docs/zh/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/MCP-Guide)：用户级 MCP 使用 `~/.workbuddy/mcp.json`。
 - 本机验证基线：`codex-cli 0.155.0-alpha.9.2` 的 `codex exec --help`。
+
+
+## 权限修复与人工审批（1.1）
+
+`codex_start` 默认工作区可写。`approval_policy` 支持 `auto-review`、`ask-user`、`never`。自动审查模式不与 `--sandbox` 同传，因为本机 CLI 将它们定义为互斥，`--approve-for-me` 本身选择 workspace-write。CLI 必须支持该选项；较旧版本先升级。状态返回实际 sandbox、approval_policy、additional_write_dirs 和观察到的 permission_issues。
+
+新增 `codex_request_approval(job_id)`：等原任务结束后，在相同保存的 thread 里续接，以 app-server `approvalPolicy=on-request`、`approvalsReviewer=user` 接收真实审批请求。新任务也可直接选择 ask-user。
+
+`codex_job` 的 `phase=awaiting_user` 和 `pending_approvals` 表示等待用户，WorkBuddy 应显示具体请求并等待答复。`codex_approval_reply(job_id, approval_id, decision, user_response, answers?)` 将真实答复传回等待中的 Codex 请求。单次 command/file approval 使用 accept/decline/cancel；permissions 只返回已请求权限，scope=turn；不会写永久策略。当前支持命令、文件变更、权限和用户问题四类请求；未知/无法完整显示的请求明确拒绝，不放行。
+
+等待用户最长 30 分钟，期间暂停任务执行计时。过期或重复 approval_id 被拒绝，进程关闭时取消挂起请求。审批连接属于当前 MCP 进程，重连后不能假定原 job 仍可操作。人工同意不等于绕过组织要求或修复 Windows 的沙箱 ACL。
+
+更新已安装技能（先处理活动任务，再重新连接 WorkBuddy MCP）：
+
+```powershell
+node workbuddy-install.cjs update
+node workbuddy-install.cjs check
+```
+
+update 备份原技能并同步源码，不修改其他 MCP 或账号设置。自动审批协议参考：[OpenAI approvals/security](https://learn.chatgpt.com/docs/agent-approvals-security)，人工审批参考：[OpenAI app-server](https://learn.chatgpt.com/docs/app-server)。

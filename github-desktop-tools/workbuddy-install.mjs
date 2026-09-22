@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process';
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const name = 'github-desktop-repos';
 const action = process.argv[2];
-if (!['install', 'check'].includes(action)) throw Error('Usage: node workbuddy-install.mjs install|check');
+if (!['install', 'update', 'check'].includes(action)) throw Error('Usage: node workbuddy-install.mjs install|update|check');
 const json = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 const config = json(path.join(dir, 'local-install.json'));
 for (const field of ['nodePath', 'cliPath', 'configDir', 'databasePath', 'gitPath']) if (!path.isAbsolute(config[field] || '') || !fs.existsSync(config[field])) throw Error(`Configure an existing absolute ${field} in local-install.json`);
@@ -30,6 +30,12 @@ if (action === 'install') {
 }
 const installed = json(mcpFile), actual = installed.mcpServers?.[name];
 if (!actual || actual.disabled || installed.disabledMcpServers?.includes(name) || actual.command !== desired.command || JSON.stringify(actual.args) !== JSON.stringify(desired.args) || actual.env?.GITHUB_DESKTOP_DB_PATH !== config.databasePath || actual.env?.GITHUB_DESKTOP_GIT_PATH !== config.gitPath) throw Error('MCP configuration does not match or is disabled');
+if (action === 'update') {
+  const backup = path.join(config.configDir, 'backups', `github-desktop-repos-update-${Date.now()}`); fs.mkdirSync(backup, { recursive: true });
+  const target = path.join(skillTarget, 'SKILL.md'); if (fs.existsSync(target)) fs.copyFileSync(target, path.join(backup, 'SKILL.md'));
+  fs.mkdirSync(skillTarget, { recursive: true }); fs.copyFileSync(path.join(skillSource, 'SKILL.md'), target);
+  console.log(JSON.stringify({ updated: true, backup }));
+}
 if (!fs.readFileSync(path.join(skillSource, 'SKILL.md')).equals(fs.readFileSync(path.join(skillTarget, 'SKILL.md')))) throw Error('Installed skill differs from source');
 if (fs.existsSync(settingsFile) && Object.hasOwn(json(settingsFile).skillOverrides || {}, name)) throw Error('Skill override exists; inspect whether invocation is disabled');
 const details = cli(['get', name]); console.log(details);

@@ -1,3 +1,4 @@
+import { startApprovalJob } from './approval-bridge.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -35,8 +36,13 @@ export function findCodex(env = process.env) {
   throw Error('Codex executable not found. Install Codex or set WORKBUDDY_CODEX_PATH; run codex login separately if needed.');
 }
 
-export function buildArgs({ cwd, sandbox = 'read-only', model }) {
-  const args = ['-a', 'never', 'exec', '--json', '--color', 'never', '--sandbox', sandbox, '--cd', cwd, '--skip-git-repo-check'];
+export function buildArgs({ cwd, sandbox = 'workspace-write', approval_policy, additional_write_dirs = [], model }) {
+  const policy = approval_policy || (sandbox === 'workspace-write' ? 'auto-review' : 'never');
+  if (policy === 'auto-review' && sandbox !== 'workspace-write') throw Error('auto-review requires workspace-write.');
+  const args = policy === 'auto-review' ? ['exec', '--approve-for-me'] : ['-a', 'never', 'exec'];
+  if (policy !== 'auto-review') args.push('--sandbox', sandbox);
+  args.push('--json', '--color', 'never', '--cd', cwd, '--skip-git-repo-check');
+  for (const dir of additional_write_dirs) args.push('--add-dir', dir);
   if (model) args.push('--model', model);
   args.push('-');
   return args;
@@ -80,7 +86,7 @@ export class Runner {
       else loginError = tail(diagnostic || error.message);
     }
     return { executable, version: version.stdout.trim(), logged_in: loggedIn, login_error: loginError,
-      backend: 'codex exec', active_jobs: [...this.jobs.values()].filter(j => j.state === 'running' || j.state === 'stopping').length,
+      backend: 'codex exec', default_sandbox: 'workspace-write', default_approval_policy: 'auto-review', supports_additional_write_dirs: true, active_jobs: [...this.jobs.values()].filter(j => j.state === 'running' || j.state === 'stopping').length,
       note: 'Uses your existing Codex account/model configuration; inference may use a remote service. Login status is not a network test. null means the login check failed, not that you are logged out.' };
   }
 
@@ -96,16 +102,25 @@ export class Runner {
     job.timer.unref();
   }
 
-  start({ prompt, cwd, sandbox = 'read-only', model, timeout_seconds = 900 }) {
+  start({ prompt, cwd, sandbox = 'workspace-write', approval_policy, additional_write_dirs = [], model, timeout_seconds = 900 }) {
+    if (approval_policy === 'ask-user') return startApprovalJob(this, { prompt, cwd, sandbox, approval_policy, additional_write_dirs, model, timeout_seconds });
     if (typeof prompt !== 'string' || !prompt.trim() || prompt.length > 100000) throw Error('prompt must contain 1-100000 characters.');
     if (typeof cwd !== 'string' || !path.isAbsolute(cwd) || !fs.existsSync(cwd) || !fs.statSync(cwd).isDirectory()) throw Error('cwd must be an existing absolute directory.');
     if (!['read-only', 'workspace-write'].includes(sandbox)) throw Error('Only read-only and workspace-write sandboxes are supported.');
+    approval_policy = approval_policy || (sandbox === 'workspace-write' ? 'auto-review' : 'never');
+    if (!['auto-review', 'never'].includes(approval_policy) || (approval_policy === 'auto-review' && sandbox !== 'workspace-write')) throw Error('auto-review requires workspace-write; read-only uses never.');
+    if (!Array.isArray(additional_write_dirs) || additional_write_dirs.length > 16) throw Error('additional_write_dirs must contain at most 16 directories.');
+    if (sandbox === 'read-only' && additional_write_dirs.length) throw Error('Additional writable directories require workspace-write.');
+    additional_write_dirs = additional_write_dirs.map(dir => {
+      if (typeof dir !== 'string' || !path.isAbsolute(dir) || !fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) throw Error('Each additional_write_dirs entry must be an existing absolute directory.');
+      const resolved = fs.realpathSync.native(dir); if (path.parse(resolved).root === resolved) throw Error('A whole drive cannot be an additional writable directory.'); return resolved;
+    });
     if (!Number.isInteger(timeout_seconds) || timeout_seconds < 10 || timeout_seconds > 3600) throw Error('timeout_seconds must be 10-3600.');
     if (model !== undefined && (typeof model !== 'string' || !model.trim() || model.length > 200)) throw Error('Invalid model.');
     if ([...this.jobs.values()].some(j => ['running', 'stopping'].includes(j.state))) throw Error('A Codex job is already active. Poll or cancel it before starting another.');
     while (this.jobs.size >= this.maxJobs) this.jobs.delete(this.jobs.keys().next().value);
     const executable = this.discover();
-    const job = { id: randomUUID(), state: 'running', cwd: fs.realpathSync(cwd), sandbox,
+    const job = { id: randomUUID(), state: 'running', cwd: fs.realpathSync.native(cwd), sandbox, model, approval_policy, additional_write_dirs, permission_issues: [],
       started_at: new Date().toISOString(), ended_at: null, thread_id: null, exit_code: null,
       answer: '', progress: '', stderr: '', error: null, events_seen: 0, output_truncated: false, turn_completed: false,
       deadline: Date.now() + timeout_seconds * 1000 };
@@ -115,8 +130,16 @@ export class Runner {
     let discardLongLine = false;
     let lastEventError = null;
     const bounded = value => boundedValue(job, value);
+    const observePermissions = text => {
+      const patterns = [
+        ['windows-sandbox', /helper_sandbox_lock_failed|SetNamedSecurityInfoW|sandbox setup failed/i, 'Windows sandbox setup/ACL failure. Auto-review may authorize an appropriate retry; repair the Windows sandbox if it persists.'],
+        ['permission-denied', /permission denied|access is denied|access denied|read.only file system|outside.{0,30}writ|approval.{0,25}(denied|rejected)/i, 'Check cwd and additional_write_dirs. Protected paths and network actions can require approval; inspect the review result.']
+      ];
+      for (const [kind, pattern, guidance] of patterns) if (pattern.test(text) && !job.permission_issues.some(x => x.kind === kind)) job.permission_issues.push({ kind, guidance, observed: true });
+    };
     const parseLine = line => {
       if (!line.trim()) return;
+      observePermissions(line);
       job.events_seen++;
       let event;
       try { event = JSON.parse(line); } catch { job.progress = bounded(line); return; }
@@ -167,7 +190,7 @@ export class Runner {
           if (ends) { if (!discardLongLine) parseLine(lineBuffer); lineBuffer = ''; discardLongLine = false; }
         }
       });
-      child.stderr.on('data', chunk => { job.stderr = bounded(job.stderr + chunk); });
+      child.stderr.on('data', chunk => { job.stderr = bounded(job.stderr + chunk); observePermissions(chunk); });
       child.stdin.on('error', error => { if (error.code !== 'EPIPE') job.error = boundedValue(job, error.message); });
       child.on('error', error => { job.error = boundedValue(job, error.message); finish(null); });
       child.on('close', code => { if (lineBuffer && !discardLongLine) parseLine(lineBuffer); finish(code); });
@@ -183,7 +206,7 @@ export class Runner {
   get(id) {
     const job = this.jobs.get(id);
     if (!job) throw Error('Unknown job_id. IDs belong to this MCP connection; restarting the server clears its jobs.');
-    const { child, timer, stopReason, closed, resolveClosed, stopPromise, deadline, ...publicJob } = job;
+    const { child, timer, stopReason, closed, resolveClosed, stopPromise, deadline, replyApproval, ...publicJob } = job;
     return { ...publicJob };
   }
 
@@ -217,6 +240,20 @@ export class Runner {
     })();
     try { return await job.stopPromise; }
     finally { delete job.stopPromise; }
+  }
+
+
+  requestApproval(id) {
+    const previous = this.get(id);
+    if (['running', 'stopping'].includes(previous.state)) throw Error('Wait for the original job to stop before requesting a human-review continuation.');
+    if (!previous.thread_id) throw Error('No saved Codex thread is available to continue. Start an ask-user task with the original scope after inspecting partial changes.');
+    return startApprovalJob(this, { cwd: previous.cwd, sandbox: previous.sandbox, model: previous.model, additional_write_dirs: previous.additional_write_dirs || [], resume_thread_id: previous.thread_id,
+      prompt: 'Continue the original user-authorized task in this existing conversation. Automatic execution was unable to finish and WorkBuddy now supports human approval. Inspect current state first; do not repeat completed edits or external writes. For any necessary operation blocked by permissions, request approval for that specific operation; the WorkBuddy host will present it to the user. Do not assume a user decision or widen the original task scope. If the task was already completed, simply report completion.' });
+  }
+
+  replyApproval(id, approvalId, decision, userResponse, answers) {
+    const job = this.jobs.get(id); if (!job?.replyApproval) throw Error('This job has no active approval connection.');
+    return job.replyApproval(approvalId, decision, userResponse, answers);
   }
 
   async close() {

@@ -8,7 +8,7 @@ let stderr = ''; transport.stderr?.on('data', b => { stderr += b.toString(); });
 async function call(name, args) { const result = await client.callTool({ name, arguments: args }, undefined, { timeout: 45000 }); if (result.isError) throw Error(result.content.map(x => x.text || '').join('\n')); return result.structuredContent || JSON.parse(result.content[0].text); }
 try {
   await client.connect(transport);
-  const tools = (await client.listTools()).tools; assert.equal(tools.length, 3); assert.ok(tools.every(t => t.annotations.readOnlyHint));
+  const tools = (await client.listTools()).tools; assert.equal(tools.length, 5); assert.equal(tools.filter(t => t.annotations.readOnlyHint).length, 3); assert.ok(tools.filter(t => /_(commit|push)$/.test(t.name)).every(t => !t.annotations.readOnlyHint));
   const list = await call('desktop_repositories', {}); assert.equal(list.totalRegistered, list.repositories.length);
   const ids = new Set(list.repositories.map(r => r.id)), statuses = []; let offset = 0;
   do { const page = await call('desktop_repository_statuses', { offset, limit: 8, maxFiles: 0 }); assert.equal(page.totalRegistered, list.totalRegistered, 'Registry changed during probe; rerun'); statuses.push(...page.repositories); offset = page.nextOffset; } while (offset !== null);
